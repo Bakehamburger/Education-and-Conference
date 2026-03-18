@@ -245,7 +245,7 @@ body.menu-open {
     background: #fff;
     /* Main rounded corner for the container itself */
     border-top-left-radius: 80px; 
-    padding: 25px 50px 25px 50px;
+    padding: 16px 50px 25px 16px;
     display: flex;
     align-items: center;
     /* This makes sure the pseudo-element positions relative to the container */
@@ -256,13 +256,13 @@ body.menu-open {
 .news-container::before {
     content: "";
     position: absolute;
-    bottom: 0px;
-    left: -50px; /* Moves it to the left of the container */
-    width: 50px;
-    height: 20px;
+    bottom: -10px;
+    left: -120px; /* Moves it to the left of the container */
+    width: 120px;
+    height: 60px;
     background: transparent;
     /* This creates the "inverse" curve using a massive shadow */
-    border-bottom-right-radius: 50px; 
+    border-bottom-right-radius: 80px; 
     box-shadow: 25px 0 0 0 #fff; /* The color should match your container background */
     pointer-events: none;
 }
