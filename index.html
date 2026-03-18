@@ -12,54 +12,66 @@
     <title>Education and Conference</title>
 </head>
 <body>
- <nav class="navbar navbar-dark bg-dark py-3 fixed-top custom-navbar">
-        <div class="container">
+ <nav class="navbar-horizontal">
+        <div class="navbar-container">
             <!-- Logo -->
-            <a class="navbar-brand fw-bold fs-4" href="#" style="z-index: 3000;">
-                <span class="text-warning">BRAND</span>
-            </a>
-
-            <!-- Desktop Nav Links & CTA -->
-            <div class="navbar-nav ms-auto align-items-center desktop-nav d-none d-lg-flex">
-                <a class="nav-link px-3 py-2" href="#home">Home</a>
-                <a class="nav-link px-3 py-2" href="#about">About</a>
-                <a class="nav-link px-3 py-2" href="#services">Services</a>
-                <a class="nav-link px-3 py-2" href="#contact">Contact</a>
-                <a class="btn btn-warning px-4 py-2 ms-3 rounded-pill fw-bold cta-btn" href="#">Join Now</a>
+            <a href="#" class="navbar-brand"><img src="assets/images/icons/company-logo.svg" alt="company logo"></a>
+            
+            <!-- Desktop Nav + CTA -->
+            <div class="desktop-nav-container">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#" class="cta-btn">Join Now</a>
             </div>
-
-            <!-- Burger Button - ALWAYS VISIBLE -->
-            <button class="navbar-toggler border-0 burger-btn d-flex d-lg-flex" 
-                    type="button" id="burgerBtn" 
-                    style="z-index: 3000;" 
-                    aria-label="Toggle navigation">
+            
+            <!-- Burger - ALWAYS VISIBLE -->
+            <button class="burger-btn navbar-toggler" type="button" id="burgerBtn">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
     </nav>
 
-    <!-- Full Viewport Modal Menu -->
+    <!-- Fullscreen Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-menu-header" id="closeMenu">
-            <span class="text-white fs-1">&times;</span>
-        </button>
-        
-        <div class="mobile-nav-links text-center">
-            <a class="nav-link display-3 fw-bold mb-4 text-white" href="#home">HOME</a>
-            <a class="nav-link display-3 fw-bold mb-4 text-white" href="#about">ABOUT</a>
-            <a class="nav-link display-3 fw-bold mb-4 text-white" href="#services">SERVICES</a>
-            <a class="nav-link display-3 fw-bold mb-4 text-white" href="#contact">CONTACT</a>
-            <a class="btn btn-warning btn-lg px-5 py-3 rounded-pill fw-bold mobile-cta mt-5" href="#">GET STARTED</a>
+        <button class="mobile-menu-header" id="closeMenu">&times;</button>
+        <div class="mobile-nav-links">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#" class="btn btn-warning btn-lg mobile-cta">GET STARTED</a>
         </div>
     </div>
 
-    <!-- Page Content -->
-    <div class="mt-5 pt-5" style="min-height: 200vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-        <div class="container py-5">
-            <h1 class="display-1 text-white text-center">Desktop Burger Works! ☰</h1>
-            <p class="lead text-white text-center">Try the burger on desktop - full screen modal!</p>
+<div class="landing-page position-relative">
+    <div class="news-container d-flex align-items-center">
+        <div class="news-icon-wrapper me-4">
+            <img src="assets/images/landing-page/news-icon.png" alt="News" class="rounded-circle news-img">
+        </div>
+
+        <div class="news-content d-flex flex-column gap-2">
+            <span class="news-pill">お知らせ</span> 
+            <div class="news-details">
+                <p class="news-date mb-0">2025.01.01</p>
+                <a href="#" class="news-link">ホームページをリニューアルしました。</a>
+            </div>
+        </div>
+
+        <div class="ms-5">
+            <a href="#" class="play-btn">
+                <span class="play-icon">▶</span>
+            </a>
         </div>
     </div>
+</div>
+    
+    <!-- Content -->
+
+    <main>
+    </main>
+
 
     <script src="assets/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
