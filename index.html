@@ -12,64 +12,70 @@
     <title>Education and Conference</title>
 </head>
 <body>
- <nav class="navbar-horizontal">
-        <div class="navbar-container">
-            <!-- Logo -->
-            <a href="#" class="navbar-brand"><img src="assets/images/icons/company-logo.svg" alt="company logo"></a>
-            
-            <!-- Desktop Nav + CTA -->
-            <div class="desktop-nav-container">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="#" class="cta-btn">Join Now</a>
+    <header>
+        <nav class="navbar-horizontal">
+                <div class="navbar-container">
+                    <!-- Logo -->
+                    <a href="#" class="navbar-brand"><img src="assets/images/icons/company-logo.svg" alt="company logo"></a>
+                    <div class="navbar-right-container">
+                    <!-- Desktop Nav + CTA -->
+                    <div class="desktop-nav-container">
+                        <a href="#home" class="nav-link">事業紹介</a>
+                        <a href="#about" class="nav-link">導入事例</a>
+                        <a href="#services" class="nav-link">お知らせ</a>
+                        <a href="#contact" class="nav-link">会社情報</a>
+                        <a href="#" class="cta-btn">お問い合わせ・資料請求 <img src="assets/images/icons/plane.png" alt=""></a>
+                    </div>
+                    
+                    <button class="burger-btn navbar-toggler" type="button" id="burgerBtn">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Fullscreen Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <button class="mobile-menu-header" id="closeMenu">&times;</button>
+                <div class="mobile-nav-links">
+                    <a href="#home">事業紹介</a>
+                    <a href="#about">導入事例</a>
+                    <a href="#services">お知らせ</a>
+                    <a href="#contact">会社情報</a>
+                    <a href="#" class="btn btn-warning btn-lg mobile-cta">GET STARTED</a>
+                </div>
             </div>
-            
-            <!-- Burger - ALWAYS VISIBLE -->
-            <button class="burger-btn navbar-toggler" type="button" id="burgerBtn">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
 
-    <!-- Fullscreen Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-menu-header" id="closeMenu">&times;</button>
-        <div class="mobile-nav-links">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#services">SERVICES</a>
-            <a href="#contact">CONTACT</a>
-            <a href="#" class="btn btn-warning btn-lg mobile-cta">GET STARTED</a>
-        </div>
-    </div>
+        <div class="landing-page position-relative" style="background-color: #777; height: 400px;">
+            <div class="news-container">
+                <div class="news-img-wrapper">
+                    <img src="assets/images/landing-page/news-icon.png" alt="News">
+                </div>
 
-<div class="landing-page position-relative">
-    <div class="news-container d-flex align-items-center">
-        <div class="news-icon-wrapper me-4">
-            <img src="assets/images/landing-page/news-icon.png" alt="News" class="rounded-circle news-img">
-        </div>
+                <div class="news-content d-flex flex-column">
+                    <span class="news-pill mb-2">お知らせ</span> 
+                    <p class="news-date mb-0" style="color: #f06700; font-weight: bold;">2025.01.01</p>
+                    <a href="#" class="news-link text-dark" style="text-decoration: underline;">ホームページをリ<br class="d-flex d-md-none">ニューアルしました。</a>
+                </div>
 
-        <div class="news-content d-flex flex-column gap-2">
-            <span class="news-pill">お知らせ</span> 
-            <div class="news-details">
-                <p class="news-date mb-0">2025.01.01</p>
-                <a href="#" class="news-link">ホームページをリニューアルしました。</a>
+                <div class="ms-5">
+                    <div class="play-btn d-flex align-items-center justify-content-center" 
+                        style="background: #f06700; width: 40px; height: 40px; border-radius: 8px;">
+                        <span style="color: white; font-size: 10px;">▶</span>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="ms-5">
-            <a href="#" class="play-btn">
-                <span class="play-icon">▶</span>
-            </a>
-        </div>
-    </div>
-</div>
+    </header>
     
     <!-- Content -->
 
-    <main>
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                <p class="fw-bold"><span class="orange">議場や学校、 文化施設、オフィス。 人や想いが集まる空間に、映像・音響、ICTで進化と安心を。</span> 北海道に根ざし、 現場とともに歩みながら、 私たちは技術を通して、 未来をもっと 身近にしていきます。</p>
+            </div>
+        </div>
     </main>
 
 
