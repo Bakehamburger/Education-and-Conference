@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* LANDING PAGE */
+
+/* 1. Force Full Screen */
+.navbar-collapse.show, 
+.navbar-collapse.collapsing {
+    display: block !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 2500 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 2. Vanishing Navbar Logic */
+/* When the menu is OPEN (Bootstrap removes .collapsed from the button) */
+.navbar:has(.show) {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.navbar:has(.show) .desktop-group {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* 3. THE "X" MARK TRANSFORMATION */
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    /* Swap standard burger for a White X */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M8 8L22 22M8 22L22 8'/%3e%3c/svg%3e") !important;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 4. Link Styling in Modal */
+.navbar-collapse .nav-link {
+    color: white !important;
+}
+.navbar-collapse .nav-link:hover {
+    color: #ffc107 !important;
+}

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+
+/* CSS Reset / Starter */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    height: auto;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+}
+
+p,
+blockquote {
+    margin: 0 !important;
+}
+
+figure {
+    margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+}
+
+:focus {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 !important;
+    font-weight: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+:root {
+    --sunset-gradient: linear-gradient(
+    to right, 
+    #FE9F5D 20%, 
+    #FD854F 44%, 
+    #FD6C41 67%, 
+    #EA6300 100%
+    );
+    --apricot: #FE9F5D;
+    --burnt-orange: #EA6300;
+    --white: #fff;
+    --mint-white: #ECF8EE;
+    --emerald-green: #419755;
+    --white-smoke: #F5F5F5;
+
+}
