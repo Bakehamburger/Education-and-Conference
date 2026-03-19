@@ -467,12 +467,6 @@ body.menu-open {
 /*-----NEWS-----*/
 /*--------------*/
 
-
-body {
-    background-color: #f8f8f8;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
 /* News Styles */
 .text-orange { color: var(--burnt-orange); }
 
@@ -510,8 +504,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
+    width: 53px;
+    height: 53px;
     background-color: #e66b27;
     color: white;
     border-radius: 4px;
@@ -532,8 +526,9 @@ body {
     background-image: url('/assets/images/news/map-news.png'); 
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: 78%; /* Adjust based on your image */
+    background-size: 78%; 
     min-height: 840px;
+    
 }
 
 .logo-card {
@@ -644,13 +639,13 @@ body {
 
 /* Hover effect for a single subprefecture (optional) */
 .map-region:hover path {
-  opacity: 80% !important;
+    opacity: 80% !important;
 }
 
 /* THE HIGHLIGHT: When the group has the 'active' class, 
    all paths inside that group turn red/highlight color */
 .map-region.active path {
-  fill: #e74c3c !important; 
+    fill: #e74c3c !important;     
 }
 
 /* list of articles */
@@ -663,6 +658,9 @@ body {
     min-height: 80vh;             /* Ensures white background covers the screen */
 }
 
+.card-logo {
+    z-index: -1;
+}
 
 /* Header Text (Japanese & English subtitled below) */
 .main-title {
@@ -674,6 +672,13 @@ body {
     font-size: 1.1rem;
 }
 
+.breadcrumb {
+    position: absolute;
+    right: 400px;
+    bottom: 50px;
+    font-size: 14px;
+}
+
 /* Breadcrumbs (matching orange theme) */
 .breadcrumb-item + .breadcrumb-item::before {
     content: "▶";
@@ -682,11 +687,12 @@ body {
     padding-top: 2px;
 }
 .breadcrumb-item a {
-    color: #666666;
+    color: #333333;
     text-decoration: none;
+    font-weight: 600;
 }
 .breadcrumb-item.active {
-    color: var(--burnt-orange); /* Matching orange theme */
+    color: var(--burnt-orange); 
 }
 
 /* Pagination Styling (Matching your orange theme) */
@@ -744,9 +750,13 @@ body {
 /* Gray Header Section */
 .header-gray-top {
     background-color: #f2f2f2;
-    padding-bottom: 80px; /* Space for the white section to overlap */
     position: relative;
+    padding-bottom: 16px;
     z-index: 1;
+}
+.header-gray-top svg {
+    display: flex;
+    justify-self: end;
 }
 
 .card-list {
@@ -763,14 +773,19 @@ body {
 .breadcrumb-item + .breadcrumb-item::before {
     content: "▶" !important;
     font-size: 10px;
-    color: #ccc;
+    color: var(--burnt-orange);
 }
 
 /* Smooth card hover */
-.news-card {
+.news-card-list {
     border: none;
-    background: #fff;
+    background: rgba(234, 99, 0, 0.1);
     padding: 25px;
 }
 
+.news-card {
+    border: none;
+    background: #ffffff;
+    padding: 25px;
+}
 
