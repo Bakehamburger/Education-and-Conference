@@ -28,6 +28,10 @@ table {
 
 body {
     font-family: "Zen Kaku Gothic New", sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 img,
@@ -77,17 +81,23 @@ h6 {
     font-weight: normal;
 }
 
+/* 1. Remove the reserved space (the gutter) */
 html {
+    scrollbar-gutter: auto !important; /* Overwrites 'stable' */
+    overflow-y: scroll; /* Keeps it scrollable */
     scroll-behavior: smooth;
-    scrollbar-gutter: stable;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+html::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
 }
 
+main{
+    background-color: var(--white-smoke);
+}
 
 .navbar-horizontal {
     background: rgba(245,245,245, 0.06) !important;
