@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* list of articles */
+/* Subpage Specific Styles */
+/* White Content Section with the Curve */
+.content-white-bottom {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 2;
+    min-height: 80vh;             /* Ensures white background covers the screen */
+}
+
+.card-logo {
+    z-index: -1;
+}
+
+/* Header Text (Japanese & English subtitled below) */
+.main-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.sub-title {
+    font-size: 1.1rem;
+}
+
+.breadcrumb {
+    position: absolute;
+    right: 400px;
+    bottom: 50px;
+    font-size: 14px;
+}
+
+/* Breadcrumbs (matching orange theme) */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "▶";
+    color: #cccccc;
+    font-size: 0.8rem;
+    padding-top: 2px;
+}
+.breadcrumb-item a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: 600;
+}
+.breadcrumb-item.active {
+    color: var(--burnt-orange); 
+}
+
+/* Pagination Styling (Matching your orange theme) */
+.t-group-pagination .page-item {
+    margin: 0 5px; /* Spacing between the numbers */
+}
+
+.t-group-pagination .page-link {
+    border: none;
+    color: #666666; /* Default text color */
+    background: transparent;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px; /* Matches the rounded boxes */
+    transition: all 0.2s ease;
+}
+
+/* Styling for the numeric pages */
+.t-group-pagination .t-number {
+    border-radius: 10px; /* Specific pill/square for number items */
+}
+
+/* Setting 'number 2' active state */
+.t-group-pagination .page-item.active .page-link {
+    background-color: var(--burnt-orange); /* Orange background */
+    color: white !important;
+    box-shadow: 0 4px 6px rgba(230, 107, 39, 0.2);
+}
+
+/* Styling for the Arrow boxes */
+.t-group-pagination .t-arrow .page-link {
+    background-color: #f1f1f1; /* Gray background for arrows */
+    color: #999999;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.t-group-pagination .t-arrow .page-link:hover {
+    background-color: var(--burnt-orange);
+    color: white;
+}
+
+/* Base Background for the whole page */
+.bg-gray-base {
+    background-color: #f2f2f2; /* Light gray from your screenshot */
+    margin: 0;
+    padding: 0;
+}
+
+/* Gray Header Section */
+.header-gray-top {
+    background-color: #f2f2f2;
+    position: relative;
+    padding-bottom: 16px;
+    z-index: 1;
+}
+.header-gray-top svg {
+    display: flex;
+    justify-self: end;
+}
+
+.card-list {
+    width: 60%;
+}
+
+/* Ensure the breadcrumb and titles stay clean */
+.main-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e66b27; /* Orange color */
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "▶" !important;
+    font-size: 10px;
+    color: var(--burnt-orange);
+}
+
+/* Smooth card hover */
+.news-card-list {
+    border: none;
+    background: rgba(234, 99, 0, 0.1);
+    padding: 25px;
+}
+
+.news-card {
+    border: none;
+    background: #ffffff;
+    padding: 25px;
+}

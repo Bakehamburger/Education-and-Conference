@@ -1,5 +1,229 @@
 @charset "UTF-8";
 
+main{
+    background-color: var(--white-smoke);
+    margin: 0 92px !important;
+}
+
+.navbar-horizontal {
+    background: rgba(245,245,245, 0.06) !important;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 0 0 32px 32px;
+}
+
+.desktop-nav-container {
+    display: flex;
+    margin-right: 33px;
+}
+
+.navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.navbar-right-container {
+    display: flex;
+}
+
+.navbar-brand {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #ffc107 !important;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-link {
+    color: black !important;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem !important;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+}
+
+.cta-btn {
+    background: var(--burnt-orange);
+    border: none !important;
+    color: white;
+    font-weight: 700 !important;
+    padding: 15px 20px 10px 11px;
+    border-radius: 8px !important;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: 1rem;
+    display: flex;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    color: #000 !important;
+}
+
+.cta-btn img {
+    margin-left: 10px;
+    height: 18px;
+}
+
+/* Burger Button - Always Visible */
+.burger-btn {
+    background: var(--sunset-gradient);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 12px !important;
+    padding: 0.75rem !important;
+    width: 52px;
+    height: 52px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-btn:hover {
+    background: rgba(255,255,255,0.25) !important;
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.4);
+}
+
+.burger-btn .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile Menu - Full Viewport */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.mobile-menu-header {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2.5rem;
+    color: white;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.mobile-menu-header:hover {
+    background: rgba(255,255,255,0.3);
+    transform: rotate(90deg);
+}
+
+.mobile-nav-links {
+    text-align: center;
+}
+
+.mobile-nav-links a {
+    color: var(--burnt-orange);
+    font-weight: 900;
+    font-size: clamp(2rem, 8vw, 4rem);
+    text-decoration: none;
+    display: block;
+    margin: 1.5rem 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.4s ease;
+    letter-spacing: 2px;
+}
+
+.mobile-nav-links a:nth-child(1) { transition-delay: 0.1s; }
+.mobile-nav-links a:nth-child(2) { transition-delay: 0.2s; }
+.mobile-nav-links a:nth-child(3) { transition-delay: 0.3s; }
+.mobile-nav-links a:nth-child(4) { transition-delay: 0.4s; }
+.mobile-nav-links a:nth-child(5) { transition-delay: 0.5s; }
+
+.mobile-menu.active .mobile-nav-links a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-nav-links a:hover {
+    text-shadow: 0 0 30px rgba(255,255,255,0.8);
+    transform: translateY(-10px) scale(1.05);
+}
+
+.mobile-cta {
+    font-size: 1.5rem !important;
+    padding: 1.25rem 3rem !important;
+    box-shadow: 0 15px 40px rgba(255,193,7,0.5);
+    margin-top: 2rem;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Hide desktop nav on mobile */
+@media (max-width: 991px) {
+    .desktop-nav-container {
+        display: none !important;
+    }
+}
+
 /* Content spacing */
 
 .landing-page {
@@ -10,10 +234,10 @@
     min-height: 100vh; /* This makes it take up 100% of the screen height */
 }
 .firstview {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .firstview img {
@@ -138,6 +362,46 @@
 }
 
 
+/* Main Button */
+.btn-orange-lg {
+    background-color: var(--burnt-orange); /* Replace with your var(--burnt-orange) */
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    min-width: 225px;
+    font-weight: bold;
+    border-radius: 12px; /* Adjusted for the rounded look in your image */
+    overflow: hidden;    /* Keeps the inner corners clipped to the radius */
+    padding: 0;          /* Remove padding from parent */
+}
+
+.btn-text {
+    text-align: center;
+    padding: 15px 60px 15px 20px;
+}
+
+.btn-icon {
+   display: flex;          /* 1. Enable flexbox */
+    align-items: center;    /* 2. Center vertically */
+    justify-content: center; /* 3. Center horizontally */
+    
+    padding: 25px 22px 23px 14px;          /* Keep your padding or set a fixed width */
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    height: 100%;
+}
+
+.btn-icon .bi {
+    font-size: 10px;
+    line-height: 1;
+}
+
+/* Hover effect */
+.btn-orange-lg:hover {
+    filter: brightness(1.1);
+    color: white;
+}
+
 /* Service Card Styles */
 .service-card {
     display: block;
@@ -199,275 +463,6 @@
     align-items: center;
     justify-content: center;
 }
-
-
-/* CASE SECTION */
-.case-section{
-    border-radius: clamp(64px, 10vw, 128px) clamp(64px, 10vw, 128px) 0 0;
-    padding: 128px 0px 140px;
-    background-color: var(--white);
-}
-
-
-.map-region path {
-    fill: var(--burnt-orange);
-    stroke: #ffffff;
-    stroke-width: 1;
-    transition: opacity 0.5s ease;
-    cursor: pointer;
-}
-
-/* Hover effect for a single subprefecture (optional) */
-.map-region:hover path {
-  opacity: 60% !important;
-}
-
-/* THE HIGHLIGHT: When the group has the 'active' class, 
-   all paths inside that group turn red/highlight color */
-.map-region.active path {
-  fill: #e74c3c !important; 
-}
-
-.region-label {
-    position: absolute;
-    display: inline-block;
-    
-    /* Box Styling */
-    background-color: var(--white); /* Makes it look like it's just text inside the box */
-    border: 2px solid var(--burnt-orange); /* High-quality orange color */
-    border-radius: 50px; /* Fully rounded corners */
-    
-    /* Text Styling */
-    color: var(--dark-charcoal);
-    font-size: 16px; /* Adjust based on your preferred design density */
-    font-weight: bold;
-    text-align: center;
-    line-height: 200%;
-    
-    /* Spacing & Sizing (the design has a narrow pill shape) */
-    min-width: 122px;
-    letter-spacing: 0;
-}
-
-/* 5. INDIVIDUAL LABEL POSITIONING using transform centering */
-
-/* Pin coordinate: Top-Right quad */
-.north-label {
-    top: 6%; 
-    left: 56%;
-    transform: translate(-50%, -50%); /* Centers the label on the point */
-}
-
-/* Pin coordinate: Middle-Left quad */
-.central-label {
-    top: 42%; 
-    left: 30%;
-    transform: translate(-50%, -50%);
-}
-
-/* Pin coordinate: Middle-Right quad */
-.east-label {
-    top: 70%; 
-    left: 75%;
-    transform: translate(-50%, -50%);
-}
-
-/* Pin coordinate: Bottom-Left quad */
-.south-label {
-    top: 74%; 
-    left: 19%;
-    transform: translate(-80%, -98%);
-}
-
-
-/* Card Container */
-.case-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease;
-}
-
-.case-card:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
-}
-
-/* Image Wrapper & Label */
-.case-image-wrapper {
-    position: relative;
-    overflow: hidden;
-}
-
-/* Content Area */
-.case-content-area {
-    padding: 15px 0;
-}
-
-.case-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 10px;
-}
-
-.case-tag {
-    border: 1px solid #f35f20;
-    color: #f35f20;
-    padding: 2px 12px;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    white-space: nowrap;
-}
-
-.case-client-name {
-    font-size: 1.1rem;
-    color: #333;
-    margin: 0;
-}
-
-
-@media screen and (min-width: 992px){
-    .case-title-section,
-    .case-headline-section{
-        padding: 0px 92px;
-    }
-    .case-section-inner{
-        padding: 0px 32px 0px; 
-    }
-}
-
-@media screen and (max-width: 576px ){
-    .north-label {
-        top: 10%; 
-        left: 62%;
-        transform: translate(-50%, -50%); /* Centers the label on the point */
-    }
-
-    /* Pin coordinate: Middle-Left quad */
-    .central-label {
-        top: 52%; 
-        left: 18%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* Pin coordinate: Middle-Right quad */
-    .east-label {
-        top: 65%; 
-        left: 82%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* Pin coordinate: Bottom-Left quad */
-    .south-label {
-        top: 80%; 
-        left: 15%;
-        transform: translate(-20%, 140%);
-    }
-
-    .case-card-item {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-
-/* SOLUTION SECTION*/
-/* The Large Outer Container */
- .solution-section-inner{
-        padding: 128px 0px; 
-    }
-
-.solution-section {
-    background: linear-gradient(
-    135deg, 
-        #FE9F5D 20%, 
-        #FD854F 44%, 
-        #FD6C41 67%, 
-        #F35F20 100%
-    );       
-    border-radius: clamp(64px, 10vw, 128px);
-    box-shadow: 0 10px 30px rgba(255, 107, 69, 0.2);
-}
-
-.small-text {
-    font-size: 0.9rem;
-    line-height: 1.8;
-}
-
-.solution-steps-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px; /* Space for the arrows */
-}
-
-.solution-step-card {
-    position: relative; /* Essential for positioning the arrow */
-    background: #ffffff;
-    border-radius: 24px;
-    padding: 35px 0px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
-
-/* Circle Number Styling */
-.step-number {
-    background-color: #f35f20; /* Your corporate orange */
-    color: #fff;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-/* Text Styling */
-.step-title {
-    color: #f35f20;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    letter-spacing: 0.05em;
-}
-
-/* The Attached Arrow (Triangle) */
-.solution-step-card:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: -15px; /* Pulls it outside the card */
-    top: 50%;
-    transform: translateY(-50%);
-    
-    /* Creating the triangle shape */
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid #f35f20; /* Matches your corporate orange */
-    
-    z-index: 1;
-}
-
-
-@media screen and (min-width: 992px){
-    .solution-title{
-        padding: 0px 92px;
-    }
-    .solution-section-inner{
-        padding: 128px 32px; 
-    }
-}
-
-/* Responsive adjustments for mobile */
-
-
-
-
 /*--------------*/
 /*-----NEWS-----*/
 /*--------------*/
@@ -622,5 +617,35 @@
     letter-spacing: 1px;
 }
 
+/* case section */
+.case-section{
+    border-radius: 128px 128px 0 0;
+    margin-top: 128px;
+    background-color: var(--white);
+}
+
+.case-section-inner{
+    padding-top: 128px ;
+}
+
+
+.map-region path {
+    fill: var(--burnt-orange);
+    stroke: #ffffff;
+    stroke-width: 1;
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for a single subprefecture (optional) */
+.map-region:hover path {
+    opacity: 80% !important;
+}
+
+/* THE HIGHLIGHT: When the group has the 'active' class, 
+   all paths inside that group turn red/highlight color */
+.map-region.active path {
+    fill: #e74c3c !important;     
+}
 
 
