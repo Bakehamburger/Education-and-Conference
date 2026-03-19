@@ -83,6 +83,10 @@ html {
 }
 
 :root {
+    /* fonts */
+    --fs-base: 16px;
+    
+    
     --sunset-gradient: linear-gradient(
     to right, 
     #FE9F5D 20%, 
@@ -97,4 +101,13 @@ html {
     --emerald-green: #419755;
     --white-smoke: #F5F5F5;
 
+}
+
+
+.english-text {
+    font-family: "Manrope", sans-serif;
+    color: var(--burnt-orange);
+    font-weight: 800;
+    font-size: var(--fs-base);
+    opacity: 60%;
 }
