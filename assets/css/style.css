@@ -238,34 +238,35 @@ body.menu-open {
   width: 100%;
   display: block;
 }
-.news-container {
+/* .news-container {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     right: 0;
     background: #fff;
-    /* Main rounded corner for the container itself */
     border-top-left-radius: 80px; 
     padding: 16px 50px 25px 16px;
     display: flex;
     align-items: center;
-    /* This makes sure the pseudo-element positions relative to the container */
     overflow: visible; 
+} */
+
+.news-container {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    background:white;
+    padding: 20px 40px 20px 80px;
+    display: flex;
+    align-items: center;
+    overflow: visible;
 }
 
-/* The "Curve Going Outside" (Bottom Left) */
-.news-container::before {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: -120px; /* Moves it to the left of the container */
-    width: 120px;
-    height: 60px;
-    background: transparent;
-    /* This creates the "inverse" curve using a massive shadow */
-    border-bottom-right-radius: 80px; 
-    box-shadow: 25px 0 0 0 #fff; /* The color should match your container background */
-    pointer-events: none;
+
+.news-container {
+  /* This path creates the sharp top curve and the horizontal flare at the bottom left */
+clip-path: path('M 800 0 L 150 0 C 40 0 50 80 40 100 C 40 130 20 150 0 160 L 800 160 Z');
 }
+
 
 /* Styling for the circular image to match your screenshot */
 @media screen and (max-width:575px) {
