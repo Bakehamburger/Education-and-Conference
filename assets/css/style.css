@@ -379,12 +379,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    cursor: pointer;
-    transition: transform 0.2s;
-}
 
-.news-card:hover {
-    transform: translateX(10px);
 }
 
 .news-date {
@@ -403,13 +398,14 @@ body {
     color: white;
     border-radius: 4px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #eee;
 }
 
 .arrow-box:hover {
-    background-color: #cf5a1d; /* Darker orange on hover */
-    color: white;
+    transform: translateX(5px);
 }
+
 
 /* Map Section Styles */
 .map-bg-container {
@@ -507,4 +503,125 @@ body {
     font-size: 0.9rem;
     letter-spacing: 1px;
 }
+
+/* list of articles */
+/* Subpage Specific Styles */
+/* White Content Section with the Curve */
+.content-white-bottom {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 2;
+    min-height: 80vh;             /* Ensures white background covers the screen */
+}
+
+
+/* Header Text (Japanese & English subtitled below) */
+.main-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.sub-title {
+    font-size: 1.1rem;
+}
+
+/* Breadcrumbs (matching orange theme) */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "▶";
+    color: #cccccc;
+    font-size: 0.8rem;
+    padding-top: 2px;
+}
+.breadcrumb-item a {
+    color: #666666;
+    text-decoration: none;
+}
+.breadcrumb-item.active {
+    color: var(--burnt-orange); /* Matching orange theme */
+}
+
+/* Pagination Styling (Matching your orange theme) */
+.t-group-pagination .page-item {
+    margin: 0 5px; /* Spacing between the numbers */
+}
+
+.t-group-pagination .page-link {
+    border: none;
+    color: #666666; /* Default text color */
+    background: transparent;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px; /* Matches the rounded boxes */
+    transition: all 0.2s ease;
+}
+
+/* Styling for the numeric pages */
+.t-group-pagination .t-number {
+    border-radius: 10px; /* Specific pill/square for number items */
+}
+
+/* Setting 'number 2' active state */
+.t-group-pagination .page-item.active .page-link {
+    background-color: var(--burnt-orange); /* Orange background */
+    color: white !important;
+    box-shadow: 0 4px 6px rgba(230, 107, 39, 0.2);
+}
+
+/* Styling for the Arrow boxes */
+.t-group-pagination .t-arrow .page-link {
+    background-color: #f1f1f1; /* Gray background for arrows */
+    color: #999999;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.t-group-pagination .t-arrow .page-link:hover {
+    background-color: var(--burnt-orange);
+    color: white;
+}
+
+/* Base Background for the whole page */
+.bg-gray-base {
+    background-color: #f2f2f2; /* Light gray from your screenshot */
+    margin: 0;
+    padding: 0;
+}
+
+/* Gray Header Section */
+.header-gray-top {
+    background-color: #f2f2f2;
+    padding-bottom: 80px; /* Space for the white section to overlap */
+    position: relative;
+    z-index: 1;
+}
+
+.card-list {
+    width: 60%;
+}
+
+/* Ensure the breadcrumb and titles stay clean */
+.main-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e66b27; /* Orange color */
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "▶" !important;
+    font-size: 10px;
+    color: #ccc;
+}
+
+/* Smooth card hover */
+.news-card {
+    border: none;
+    background: #fff;
+    padding: 25px;
+}
+
 
