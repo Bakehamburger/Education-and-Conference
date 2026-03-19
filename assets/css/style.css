@@ -245,22 +245,26 @@ body.menu-open {
     display: block;
 }
 
+
+
 .news-container {
     position: absolute;
     bottom: -1px;
     right: 0;
-    display: flex;
-    align-items: center;
     overflow: visible;
+    display: flex;
 }
 
 .news-container svg {
     z-index: 0;
 }
 
-.news-container div{
-    z-index: 1;
+.news-content-container {
+    display: flex;
     position: absolute;
+    right: 0;
+    bottom: 20%;
+    align-items: center;
 }
 
 /* Styling for the circular image to match your screenshot */
