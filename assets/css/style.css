@@ -15,10 +15,10 @@ main{
     min-height: 100vh; /* This makes it take up 100% of the screen height */
 }
 .firstview {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 .firstview img {
