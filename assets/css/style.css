@@ -343,124 +343,166 @@ clip-path: path('M 800 0 L 150 0 C 40 0 50 80 40 100 C 40 130 20 150 0 160 L 800
 }
 
 
+/*--------------*/
+/*-----NEWS-----*/
+/*--------------*/
 
-/* service */
-.service-section-header h2 {
-    color: var(--burnt-orange);
-    font-size: 40px;
-    font-weight: 800;
+
+body {
+    background-color: #f8f8f8;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-.service-section-header h1 {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 130%;
-}
+/* News Styles */
+.text-orange { color: var(--burnt-orange); }
 
-.service-section-header p:nth-child(2) {
-    font-weight: 600;
-    line-height: 2;
-}
-
-
-/* Main Button */
-.btn-orange-lg {
-    background-color: var(--burnt-orange); /* Replace with your var(--burnt-orange) */
+.btn-orange-action {
+    background-color: var(--burnt-orange);
     color: white;
-    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 25px;
     display: inline-flex;
+    justify-content: space-between;
+    width: 180px;
     align-items: center;
-    min-width: 225px;
+}
+.btn-orange-action:hover {
+    border-radius: 2px;
+    margin-left: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.news-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.news-card:hover {
+    transform: translateX(10px);
+}
+
+.news-date {
+    color: var(--brand-orange);
     font-weight: bold;
-    border-radius: 12px; /* Adjusted for the rounded look in your image */
-    overflow: hidden;    /* Keeps the inner corners clipped to the radius */
-    padding: 0;          /* Remove padding from parent */
-}
-
-.btn-text {
-    text-align: center;
-    padding: 15px 60px 15px 20px;
-}
-
-.btn-icon {
-   display: flex;          /* 1. Enable flexbox */
-    align-items: center;    /* 2. Center vertically */
-    justify-content: center; /* 3. Center horizontally */
-    
-    padding: 25px 22px 23px 14px;          /* Keep your padding or set a fixed width */
-    border-left: 1px solid rgba(255, 255, 255, 0.4);
-    height: 100%;
-}
-
-.btn-icon .bi {
-    font-size: 10px;
-    line-height: 1;
-}
-
-/* Hover effect */
-.btn-orange-lg:hover {
-    filter: brightness(1.1);
-    color: white;
-}
-
-/* Service Card Styles */
-.service-card {
-    display: block;
-    position: relative;
-    height: 350px;
-    border-radius: 15px;
-    overflow: hidden;
-    background-position: center;
-    background-size: cover;
-    text-decoration: none;
-    color: white !important;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-3px);
-}
-
-
-.card-content {
-    position: relative;
-    z-index: 2;
-    padding: 30px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.service-card h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-.service-card h3 span {
-    font-size: 1.8rem;
-}
-
-.english-label {
     font-size: 0.9rem;
-    margin-bottom: auto; /* Pushes description to bottom */
 }
 
-.description {
-    font-size: 0.95rem;
-    max-width: 80%;
-    margin-bottom: 0;
-    line-height: 1.6;
-}
-
-/* Orange Arrow Icon */
-.arrow-btn {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    width: 40px;
-    height: 30px;
+.arrow-box {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #e66b27;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
 }
+
+.arrow-box:hover {
+    background-color: #cf5a1d; /* Darker orange on hover */
+    color: white;
+}
+
+/* Map Section Styles */
+.map-bg-container {
+    position: relative;
+    /* Replace with your map image path */
+    background-image: url('/assets/images/news/map-news.png'); 
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 78%; /* Adjust based on your image */
+    min-height: 840px;
+}
+
+.logo-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    height: 100%;
+    font-size: 0.8rem;
+    border: 1px solid #eee;
+}
+
+.map-label {
+    position: absolute;
+    bottom: 200px;
+    right: 0;
+    background: linear-gradient(to right, #f39c12, var(--burnt-orange));
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+/* For small screens, move map below text */
+@media (max-width: 992px) {
+    .map-bg-container {
+        background-position: bottom center;
+        background-size: 100%;
+    }
+}
+
+/* Ensure the logo-card provides the 'anchor' point for absolute items */
+.logo-card.position-relative {
+    position: relative; /* Safety in case bootstrap class doesn't load */
+    /* Add padding at the bottom so text doesn't overlap the icon on small screens */
+    padding-bottom: 30px; 
+    transition: box-shadow 0.3s ease;
+}
+.gallery-section {
+    margin-top: -200px;
+}
+
+/* Hover effect for the card (optional but good practice) */
+.logo-card.position-relative:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Styling the external link icon */
+.external-icon {
+    position: absolute;  /* Position relative to .logo-card */
+    bottom: 10px;        /* Distance from the bottom edge */
+    right: 10px;         /* Distance from the right edge */
+    color: #e66b27;      /* Set the orange color to match your theme */
+    font-size: 1.1rem;   /* Adjust size of the icon */
+    opacity: 0.8;        /* Slightly transparent */
+    transition: opacity 0.3s ease;
+}
+
+/* Make the icon full opacity when hovering over the card */
+.logo-card:hover .external-icon {
+    opacity: 1;
+}
+
+.placeholder-box {
+    background-color: #e0e0e0; /* The specific light gray from the layout */
+    color: #888888;          /* The color for the placeholder text */
+    border-radius: 12px;     /* Match the rounded corner style of the layout */
+    
+    /* This maintains a rectangular shape (4:3 ratio) 
+       regardless of how wide the screen gets */
+    aspect-ratio: 4 / 3;
+    
+    border: 1px solid #dcdcdc; /* Subtle border for definition */
+    transition: all 0.3s ease;
+}
+
+/* Optional hover state to make it interactive */
+.placeholder-box:hover {
+    background-color: #d8d8d8;
+    cursor: pointer;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.placeholder-text {
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
