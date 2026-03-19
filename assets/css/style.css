@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-main{
-    background-color: var(--white-smoke);
-    margin: 0 92px !important;
-}
-
 .navbar-horizontal {
     background: rgba(245,245,245, 0.06) !important;
     backdrop-filter: blur(40px);
@@ -469,15 +464,278 @@ clip-path: path('M 800 0 L 150 0 C 40 0 50 80 40 100 C 40 130 20 150 0 160 L 800
     align-items: center;
     justify-content: center;
 }
+
+
+/* CASE SECTION */
+.case-section{
+    border-radius: clamp(64px, 10vw, 128px) clamp(64px, 10vw, 128px) 0 0;
+    padding: 128px 0px 140px;
+    background-color: var(--white);
+}
+
+
+.map-region path {
+    fill: var(--burnt-orange);
+    stroke: #ffffff;
+    stroke-width: 1;
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for a single subprefecture (optional) */
+.map-region:hover path {
+  opacity: 60% !important;
+}
+
+/* THE HIGHLIGHT: When the group has the 'active' class, 
+   all paths inside that group turn red/highlight color */
+.map-region.active path {
+  fill: #e74c3c !important; 
+}
+
+.region-label {
+    position: absolute;
+    display: inline-block;
+    
+    /* Box Styling */
+    background-color: var(--white); /* Makes it look like it's just text inside the box */
+    border: 2px solid var(--burnt-orange); /* High-quality orange color */
+    border-radius: 50px; /* Fully rounded corners */
+    
+    /* Text Styling */
+    color: var(--dark-charcoal);
+    font-size: 16px; /* Adjust based on your preferred design density */
+    font-weight: bold;
+    text-align: center;
+    line-height: 200%;
+    
+    /* Spacing & Sizing (the design has a narrow pill shape) */
+    min-width: 122px;
+    letter-spacing: 0;
+}
+
+/* 5. INDIVIDUAL LABEL POSITIONING using transform centering */
+
+/* Pin coordinate: Top-Right quad */
+.north-label {
+    top: 6%; 
+    left: 56%;
+    transform: translate(-50%, -50%); /* Centers the label on the point */
+}
+
+/* Pin coordinate: Middle-Left quad */
+.central-label {
+    top: 42%; 
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+/* Pin coordinate: Middle-Right quad */
+.east-label {
+    top: 70%; 
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+/* Pin coordinate: Bottom-Left quad */
+.south-label {
+    top: 74%; 
+    left: 19%;
+    transform: translate(-80%, -98%);
+}
+
+
+/* Card Container */
+.case-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+/* Image Wrapper & Label */
+.case-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Content Area */
+.case-content-area {
+    padding: 15px 0;
+}
+
+.case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.case-tag {
+    border: 1px solid #f35f20;
+    color: #f35f20;
+    padding: 2px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.case-client-name {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+}
+
+
+@media screen and (min-width: 992px){
+    .case-title-section,
+    .case-headline-section{
+        padding: 0px 92px;
+    }
+    .case-section-inner{
+        padding: 0px 32px 0px; 
+    }
+}
+
+@media screen and (max-width: 576px ){
+    .north-label {
+        top: 10%; 
+        left: 62%;
+        transform: translate(-50%, -50%); /* Centers the label on the point */
+    }
+
+    /* Pin coordinate: Middle-Left quad */
+    .central-label {
+        top: 52%; 
+        left: 18%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Pin coordinate: Middle-Right quad */
+    .east-label {
+        top: 65%; 
+        left: 82%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Pin coordinate: Bottom-Left quad */
+    .south-label {
+        top: 80%; 
+        left: 15%;
+        transform: translate(-20%, 140%);
+    }
+
+    .case-card-item {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* SOLUTION SECTION*/
+/* The Large Outer Container */
+ .solution-section-inner{
+        padding: 128px 0px; 
+    }
+
+.solution-section {
+    background: linear-gradient(
+    135deg, 
+        #FE9F5D 20%, 
+        #FD854F 44%, 
+        #FD6C41 67%, 
+        #F35F20 100%
+    );       
+    border-radius: clamp(64px, 10vw, 128px);
+    box-shadow: 0 10px 30px rgba(255, 107, 69, 0.2);
+}
+
+.small-text {
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.solution-steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Space for the arrows */
+}
+
+.solution-step-card {
+    position: relative; /* Essential for positioning the arrow */
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 35px 0px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Circle Number Styling */
+.step-number {
+    background-color: #f35f20; /* Your corporate orange */
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Text Styling */
+.step-title {
+    color: #f35f20;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 0.05em;
+}
+
+/* The Attached Arrow (Triangle) */
+.solution-step-card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -15px; /* Pulls it outside the card */
+    top: 50%;
+    transform: translateY(-50%);
+    
+    /* Creating the triangle shape */
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #f35f20; /* Matches your corporate orange */
+    
+    z-index: 1;
+}
+
+
+@media screen and (min-width: 992px){
+    .solution-title{
+        padding: 0px 92px;
+    }
+    .solution-section-inner{
+        padding: 128px 32px; 
+    }
+}
+
+/* Responsive adjustments for mobile */
+
+
+
+
 /*--------------*/
 /*-----NEWS-----*/
 /*--------------*/
-
-
-body {
-    background-color: #f8f8f8;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-}
 
 /* News Styles */
 .text-orange { color: var(--burnt-orange); }
@@ -632,34 +890,5 @@ body {
     letter-spacing: 1px;
 }
 
-/* case section */
-.case-section{
-    border-radius: 128px 128px 0 0;
-    margin-top: 128px;
-    background-color: var(--white);
-}
 
-.case-section-inner{
-    padding-top: 128px ;
-}
-
-
-.map-region path {
-    fill: var(--burnt-orange);
-    stroke: #ffffff;
-    stroke-width: 1;
-    transition: opacity 0.5s ease;
-    cursor: pointer;
-}
-
-/* Hover effect for a single subprefecture (optional) */
-.map-region:hover path {
-  opacity: 80% !important;
-}
-
-/* THE HIGHLIGHT: When the group has the 'active' class, 
-   all paths inside that group turn red/highlight color */
-.map-region.active path {
-  fill: #e74c3c !important; 
-}
 
