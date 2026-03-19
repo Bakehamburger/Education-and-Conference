@@ -128,7 +128,8 @@ main{
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #fff;
+
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
@@ -177,7 +178,7 @@ main{
 }
 
 .mobile-nav-links a {
-    color: white;
+    color: var(--burnt-orange);
     font-weight: 900;
     font-size: clamp(2rem, 8vw, 4rem);
     text-decoration: none;
