@@ -89,6 +89,266 @@ body::-webkit-scrollbar {
 }
 
 
+.navbar-horizontal {
+    background: rgba(245,245,245, 0.06) !important;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 0 0 32px 32px;
+}
+
+.desktop-nav-container {
+    display: flex;
+    margin-right: 33px;
+}
+
+.navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.navbar-right-container {
+    display: flex;
+}
+
+.navbar-brand {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #ffc107 !important;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-link {
+    color: black !important;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem !important;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+}
+
+.cta-btn {
+    background: var(--burnt-orange);
+    border: none !important;
+    color: white;
+    font-weight: 700 !important;
+    padding: 15px 20px 10px 11px;
+    border-radius: 8px !important;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: 1rem;
+    display: flex;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    color: #000 !important;
+}
+
+.cta-btn img {
+    margin-left: 10px;
+    height: 18px;
+}
+
+/* Burger Button - Always Visible */
+.burger-btn {
+    background: var(--sunset-gradient);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 12px !important;
+    padding: 0.75rem !important;
+    width: 52px;
+    height: 52px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-btn:hover {
+    background: rgba(255,255,255,0.25) !important;
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.4);
+}
+
+.burger-btn .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile Menu - Full Viewport */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.mobile-menu-header {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2.5rem;
+    color: white;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.mobile-menu-header:hover {
+    background: rgba(255,255,255,0.3);
+    transform: rotate(90deg);
+}
+
+.mobile-nav-links {
+    text-align: center;
+}
+
+.mobile-nav-links a {
+    color: white;
+    font-weight: 900;
+    font-size: clamp(2rem, 8vw, 4rem);
+    text-decoration: none;
+    display: block;
+    margin: 1.5rem 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.4s ease;
+    letter-spacing: 2px;
+}
+
+.mobile-nav-links a:nth-child(1) { transition-delay: 0.1s; }
+.mobile-nav-links a:nth-child(2) { transition-delay: 0.2s; }
+.mobile-nav-links a:nth-child(3) { transition-delay: 0.3s; }
+.mobile-nav-links a:nth-child(4) { transition-delay: 0.4s; }
+.mobile-nav-links a:nth-child(5) { transition-delay: 0.5s; }
+
+.mobile-menu.active .mobile-nav-links a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-nav-links a:hover {
+    text-shadow: 0 0 30px rgba(255,255,255,0.8);
+    transform: translateY(-10px) scale(1.05);
+}
+
+.mobile-cta {
+    font-size: 1.5rem !important;
+    padding: 1.25rem 3rem !important;
+    box-shadow: 0 15px 40px rgba(255,193,7,0.5);
+    margin-top: 2rem;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Hide desktop nav on mobile */
+@media (max-width: 991px) {
+    .desktop-nav-container {
+        display: none !important;
+    }
+}
+
+/* button orange */
+
+/* Main Button */
+.btn-orange-lg {
+    background-color: var(--burnt-orange); /* Replace with your var(--burnt-orange) */
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    min-width: 225px;
+    font-weight: bold;
+    border-radius: 12px; /* Adjusted for the rounded look in your image */
+    overflow: hidden;    /* Keeps the inner corners clipped to the radius */
+    padding: 0;          /* Remove padding from parent */
+}
+
+.btn-text {
+    text-align: center;
+    padding: 15px 60px 15px 20px;
+}
+
+.btn-icon {
+   display: flex;          /* 1. Enable flexbox */
+    align-items: center;    /* 2. Center vertically */
+    justify-content: center; /* 3. Center horizontally */
+    
+    padding: 25px 22px 23px 14px;          /* Keep your padding or set a fixed width */
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    height: 100%;
+}
+
+.btn-icon .bi {
+    font-size: 10px;
+    line-height: 1;
+}
+
+/* Hover effect */
+.btn-orange-lg:hover {
+    filter: brightness(1.1);
+    color: white;
+}
+
 
 :root {
     /* fonts */
