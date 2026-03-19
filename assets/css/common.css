@@ -82,6 +82,14 @@ html {
     scrollbar-gutter: stable;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
 :root {
     /* fonts */
     --fs-base: 16px;
@@ -100,7 +108,7 @@ html {
     --mint-white: #ECF8EE;
     --emerald-green: #419755;
     --white-smoke: #F5F5F5;
-
+    --dark-charcoal: #333333;
 }
 
 .english-text {
