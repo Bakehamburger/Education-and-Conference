@@ -34,3 +34,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+
+
+// Select all the groups we created
+const regionGroups = document.querySelectorAll('.map-region');
+
+regionGroups.forEach(group => {
+  group.addEventListener('click', function() {
+    // 1. Remove 'active' from all groups to clear previous selection
+    regionGroups.forEach(g => g.classList.remove('active'));
+    
+    // 2. Add 'active' to the group that was just clicked
+    this.classList.add('active');
+    
+    // 3. Optional: Get the ID to show the name of the region
+    console.log("You clicked the " + this.id + " region!");
+  });
+});
+

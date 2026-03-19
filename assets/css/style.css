@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+main{
+    background-color: var(--white-smoke);
+    margin: 0 92px !important;
+}
+
 .navbar-horizontal {
     background: rgba(245,245,245, 0.06) !important;
     backdrop-filter: blur(40px);
@@ -339,4 +344,36 @@ body.menu-open {
 
 .orange {
     color: var(--burnt-orange);
+}
+
+
+/* case section */
+.case-section{
+    border-radius: 128px 128px 0 0;
+    margin-top: 128px;
+    background-color: var(--white);
+}
+
+.case-section-inner{
+    padding-top: 128px ;
+}
+
+
+.map-region path {
+    fill: var(--burnt-orange);
+    stroke: #ffffff;
+    stroke-width: 1;
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for a single subprefecture (optional) */
+.map-region:hover path {
+  opacity: 80% !important;
+}
+
+/* THE HIGHLIGHT: When the group has the 'active' class, 
+   all paths inside that group turn red/highlight color */
+.map-region.active path {
+  fill: #e74c3c !important; 
 }
