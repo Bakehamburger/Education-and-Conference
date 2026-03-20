@@ -81,19 +81,7 @@ h6 {
     font-weight: normal;
 }
 
-/* 1. Remove the reserved space (the gutter) */
-html {
-    scrollbar-gutter: auto !important; /* Overwrites 'stable' */
-    overflow-y: scroll; /* Keeps it scrollable */
-    scroll-behavior: smooth;
-    scrollbar-width: none !important;
-    -ms-overflow-style: none !important;
-}
 
-html::-webkit-scrollbar {
-    display: none !important;
-    width: 0 !important;
-}
 
 main{
     background-color: var(--white-smoke);
