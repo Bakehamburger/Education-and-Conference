@@ -4,7 +4,7 @@
 /* Content spacing */
 .landing-page {
     position: relative;
-    background: url('/assets/images/service/lgs-lp.png');
+    background: url('/assets/images/service/ss-lp.png');
     background-size: cover; /* Ensures the image fills the space */
     background-position: center;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@
     font-size: 40px;
     font-weight: 800;
     margin: 0;
-    color: white;
+    color: white ;
 }
 
 .sub-title {
