@@ -434,17 +434,23 @@ body.menu-open {
 }
 
 .case-tag {
-    border: 1px solid #f35f20;
-    color: #f35f20;
-    padding: 2px 12px;
+    border: 1px solid var(--burnt-orange);
+    color: var(--burnt-orange);
+    padding: 6px;
     border-radius: 50px;
-    font-size: 0.75rem;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 100%;
     white-space: nowrap;
 }
 
 .case-client-name {
-    font-size: 1.1rem;
-    color: #333;
+    color: var(--dark-charcoal);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 100%;
     margin: 0;
 }
 
@@ -495,19 +501,24 @@ body.menu-open {
 
 
 /* SOLUTION SECTION*/
-/* The Large Outer Container */
- .solution-section-inner{
-        padding-top: 128px; 
-        padding-bottom: 128px; 
-    }
 
 /* Background with 80% Opacity */
 .solution-section {
     position: relative;
-    padding: 60px 0;
     overflow: hidden;
     z-index: 1;
+    background: linear-gradient(
+        to bottom, 
+        #FFFFFF 50%, 
+        #F5F5F5 50%
+    );
 }
+
+ .solution-section-inner{
+    padding-top: 128px; 
+    padding-bottom: 128px; 
+}
+
 
 .solution-section::before {
     content: "";
@@ -518,15 +529,15 @@ body.menu-open {
         #FE9F5D 20%, 
         #FD854F 44%, 
         #FD6C41 67%, 
-        #F35F20 100%);
-    opacity: 0.8;
-    border-radius: clamp(32px, 10vw, 128px);
+        #F35F20 100%);       
+    opacity: 0.8; 
     z-index: -1;
+    border-radius: clamp(32px, 10vw, 128px);
 }
 
 /* Uniform Card Styling */
 .solution-step-card {
-    background: #ffffff;
+    background: var(--white);
     border-radius: 24px;
     padding: 35px 15px;
     display: flex;
@@ -541,19 +552,20 @@ body.menu-open {
 /* Element Styling */
 .step-number {
     background-color: var(--burnt-orange);
-    color: white;
+    color: var(--white);
     width: 30px;
     height: 30px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    
     font-family: "Manrope", sans-serif;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.03em;
     line-height: 100%;
-    margin-bottom: 22x;
+    margin-bottom: 22px;
 }
 
 .step-title {
@@ -620,7 +632,13 @@ body.menu-open {
 @media screen and  (max-width: 991px){
     .solution-steps-wrapper {
         flex-direction: column !important;
-        gap: 20px;
+        gap: 0 !important;
+    }
+
+    .solution-steps-wrapper > div {
+        /* This margin creates the 'white space' for the arrow to sit in */
+        margin-bottom: 16px; 
+        position: relative;
     }
 
     .solution-step-card {
@@ -631,13 +649,18 @@ body.menu-open {
         width: 100% !important;
         max-width: 100% !important;
         min-height: auto !important;
-        padding: 15px 25px;
-        border-radius: 20px;
+        padding: 15px 28px 15px 22px;
+        border-radius: 16px;
+    }
+
+    .solution-step-card {
+        min-height: 111px;
+        overflow: visible !important;
     }
 
     .step-number {
         margin-bottom: 0 !important; /* Remove desktop bottom margin */
-        margin-right: 15px;
+        margin-right: 34px;
         flex-shrink: 0;
     }
 
@@ -645,12 +668,9 @@ body.menu-open {
         margin-bottom: 0 !important;
         text-align: left;
         flex-grow: 1; /* Pushes the icon to the right */
-        font-size: 1.1rem;
     }
 
     .step-icon img {
-        height: 40px;
-        width: 40px;
         margin-left: auto;
     }
 
@@ -659,20 +679,20 @@ body.menu-open {
         content: "";
         position: absolute;
         /* Position at the bottom center of the card */
-        bottom: -22px; 
+        bottom: -15px; 
         left: 50%;
         transform: translateX(-50%);
-        right: auto;
-        top: auto;
+        right: auto !important;
+        top: auto !important;
         
         /* Triangle pointing DOWN */
         border-left: 12px solid transparent;
         border-right: 12px solid transparent;
-        border-top: 15px solid #F35F20; 
+        border-top: 15px solid var(--burnt-orange); 
         border-bottom: 0;
         
         display: block !important;
-        z-index: 5;
+        z-index: 999;
     }
 
     /* Hide arrow on the last step (Step 5) */
@@ -687,6 +707,45 @@ body.menu-open {
     }
 }
 
+
+/* Marquee Section */
+.phrase-marquee-section {
+    overflow: hidden;
+    width: 100%;
+}
+
+.marquee-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-track {
+    display: flex;
+    padding-left: 0;
+    /* Adjust '30s' to change speed (Higher = Slower) */
+    animation: marquee-move 30s linear infinite;
+}
+
+.marquee-track span {
+    display: inline-block;
+    font-size: 188px;
+    font-weight: 800;
+    color: rgba(234,99,0,0.05); 
+    padding-right: 20px;
+    line-height: 1; 
+    margin: 0;
+}
+
+/* THE ANIMATION */
+@keyframes marquee-move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
 
 
 
