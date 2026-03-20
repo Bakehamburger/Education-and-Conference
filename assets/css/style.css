@@ -467,13 +467,14 @@ body.menu-open {
 
 /* case section */
 .case-section{
-    border-radius: 128px 128px 0 0;
+    border-radius: clamp(64px, 10vw, 128px) clamp(64px, 10vw, 128px) 0 0;
     margin-top: 128px;
     background-color: var(--white);
 }
 
 .case-section-inner{
-    padding-top: 128px ;
+    padding-top: 128px;
+    padding-bottom: 128px;
 }
 
 
@@ -556,9 +557,6 @@ body.menu-open {
     transition: transform 0.3s ease;
 }
 
-.case-card:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
-}
 
 /* Image Wrapper & Label */
 .case-image-wrapper {
@@ -600,7 +598,7 @@ body.menu-open {
         padding: 0px 92px;
     }
     .case-section-inner{
-        padding: 0px 32px 0px; 
+        padding: 128px 32px; 
     }
 }
 
@@ -642,94 +640,198 @@ body.menu-open {
 /* SOLUTION SECTION*/
 /* The Large Outer Container */
  .solution-section-inner{
-        padding: 128px 0px; 
+        padding-top: 128px; 
+        padding-bottom: 128px; 
     }
 
+/* Background with 80% Opacity */
 .solution-section {
+    position: relative;
+    padding: 60px 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.solution-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
     background: linear-gradient(
-    135deg, 
+        135deg,
         #FE9F5D 20%, 
         #FD854F 44%, 
         #FD6C41 67%, 
-        #F35F20 100%
-    );       
-    border-radius: clamp(64px, 10vw, 128px);
-    box-shadow: 0 10px 30px rgba(255, 107, 69, 0.2);
+        #F35F20 100%);
+    opacity: 0.8;
+    border-radius: clamp(32px, 10vw, 128px);
+    z-index: -1;
 }
 
-.small-text {
-    font-size: 0.9rem;
-    line-height: 1.8;
-}
-
-.solution-steps-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px; /* Space for the arrows */
-}
-
+/* Uniform Card Styling */
 .solution-step-card {
-    position: relative; /* Essential for positioning the arrow */
     background: #ffffff;
     border-radius: 24px;
-    padding: 35px 0px;
-    flex: 1;
+    padding: 35px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    min-height: 241px; /* Ensures vertical uniformity */
 }
 
-/* Circle Number Styling */
+
+/* Element Styling */
 .step-number {
-    background-color: #f35f20; /* Your corporate orange */
-    color: #fff;
-    width: 32px;
-    height: 32px;
+    background-color: var(--burnt-orange);
+    color: white;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-/* Text Styling */
-.step-title {
-    color: #f35f20;
-    font-size: 1.1rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
     font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 100%;
+    margin-bottom: 22x;
+}
+
+.step-title {
+    color: var(--burnt-orange);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 100%;
     margin-bottom: 25px;
-    letter-spacing: 0.05em;
 }
 
-/* The Attached Arrow (Triangle) */
-.solution-step-card:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: -15px; /* Pulls it outside the card */
-    top: 50%;
-    transform: translateY(-50%);
-    
-    /* Creating the triangle shape */
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid #f35f20; /* Matches your corporate orange */
-    
-    z-index: 1;
+.step-icon img {
+    height: 58px;
+    width: 58px;
+    object-fit: contain;
 }
 
 
-@media screen and (min-width: 992px){
-    .solution-title{
+/* Arrow Logic (Desktop/Large Tablets Only) */
+@media screen and  (min-width: 992px) {
+    .solution-steps-wrapper {
+        display: flex;
+        justify-content: center; 
+        gap: 26px; 
+        align-items: stretch;
+    }
+    .solution-step-card {
+        position: relative;        
+        width: 100%; 
+    }
+    
+    /* THE SNAP FIX: Target the last column to push its content to the right */
+    .solution-steps-wrapper > div:last-child {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .solution-step-card::after {
+        content: "";
+        position: absolute;
+        /* Position the arrow in the gutter so it doesn't push the card */
+        right: -20px; 
+        top: 50%;
+        transform: translateY(-50%);
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 20px solid #F35F20;
+        z-index: 2;
+    }
+
+    /* Ensure no arrow on the last card */
+    .solution-steps-wrapper > div:last-child .solution-step-card::after {
+        display: none;   
+    }
+
+    .solution-title {
         padding: 0px 92px;
     }
-    .solution-section-inner{
+    .solution-section-inner {
         padding: 128px 32px; 
     }
 }
+
+@media screen and  (max-width: 991px){
+    .solution-steps-wrapper {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .solution-step-card {
+        flex-direction: row !important; 
+        justify-content: flex-start;
+        align-items: center;
+        
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: auto !important;
+        padding: 15px 25px;
+        border-radius: 20px;
+    }
+
+    .step-number {
+        margin-bottom: 0 !important; /* Remove desktop bottom margin */
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    .step-title {
+        margin-bottom: 0 !important;
+        text-align: left;
+        flex-grow: 1; /* Pushes the icon to the right */
+        font-size: 1.1rem;
+    }
+
+    .step-icon img {
+        height: 40px;
+        width: 40px;
+        margin-left: auto;
+    }
+
+    /* Create the downward pointing arrow between cards */
+    .solution-step-card::after {
+        content: "";
+        position: absolute;
+        /* Position at the bottom center of the card */
+        bottom: -22px; 
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        top: auto;
+        
+        /* Triangle pointing DOWN */
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 15px solid #F35F20; 
+        border-bottom: 0;
+        
+        display: block !important;
+        z-index: 5;
+    }
+
+    /* Hide arrow on the last step (Step 5) */
+    /* 3. THE CRITICAL FIX: Hide arrow on the last card (Step 5) */
+    .solution-steps-wrapper > div:last-child {
+        margin-bottom: 0;
+    }
+    
+    .solution-steps-wrapper > div:last-child .solution-step-card::after {
+        display: none !important;
+        content: none;
+    }
+}
+
+
+
 
 
 
