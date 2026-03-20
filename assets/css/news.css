@@ -26,9 +26,19 @@
 .breadcrumb {
     position: absolute;
     right: 400px;
-    bottom: 50px;
+    padding-top: 40px;
     font-size: 14px;
 }
+
+@media screen and (max-width: 576px) {
+.breadcrumb {
+    position: absolute;
+    right: 150px;
+    padding-top: 20px;
+    font-size: 14px;
+}
+}
+
 
 /* Breadcrumbs (matching orange theme) */
 .breadcrumb-item + .breadcrumb-item::before {
@@ -103,6 +113,7 @@
     background-color: #f2f2f2;
     position: relative;
     padding-bottom: 16px;
+    margin-left: 40px;
     z-index: 1;
 }
 .header-gray-top svg {
@@ -110,8 +121,20 @@
     justify-self: end;
 }
 
+@media screen and (min-width: 1024px) {
 .card-list {
-    width: 60%;
+    display: flex;
+    justify-self: center;
+    width: 80%;
+}
+}
+
+@media screen and (max-width: 576px) {
+.card-list-mobile {
+    display: flex;
+    justify-self: center;
+    width: 100%;
+}
 }
 
 /* Ensure the breadcrumb and titles stay clean */
@@ -132,6 +155,7 @@
     border: none;
     background: rgba(234, 99, 0, 0.1);
     padding: 25px;
+    border-radius: 16px;
 }
 
 .news-card {
@@ -139,3 +163,23 @@
     background: #ffffff;
     padding: 25px;
 }
+
+.arrow-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    background-color: #e66b27;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #eee;
+}
+
+.arrow-box:hover {
+    transform: translateX(5px);
+}
+
+    
