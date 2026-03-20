@@ -5,6 +5,10 @@
     --bg-grey: #F5F5F5;
 }
 
+main {
+  background-color: white;
+}
+
 .service-header {
     position: relative;
     background-color: var(--bg-grey);
@@ -45,12 +49,6 @@
     height: 93px; /* Matches SVG height */
 }
 
-.s-curve-svg {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 .breadcrumb-overlay {
     position: absolute;
     bottom: 30px; /* Adjust to center vertically in the white area */
@@ -61,6 +59,28 @@
     align-items: center;
     gap: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .curve-container  {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 341px !important; /* Matches SVG width */
+    height: 51px !important; /* Matches SVG height */
+  }
+  
+  .breadcrumb-overlay {
+    position: absolute;
+    bottom: 20px !important; /* Adjust to center vertically in the white area */
+    left: 45px !important;   /* Adjust to match horizontal padding in image */
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+}
+
 
 .breadcrumb-arrow {
     color: var(--burnt-orange);
@@ -139,127 +159,278 @@
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-
+/* solution */
 .solutions-section {
-background: 
-    /* The Noise Layer (Tiled) */
+  background: 
     url('https://grainy-gradients.vercel.app/noise.svg'), 
-    /* Your Gradient Layer */
-    linear-gradient(135deg, #FE9F5D 20%, #FD854F 44%, #FD6C41 67%, #EA6300 100%);
-    
+    linear-gradient(135deg, #FE9F5D 0%, #FD854F 40%, #EA6300 100%);
   background-blend-mode: overlay;
-  padding: 104px 92px 62px 92px;
-  border-radius: 128px; /* Large rounded corners like the image */
+  padding: 80px 60px;
+  border-radius: 80px; /* Adjusted to look more natural */
   color: #fff;
-
+  margin: 20px 0;
 }
 
-/* Header Setup */
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 60px;
-  gap: 40px;
-}
-
-.header-left h2 {
-  font-size: 2rem;
+/* Header Typography */
+.solutions-section .main-title {
+  font-size: 2.2rem;
+  font-weight: 800;
   line-height: 1.4;
-  font-weight: bold;
+  color: white;
 }
 
-.header-right p {
-  font-size: 0.9rem;
+.description-text p {
+  font-size: 0.95rem;
   line-height: 1.8;
-  max-width: 500px;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
-/* Process Cards */
-.process-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 100px;
-}
-
-.card {
+/* Process Cards Styling */
+.process-card {
   background: #fff;
-  border-radius: 15px;
-  width: 160px;
-  height: 180px;
+  border-radius: 15px; /* Slightly rounder like the image */
+  padding: 40px 20px;  /* Increase top/bottom, decrease left/right */
+  text-align: center;
+  width: 211px;
+  height: 241px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  color: #ed7d31; /* Orange text inside card */
+  justify-content: space-between; /* Spaced out elements */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  color: #f37021;
+  aspect-ratio: 1 / 1.1; /* This forces a tall-rectangle shape */
 }
-
 .step-number {
-  background: #ed7d31;
+  background: #f37021;
   color: #fff;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
+  font-weight: bold;
   margin-bottom: 15px;
 }
 
 .step-label {
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  margin-top: 10px;
   margin-bottom: 20px;
+  white-space: nowrap; /* Keeps Japanese text on one line if possible */
 }
-
 .step-icon {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+  width: 45px;
+  height: 45px;
+  filter: invert(56%) sepia(85%) saturate(1450%) hue-rotate(344deg) brightness(98%) contrast(92%);
 }
 
-/* The Triangles/Arrows */
-.process-arrow {
-  width: 0; 
-  height: 0; 
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #d66a1e; /* Darker orange for the arrow */
+/* The Arrow logic */
+@media (min-width: 768px) {
+  .process-col {
+    position: relative;
+  }
+  .process-col::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 19px;
+    transform: translateY(-50%);
+    width: 0; 
+    height: 0; 
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 24px solid #d66a1e; /* Darker orange triangle */
+    z-index: 5;
+  }
 }
 
-/* Features Section */
-.features-title h3 {
-  font-size: 1.8rem;
-  margin-bottom: 40px;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+/* Features Styling */
+.features-header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 40px;
 }
 
 .feature-num {
-  font-size: 4rem;
-  font-weight: bold;
-  opacity: 0.4;
+  font-size: 5.5rem; /* Large impact numbers */
+  font-weight: 800;
+  opacity: 0.3;
+  line-height: 1;
   display: block;
-  margin-bottom: -10px;
 }
 
-.feature-item h4 {
-  font-size: 1.5rem;
+.feature-title {
+  font-size: 1.8rem;
+  font-weight: bold;
   margin-bottom: 15px;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
   padding-bottom: 10px;
+  display: inline-block;
+  width: 100%;
 }
 
-.feature-item p {
-  font-size: 0.9rem;
+.feature-desc {
+  font-size: 1rem;
   line-height: 1.6;
-  opacity: 0.9;
+}
+
+/* service solutions */
+/* Section Container */
+#services-list-solutions {
+    background-color: #ffffff;
+}
+
+/* Main Card Wrapper */
+.services-list-solutions-card {
+    background-color: #f6f6f6; /* Light grey card background */
+    border-radius: 25px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.services-list-solutions-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Image container with internal padding to match screenshot */
+.services-list-solutions-image {
+    padding: 20px;
+}
+
+.services-list-solutions-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Matches the rounded image look */
+    display: block;
+}
+
+/* Content Area */
+.services-list-solutions-content {
+    padding: 40px;
+    position: relative; /* Necessary for the play button placement */
+}
+
+.services-list-solutions-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.services-list-solutions-title span {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+.services-list-solutions-en {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #444;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+}
+
+.services-list-solutions-desc {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 90%;
+}
+
+/* Play Button (Bottom Right) */
+.services-list-solutions-btn {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    transition: transform 0.2s ease;
+}
+
+.services-list-solutions-btn:hover {
+    transform: scale(1.1);
+}
+
+.services-list-solutions-btn img {
+    width: 40px; /* Adjust based on your actual SVG dimensions */
+    height: auto;
+}
+
+/* Responsive Fixes */
+@media (max-width: 767.98px) {
+    .services-list-solutions-content {
+        padding: 20px 30px 60px 30px;
+    }
+    .services-list-solutions-desc {
+        max-width: 100%;
+    }
+}
+
+/* flow */
+/* Section Styles */
+#flow-section {
+  background-color: #ffffff;
+}
+
+
+/* Timeline Components */
+.timeline-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px; /* Consistent width for the numbers column */
+}
+
+.flow-number {
+  width: 50px;
+  height: 50px;
+background: linear-gradient(135deg, 
+    rgba(254, 159, 93, 0.8) 20%, 
+    rgba(253, 133, 79, 0.8) 44%, 
+    rgba(253, 108, 65, 0.8) 67%, 
+    rgba(234, 99, 0, 0.8) 100%
+  );
+  /* The first value is width, the second is height */
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  z-index: 2;
+}
+
+.vertical-line {
+  flex-grow: 1;
+  width: 1px;
+ background-color: rgba(254, 159, 93, 0.8);
+  margin-top: -5px; /* Slight overlap to ensure no gap */
+  margin-bottom: -5px;
+}
+
+/* Text Content Styles */
+.step-header {
+  color: var(--burnt-orange);
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.step-description {
+  color: #333;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* Responsive Tweak */
+@media (max-width: 576px) {
+  .step-header { font-size: 1.3rem; }
+  .timeline-col { width: 50px; }
+  .flow-number { width: 40px; height: 40px; font-size: 0.9rem; }
 }
