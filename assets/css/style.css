@@ -524,12 +524,15 @@ body.menu-open {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(
+    background: 
+    url('https://grainy-gradients.vercel.app/noise.svg'),
+    linear-gradient(
         135deg,
         #FE9F5D 20%, 
         #FD854F 44%, 
         #FD6C41 67%, 
-        #F35F20 100%);       
+        #F35F20 100%);
+    background-blend-mode: overlay;     
     opacity: 0.8; 
     z-index: -1;
     border-radius: clamp(32px, 10vw, 128px);
@@ -543,7 +546,6 @@ body.menu-open {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     transition: transform 0.3s ease;
     min-height: 241px; /* Ensures vertical uniformity */
 }
@@ -574,7 +576,7 @@ body.menu-open {
     font-weight: 500;
     letter-spacing: 0.03em;
     line-height: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 25px !important;
 }
 
 .step-icon img {
