@@ -5,7 +5,6 @@
 .content-white-bottom {
     background-color: #ffffff;
     position: relative;
-    z-index: 2;
     min-height: 80vh;             /* Ensures white background covers the screen */
 }
 
@@ -50,7 +49,6 @@
 .breadcrumb-item a {
     color: #333333;
     text-decoration: none;
-    font-weight: 600;
 }
 .breadcrumb-item.active {
     color: var(--brand-orange); 
@@ -59,9 +57,7 @@
 .breadcrumb-items::after {
     content: "▶";
     font-size: 0.8rem;
-    font-weight: 600;
 }
-
 
 
 /* Pagination Styling (Matching your orange theme) */
@@ -120,7 +116,7 @@
 .header-gray-top {
     background-color: #f2f2f2;
     position: relative;
-    margin-left: 40px;
+    margin-left: 0;
     z-index: 1;
 }
 .header-gray-top svg {
