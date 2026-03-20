@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/assets/css/common.css">
     <link rel="stylesheet" href="/assets/css/news.css">
     <title>お知らせ | 東和グループ</title>
@@ -30,31 +34,45 @@
     </header>
 
     <main class="content-white-bottom mx-0">
-        <div class="container card-list">
-            <div class="row row-cols-1 g-3 pt-5">
+        <div class="container">
+            <div class="row row-cols-1 g-3 pt-5 card-list card-list-mobile">
                 <div class="news-card-list d-flex justify-content-between align-items-center mb-3">
                     <div>
                         <span class="news-date">2023.01.01</span>
                         <p class="mb-0">ホームページをリニューアルしました。</p>
                     </div>
-                    <a href="article.html" class="arrow-box text-decoration-none">▶</a>
+                    <a href="article.html" class="arrow-box text-decoration-none"><i class="bi bi-play-fill"></i></a>
                 </div>
                 <div class="news-card-list d-flex justify-content-between align-items-center mb-3">
                     <div>
                         <span class="news-date">2023.01.01</span>
                         <p class="mb-0">ホームページをリニューアルしました。</p>
                     </div>
-                    <a href="article.html" class="arrow-box text-decoration-none">▶</a>
+                    <a href="article.html" class="arrow-box text-decoration-none"><i class="bi bi-play-fill"></i></a>
+                </div>
+                <div class="news-card-list d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                        <span class="news-date">2023.01.01</span>
+                        <p class="mb-0">ホームページをリニューアル6しました。</p>
+                    </div>
+                    <a href="article.html" class="arrow-box text-decoration-none"><i class="bi bi-play-fill"></i></a>
+                </div>
+                <div class="news-card-list d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                        <span class="news-date">2023.01.01</span>
+                        <p class="mb-0">ホームページをリニューアルしました。</p>
+                    </div>
+                    <a href="article.html" class="arrow-box text-decoration-none"><i class="bi bi-play-fill"></i></a>
                 </div>
                 </div>
 
             <nav class="mt-5 pb-5">
                 <ul class="pagination justify-content-center t-group-pagination">
-                    <li class="page-item t-arrow"><a class="page-link" href="#">◀</a></li>
-                    <li class="page-item"><a class="page-link t-number" href="#">1</a></li>
-                    <li class="page-item active"><a class="page-link t-number" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link t-number" href="#">3</a></li>
-                    <li class="page-item t-arrow"><a class="page-link" href="#">▶</a></li>
+                    <li class="page-item t-arrow"><a class="page-link" href="index.html">◀</a></li>
+                    <li class="page-item"><a class="page-link t-number" href="index.html">1</a></li>
+                    <li class="page-item active"><a class="page-link t-number" href="news.html">2</a></li>
+                    <li class="page-item"><a class="page-link t-number" href="article.html">3</a></li>
+                    <li class="page-item t-arrow"><a class="page-link" href="article.html">▶</a></li>
                 </ul>
             </nav>
         </div>
