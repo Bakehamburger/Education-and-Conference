@@ -11,12 +11,6 @@ body.menu-open {
     overflow: hidden;
 }
 
-/* Hide desktop nav on mobile */
-@media (max-width: 991px) {
-    .desktop-nav-container {
-        display: none !important;
-    }
-}
 
 /* Content spacing */
 
@@ -38,7 +32,6 @@ body.menu-open {
     width: 100%;
     display: block;
 }
-
 
 
 .news-container {
