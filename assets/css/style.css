@@ -803,13 +803,11 @@ body.menu-open {
     transform: translateX(5px);
 }
 
-.map-bg-container {
+.map-bg-news {
     position: relative;
-    background-image: url('/assets/images/news/map-news.png'); 
     background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 80%; 
-    min-height: 1000px;
+    height: auto;
+    margin-left: -300px;
     
 }
 
