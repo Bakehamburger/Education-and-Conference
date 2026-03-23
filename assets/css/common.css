@@ -376,6 +376,13 @@ main{
     color: var(--burnt-orange);
 }
 
+/* Hide desktop nav on mobile */
+@media (max-width: 991px) {
+    .desktop-nav-container {
+        display: none !important;
+    }
+}
+
 .headline-text{
     font-size: 40px;
     font-weight: 500;
