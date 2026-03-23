@@ -350,10 +350,15 @@ body.menu-open {
 }
 
 
+/* Card Container */
+.case-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
 
 
-<<<<<<< HEAD
-=======
 /* Image Wrapper & Label */
 .case-image-wrapper {
     position: relative;
@@ -438,7 +443,6 @@ body.menu-open {
     }
 }
 
->>>>>>> c280c32393d73e354b3bfc46bba95f0e0ce40974
 
 /* SOLUTION SECTION*/
 /* Background with 80% Opacity */
