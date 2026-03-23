@@ -410,6 +410,84 @@ main{
     flex-direction: column;
 }
 
+
+.contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .left-text {
+            color: #333;
+            font-weight: 700;
+            line-height: 1.8;
+            font-size: 1.5rem;
+        }
+
+        .orange-card {
+            background-color: #f06a00; /* Matching the orange shade */
+            color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .phone-header {
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .phone-icon {
+            width: 24px;
+            margin-right: 10px;
+        }
+
+        .brand-name {
+            font-size: 0.9rem;
+            letter-spacing: 0.2rem;
+            display: block;
+            margin-bottom: -5px;
+        }
+
+        .phone-number {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .badge-circle {
+            background-color: white;
+            color: #f06a00;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            line-height: 1.1;
+            margin-left: 10px;
+        }
+
+        .badge-circle span {
+            font-size: 0.7rem;
+        }
+
+        .badge-circle strong {
+            font-size: 1.2rem;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            margin-top: 15px;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
 .footer-banner {
     background-image: 
         linear-gradient(rgba(51, 51, 51, 0.57), rgba(51, 51, 51, 0.57)), 
@@ -455,7 +533,7 @@ main{
 }
 
 .footer-body {
-    background: conic-gradient(from 270deg, #FD854F 0%, #FD6C41 50%, #FD854F 100%);
+    background: conic-gradient(from 93.58deg at 48.26% 42.79%, #FD6C41 -117.69deg, #EA6300 45.82deg, #FE864F 157.5deg, #FD6C41 242.31deg, #EA6300 405.82deg);
     border-radius: 128px 128px 0 0;
     display: flex;
     align-items: center;
