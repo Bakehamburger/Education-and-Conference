@@ -350,10 +350,6 @@ body.menu-open {
 }
 
 
-
-
-<<<<<<< HEAD
-=======
 /* Image Wrapper & Label */
 .case-image-wrapper {
     position: relative;
@@ -438,19 +434,15 @@ body.menu-open {
     }
 }
 
->>>>>>> c280c32393d73e354b3bfc46bba95f0e0ce40974
 
 /* SOLUTION SECTION*/
 /* Background with 80% Opacity */
 .solution-section {
     position: relative;
     overflow: hidden;
-    z-index: 1;
-    background: linear-gradient(
-        to bottom, 
-        #FFFFFF 50%, 
-        #F5F5F5 50%
-    );
+    z-index: 999;
+    background: var(--white);
+    border-radius: 0 0 clamp(32px, 10vw, 128px) clamp(32px, 10vw, 128px) ;
 }
 
  .solution-section-inner{
