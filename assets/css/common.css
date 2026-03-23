@@ -376,6 +376,10 @@ main{
     color: var(--burnt-orange);
 }
 
+.txt-color-gray{
+    color: var(--dark-charcoal);
+}
+
 /* Hide desktop nav on mobile */
 @media (max-width: 991px) {
     .desktop-nav-container {
@@ -390,17 +394,12 @@ main{
     line-height: 135%;
 }
 
-.txt-color-gray{
-    color: var(--dark-charcoal);
-}
-
 .description-text{
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 200%;
 }
-
 
 
 

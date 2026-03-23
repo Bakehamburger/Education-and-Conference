@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
 
+
+// case section
+
 // Select all the groups we created
 const regionGroups = document.querySelectorAll('.map-region');
 
@@ -52,85 +55,168 @@ regionGroups.forEach(group => {
   });
 });
 
-
-
-// case section
-
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. Get all filter groups (Region, Category, System)
-    const filterGroups = document.querySelectorAll('.filter-group');
+    const cards = document.querySelectorAll('.case-card-item');
+    const filterButtons = document.querySelectorAll('.filter-group .btn');
 
-    filterGroups.forEach(group => {
-        // 2. Find the very first button in each group (The "All" button)
-        const allButton = group.querySelector('.btn');
-        
+    // --- 1. THE FILTER FUNCTION ---
+    function filterAll() {
+        const activeRegion = document.querySelector('button[data-region].active-orange')?.getAttribute('data-region') || 'all';
+        const activeCategory = document.querySelector('button[data-category].active-orange')?.getAttribute('data-category') || 'all';
+        const activeSystem = document.querySelector('button[data-system].active-orange')?.getAttribute('data-system') || 'all';
+
+        cards.forEach(card => {
+            const matchesRegion = (activeRegion === 'all' || card.getAttribute('data-region') === activeRegion);
+            const matchesCategory = (activeCategory === 'all' || card.getAttribute('data-category') === activeCategory);
+            const matchesSystem = (activeSystem === 'all' || card.getAttribute('data-system') === activeSystem);
+
+            card.style.display = (matchesRegion && matchesCategory && matchesSystem) ? 'block' : 'none';
+        });
+    }
+
+    // --- 2. INITIAL STATE (Handling Map Redirects) ---
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedRegion = urlParams.get('region');
+
+    // Default: Highlight "All" in every group first
+    document.querySelectorAll('.filter-group').forEach(group => {
+        const allButton = group.querySelector('[data-region="all"], [data-category="all"], [data-system="all"]');
         if (allButton) {
-            // 3. Make it orange and active
             allButton.classList.add('active-orange');
             allButton.classList.remove('btn-outline-secondary');
         }
     });
 
-    // 4. Handle manual clicks for the rest of the session
-    const allButtons = document.querySelectorAll('.filter-group .btn');
-    allButtons.forEach(btn => {
+    // Overwrite: If URL has ?region=north, switch the highlight
+    if (selectedRegion && selectedRegion !== 'all') {
+        const allRegBtn = document.querySelector('button[data-region="all"]');
+        const targetRegBtn = document.querySelector(`button[data-region="${selectedRegion}"]`);
+
+        if (targetRegBtn && allRegBtn) {
+            allRegBtn.classList.remove('active-orange');
+            allRegBtn.classList.add('btn-outline-secondary');
+            targetRegBtn.classList.add('active-orange');
+            targetRegBtn.classList.remove('btn-outline-secondary');
+        }
+    }
+
+    // --- 3. CLICK HANDLERS ---
+    filterButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Remove active state from all buttons in THIS specific group
-            const currentGroup = this.closest('.d-flex');
-            currentGroup.querySelectorAll('.btn').forEach(b => {
+            // Reset only the buttons in the same row/group
+            const row = this.closest('.d-flex');
+            row.querySelectorAll('.btn').forEach(b => {
                 b.classList.remove('active-orange');
                 b.classList.add('btn-outline-secondary');
             });
 
-            // Add active state to the clicked button
+            // Activate clicked button
             this.classList.add('active-orange');
             this.classList.remove('btn-outline-secondary');
+
+            filterAll();
         });
     });
+
+    // Run filter immediately on load
+    filterAll();
 });
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. Get the region from the URL (e.g., 'north')
-    const params = new URLSearchParams(window.location.search);
-    const regionValue = params.get('region');
+    const cards = document.querySelectorAll('.case-card-item');
+    const pageNums = document.querySelectorAll('.page-num');
+    const itemsPerPage = 9; 
+    let currentPage = 1;
 
-    // 2. Define the highlighting function
-    function applyOrangeStyle(button) {
-        if (!button) return;
+    function updateDisplay() {
+        // 1. Get current filters
+        const activeRegion = document.querySelector('[data-region].active-orange')?.getAttribute('data-region') || 'all';
+        const activeCategory = document.querySelector('[data-category].active-orange')?.getAttribute('data-category') || 'all';
 
-        // Find the row this button is in
-        const row = button.closest('.d-flex');
-        
-        // Remove orange from all buttons in this row (resetting 'All')
-        row.querySelectorAll('.btn').forEach(btn => {
-            btn.classList.remove('active-orange');
-            btn.classList.add('btn-outline-secondary');
+        // 2. Filter the cards
+        let filtered = Array.from(cards).filter(card => {
+            const regMatch = (activeRegion === 'all' || card.getAttribute('data-region') === activeRegion);
+            const catMatch = (activeCategory === 'all' || card.getAttribute('data-category') === activeCategory);
+            return regMatch && catMatch;
         });
 
-        // Add the orange highlight to the target button
-        button.classList.add('active-orange');
-        button.classList.remove('btn-outline-secondary');
-    }
+        const maxPages = Math.ceil(filtered.length / itemsPerPage) || 1;
 
-    // 3. EXECUTION ON LOAD
-    if (regionValue) {
-        // Find the button where data-region="north"
-        const target = document.querySelector(`[data-region="${regionValue}"]`);
-        if (target) {
-            applyOrangeStyle(target);
-        }
-    } else {
-        // If no region in URL (clicked "View More"), highlight "All"
-        document.querySelectorAll('[data-region="all"]').forEach(btn => {
-            applyOrangeStyle(btn);
+        // 3. Ensure we don't go out of bounds
+        if (currentPage > maxPages) currentPage = maxPages;
+        if (currentPage < 1) currentPage = 1;
+
+        // 4. Show/Hide Cards
+        cards.forEach(card => card.style.display = 'none');
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        filtered.slice(start, end).forEach(card => card.style.display = 'block');
+
+        // 5. Update Pagination Background (Active Button)
+        pageNums.forEach(num => {
+            const pageVal = parseInt(num.getAttribute('data-page'));
+            
+            // Background moves here
+            if (pageVal === currentPage) {
+                num.classList.add('active');
+            } else {
+                num.classList.remove('active');
+            }
+
+            // Keep numbers visible but fade them if they have no content
+            num.style.opacity = (pageVal > maxPages) ? "0.2" : "1";
+            num.style.cursor = (pageVal > maxPages) ? "default" : "pointer";
         });
+
+        // 6. Arrow Visibility
+        document.getElementById('prevPage').style.opacity = (currentPage === 1) ? "0.3" : "1";
+        document.getElementById('nextPage').style.opacity = (currentPage === maxPages || currentPage === 3) ? "0.3" : "1";
     }
 
-    // 4. MANUAL CLICK HANDLER
+    // CLICKING REGIONS/FILTERS
     document.querySelectorAll('.filter-group .btn').forEach(btn => {
         btn.addEventListener('click', function() {
-            applyOrangeStyle(this);
+            const region = this.getAttribute('data-region');
+            
+            // THE TRICK: 
+            // If "All" is clicked, go to Page 2. 
+            // If a specific region is clicked, go to Page 1.
+            if (region === 'all' || !region) {
+                currentPage = 2;
+            } else {
+                currentPage = 1;
+            }
+            
+            setTimeout(updateDisplay, 10);
         });
     });
+
+    // ARROW CONTROLS
+    document.getElementById('nextPage').addEventListener('click', () => {
+        if (currentPage < 3) {
+            currentPage++;
+            updateDisplay();
+        }
+    });
+
+    document.getElementById('prevPage').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            updateDisplay();
+        }
+    });
+
+    // INITIAL LOAD CHECK (For "View More" from index.html)
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialRegion = urlParams.get('region');
+    
+    if (!initialRegion || initialRegion === 'all') {
+        currentPage = 2; // Default to middle page if viewing all
+    } else {
+        currentPage = 1; // Default to first page if coming from a specific map region
+    }
+
+    updateDisplay();
 });
+
