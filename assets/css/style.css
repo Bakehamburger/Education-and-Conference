@@ -2,7 +2,7 @@
 
 main{
     background-color: var(--white-smoke);
-    margin: 0 92px !important;
+    /* margin: 0 92px !important; */
 }
 
 
@@ -295,15 +295,8 @@ body.menu-open {
     cursor: pointer;
 }
 
-/* Hover effect for a single subprefecture (optional) */
 .map-region:hover path {
     opacity: 80% !important;
-}
-
-/* THE HIGHLIGHT: When the group has the 'active' class, 
-   all paths inside that group turn red/highlight color */
-.map-region.active path {
-    fill: #e74c3c !important;     
 }
 
 .region-label {
@@ -311,13 +304,13 @@ body.menu-open {
     display: inline-block;
     
     /* Box Styling */
-    background-color: var(--white); /* Makes it look like it's just text inside the box */
-    border: 2px solid var(--burnt-orange); /* High-quality orange color */
-    border-radius: 50px; /* Fully rounded corners */
+    background-color: var(--white); 
+    border: 2px solid var(--burnt-orange); 
+    border-radius: 50px; 
     
     /* Text Styling */
     color: var(--dark-charcoal);
-    font-size: 16px; /* Adjust based on your preferred design density */
+    font-size: 16px; 
     font-weight: bold;
     text-align: center;
     line-height: 200%;
@@ -327,13 +320,12 @@ body.menu-open {
     letter-spacing: 0;
 }
 
-/* 5. INDIVIDUAL LABEL POSITIONING using transform centering */
 
 /* Pin coordinate: Top-Right quad */
 .north-label {
     top: 6%; 
     left: 56%;
-    transform: translate(-50%, -50%); /* Centers the label on the point */
+    transform: translate(-50%, -50%); 
 }
 
 /* Pin coordinate: Middle-Left quad */
@@ -360,6 +352,93 @@ body.menu-open {
 
 
 
+<<<<<<< HEAD
+=======
+/* Image Wrapper & Label */
+.case-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Content Area */
+.case-content-area {
+    padding: 15px 0;
+}
+
+.case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.case-tag {
+    border: 1px solid var(--burnt-orange);
+    color: var(--burnt-orange);
+    padding: 6px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 100%;
+    white-space: nowrap;
+}
+
+.case-client-name {
+    color: var(--dark-charcoal);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 100%;
+    margin: 0;
+}
+
+
+@media screen and (min-width: 992px){
+    .case-title-section,
+    .case-headline-section{
+        padding: 0px 92px;
+    }
+    .case-section-inner{
+        padding: 128px 32px; 
+    }
+}
+
+@media screen and (max-width: 576px ){
+    .north-label {
+        top: 10%; 
+        left: 62%;
+        transform: translate(-50%, -50%); 
+    }
+
+    /* Pin coordinate: Middle-Left quad */
+    .central-label {
+        top: 52%; 
+        left: 18%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Pin coordinate: Middle-Right quad */
+    .east-label {
+        top: 65%; 
+        left: 82%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Pin coordinate: Bottom-Left quad */
+    .south-label {
+        top: 80%; 
+        left: 15%;
+        transform: translate(-20%, 140%);
+    }
+
+    .case-card-item {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+>>>>>>> c280c32393d73e354b3bfc46bba95f0e0ce40974
 
 /* SOLUTION SECTION*/
 /* Background with 80% Opacity */
@@ -407,7 +486,7 @@ body.menu-open {
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease;
-    min-height: 241px; /* Ensures vertical uniformity */
+    min-height: 241px; /
 }
 
 
@@ -446,7 +525,6 @@ body.menu-open {
 }
 
 
-/* Arrow Logic (Desktop/Large Tablets Only) */
 @media screen and  (min-width: 992px) {
     .solution-steps-wrapper {
         display: flex;
@@ -459,7 +537,6 @@ body.menu-open {
         width: 100%; 
     }
     
-    /* THE SNAP FIX: Target the last column to push its content to the right */
     .solution-steps-wrapper > div:last-child {
         display: flex;
         justify-content: flex-end;
@@ -468,7 +545,6 @@ body.menu-open {
     .solution-step-card::after {
         content: "";
         position: absolute;
-        /* Position the arrow in the gutter so it doesn't push the card */
         right: -20px; 
         top: 50%;
         transform: translateY(-50%);
@@ -478,7 +554,6 @@ body.menu-open {
         z-index: 2;
     }
 
-    /* Ensure no arrow on the last card */
     .solution-steps-wrapper > div:last-child .solution-step-card::after {
         display: none;   
     }
@@ -498,7 +573,6 @@ body.menu-open {
     }
 
     .solution-steps-wrapper > div {
-        /* This margin creates the 'white space' for the arrow to sit in */
         margin-bottom: 16px; 
         position: relative;
     }
@@ -521,7 +595,7 @@ body.menu-open {
     }
 
     .step-number {
-        margin-bottom: 0 !important; /* Remove desktop bottom margin */
+        margin-bottom: 0 !important; 
         margin-right: 34px;
         flex-shrink: 0;
     }
@@ -529,7 +603,7 @@ body.menu-open {
     .step-title {
         margin-bottom: 0 !important;
         text-align: left;
-        flex-grow: 1; /* Pushes the icon to the right */
+        flex-grow: 1; 
     }
 
     .step-icon img {
@@ -540,14 +614,12 @@ body.menu-open {
     .solution-step-card::after {
         content: "";
         position: absolute;
-        /* Position at the bottom center of the card */
         bottom: -15px; 
         left: 50%;
         transform: translateX(-50%);
         right: auto !important;
         top: auto !important;
         
-        /* Triangle pointing DOWN */
         border-left: 12px solid transparent;
         border-right: 12px solid transparent;
         border-top: 15px solid var(--burnt-orange); 
