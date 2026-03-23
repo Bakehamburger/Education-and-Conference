@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+:root {
+    --burnt-orange: #E66B27;
+    --bg-grey: #F5F5F5;
+}
+
+main {
+  background-color: white;
+}
+
+.case-header {
+    position: relative;
+    background-color: var(--bg-grey);
+    min-height: 450px; /* Adjust based on your preference */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.header-content {
+   padding-left: 92px;
+    margin-top: 60px; /* Offset for the fixed navbar */
+  
+}
+
+.main-title {
+    color: var(--burnt-orange);
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+     
+}
+
+.sub-title {
+    color: var(--burnt-orange);
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-family: sans-serif;
+}
+
+/* Curve & Breadcrumb Positioning */
+.curve-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 620px; /* Matches SVG width */
+    height: 93px; /* Matches SVG height */
+}
+
+.breadcrumb-overlay {
+    position: absolute;
+    bottom: 30px; /* Adjust to center vertically in the white area */
+    left: 130px;   /* Adjust to match horizontal padding in image */
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .curve-container  {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 341px !important; /* Matches SVG width */
+    height: 51px !important; /* Matches SVG height */
+  }
+  
+  .breadcrumb-overlay {
+    position: absolute;
+    bottom: 20px !important; /* Adjust to center vertically in the white area */
+    left: 45px !important;   /* Adjust to match horizontal padding in image */
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+}
+
+
+.breadcrumb-arrow {
+    color: var(--burnt-orange);
+    font-size: 0.7rem;
+}
+
+.breadcrumb-current {
+    color: var(--burnt-orange);
+    font-weight: 600;
+}
+
+/* Hide curve on small mobile screens if it breaks layout */
+@media (max-width: 620px) {
+    .curve-container {
+        width: 100%;
+        height: auto;
+    }
+    .breadcrumb-overlay {
+        right: 20px;
+        font-size: 0.8rem;
+    }
+}
+
+.case-container{
+    background-color: var(--white);
+}
+
+.case-inner{
+    padding: 0px !important;
+}
+
+
+/* Base style for all filter buttons (Inactive state) */
+.filter-group .btn {
+    background-color: #ffffff !important;
+    color: #444444 !important; /* Dark gray text */
+    border: 1px solid #dee2e6 !important; /* Light gray border */
+    border-radius: 50px;
+    padding: 6px 20px;
+    font-size: 14px;
+    transition: none; /* Removes any fade effects */
+    box-shadow: none !important; /* Removes the "gray" glow after clicking */
+}
+
+/* Eliminate Bootstrap's default hover/active gray background */
+.filter-group .btn:hover, 
+.filter-group .btn:focus, 
+.filter-group .btn:active {
+    background-color: #ffffff !important;
+    color: #444444 !important;
+    border-color: #dee2e6 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* The Highlighted (Active) state - This overrides the above */
+.filter-group .btn.active-orange {
+    background-color: #f26522 !important; /* Your Orange */
+    border-color: #f26522 !important;
+    color: #ffffff !important;
+}
+
+/* Ensure orange stays orange even when clicked/focused */
+.filter-group .btn.active-orange:hover,
+.filter-group .btn.active-orange:focus {
+    background-color: #f26522 !important;
+    color: #ffffff !important;
+}
