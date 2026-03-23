@@ -837,7 +837,7 @@ body.menu-open {
     position: absolute;
     bottom: 200px;
     right: 0;
-    background: linear-gradient(to right, #f39c12, var(--burnt-orange));
+    background: linear-gradient(to right, #FE9F5D, #FD854F, var(--burnt-orange));
     color: white;
     padding: 15px 40px;
     border-radius: 50px;
