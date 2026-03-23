@@ -1,4 +1,15 @@
 @charset "UTF-8";
+
+.navbar-news {
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 0 0 32px 32px;
+}
+
+
 /* list of articles */
 /* Subpage Specific Styles */
 /* White Content Section with the Curve */
@@ -24,7 +35,7 @@
 
 .breadcrumb {
     position: absolute;
-    right: 400px;
+    right: 350px;
     padding-top: 40px;
     font-size: 14px;
 }
@@ -56,6 +67,7 @@
 
 .breadcrumb-items::after {
     content: "▶";
+    padding: 0 8px 0 8px;
     font-size: 0.8rem;
 }
 
