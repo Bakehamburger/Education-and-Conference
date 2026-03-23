@@ -34,3 +34,167 @@
     font-weight: bold;
     letter-spacing: 0.15em;
 }
+
+.company-president-image img{
+    width: 516px;
+}
+
+.message-content p{
+    line-height: 2em;
+    font-weight: 500;
+    width: 410px;
+}
+
+
+Certainly! I can recreate this "Company Overview" (会社概要) page for you. I'll use Bootstrap 5 for the layout to ensure it's responsive and clean, mimicking the minimalist aesthetic of the original Japanese document.
+
+Here is the complete code. You can save this as an .html file and open it in any browser.
+
+HTML
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Overview - Touwa E&C</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            color: #333;
+        }
+        .company-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 60px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        .header-title {
+            color: #ff6600; /* Matching the orange color */
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header-title h1 {
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        .header-title p {
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .row-border {
+            border-bottom: 1px solid #eeeeee;
+            padding: 20px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        .label-col {
+            color: #ff6600;
+            font-weight: bold;
+            width: 200px;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+        .content-col {
+            flex-grow: 1;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        /* Mobile adjustment */
+        @media (max-width: 768px) {
+            .row-border {
+                flex-direction: column;
+            }
+            .label-col {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            .company-container {
+                padding: 20px;
+                margin: 10px;
+            }
+        }
+
+
+/* Card Container */
+        .history-card {
+            background: #f8f8f8;
+            border-radius: 60px;
+            padding: 80px 60px;
+            max-width: 900px;
+            margin: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .history-title {
+            color: #f37021;
+            font-weight: bold;
+        }
+
+        /* Timeline Logic */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        /* The Vertical Line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 5px;
+            bottom: 40px; /* Ends at the last dot */
+            width: 1px;
+            background-color: #f37021;
+            opacity: 0.5;
+        }
+
+        /* The Dotted Extension at the bottom */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            bottom: 0;
+            height: 40px;
+            width: 1px;
+            border-left: 1px dashed #f37021;
+            opacity: 0.5;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 45px;
+        }
+
+        /* The Orange Dots */
+        .timeline-dot {
+            position: absolute;
+            left: -40px;
+            top: 8px;
+            width: 15px;
+            height: 15px;
+            background: url(.png), linear-gradient(82.99deg, rgba(254, 159, 93, 0.8) 24.13%, rgba(254, 134, 79, 0.8) 42.16%, rgba(253, 108, 65, 0.8) 60.29%, rgba(234, 99, 0, 0.8) 85.45%);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+
+
+
+
+
+        .year {
+            color: #f37021;
+            font-size: 1.8rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: #333;
+        }
