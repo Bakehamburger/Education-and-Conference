@@ -12,7 +12,7 @@ main {
 .service-header {
     position: relative;
     background-color: var(--bg-grey);
-    min-height: 450px; /* Adjust based on your preference */
+    min-height: 450px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,7 @@ main {
 
 .header-content {
    padding-left: 92px;
-    margin-top: 60px; /* Offset for the fixed navbar */
+    margin-top: 60px; 
   
 }
 
@@ -40,19 +40,18 @@ main {
     font-family: sans-serif;
 }
 
-/* Curve & Breadcrumb Positioning */
 .curve-container {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 620px; /* Matches SVG width */
-    height: 93px; /* Matches SVG height */
+    width: 620px; 
+    height: 93px; 
 }
 
 .breadcrumb-overlay {
     position: absolute;
-    bottom: 30px; /* Adjust to center vertically in the white area */
-    left: 130px;   /* Adjust to match horizontal padding in image */
+    bottom: 30px; 
+    left: 130px;   
     font-size: 0.9rem;
     color: #333;
     display: flex;
@@ -65,14 +64,14 @@ main {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 341px !important; /* Matches SVG width */
-    height: 51px !important; /* Matches SVG height */
+    width: 341px !important; 
+    height: 51px !important; 
   }
   
   .breadcrumb-overlay {
     position: absolute;
-    bottom: 20px !important; /* Adjust to center vertically in the white area */
-    left: 45px !important;   /* Adjust to match horizontal padding in image */
+    bottom: 20px !important; 
+    left: 45px !important;   
     font-size: 0.9rem;
     color: #333;
     display: flex;
@@ -92,7 +91,7 @@ main {
     font-weight: 600;
 }
 
-/* Hide curve on small mobile screens if it breaks layout */
+
 @media (max-width: 620px) {
     .curve-container {
         width: 100%;
@@ -104,18 +103,18 @@ main {
     }
 }
 
-/* Container is handled by Bootstrap, but we can set a max-width if needed */
+
 @media screen and (min-width: 992px) {
   .service-grid {
     padding: 0 32px;
   }
 }
-/* Base card styling - Cleaned up */
+
 .service-card {
   position: relative;
   height: 245px;
   border-radius: 15px;
-  background-position: center; /* Changed to center for better scaling */
+  background-position: center; 
   background-size: cover;
   overflow: hidden;
   display: flex;
@@ -138,7 +137,7 @@ main {
   opacity: 0.9;
 }
 
-/* Wide card specific - Badge centering */
+
 .wide-card {
   justify-content: center; 
   align-items: center;    
@@ -153,7 +152,7 @@ main {
 }
 
 .time-badge {
-  font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive font size */
+  font-size: clamp(2rem, 5vw, 3.5rem); 
   font-weight: bold;
   letter-spacing: 2px;
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -161,17 +160,36 @@ main {
 
 /* solution */
 .solutions-section {
-  background: 
-    url('https://grainy-gradients.vercel.app/noise.svg'), 
-    linear-gradient(135deg, #FE9F5D 0%, #FD854F 40%, #EA6300 100%);
-  background-blend-mode: overlay;
-  padding: 80px 60px;
-  border-radius: 80px; /* Adjusted to look more natural */
-  color: #fff;
-  margin: 20px 0;
+    position: relative; 
+    padding: 80px 60px;
+    border-radius: 80px;
+    color: #fff;
+    margin: 20px 0;
+    overflow: hidden; 
+    z-index: 1;
 }
 
-/* Header Typography */
+.solutions-section::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background: 
+        url('https://grainy-gradients.vercel.app/noise.svg'),
+        linear-gradient(
+            155deg, 
+            #FE9F5D 20%, 
+            #FD854F 44%, 
+            #FD6C41 67%, 
+            #EA6300 100%
+        );
+    background-blend-mode: overlay;
+    opacity: 0.8; 
+    z-index: -1;   
+}
+
 .solutions-section .main-title {
   font-size: 2.2rem;
   font-weight: 800;
@@ -182,45 +200,8 @@ main {
 .description-text p {
   font-size: 0.95rem;
   line-height: 1.8;
-  margin-bottom: 1.5rem;
 }
 
-.solution-section {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    background: linear-gradient(
-        to bottom, 
-        #FFFFFF 50%, 
-        #F5F5F5 50%
-    );
-}
-
- .solution-section-inner{
-    padding-top: 128px; 
-    padding-bottom: 128px; 
-}
-
-
-.solution-section::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: 
-    url('https://grainy-gradients.vercel.app/noise.svg'),
-    linear-gradient(
-        135deg,
-        #FE9F5D 20%, 
-        #FD854F 44%, 
-        #FD6C41 67%, 
-        #F35F20 100%);
-    background-blend-mode: overlay;     
-    opacity: 0.8; 
-    z-index: -1;
-    border-radius: clamp(32px, 10vw, 128px);
-}
-
-/* Uniform Card Styling */
 .solution-step-card {
     background: var(--white);
     border-radius: 24px;
@@ -229,11 +210,9 @@ main {
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease;
-    min-height: 241px; /* Ensures vertical uniformity */
+    min-height: 241px; 
 }
 
-
-/* Element Styling */
 .step-number {
     background-color: var(--burnt-orange);
     color: var(--white);
@@ -268,7 +247,6 @@ main {
 }
 
 
-/* Arrow Logic (Desktop/Large Tablets Only) */
 @media screen and  (min-width: 992px) {
     .solution-steps-wrapper {
         display: flex;
@@ -281,7 +259,6 @@ main {
         width: 100%; 
     }
     
-    /* THE SNAP FIX: Target the last column to push its content to the right */
     .solution-steps-wrapper > div:last-child {
         display: flex;
         justify-content: flex-end;
@@ -290,7 +267,6 @@ main {
     .solution-step-card::after {
         content: "";
         position: absolute;
-        /* Position the arrow in the gutter so it doesn't push the card */
         right: -20px; 
         top: 50%;
         transform: translateY(-50%);
@@ -300,7 +276,6 @@ main {
         z-index: 2;
     }
 
-    /* Ensure no arrow on the last card */
     .solution-steps-wrapper > div:last-child .solution-step-card::after {
         display: none;   
     }
@@ -320,7 +295,6 @@ main {
     }
 
     .solution-steps-wrapper > div {
-        /* This margin creates the 'white space' for the arrow to sit in */
         margin-bottom: 16px; 
         position: relative;
     }
@@ -343,7 +317,7 @@ main {
     }
 
     .step-number {
-        margin-bottom: 0 !important; /* Remove desktop bottom margin */
+        margin-bottom: 0 !important;
         margin-right: 34px;
         flex-shrink: 0;
     }
@@ -351,36 +325,29 @@ main {
     .step-title {
         margin-bottom: 0 !important;
         text-align: left;
-        flex-grow: 1; /* Pushes the icon to the right */
+        flex-grow: 1;
     }
 
     .step-icon img {
         margin-left: auto;
     }
 
-    /* Create the downward pointing arrow between cards */
     .solution-step-card::after {
         content: "";
         position: absolute;
-        /* Position at the bottom center of the card */
         bottom: -15px; 
         left: 50%;
         transform: translateX(-50%);
         right: auto !important;
         top: auto !important;
-        
-        /* Triangle pointing DOWN */
         border-left: 12px solid transparent;
         border-right: 12px solid transparent;
         border-top: 15px solid var(--burnt-orange); 
         border-bottom: 0;
-        
         display: block !important;
         z-index: 999;
     }
-
-    /* Hide arrow on the last step (Step 5) */
-    /* 3. THE CRITICAL FIX: Hide arrow on the last card (Step 5) */
+    
     .solution-steps-wrapper > div:last-child {
         margin-bottom: 0;
     }
@@ -391,27 +358,26 @@ main {
     }
 }
 
-
-/* Features Styling */
 .features-header-title {
   font-size: 2rem;
   font-weight: bold;
-  margin-top: 40px;
+  padding-top: 50px;
 }
 
 .feature-num {
-  font-size: 5.5rem; /* Large impact numbers */
+  font-size: 5.5rem; 
   font-weight: 800;
   opacity: 0.3;
   line-height: 1;
   display: block;
+  padding-bottom: 20px;
 }
 
 .feature-title {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   display: inline-block;
   width: 100%;
 }
@@ -421,42 +387,44 @@ main {
   line-height: 1.6;
 }
 
-/* service solutions */
-/* Section Container */
 #services-list-solutions {
     background-color: #ffffff;
 }
 
-/* Main Card Wrapper */
+.container-inner {
+  padding: 0 32px;
+}
+
 .services-list-solutions-card {
-    background-color: #f6f6f6; /* Light grey card background */
-    border-radius: 25px;
-    margin-bottom: 25px;
+    background-color: #F5F5F5; 
+    border-radius: 20px;
+    margin-bottom: 30px;
     overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.03);
-    transition: all 0.3s ease;
+    border: none;
 }
 
 .services-list-solutions-card:hover {
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* Image container with internal padding to match screenshot */
 .services-list-solutions-image {
-    padding: 20px;
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    padding: 30px 62px 30px 57px;
 }
 
 .services-list-solutions-image img {
-    width: 100%;
+   width: 100%; 
     height: auto;
-    border-radius: 15px; /* Matches the rounded image look */
+    object-fit: cover;
+    border-radius: 15px; 
     display: block;
 }
 
-/* Content Area */
 .services-list-solutions-content {
-    padding: 40px;
-    position: relative; /* Necessary for the play button placement */
+    padding-right: 30px; 
+    min-height: 280px; 
 }
 
 .services-list-solutions-title {
@@ -481,64 +449,143 @@ main {
 }
 
 .services-list-solutions-desc {
-    font-size: 0.9rem;
-    color: #555;
     line-height: 1.8;
-    max-width: 90%;
+    flex: 1; 
 }
 
-/* Play Button (Bottom Right) */
+
 .services-list-solutions-btn {
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
+    position: relative;
+    right: 35px; 
+    
+    flex-shrink: 0;
     transition: transform 0.2s ease;
+    display: inline-block;
+    margin-bottom: 20px; 
 }
 
 .services-list-solutions-btn:hover {
     transform: scale(1.1);
 }
 
-.services-list-solutions-btn img {
-    width: 40px; /* Adjust based on your actual SVG dimensions */
-    height: auto;
+.services-list-solutions-btn {
+    transition: transform 0.2s ease;
+    display: inline-block;
+    margin-bottom: 20px; 
 }
 
-/* Responsive Fixes */
-@media (max-width: 767.98px) {
+@media (max-width: 992px) {
+  .services-list-solutions-btn {
+     position: relative;
+    right: 10px; 
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    display: inline-block;
+    margin-bottom: 20px; 
+  }
+}
+
+@media (max-width: 768px) {
     .services-list-solutions-content {
         padding: 20px 30px 60px 30px;
     }
     .services-list-solutions-desc {
         max-width: 100%;
     }
+    
+    .services-list-solutions-image {
+      margin: 0 auto;
+    }
 }
 
-/* flow */
-/* Section Styles */
+@media (max-width: 576px) {
+  .container-inner {
+    padding: 0 12px;
+  }
+    .services-list-solutions-card {
+        position: relative; 
+        padding: 12px 12px 76px 12px;    
+        display: block;    
+    }
+
+    .services-list-solutions-image {
+        padding: 0 !important; 
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+    .services-list-solutions-image img {
+        border-radius: 15px;
+        width: 100%;
+        height: auto;
+    }
+
+    .services-list-solutions-content {
+        padding: 0 !important; 
+        min-height: auto;      
+    }
+
+    .services-list-solutions-title {
+        font-size: 1.5rem;
+        margin-bottom: 4px;
+    }
+
+    .services-list-solutions-title span {
+        font-size: 2rem;
+    }
+
+    .services-list-solutions-en {
+        margin-bottom: 24px;
+        font-size: 0.85rem;
+    }
+
+    .services-list-solutions-desc {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        padding-right: 20%; 
+        margin-bottom: 0;
+    }
+
+    .services-list-solutions-btn {
+        position: absolute;
+        bottom: 24px;   
+        right: 12px;    
+        margin: 0;     
+        display: block;
+        z-index: 10;
+    }
+
+    .services-list-solutions-btn img {
+        width: 45px;  
+        height: auto;
+    }
+    
+    .services-list-solutions-content .d-flex {
+        display: block !important;
+    }
+}
+
+/* FLOW */
 #flow-section {
   background-color: #ffffff;
 }
 
-
-/* Timeline Components */
 .timeline-col {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70px; /* Consistent width for the numbers column */
+  width: 70px; 
 }
 
 .flow-number {
   width: 50px;
   height: 50px;
-background: linear-gradient(135deg, 
+background: linear-gradient(57deg, 
     rgba(254, 159, 93, 0.8) 20%, 
     rgba(253, 133, 79, 0.8) 44%, 
     rgba(253, 108, 65, 0.8) 67%, 
     rgba(234, 99, 0, 0.8) 100%
   );
-  /* The first value is width, the second is height */
   background-repeat: no-repeat;
   color: white;
   border-radius: 50%;
@@ -554,11 +601,10 @@ background: linear-gradient(135deg,
   flex-grow: 1;
   width: 1px;
  background-color: rgba(254, 159, 93, 0.8);
-  margin-top: -5px; /* Slight overlap to ensure no gap */
+  margin-top: -5px;
   margin-bottom: -5px;
 }
 
-/* Text Content Styles */
 .step-header {
   color: var(--burnt-orange);
   font-weight: 700;
@@ -573,7 +619,7 @@ background: linear-gradient(135deg,
   font-size: 0.95rem;
 }
 
-/* Responsive Tweak */
+
 @media (max-width: 576px) {
   .step-header { font-size: 1.3rem; }
   .timeline-col { width: 50px; }
