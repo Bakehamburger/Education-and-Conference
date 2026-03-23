@@ -1,12 +1,15 @@
 @charset "UTF-8";
 
-.navbar-news {
+.navbar-no-background {
     padding: 1rem 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     border-radius: 0 0 32px 32px;
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
 }
 
 
