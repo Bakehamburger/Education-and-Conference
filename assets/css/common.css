@@ -361,7 +361,6 @@ main{
     font-weight: 700;
     letter-spacing: 0;
     line-height: 100%;
-    color: var(--burnt-orange);
     padding-bottom: 12px;
 }
 
@@ -371,7 +370,6 @@ main{
     font-size: var(--fs-base);
     letter-spacing: 0.1em;
     line-height: 100%;
-    color: var(--burnt-orange);
     padding-top: 12px;
 }
 
