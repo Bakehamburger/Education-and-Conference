@@ -9,6 +9,13 @@ main {
   background-color: white;
 }
 
+/* SERVICE */
+.service-section-header h2 {
+    color: var(--burnt-orange);
+    font-size: 40px;
+    line-height: 2;
+}
+
 .service-header {
     position: relative;
     background-color: var(--bg-grey);
