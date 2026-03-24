@@ -13,7 +13,6 @@ body.menu-open {
 
 
 /* Content spacing */
-
 .landing-page {
     position: relative;
     background: url('/assets/images/landing-page/first-view.png');
@@ -194,21 +193,13 @@ body.menu-open {
 
 
 /* SERVICE */
-.service-section-header h2 {
-    color: var(--burnt-orange);
-    font-size: 40px;
+.site-container {
+  padding: 0 32px;
+}
+
+.service-section-header .main-title-eng {
+    color: rgba(234, 99, 00, 0.6);
     font-weight: 800;
-}
-
-.service-section-header h1 {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 130%;
-}
-
-.service-section-header p:nth-child(2) {
-    font-weight: 600;
-    line-height: 2;
 }
 
 /* Service Card Styles */
@@ -225,24 +216,28 @@ body.menu-open {
     transition: transform 0.3s ease;
 }
 
-.service-card:hover {
-    transform: translateY(-3px);
-}
-
-
 .card-content {
     position: relative;
     z-index: 2;
-    padding: 30px;
+    padding: 24px;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .service-card h3 {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: var(--fs-xl);
+    font-weight: 700;
     margin-bottom: 0;
+    line-height: 130%;
+}
+
+.service-card .main-title-eng {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  padding-top: 4px;
 }
 
 .service-card h3 span {
@@ -255,7 +250,7 @@ body.menu-open {
 }
 
 .description {
-    font-size: 0.95rem;
+    font-size: var(--fs-sm);
     max-width: 80%;
     margin-bottom: 0;
     line-height: 1.6;
