@@ -223,6 +223,7 @@ main {
     align-items: center;
     transition: transform 0.3s ease;
     min-height: 241px; 
+    box-shadow: 0 4px 40px 0 rgba(139, 73, 25, 0.5);
 }
 
 .step-number {
