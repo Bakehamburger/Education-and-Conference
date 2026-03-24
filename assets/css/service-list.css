@@ -12,8 +12,10 @@ main {
 /* SERVICE */
 .service-section-header h2 {
     color: var(--burnt-orange);
-    font-size: 40px;
-    line-height: 2;
+}
+
+.header-content {
+    margin-top: 60px; 
 }
 
 .service-header {
@@ -26,11 +28,7 @@ main {
     overflow: hidden;
 }
 
-.header-content {
-   padding-left: 92px;
-    margin-top: 60px; 
-  
-}
+
 
 .curve-container {
     position: absolute;
@@ -97,10 +95,21 @@ main {
 
 
 @media screen and (min-width: 992px) {
-  .service-grid {
-    padding: 0 32px;
-  }
+    .container-inner {
+        padding: 0 32px;
+    }
+
 }
+
+@media screen and (max-width: 576px) {
+  .container-inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
+
 
 .service-card {
   position: relative;
@@ -383,9 +392,6 @@ main {
     background-color: #ffffff;
 }
 
-.container-inner {
-  padding: 0 32px;
-}
 
 .services-list-solutions-card {
     background-color: #F5F5F5; 
@@ -491,9 +497,6 @@ main {
 }
 
 @media (max-width: 576px) {
-  .container-inner {
-    padding: 0 12px;
-  }
     .services-list-solutions-card {
         position: relative; 
         padding: 12px 12px 76px 12px;    
