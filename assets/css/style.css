@@ -683,8 +683,25 @@ body.menu-open {
 /*-----NEWS-----*/
 /*--------------*/
 
+
 /* News Styles */
-.text-orange { color: var(--burnt-orange); }
+.text-orange { 
+    color: var(--burnt-orange);
+    font-size: 40px;
+    line-height: 100%;
+    font-weight: 700;
+    padding-bottom: 12px;
+}
+
+.news-title-en {
+    font-family: "Manrope";
+    color: rgba(234, 99, 0, 0.6);
+    padding-bottom: 32px;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+}
 
 .btn-orange-action {
     background-color: var(--burnt-orange);
@@ -703,35 +720,34 @@ body.menu-open {
 }
 
 .news-card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
+    background: #ffffff;
+    padding: 40px 37px 40px 37px;
+    border-radius: 16px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-
 }
 
 .news-date {
-    color: var(--brand-orange);
-    font-weight: bold;
-    font-size: 0.9rem;
+    color: #EA6300;
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 100%;
 }
 
-.arrow-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 53px;
-    height: 53px;
-    background-color: #e66b27;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid #eee;
+.news-article-title {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 100%;
 }
 
-.arrow-box:hover {
-    transform: translateX(5px);
+.towa-title {
+    color: var(--burnt-orange);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 135%;
+    letter-spacing: 0.08em;
+    padding-bottom: 48px;
 }
 
 .map-bg-container {
