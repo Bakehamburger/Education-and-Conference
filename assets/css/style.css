@@ -687,6 +687,10 @@ body.menu-open {
 /* News Styles */
 .text-orange { 
     color: var(--burnt-orange);
+    font-size: 40px;
+    line-height: 100%;
+    font-weight: 700;
+    padding-bottom: 12px;
 }
 
 .news-title-en {
