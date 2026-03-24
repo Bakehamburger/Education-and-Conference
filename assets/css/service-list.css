@@ -16,6 +16,7 @@ main {
 
 .header-content {
     margin-top: 60px; 
+    padding-left: 92px;
 }
 
 .service-header {
@@ -97,6 +98,29 @@ main {
   .service-grid {
     padding: 0 32px;
   }
+}
+
+@media screen and (max-width: 767px) {
+  .service-landing-page .site-container {
+    max-width: 768px;
+  }
+  
+  .service-landing-page .service-card {
+    min-height: 122px; 
+    height: 100%;
+    column-gap: 11px;
+    row-gap: 11px;
+    border-radius: 4px;
+  }
+  
+   .service-landing-page .service-card h3 {
+     font-size: var(--fs-sm);
+    }
+  
+  .service-card p {
+    display: none;
+  }
+  
 }
  
 .service-card {
