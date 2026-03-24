@@ -112,7 +112,9 @@ main {
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.1em;
-  border-bottom: 4px solid var(--primary-orange);
+ border-bottom: 4px solid; 
+  /* Define the gradient */
+  border-image: linear-gradient(to right, #B6EDAC 0%, #32922D 100%) 1;
 }
 
 /* Solution Cards */
@@ -148,7 +150,7 @@ main {
 /* feature */
 /* Section Background */
 .feature-section {
-    background-color: #fdf6f0; /* Matches the warm cream tone */
+    background-color: #ECF8EE; /* Matches the warm cream tone */
     position: relative;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -170,13 +172,13 @@ main {
 /* Typography */
 /* Layout Adjustments */
 .section-title {
-    color: #e67e22; /* Matches the orange in your image */
+    color: #419755; /* Matches the orange in your image */
     font-weight: bold;
 }
 
 .section-divider {
-    border-top: 1px solid #fce4d6;
-    opacity: 1;
+    border-top: 1px solid #419755;
+    opacity: 0.1;
     margin-top: 2rem;
 }
 
@@ -210,10 +212,13 @@ align-items: center;
 /* The orange dots in your image */
 .feature-list li::before {
     content: "●";
-    color: #f39c12;
+    background: linear-gradient(58deg, #B6EDAC 0%, #32922D 100%);
+    color: transparent;
+    border-radius: 50%;
     position: absolute;
     left: 0;
-    font-size: 0.8rem;
+    width: 12px;
+    height: 12px;
     top: 2px;
 }
 
