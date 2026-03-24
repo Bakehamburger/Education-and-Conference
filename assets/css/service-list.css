@@ -32,12 +32,6 @@ main {
   
 }
 
-.header-content .main-title-eng {
-    color: rgba(234, 99, 00, 0.6);
-    font-weight: 800;
-     
-}
-
 .curve-container {
     position: absolute;
     bottom: 0;
