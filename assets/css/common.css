@@ -367,24 +367,29 @@ main{
 
 .main-title-eng{
     font-family: "Manrope", sans-serif;
-    color: var(--burnt-orange);
-    font-weight: 800;
+    font-weight: 500;
     font-size: var(--fs-base);
+    letter-spacing: 0.1em;
+    line-height: 100%;
+    color: var(--burnt-orange);
+    padding-top: 12px;
 }
 
 .txt-color-orange{
     color: var(--burnt-orange);
 }
 
-.txt-color-gray{
-    color: var(--dark-charcoal);
+.txt-color-orange-rgba{
+    color: rgba(239, 99, 0, 0.6);
 }
 
-/* Hide desktop nav on mobile */
-@media (max-width: 991px) {
-    .desktop-nav-container {
-        display: none !important;
-    }
+
+.txt-color-white{
+    color: var(--white);
+}
+
+.txt-color-white-rgba{
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .headline-text{
@@ -399,6 +404,18 @@ main{
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 200%;
+}
+
+.txt-color-gray{
+    color: var(--dark-charcoal);
+}
+
+
+/* Hide desktop nav on mobile */
+@media (max-width: 991px) {
+    .desktop-nav-container {
+        display: none !important;
+    }
 }
 
 /* Main Button */
@@ -451,12 +468,6 @@ main{
 }
 
 
-/* Image Wrapper & Label */
-.case-image-wrapper {
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-}
 
 /* Content Area */
 .case-content-area {

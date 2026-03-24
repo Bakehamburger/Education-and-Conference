@@ -450,6 +450,10 @@ body.menu-open {
     padding-bottom: 128px; 
 }
 
+.solution-section-desc{
+    letter-spacing: 0.08em;
+}
+
 
 .solution-section::before {
     content: "";
@@ -464,7 +468,7 @@ body.menu-open {
         #FD6C41 67%, 
         #F35F20 100%);
     background-blend-mode: overlay;     
-    opacity: 0.8; 
+    opacity: 0.9; 
     z-index: -1;
     border-radius: clamp(32px, 10vw, 128px);
 }
@@ -478,7 +482,8 @@ body.menu-open {
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease;
-    min-height: 241px; /
+    min-height: 241px; 
+    box-shadow: 0 4px 40px 0 rgba(139, 73, 25, 0.5);
 }
 
 

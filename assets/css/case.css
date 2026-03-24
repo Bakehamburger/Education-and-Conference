@@ -109,7 +109,7 @@ main {
     padding-top: 128px;
 }
 
-.case-image-wrapper img{
+.case-container .case-card-item .case-image-wrapper img{
     border-radius: 16px;
 }
 
