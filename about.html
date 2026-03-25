@@ -15,7 +15,7 @@
 </head>
 <body class="bg-gray-base" id="about"> 
     <header class="header-gray-top">
-        <nav class="navbar-horizontal">
+            <nav class="navbar-horizontal navbar-no-background">
                 <div class="navbar-container">
                     <!-- Logo -->
                     <a href="index.html" class="navbar-brand"><img src="assets/images/icons/company-logo.svg" alt="company logo"></a>
@@ -50,7 +50,7 @@
                         <div>
                             <a href="#service">
                                 <p>事業紹介</p> 
-                                <p class="text-orange">Service</p>
+                                <p class="txt-color-orange">Service</p>
                             </a>
                         </div>
                         <ul class="menu-service-list">
@@ -61,7 +61,7 @@
                         <div>
                             <a href="#case">
                                 <p>導入事例</p> 
-                                <p class="text-orange">Case</p>
+                                <p class="txt-color-orange">Case</p>
                             </a>
                         </div>
                     </div>
@@ -69,11 +69,11 @@
                         <div class="">
                             <a href="#news">
                                 <p>お知らせ</p> 
-                                <p class="text-orange">News</p>
+                                <p class="txt-color-orange">News</p>
                             </a>
                         </div>
                         <div>
-                            <a href="#about">お知らせ <span class="text-orange">About</span></a>
+                            <a href="#about">お知らせ <span class="txt-color-orange">About</span></a>
                         </div>
                     </div>
                     <div class="col">
@@ -108,11 +108,13 @@
                     </div>
                 </div>
             </div>
-        <div class="pt-5">
+
+            
+        <div class="pt-5 mt-5">
             <div class="d-flex justify-content-between align-items-center ps-5">
                 <div>
                     <h1 class="main-title text-orange">お知らせ</h1>
-                    <p class="sub-title text-muted">About</p>
+                    <p class="sub-title txt-color-orange">About</p>
                 </div>
             </div>
             <div class="position-relative">
@@ -128,12 +130,16 @@
         </div>
         </div>
     </header>
-    <main>
+    <main class="content-white-bottom mx-0">
         <div class="container">
             <div class="row">
                 <div class="about-top">
                     <h1 class="text-orange">
-                        技術×営業×サポートの総合力で <br> お客様を支え続ける。<br> <br>
+                        技術×営業×サポートの総合力で
+                        <br>
+                        お客様を支え続ける。 
+                        <br>
+                        <br>
                         北海道に根差す、現場密着型の伴走者。
                     </h1>
                 </div>
@@ -188,8 +194,8 @@
             <div class="container">
                 <div class="row mx-auto">
                     <div class="message-title">
-                        <p>代表挨拶</p>
-                        <p>Message</p>
+                        <h2 class="main-title txt-color-orange">代表挨拶</h2>
+                        <p class="sub-title txt-color-orange">Message</p>
                     </div>
                     <div class="col company-president-image">
                         <img src="assets/images/about/company-president.png" alt="">
@@ -214,7 +220,7 @@
         
         <div class="header-title">
             <h1>会社概要</h1>
-            <p>Company Overview</p>
+            <p class="sub-title txt-color-orange">Company Overview</p>
         </div>
 
         <div class="row-border">
@@ -322,7 +328,7 @@
         <div class="row">
             <div class="col-md-3 mb-4">
                 <h2 class="history-title h1 mb-0">沿革</h2>
-                <small class="text-muted text-uppercase" style="letter-spacing: 2px;">History</small>
+                <p class="text-muted text-uppercase" style="letter-spacing: 2px;">History</p>
             </div>
 
             <div class="col-md-9">
@@ -375,7 +381,143 @@
         </div>
     </div>
 </div>
+
+<div class="access-container">
+    <div class="access-header">
+        <div class="title-group">
+            <h2 class="main-title txt-color-orange">アクセス</h2>
+            <p class="sub-title txt-color-orange">Access</p>
+        </div>
+
+        <div class="address-info">
+            <div>〒007-0841</div>
+            <div>札幌市東区北41条東8丁目2番25号</div>
+            <div>地下鉄東豊線 栄町駅 徒歩12分</div>
+        </div>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=札幌市東区北41条東8丁目2番25号" target="_blank" class="btn-google">
+            <span class="btn-label">GoogleMap</span>
+            <span class="btn-arrow">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="white">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </span>
+        </a>
+    </div>
+
+    <div class="map-wrapper">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.8228518840254!2d141.36217467664687!3d43.108269587498715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2f1957262f3f%3A0x6b3b555027588722!2z44CSMDA3LTA4NDEg5YyX5rW36YGT5pyt5bmM5biC5p2x5Yy65YyX77yU77yR5p2h5p2x77yY5LiB55uu77yS4oiS77yS77yV!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
     </main>
+    <!-- FOOTER -->
+            <footer class="footer-section">
+              
+                <div class="footer-banner mx-auto">
+                    <div class="footer-banner-title">
+                        <h2>
+                            お問い合わせ <br>
+                            資料請求
+                        </h2>
+                        <p>Contact</p>     
+                    </div>
+                    <div class="footer-banner-description">
+                        お客様の課題・環境に合わせて設計から保守まで包括的にサポートします。無料のお見積りも承っております。内容確認の上、担当よりご連絡させていただきます。
+                    </div>
+                    <div class="footer-banner-cta">
+                        <img src="assets/images/icons/sm-play-btn.svg" alt="">
+                    </div>
+                </div>
+                <div class="footer-body">
+                    <div class="row footer-content mx-auto">
+                        <div class="col-6">
+                            <h2>
+                                北海道に寄り添い <br>
+                                ともに未来をつくる
+                            </h2>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <a href="#service">
+                                    <p>事業紹介</p> 
+                                    <p>Service</p>
+                                </a>
+                            </div>
+                            <ul class="menu-service-list">
+                                <li><a href="#service"><img src="assets/images/icons/line-white.svg" alt="">自治体ソリューション</a></li>
+                                <li><a href="#service"><img src="assets/images/icons/line-white.svg" alt="">自治体ソリューション</a></li>
+                                <li><a href="#service"><img src="assets/images/icons/line-white.svg" alt="">自治体ソリューション</a></li>
+                            </ul>
+                            <div>
+                            <a href="#case">
+                                <p>導入事例</p> 
+                                <p>Case</p>
+                            </a>
+                            </div>
+                        </div>
+                        
+                        <div class="col footer-right-nav-links">
+                            <div>
+                                <a href="#news">
+                                    <p>お知らせ</p> 
+                                    <p>News</p>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#about">
+                                    <p>お知らせ</p> 
+                                    <p>About</p>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#contact">
+                                    <p>お問い合わせ・資料請求</p> 
+                                    <p>Contact</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 footer-end">
+                        <img src="assets/images/icons/logo-white.svg" alt="">
+                        </div>
+                        <div class="col-12 footer-bottom-container">
+                            <div class="footer-left-links">
+                            <p>
+                                〒007-0841  
+                            </p>
+                            <p>
+                                札幌市東区北41条東8丁目2番25号
+                            </p>
+                            <p>
+                                TEL 011-743-2233 
+                            </p>
+                            <p>
+                                FAX 011-743-2319
+                            </p>
+                            </div>
+                            <div class="footer-right-links">
+                                <p>
+                                    プライバシーポリシー
+                                </p>
+                                <p>
+                                    クッキーポリシー
+                                </p>
+                                <small>
+                                    Copyright © 2026 TOWA E&C Corporation All rights reserved.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </footer>
 
     <script src="assets/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
