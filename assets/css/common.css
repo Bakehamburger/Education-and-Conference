@@ -136,6 +136,11 @@ main{
     font-family: "Manrope", sans-serif;
 }
 
+.site-container {
+  padding: 0 32px;
+}
+
+
 .navbar-horizontal {
     background: rgba(245,245,245, 0.06) !important;
     backdrop-filter: blur(40px);
@@ -405,7 +410,7 @@ main{
 
 .main-title-eng {
     font-family: "Manrope", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: var(--fs-base);
     letter-spacing: 0.1em;
     line-height: 100%;
