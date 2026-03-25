@@ -113,11 +113,18 @@
     padding: 95px 426px 96px 158px;
     margin: auto;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: 1137px;
+    width: 1360px;
 }
 
 .history-title {
     color: #f37021;
     font-weight: bold;
+}
+
+.history-subtitle {
+    line-height: 1em;
+    letter-spacing: 0.1em;
 }
 
 /* Timeline Logic */
@@ -152,16 +159,16 @@
 
 .timeline-item {
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 64px;
 }
 
 /* The Orange Dots */
 .timeline-dot {
     position: absolute;
-    left: -40px;
+    left: -42px;
     top: 8px;
-    width: 15px;
-    height: 15px;
+    width: 19px;
+    height: 19px;
     background: url(.png), linear-gradient(82.99deg, rgba(254, 159, 93, 0.8) 24.13%, rgba(254, 134, 79, 0.8) 42.16%, rgba(253, 108, 65, 0.8) 60.29%, rgba(234, 99, 0, 0.8) 85.45%);
     border-radius: 50%;
     z-index: 2;
@@ -174,15 +181,17 @@
 
 .year {
     color: #f37021;
-    font-size: 1.8rem;
+    font-size: var(--fs-xl);
     font-weight: 800;
     line-height: 1;
     margin-bottom: 5px;
+    font-family: "Manrop", sans-serif;
 }
 
 .description {
     font-size: 0.95rem;
     color: #333;
+    font-weight: 500;
 }
 
 
@@ -190,6 +199,7 @@
         .access-container {
             max-width: 960px;
             margin: 0 auto;
+            padding-bottom: 240px;
         }
 
         /* ヘッダーレイアウト */

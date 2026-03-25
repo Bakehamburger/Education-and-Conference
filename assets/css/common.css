@@ -748,11 +748,13 @@ main{
 
 
 .footer-body {
-   background: url(.png), conic-gradient(from 93.58deg at 48.26% 42.79%, #FD6C41 -117.69deg, #EA6300 45.82deg, #FE864F 157.5deg, #FD6C41 242.31deg, #EA6300 405.82deg);
+    background: url(.png), conic-gradient(from 93.58deg at 48.26% 42.79%, #FD6C41 -117.69deg, #EA6300 45.82deg, #FE864F 157.5deg, #FD6C41 242.31deg, #EA6300 405.82deg);
     border-radius: 128px 128px 0px 0px;
     display: flex;
     align-items: center;
 }
+
+
 .footer-content {
     display: flex;
     color: white;
