@@ -366,11 +366,10 @@ main{
 
 .main-title-eng {
     font-family: "Manrope", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: var(--fs-base);
     letter-spacing: 0.1em;
     line-height: 100%;
-    padding-top: 12px;
 }
 
 .txt-color-orange{
@@ -460,14 +459,12 @@ main{
 }
 
 /* case */
-/* Card Container */
 .case-card {
     height: 100%;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
 }
-
 
 
 /* Content Area */
@@ -509,9 +506,32 @@ main{
     .case-headline-section{
         padding: 0px 92px;
     }
+
     .case-section-inner{
         padding: 128px 32px; 
     }
+
+     .case-card-container {
+        margin: 0 auto;    
+        display: flex;
+        flex-wrap: nowrap; 
+        gap: 12px;        
+    }
+
+    .case-card-item {
+        padding: 0 !important; 
+        flex: 0 0 calc(33.333% - 8px) !important;
+        max-width: calc(33.333% - 8px) !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .case-card-container {
+        display: flex;
+        flex-wrap: wrap;    
+        gap: 20px;        
+    }
+
 }
 
 @media screen and (max-width: 576px ){
