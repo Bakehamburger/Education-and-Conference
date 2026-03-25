@@ -667,22 +667,9 @@ body.menu-open {
 
 
 /* News Styles */
-.text-orange { 
-    color: var(--burnt-orange);
-    font-size: 40px;
-    line-height: 100%;
-    font-weight: 700;
-    padding-bottom: 12px;
-}
 
-.news-title-en {
-    font-family: "Manrope";
-    color: rgba(234, 99, 0, 0.6);
+.pb-32 {
     padding-bottom: 32px;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0.1em;
-    font-weight: 800;
 }
 
 .btn-orange-action {
@@ -760,9 +747,13 @@ body.menu-open {
     bottom: 200px;
     right: 0;
     background: linear-gradient(to right, #FE9F5D, #FD854F, var(--burnt-orange));
-    color: white;
-    padding: 15px 40px;
+    color: #ffffff;
+    padding: 29px 36px 27px 41px;
     border-radius: 50px;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    font-weight: 600;
     font-weight: bold;
 }
 
