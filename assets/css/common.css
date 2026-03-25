@@ -311,24 +311,35 @@ main{
     font-size: 1.5rem;
     text-decoration: none;
     display: block;
-    margin: 1.5rem 0;
+    margin: 40px 0;
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.4s ease;
     letter-spacing: 2px;
 }
 
+.mobile-nav-links p {
+    line-height: 1em;
+}
 
+.mobile-nav-links small {
+    font-size: 14px;
+    font-family: "Manrope", sans-serif;
+}
+
+.nav-link-service a{
+    margin: 0;
+}
 
 .menu-service-list {
     display: flex;
-    align-items: center;
     flex-direction: column;
 }
 
 .menu-service-list a {
     display: flex;
     align-items: center;
+    margin: 0;
 }
 
 
