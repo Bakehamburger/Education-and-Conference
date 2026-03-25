@@ -242,7 +242,7 @@ main {
     
     font-family: "Manrope", sans-serif;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 5;
     letter-spacing: 0.03em;
     line-height: 100%;
     margin-bottom: 22px;
@@ -450,28 +450,17 @@ main {
     min-height: 280px; 
 }
 
-.services-list-solutions-title {
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 5px;
-    color: #333;
+
+.services-list-solutions-content .service-title-jap {
+    font-weight: 500;
 }
 
-.services-list-solutions-title span {
-    font-size: 2.2rem;
-    letter-spacing: 2%;
-}
-
-.services-list-solutions-en {
-    font-size: 0.75rem;
-    font-weight: 800;
-    color: #444;
-    margin-bottom: 40px;
-    letter-spacing: 0.5px;
+.services-list-solutions-content .service-title-eng {
+      font-weight: 600;
 }
 
 .services-list-solutions-desc {
+    font-weight: 500;
     line-height: 1.8;
     flex: 1; 
 }
@@ -545,19 +534,6 @@ main {
         min-height: auto;      
     }
 
-    .services-list-solutions-title {
-        font-size: 1.5rem;
-        margin-bottom: 4px;
-    }
-
-    .services-list-solutions-title span {
-        font-size: 2rem;
-    }
-
-    .services-list-solutions-en {
-        margin-bottom: 24px;
-        font-size: 0.85rem;
-    }
 
     .services-list-solutions-desc {
         font-size: 0.95rem;
@@ -627,16 +603,16 @@ background: linear-gradient(57deg,
 
 .step-header {
   color: var(--burnt-orange);
-  font-weight: 700;
-  font-size: 1.6rem;
+  font-weight: 600;
+  font-size: var(--fs-xl);
   margin-top: 5px;
   margin-bottom: 20px;
 }
 
 .step-description {
-  color: #333;
   line-height: 1.8;
-  font-size: 0.95rem;
+  font-size: var(--fs-base);
+  font-weight: 500;
 }
 
 

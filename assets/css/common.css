@@ -384,12 +384,27 @@ main{
     padding-bottom: 12px;
 }
 
+.service-title-jap {
+    font-size: var(--fs-xl);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 130%;
+}
+
 .main-title-eng {
     font-family: "Manrope", sans-serif;
     font-weight: 600;
     font-size: var(--fs-base);
     letter-spacing: 0.1em;
     line-height: 100%;
+}
+
+.service-title-eng {
+  font-size: var(--fs-base);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 110%;
+  padding-top: 4px;
 }
 
 .txt-color-orange{

@@ -208,7 +208,6 @@ body.menu-open {
     background-position: center;
     background-size: cover;
     text-decoration: none;
-    color: white !important;
     transition: transform 0.3s ease;
 }
 
@@ -221,20 +220,7 @@ body.menu-open {
     flex-direction: column;
 }
 
-.service-card h3 {
-    font-size: var(--fs-xl);
-    font-weight: 700;
-    margin-bottom: 0;
-    line-height: 130%;
-}
 
-.service-card .main-title-eng {
-  font-size: var(--fs-sm);
-  font-weight: 500;
-  letter-spacing: 0em;
-  line-height: 100%;
-  padding-top: 4px;
-}
 
 .service-card h3 span {
     font-size: 1.8rem;
