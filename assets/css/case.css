@@ -127,21 +127,25 @@ main {
 }
 
 .label-name::before {
-  content: "";        
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  
-  background: url('https://grainy-gradients.vercel.app/noise.svg'),
-    linear-gradient(
-        135deg,
-        #FE9F5D 20%, 
-        #FD854F 44%, 
-        #FD6C41 67%, 
-        #F35F20 100%);
-    background-blend-mode: overlay;     
-    opacity: 0.8; 
+    content: "";        
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    
+    background: url('https://grainy-gradients.vercel.app/noise.svg'),
+        linear-gradient(
+            135deg,
+            #FE9F5D 20%, 
+            #FD854F 44%, 
+            #FD6C41 67%, 
+            #F35F20 100%);
+        background-blend-mode: overlay;     
+        opacity: 0.8; 
+}
+
+.filter-group{
+    padding-bottom: 40px;
 }
 
 
@@ -265,4 +269,19 @@ main {
     flex-wrap: wrap;
     gap: 12px;      
 }
+
+@media screen and (max-width: 576px){
+    .mobile-filter-container .all-btn-wrapper{
+        width: 100%;
+    }
+
+    .mobile-filter-container{
+        gap: 24px !important;
+    }
+
+    .custom-pad{
+        padding: 10px 16px !important;
+    }
+}
+
 
