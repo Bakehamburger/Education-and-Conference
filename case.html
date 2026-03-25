@@ -133,31 +133,37 @@
     <div class="container container-inner">
         <div class="row mb-5">
             <div class="col-12 case-inner">          
-                <div class="filter-group mb-4">
-                    <label class="mb-2 label-name">地域で探す</label>
-                    <div class="d-flex flex-wrap gap-2">
-                        <button class="btn btn-orange rounded-pill active" data-region="all">すべて</button>
-                        <button class="btn btn-outline-secondary rounded-pill" data-region="central">道央</button>
-                        <button class="btn btn-outline-secondary rounded-pill" data-region="east">道東</button>
-                        <button class="btn btn-outline-secondary rounded-pill" data-region="north">道北</button>
-                        <button class="btn btn-outline-secondary rounded-pill" data-region="south">道南</button>
+                <div class="filter-group">
+                    <label class="mb-3 label-name">地域で探す</label>
+                    <div class="d-flex flex-wrap gap-2 mobile-filter-container">
+                        <div class="all-btn-wrapper">
+                            <button class="btn btn-orange rounded-pill select-all-btn active" data-region="all">すべて</button>
+                        </div>                    
+                        <button class="btn btn-outline-secondary rounded-pill custom-pad" data-region="central">道央</button>
+                        <button class="btn btn-outline-secondary rounded-pill custom-pad" data-region="east">道東</button>
+                        <button class="btn btn-outline-secondary rounded-pill custom-pad" data-region="north">道北</button>
+                        <button class="btn btn-outline-secondary rounded-pill custom-pad" data-region="south">道南</button>
                     </div>
                 </div>
 
-                <div class="filter-group mb-4">
-                    <label class="mb-2 label-name">カテゴリーで探す</label>
-                    <div class="d-flex flex-wrap gap-2">
-                        <button class="btn btn-orange rounded-pill active" data-category="all">すべて</button>
+                <div class="filter-group">
+                    <label class="mb-3 label-name">カテゴリーで探す</label>
+                    <div class="d-flex flex-wrap gap-2 mobile-filter-container">
+                        <div class="all-btn-wrapper">
+                            <button class="btn btn-orange rounded-pill select-all-btn active" data-category="all">すべて</button>
+                        </div> 
                         <button class="btn btn-outline-secondary rounded-pill" data-category="education">教育ソリューション</button>
                         <button class="btn btn-outline-secondary rounded-pill" data-category="government">自治体ソリューション</button>
                         <button class="btn btn-outline-secondary rounded-pill" data-category="business">企業・ビジネスソリューション</button>
                     </div>
                 </div>
 
-                <div class="filter-group mb-4">
+                <div class="filter-group">
                     <label class="mb-2 label-name">システムで探す</label>
-                    <div class="d-flex flex-wrap gap-2">
-                        <button class="btn btn-outline-secondary rounded-pill active-orange" data-system="all">すべて</button>
+                    <div class="d-flex flex-wrap gap-2 mobile-filter-container">
+                        <div class="all-btn-wrapper">
+                            <button class="btn btn-outline-secondary rounded-pill active-orange" data-system="all">すべて</button>
+                        </div>
                         <button class="btn btn-outline-secondary rounded-pill" data-system="edu-facility"># 大学・教育施設</button>
                         <button class="btn btn-outline-secondary rounded-pill" data-system="assembly"># 議場</button>
                         <button class="btn btn-outline-secondary rounded-pill" data-system="public"># 公共施設</button>
