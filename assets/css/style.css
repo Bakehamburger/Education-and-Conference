@@ -17,6 +17,15 @@ body.menu-open {
     height: 870px;
     margin-top: 5px;
 }
+
+@media screen and (max-width:992px) {
+    .landing-page {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 59.8% 0%;
+        height: 757px;
+    }
+}
 .firstview {
     margin: 0;
     padding: 0;
@@ -47,12 +56,9 @@ body.menu-open {
         left: 3%;
     }
 
-    /* .slogan h1 {
-        font-size: 36px;
-        line-height: 1.65em;
-        letter-spacing: 0.1em;
-        font-weight:bolder;
-    } */
+    .slogan h1 {
+        line-height: 1.65em
+    }
 }
 
 .news-container,.news-container-mobile {
@@ -75,7 +81,7 @@ body.menu-open {
     .news-content-container-mobile {
         left: 10%;
         padding: 16px 12px;
-        bottom: 5%;
+        bottom: 0;
     }
 
     .news-content-container {
@@ -145,7 +151,7 @@ body.menu-open {
 
 @media screen and (max-width:992px) {
     .news-button-container {
-        margin-left: 20px;
+        margin-left: 30px;
     }
 }
 
@@ -175,7 +181,13 @@ body.menu-open {
 
 /* TOP */
 .top-section {
-    padding: 159px 0 80px 0;
+    padding: 159px 12px 80px 12px;
+}
+
+@media screen and (max-width :992px) {
+    .top-section {
+        padding: 77px 12px 92px 12px;
+    }
 }
 
 .apricot {
@@ -184,15 +196,21 @@ body.menu-open {
 
 
 .top-content h1{
-    font-size: 54px;
+    font-size: clamp(23px, 4.5vw, 54px);
     padding-bottom: 64px;
     line-height: 1.5em;
     letter-spacing: 0.02em;
 }
 
+@media screen and (max-width :992px) {
+    .top-content h1{
+        line-height: 1.65em;
+    }
+}
+
 .top-section p {
     font-weight: bold;
-    font-size: 20px;
+    font-size: clamp(16px, 1.67vw, 20px);
 }
 
 .brand-description p {
@@ -200,10 +218,20 @@ body.menu-open {
 }
 
 /* EVENT INFORMATION CARD */
+.event-information-card-section {
+    padding: 0 12px;
+}
+
 .event-information-card {
     background-color: #fff;
     border-radius: 32px;
     padding: 128px 106px ;
+}
+
+@media screen and (max-width:992px) {
+    .event-information-card {
+        padding: 72px 12px 79px 12px;
+    }
 }
 
 .event-information-card p {
@@ -225,9 +253,23 @@ body.menu-open {
     font-size: 24px;
 }
 
+@media screen and (max-width: 992px) {
+    .event-information-badge-label {
+        height: 44px;
+    }
+}
+
 .event-information-card img {
     width: 410px;
     height: 350px;
+}
+
+@media screen and (max-width: 992px) {
+    .event-information-card img {
+        width: 100%;
+        max-height: 254px;
+        object-fit: contain;
+    }
 }
 
 .event-information-card h2 {
@@ -235,6 +277,17 @@ body.menu-open {
     padding-bottom: 44px;
     font-weight: bold;
 }
+
+@media screen and (max-width :992px) {
+    .event-information-card h2 {
+        line-height: 1.5em;
+        padding-top: 40px;
+    padding-bottom: 30px;
+    }
+    
+}
+
+
 
 .event-information-card-text p{
     padding-bottom: 32px;
