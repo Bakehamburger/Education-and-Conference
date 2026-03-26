@@ -112,7 +112,7 @@ main {
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.1em;
- border-bottom: 4px solid; 
+ border-bottom: 17px solid; 
   /* Define the gradient */
   border-image: linear-gradient(to right, #B6EDAC 0%, #32922D 100%) 1;
 }
