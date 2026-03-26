@@ -103,23 +103,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- 3. CLICK HANDLERS ---
     filterButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Reset only the buttons in the same row/group
-            const row = this.closest('.d-flex');
-            row.querySelectorAll('.btn').forEach(b => {
-                b.classList.remove('active-orange');
-                b.classList.add('btn-outline-secondary');
-            });
+            // CHANGE: Use .mobile-filter-container instead of .d-flex
+            // This container holds BOTH the 'all' wrapper and the 'choices' wrapper
+            const filterRow = this.closest('.mobile-filter-container');
+            
+            if (filterRow) {
+                filterRow.querySelectorAll('.btn').forEach(b => {
+                    b.classList.remove('active-orange');
+                    b.classList.remove('active'); // Added to ensure 'active' from HTML is also removed
+                    b.classList.add('btn-outline-secondary');
+                });
+            }
 
             // Activate clicked button
             this.classList.add('active-orange');
             this.classList.remove('btn-outline-secondary');
 
-            filterAll();
+            // Trigger filtering
+            filterAll(); 
         });
     });
-
-    // Run filter immediately on load
-    filterAll();
 });
 
 
