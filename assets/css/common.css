@@ -298,7 +298,7 @@ main{
     visibility: hidden;
     transform: translateX(-100%);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    padding: 176px 198px 0 198px;
+    padding: clamp(69px, 14.67vw, 176px) clamp(12px, 16.5vw, 198px) 0;
 }
 
 @media screen and (max-width:992px) {
@@ -341,7 +341,9 @@ main{
     z-index: 10000;
 }
 
-
+.mobile-nav-links {
+    display: flex;
+}
 
 .mobile-nav-links a {
     color: var(--burnt-orange);
@@ -364,6 +366,10 @@ main{
     font-family: "Manrope", sans-serif;
 }
 
+.mobile-nav-links-wrapper {
+    width: 235px;
+}
+
 .top-navlink {
     padding: 11px 0 40px 0;
 }
@@ -379,7 +385,7 @@ main{
     margin-bottom: 40px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
     .menu-service-list {
         display: flex;
         flex-direction: row;
@@ -397,7 +403,7 @@ main{
     font-size: var(--fs-sm);
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:992px) {
     .menu-service-list a {
         background-color: var(--white);
         padding: 16px;
@@ -411,7 +417,7 @@ main{
     
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
     .nav-link-case,.nav-link-news,.nav-link,.nav-link-about {
         padding-bottom: 32px;
     }
@@ -428,7 +434,7 @@ main{
     font-weight: 700;
 }
 
-@media screen and (max-width : 1200px) {
+@media screen and (max-width: 992px) {
     .menu-header-cta p{
         font-size: var(--fs-base);
         line-height: 1.35em;
@@ -452,7 +458,7 @@ main{
     gap: 16px;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:992px) {
     .cta-container {
         flex-direction: row;
         gap: 12px;
@@ -464,10 +470,10 @@ main{
     border-radius: 8px;
     color: white;
     padding: 21px 28px;
-    width: 411px;
+    max-height: 176px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
     .mobile-menu-cta {
         padding: 16px 13px;
     }
@@ -486,7 +492,7 @@ main{
     margin-top: 20px;
 }
 
-@media screen and (max-width :1200px) {
+@media screen and (max-width :992px) {
     .cta-content {
         margin-top: 0px;
     }
@@ -510,10 +516,10 @@ main{
 }
 
 .cta-content2 {
-        padding-top: 42px;
+    padding-top: 42px;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:992px) {
     .cta-content2 {
         padding-top: 18px;
     }
