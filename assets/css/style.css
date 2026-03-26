@@ -56,7 +56,7 @@ body.menu-open {
 .news-content-container {
     display: flex;
     position: absolute;
-    right: 8%;
+    right: 5%;
     bottom: 20%;
 }
 
