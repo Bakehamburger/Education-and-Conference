@@ -13,7 +13,7 @@ main {
 .case-header {
     position: relative;
     background-color: var(--bg-grey);
-    min-height: 450px; /* Adjust based on your preference */
+    min-height: 284px; /* Adjust based on your preference */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,9 +21,16 @@ main {
 }
 
 .header-content {
-   padding-left: 92px;
-    margin-top: 60px; /* Offset for the fixed navbar */
-  
+    padding:  0 clamp(12px, 7.6vw - 17.7px, 92px);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 6px;
+}
+
+@media screen and (max-width: 992px){
+    .header-content{
+        margin-bottom: 75px;
+    }
 }
 
 .main-title {
@@ -53,7 +60,7 @@ main {
 .breadcrumb-overlay {
     position: absolute;
     bottom: 30px; /* Adjust to center vertically in the white area */
-    left: 130px;   /* Adjust to match horizontal padding in image */
+    left: 100px;   /* Adjust to match horizontal padding in image */
     font-size: 0.9rem;
     color: #333;
     display: flex;
@@ -106,31 +113,40 @@ main {
 }
 
 .container-inner{
-    padding-top: 128px;
+    padding-top: 220px;
 }
 
-.case-container .case-card-item .case-image-wrapper img{
-    border-radius: 16px;
+@media screen and (min-width: 992px){
+    .container-inner{
+        padding: 220px 32px 0px;
+    }
+}
+
+.custom-fs{
+    font-size: 18px;
+}
+
+.label-name{
+    padding-left: 16px;
 }
 
 
-.label-name {
+.label-name-container {
   display: flex;
   align-items: center; 
-  gap: 16px;            
 
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   letter-spacing: 0.1em;
   line-height: 100%;
   color: var(--dark-charcoal);
 }
 
-.label-name::before {
+.label-name-container::before {
     content: "";        
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     
     background: url('https://grainy-gradients.vercel.app/noise.svg'),
@@ -191,13 +207,6 @@ main {
 }
 
 
-@media screen and (min-width: 992px){
-    .container-inner{
-        background-color: var(--white);
-        padding: 128px 32px 0px;
-    }
-}
-
 .custom-pagination {
     padding: 0 0 128px;
 }
@@ -228,16 +237,13 @@ main {
     user-select: none;
 }
 
-
 .page-num.active {
     box-shadow: 0 4px 10px rgba(242, 101, 34, 0.2);
 }
 
-
 .page-num:hover:not(.active) {
     background-color: var(--white);
 }
-
 
 .case-card-item {
     animation: fadeIn 0.5s ease;
@@ -270,13 +276,25 @@ main {
     gap: 12px;      
 }
 
-@media screen and (max-width: 576px){
-    .mobile-filter-container .all-btn-wrapper{
-        width: 100%;
-    }
+.case-card-item .case-image-wrapper img{
+    border-radius: 16px;
+}
 
+.mobile-filter-container {
+    display: flex;
+    align-items: flex-start; /* Keeps the "All" button at the top */
+}
+
+.all-btn-wrapper {
+    flex-shrink: 0; /* Prevents the "All" button from getting squeezed */
+}
+
+@media screen and (max-width: 992px){  
     .mobile-filter-container{
-        gap: 24px !important;
+        flex-direction: column;
+    }
+    .choices-btn-wrapper{
+        margin-top: 24px;
     }
 
     .custom-pad{
