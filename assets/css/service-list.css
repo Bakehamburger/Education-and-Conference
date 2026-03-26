@@ -446,7 +446,7 @@
 }
 
 .services-list-solutions-image {
-    padding: 30px; /* Simplified padding to match the image mockup */
+    padding: 30px 30px 30px 57px; /* Simplified padding to match the image mockup */
     display: flex;
     justify-content: center;
     align-items: center;

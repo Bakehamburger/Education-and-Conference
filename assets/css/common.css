@@ -752,14 +752,14 @@ main{
 
 /* The orange dots in your image */
 .feature-list li::before {
-    content: "●";
+   content: "";
     position: absolute;
     left: 0;
-    top: 0; /* Adjust this based on your font-size to center the dot */
-    font-size: 14px;
+    top: 0.5em; /* Centers it relative to line-height */
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
     background: linear-gradient(to right, #FE9F5D, #EA6300);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .gray-placeholder-box {
