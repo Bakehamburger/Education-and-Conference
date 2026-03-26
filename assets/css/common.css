@@ -343,6 +343,7 @@ main{
 
 .mobile-nav-links {
     display: flex;
+    justify-content: space-between;
 }
 
 .mobile-nav-links a {
@@ -432,6 +433,7 @@ main{
     border-bottom: 1px solid #fff;
     font-size: 20px;
     font-weight: 700;
+    padding-bottom: 9px;
 }
 
 @media screen and (max-width: 992px) {
@@ -470,7 +472,7 @@ main{
     border-radius: 8px;
     color: white;
     padding: 21px 28px;
-    max-height: 176px;
+    max-height: 149px;
 }
 
 @media screen and (max-width: 992px) {
@@ -490,6 +492,8 @@ main{
 
 .cta-content  {
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 @media screen and (max-width :992px) {
@@ -513,10 +517,6 @@ main{
 
 .request-information {
     font-size: 26px;
-}
-
-.cta-content2 {
-    padding-top: 42px;
 }
 
 @media screen and (max-width:992px) {
