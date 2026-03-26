@@ -27,12 +27,6 @@ main {
     margin-bottom: 6px;
 }
 
-@media screen and (max-width: 992px){
-    .header-content{
-        margin-bottom: 75px;
-    }
-}
-
 .main-title {
     color: var(--burnt-orange);
     font-size: 3.5rem;
@@ -109,16 +103,6 @@ main {
     .breadcrumb-overlay {
         right: 20px;
         font-size: 0.8rem;
-    }
-}
-
-.container-inner{
-    padding-top: 220px;
-}
-
-@media screen and (min-width: 992px){
-    .container-inner{
-        padding: 220px 32px 0px;
     }
 }
 
@@ -273,7 +257,8 @@ main {
 .case-grid-grow {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;      
+    gap: 12px; 
+    padding-top: 76px;     
 }
 
 .case-card-item .case-image-wrapper img{
@@ -289,7 +274,27 @@ main {
     flex-shrink: 0; /* Prevents the "All" button from getting squeezed */
 }
 
-@media screen and (max-width: 992px){  
+@media screen and (max-width: 991px){  
+    .header-content{
+        margin-bottom: 75px;
+    }
+
+    .case-header{
+        min-height: 270px !important;
+    }
+
+    .label-name-container {
+        font-size: 20px;
+    }
+
+    .filter-group .btn{
+        padding: 9px 16px;
+    }
+
+    .choices-btn-wrapper{
+        gap: 24px !important;
+    }
+
     .mobile-filter-container{
         flex-direction: column;
     }
@@ -297,9 +302,21 @@ main {
         margin-top: 24px;
     }
 
-    .custom-pad{
-        padding: 10px 16px !important;
+    .filter-group-category .all-btn-wrapper{
+        display: none;
+    }
+
+    .filter-group-category .choices-btn-wrapper{
+        margin-top: 4px;
+    }
+    .case-grid-grow{
+        padding-top: 32px;
+    }
+
+    .case-content-area {
+        padding-bottom: 30px;
     }
 }
+
 
 

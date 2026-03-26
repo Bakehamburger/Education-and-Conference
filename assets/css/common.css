@@ -173,7 +173,8 @@ main{
 
 .navbar-container {
     max-width: 1400px;
-    padding: 0 2rem;
+    margin: 0 auto;
+    padding: 0 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -209,6 +210,18 @@ main{
     border-radius: 25px;
     transition: all 0.3s ease;
     white-space: nowrap;
+}
+
+@media screen and (max-width: 992px){
+    .navbar-brand img{
+        width: 71px;
+        height: 39px;
+    }
+
+    .navbar-toggler{
+        width: 45px !important;
+        height: 45px !important;
+    }
 }
 
 .nav-link:hover {
@@ -513,7 +526,7 @@ main{
 
 .main-title-jap {
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0;
     line-height: 100%;
     padding-bottom: 12px;
@@ -728,12 +741,6 @@ main{
     margin-left: auto; /* Pushes the box to the right edge of its column */
 }
 
-
-
-
-
-
-
 /* Hide desktop nav on mobile */
 @media (max-width: 991px) {
     .desktop-nav-container {
@@ -764,7 +771,7 @@ main{
 }
 
 .btn-icon {
-   display: flex;          /* 1. Enable flexbox */
+    display: flex;          /* 1. Enable flexbox */
     align-items: center;    /* 2. Center vertically */
     justify-content: center; /* 3. Center horizontally */
     
@@ -795,14 +802,14 @@ main{
 
 /* Content Area */
 .case-content-area {
-    padding: 15px 0;
+    padding: 24px 0 40px 0px ;
 }
 
 .case-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .case-tag {
@@ -823,7 +830,6 @@ main{
     font-weight: 500;
     letter-spacing: 0;
     line-height: 100%;
-    margin: 0;
 }
 
 
@@ -833,8 +839,8 @@ main{
         padding: 0px 92px;
     }
 
-    .case-section-inner{
-        padding: 128px 32px; 
+    .case-container .container-inner{
+        padding: 220px 32px 0px;
     }
 
      .case-card-container {
@@ -858,9 +864,11 @@ main{
         gap: 20px;        
     }
 
+    .case-container .container-inner{
+        padding-top: 82px;
+    }
+
 }
-
-
 
 /* FOOTER */
 .footer-section {
