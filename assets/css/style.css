@@ -18,7 +18,8 @@ body.menu-open {
     background: url('/assets/images/landing-page/first-view.png');
     background-size: cover; /* Ensures the image fills the space */
     background-position: center;
-    min-height: 100vh; /* This makes it take up 100% of the screen height */
+    height: 870px;
+    margin-top: 5px;
 }
 .firstview {
     margin: 0;
@@ -30,6 +31,13 @@ body.menu-open {
 .firstview img {
     width: 100%;
     display: block;
+}
+
+.slogan {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    z-index: 1;
 }
 
 
@@ -48,9 +56,8 @@ body.menu-open {
 .news-content-container {
     display: flex;
     position: absolute;
-    right: 0;
+    right: 8%;
     bottom: 20%;
-    align-items: center;
 }
 
 /* Styling for the circular image to match your screenshot */
@@ -71,16 +78,19 @@ body.menu-open {
 .news-img-wrapper img {
     width: 100%;
     height: 100%;
+    max-width: 106px;
+    max-height: 106px;
     object-fit: cover;
 }
 .news-pill {
     background-color: var(--apricot);
     color: white;
     font-size: 0.85rem;
-    padding: 4px 15px;
+    padding: 5px 16px;
     border-radius: 50px;
     width: fit-content;
     display: inline-block;
+    margin-top: 12px;
 }
 
 .news-date {
@@ -88,6 +98,7 @@ body.menu-open {
     font-weight: bold;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
+    padding-top: 25px;
 }
 
 .news-link {
@@ -99,6 +110,13 @@ body.menu-open {
 
 .news-link:hover {
     color: var(--burnt-orange);
+}
+
+.news-button-container {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 18px;
+    margin-bottom: 2px;
 }
 
 /* Square Play Button */
@@ -123,20 +141,22 @@ body.menu-open {
     font-size: 12px;
 }
 
-.orange {
-    color: var(--burnt-orange);
-}
-
 
 /* TOP */
 .top-section {
-    padding: 180px 0 80px 0;
+    padding: 159px 0 80px 0;
+}
+
+.apricot {
+    color: var(--apricot);
 }
 
 
 .top-content h1{
     font-size: 54px;
     padding-bottom: 64px;
+    line-height: 1.5em;
+    letter-spacing: 0.02em;
 }
 
 .top-section p {
@@ -144,11 +164,19 @@ body.menu-open {
     font-size: 20px;
 }
 
+.brand-description p {
+    line-height: 2em;
+}
+
 /* EVENT INFORMATION CARD */
 .event-information-card {
     background-color: #fff;
     border-radius: 32px;
     padding: 128px 106px ;
+}
+
+.event-information-card p {
+    line-height: 2em;
 }
 
 .event-information-badge-label {
@@ -173,7 +201,7 @@ body.menu-open {
 
 .event-information-card h2 {
     font-size: 24px;
-    padding-bottom: 32px;
+    padding-bottom: 44px;
     font-weight: bold;
 }
 
