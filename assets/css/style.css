@@ -2,15 +2,11 @@
 
 main{
     background-color: var(--white-smoke);
-    /* margin: 0 92px !important; */
 }
-
-
 
 body.menu-open {
     overflow: hidden;
 }
-
 
 /* Content spacing */
 .landing-page {
@@ -40,8 +36,26 @@ body.menu-open {
     z-index: 1;
 }
 
+.slogan h1{
+    line-height: 1.5em;
+    font-size: clamp(36px, 5.33vw, 64px);
+}
 
-.news-container {
+@media screen and (max-width:1200px) {
+    .slogan {
+        bottom: 20%;
+        left: 3%;
+    }
+
+    /* .slogan h1 {
+        font-size: 36px;
+        line-height: 1.65em;
+        letter-spacing: 0.1em;
+        font-weight:bolder;
+    } */
+}
+
+.news-container,.news-container-mobile {
     position: absolute;
     bottom: -1px;
     right: 0;
@@ -49,9 +63,6 @@ body.menu-open {
     display: flex;
 }
 
-.news-container svg {
-    z-index: 0;
-}
 
 .news-content-container {
     display: flex;
@@ -60,8 +71,16 @@ body.menu-open {
     bottom: 20%;
 }
 
-/* Styling for the circular image to match your screenshot */
-@media screen and (max-width:575px) {
+@media screen and (max-width: 992px) {
+    .news-content-container {
+        left: 10%;
+        padding: 16px 12px;
+        bottom: 0;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
     .news-img-wrapper {
     display: none;
 }
@@ -101,6 +120,13 @@ body.menu-open {
     padding-top: 25px;
 }
 
+@media screen and (max-width:992px) {
+    .news-date {
+        padding-top: 11px;
+    }
+}
+
+
 .news-link {
     color: #333;
     text-decoration: underline;
@@ -118,6 +144,13 @@ body.menu-open {
     margin-left: 18px;
     margin-bottom: 2px;
 }
+
+@media screen and (max-width:992px) {
+    .news-button-container {
+        margin-left: 40px;
+    }
+}
+
 
 /* Square Play Button */
 .play-btn {
