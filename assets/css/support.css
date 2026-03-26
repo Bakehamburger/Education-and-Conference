@@ -112,9 +112,15 @@ main {
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.1em;
- border-bottom: 17px solid; 
-  /* Define the gradient */
-  border-image: linear-gradient(to right, #B6EDAC 0%, #32922D 100%) 1;
+  display: inline-block;
+
+  background-image: linear-gradient(to right, #B6EDAC 0%, #32922D 100%);
+  background-repeat: no-repeat;
+  
+  /* Position and Size: 100% width, 17px height, at the very bottom */
+  background-size: 100% 17px;
+  background-position: bottom;
+  padding-bottom: 4px;
 }
 
 /* Solution Cards */
@@ -134,7 +140,7 @@ main {
 }
 
 .point-number {
-  color: var(--primary-orange);
+  color: var(--emerald-green);
   font-weight: bold;
   font-size: 1.1rem;
   margin-bottom: 15px;
@@ -150,7 +156,7 @@ main {
 /* feature */
 /* Section Background */
 .feature-section {
-    background-color: #ECF8EE; /* Matches the warm cream tone */
+    background-color: var(--green); /* Matches the warm cream tone */
     position: relative;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -166,26 +172,22 @@ main {
     height: 0;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    border-top: 30px solid #ffffff; /* Cutting into the section */
+    border-top: 30px solid var(--white); /* Cutting into the section */
 }
 
 /* Typography */
 /* Layout Adjustments */
 .section-title {
-    color: #419755; /* Matches the orange in your image */
-    font-weight: bold;
+    color: var(--emerald-green); /* Matches the orange in your image */
+    font-weight: 700;
 }
 
 .section-divider {
-    border-top: 1px solid #419755;
-    opacity: 0.1;
+    border-top: 3px solid var(--emerald-green);
+    opacity: 10%;
     margin-top: 2rem;
 }
 
-/* .feature-row {
-  display: flex;
-align-items: center;
-} */
 
 .feature-item {
   padding-top: 144px;
@@ -227,5 +229,47 @@ align-items: center;
     width: 450px; /* Adjust based on preference */
     height: 300px;
     border-radius: 15px;
+}
+
+
+/* case */
+.service-case {
+    padding-top: 50px;
+}
+
+.case-main-title {
+    padding-bottom: 20px;
+}
+
+.case-grid-grow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;      
+}
+
+.case-card-item .case-image-wrapper img{
+    border-radius: 16px;
+}
+
+.mobile-filter-container {
+    display: flex;
+    align-items: flex-start; /* Keeps the "All" button at the top */
+}
+
+.all-btn-wrapper {
+    flex-shrink: 0; /* Prevents the "All" button from getting squeezed */
+}
+
+@media screen and (max-width: 992px){  
+    .mobile-filter-container{
+        flex-direction: column;
+    }
+    .choices-btn-wrapper{
+        margin-top: 24px;
+    }
+
+    .custom-pad{
+        padding: 10px 16px !important;
+    }
 }
 

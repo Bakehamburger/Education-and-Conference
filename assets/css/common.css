@@ -128,6 +128,7 @@ main{
     --white: #fff;
     --mint-white: #ECF8EE;
     --emerald-green: #419755;
+    --green: #ECF8EE;
     --white-smoke: #F5F5F5;
     --dark-charcoal: #333333;
     --service-bg: #FEF7F2;
@@ -142,6 +143,11 @@ main{
     padding: 0 32px;
 }
 
+@media screen and (max-width: 768px) {
+    .site-container {
+        padding: 0 12px;
+    }
+}
 
 .navbar-horizontal {
     background: rgba(245,245,245, 0.6) !important;
@@ -463,10 +469,14 @@ main{
 }
 
 /* service */
-
 .service-title-fw {
     font-weight: 800;
     line-height: 100%;
+}
+
+.service-title-fw-light {
+    font-weight: 600;
+    line-height: 200%;
 }
 
 .section-subtitle {
@@ -477,8 +487,6 @@ main{
 
 
 /* local */
-
-
 /* intro */
 /* Main Top Title */
 .intro .main-title-jap {
@@ -494,16 +502,29 @@ main{
 /* Section Subtitle with Orange Underline */
 .intro .service-title-jap {
     font-weight: 500;
-  border-bottom: 17px solid; 
-  border-image: linear-gradient(
-    to right, 
-    #FE9F5D 20%, 
-    #FD854F 44%, 
-    #FD6C41 67%, 
-    #EA6300 100%
-) 0.8;
+    display: inline-block; /* Crucial: ensures underline only spans the text width */
+    
+    /* Apply the orange gradient as a background instead of a border */
+    background-image: linear-gradient(
+        to right, 
+        #FE9F5D 20%, 
+        #FD854F 44%, 
+        #FD6C41 67%, 
+        #EA6300 100%
+    );
+    
+    background-repeat: no-repeat;
+    
+    /* Set the height of the underline to 17px */
+    background-size: 100% 17px;
+    
+    /* Stick it to the bottom */
+    background-position: bottom;
+    
+    /* Control the gap between the text and the line */
+    padding-bottom: 8px; 
+    
 }
-
 /* Solution Cards */
 .solution-card {
   background-color: var(--white-smoke);

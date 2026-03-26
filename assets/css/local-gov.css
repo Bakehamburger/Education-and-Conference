@@ -48,7 +48,6 @@
 }
 }
 
-
 .breadcrumb-overlay {
     position: absolute;
     bottom: 30px; /* Adjust to center vertically in the white area */
@@ -75,3 +74,42 @@ main {
 }
 
 /* case */
+.service-case {
+    padding-top: 50px;
+}
+
+.case-main-title {
+    padding-bottom: 20px;
+}
+
+.case-grid-grow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;      
+}
+
+.case-card-item .case-image-wrapper img{
+    border-radius: 16px;
+}
+
+.mobile-filter-container {
+    display: flex;
+    align-items: flex-start; /* Keeps the "All" button at the top */
+}
+
+.all-btn-wrapper {
+    flex-shrink: 0; /* Prevents the "All" button from getting squeezed */
+}
+
+@media screen and (max-width: 992px){  
+    .mobile-filter-container{
+        flex-direction: column;
+    }
+    .choices-btn-wrapper{
+        margin-top: 24px;
+    }
+
+    .custom-pad{
+        padding: 10px 16px !important;
+    }
+}
