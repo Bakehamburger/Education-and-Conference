@@ -289,16 +289,16 @@ main{
 .mobile-menu {
     position: fixed;
     top: 0;
-    left: 0;
+    left:0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background: var(--white-smoke);
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-100%);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    padding: clamp(69px, 14.67vw, 176px) clamp(12px, 16.5vw, 198px) 0;
+    /* transform: translateX(-100%); */
+    /* transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); */
+     /* padding: clamp(69px, 14.67vw, 176px) clamp(12px, 16.5vw, 198px) 0; */
 }
 
 @media screen and (max-width:992px) {
@@ -343,8 +343,11 @@ main{
 
 .mobile-nav-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    
 }
+
 
 .mobile-nav-links a {
     color: var(--burnt-orange);
