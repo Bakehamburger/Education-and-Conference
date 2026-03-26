@@ -972,7 +972,11 @@ body.menu-open {
 
 
     .gallery-col:first-child {
-        margin-left: 5%; 
+        margin-left: 5% !important; 
+    }
+
+    .gallery-card {
+        flex:  0 0 288px !important;
     }
 }
 
@@ -992,7 +996,7 @@ body.menu-open {
 }
 
 .gallery-card {
-    flex: 0 0  288px; 
+    flex: 0 0  21%; 
 }
 
 .placeholder-box {
