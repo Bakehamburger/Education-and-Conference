@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/case.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     <title>Contact</title>
 </head>
 <body>
-  <header class="case-header">
+  <header class="contact-header">
     <nav class="navbar-horizontal">
                 <div class="navbar-container">
                     <!-- Logo -->
@@ -128,6 +128,146 @@
         </div>
     </div>
 </header>
+<main class="contact-container">
+    <div class="container col-lg-10 col-sm-12 my-5">
+        <p class="mb-4 form-header-text">ご質問やご相談がございましたら、以下のフォームに必要事項を入力しお気軽にお問い合わせください。</p>
+        <hr>
+
+        <form class="form-section">
+            <div class="mb-4 pb-2">
+                <label class="form-label">お問い合わせ種類 <span class="ms-4 badge-custom badge-optional">任意</span></label>
+                <div class="row row-cols-2" style="max-width: 500px;">
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="type1">
+                            <label class="form-check-label" for="type1">詳細説明依頼</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="type2">
+                            <label class="form-check-label" for="type2">お見積もり依頼</label>
+                        </div>
+                    </div>
+                    <div class="w-100 d-none d-md-block"></div>
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="type3">
+                            <label class="form-check-label" for="type3">資料請求</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="type4">
+                            <label class="form-check-label" for="type4">その他</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-5 pt-3">
+                <label class="form-label">資料請求したいサービス <span class="ms-3 badge-custom badge-optional">任意</span></label>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="s1"><label class="form-check-label" for="s1">全て</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="s2"><label class="form-check-label" for="s2">議場ソリューション</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="s3"><label class="form-check-label" for="s3">災害対策ソリューション</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="s4"><label class="form-check-label" for="s4">会議室ソリューション</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="s5"><label class="form-check-label" for="s5">株主総会支援システム</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="s6"><label class="form-check-label" for="s6">BOSCH会議システム</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="s7"><label class="form-check-label" for="s7">AVコントロールシステム - AViot</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="s8"><label class="form-check-label" for="s8">混雑状況可視化-DEIL</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="s9"><label class="form-check-label" for="s9">出席管理システム-Torimass</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="s10"><label class="form-check-label" for="s10">ワイヤレス映像共有-Solstice Pod</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="s11"><label class="form-check-label" for="s11">LEDビジョンソリューション</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="s12"><label class="form-check-label" for="s12">オンラインサポート‐リモートコンシェル</label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3 mt-4 pb-3">
+                <label class="form-label" for="company_name">会社名 <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <input type="text" id="company_name" name="company_name" class="form-control custom-input">
+            </div>
+
+            <div class="mb-3 pb-3">
+                <label class="form-label" for="user_name">お名前 <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <input type="text" id="user_name" name="user_name" class="form-control custom-input">
+            </div>
+
+            <div class="mb-3 pb-3">
+                <label class="form-label" for="user_kana">お名前（フリガナ） <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <input type="text" id="user_kana" name="user_kana" class="form-control custom-input">
+            </div>
+
+            <div class="mb-3 pb-3">
+                <label class="form-label" for="email">メールアドレス <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <input type="email" id="email" name="email" class="form-control custom-input">
+            </div>
+
+            <div class="mb-3 pb-4">
+                <label class="form-label" for="tel">電話番号 <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <input type="tel" id="tel" name="tel" class="form-control custom-input">
+            </div>
+
+            <div class="mb-3 pb-3">
+                <label class="form-label" for="zip_code">郵便番号 <span class="ms-2 badge-custom badge-optional">任意</span></label>
+                <div class="col-md-3">
+                    <input type="text" id="zip_code" name="zip_code" class="form-control custom-input">
+                </div>
+            </div>
+
+            <div class="mb-3 pb-3">
+                <label class="form-label" for="prefecture">都道府県 <span class="ms-2 badge-custom badge-optional">任意</span></label>
+                <div class="col-md-4">
+                    <select id="prefecture" name="prefecture" class="form-select custom-input">
+                        <option selected disabled value=""></option>
+                        <option value="13">東京都</option>
+                        <option value="27">大阪府</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-3 pb-3">
+                <label class="form-label" for="city">市区町村 <span class="ms-2 badge-custom badge-optional">任意</span></label>
+                <input type="text" id="city" name="city" class="form-control custom-input">
+            </div>
+
+            <div class="mb-4 pb-3">
+                <label class="form-label" for="address_detail">丁目番地・建物名・部屋番号 <span class="ms-2 badge-custom badge-optional">任意</span></label>
+                <input type="text" id="address_detail" name="address_detail" class="form-control custom-input">
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" for="message">お問合せ内容 <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <textarea id="message" name="message" class="form-control custom-input" placeholder="ご希望やご質問などご自由にお書きください。"></textarea>
+            </div>
+
+            <div class="privacy-section mt-4">
+                <div class="form-check d-flex justify-content-start align-items-center mb-4">
+                    <input class="form-check-input me-2" type="checkbox" id="privacy_agree" name="privacy_agree">
+                    <label class="form-check-label" for="privacy_agree">
+                        プライバシーポリシーに同意する
+                    </label>
+                </div>
+
+                <div class="privacy-statement col-lg-7 col-md-8">
+                    <p class="privacy-title mb-3">個人情報の取り扱いについて</p>
+                    <p class="privacy-text mb-0">
+                        当サイトより取得した個人情報は<a href="/privacy-policy" class="privacy-link">プライバシーポリシー</a>に従い、厳重に管理 
+                        いたします。個人情報保護法に定める例外事項を除き、本人の同意を得るこ 
+                        となく第三者に提供、開示しません。
+                    </p>
+                </div>
+            </div>         
+        </form>
+        <div class="btn-submit-container d-flex align-items-center">
+            <button type="submit" class="btn btn-submit mx-auto">送信する</button>
+        </div>
+        
+    </div>
+</main>
 
 
 <footer class="footer-section">
