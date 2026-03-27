@@ -842,6 +842,7 @@ body.menu-open {
 .card-logo {
     width: 86.312%;
     height: 45%;
+    row-gap: 24px;
 }
 
 .p-34 {
@@ -874,7 +875,7 @@ body.menu-open {
 .map-wrapper {
     position: relative;
     padding: 20px;
-    width: 153%;
+    width: 80vw;
     right: 54%;
     padding-top: 100px;
     z-index: 100;
@@ -946,6 +947,7 @@ body.menu-open {
 
     .card-logo {
     width: 105%;
+
 }
 
     .gallery-section {
@@ -1013,7 +1015,17 @@ body.menu-open {
         margin-left: -5%; 
     }
 
+    @media screen and (max-width: 1400px) {
+        .gallery-section {
+            margin-top: -150px;
+        }
+    }
 
+    @media screen and (max-width: 1200px) {
+        .gallery-section {
+            margin-top: 10px;
+        }
+    }
 
 
 
