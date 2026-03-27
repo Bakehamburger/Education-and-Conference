@@ -307,12 +307,6 @@ main{
      /* padding: clamp(69px, 14.67vw, 176px) clamp(12px, 16.5vw, 198px) 0; */
 }
 
-@media screen and (max-width:992px) {
-    .mobile-menu {
-        padding: 69px 12px;
-    }
-}
-
 
 .mobile-menu.active {
     opacity: 1;
@@ -349,11 +343,13 @@ main{
 
 .mobile-nav-links {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
 }
 
+@media screen and (max-width: 992px) {
+    .mobile-nav-links {
+        padding-top: 80px;
+    }
+}
 
 .mobile-nav-links a {
     color: var(--burnt-orange);
@@ -377,12 +373,23 @@ main{
 }
 
 .mobile-nav-links-wrapper {
-    width: 235px;
+    padding-bottom: 32px;
+}
+
+@media screen and (max-width:992px) {
+    .mobile-nav-links-wrapper p {
+        font-size: 20px;
+    }
+
+    .mobile-nav-links-wrapper small {
+        font-size: 12px;
+    }
 }
 
 .top-navlink {
     padding: 11px 0 40px 0;
 }
+
 
 .nav-link-service a{
     margin: 0;
@@ -391,68 +398,53 @@ main{
 
 .menu-service-list {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-}
-
-@media screen and (max-width: 992px) {
-    .menu-service-list {
-        display: flex;
-        flex-direction: row;
-        column-gap: 8px;
-        row-gap: 16px;
-        margin-bottom: 32px;
-    }
+    padding-bottom: 40px;
 }
 
 .menu-service-list a {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
     margin: 0;
     font-size: var(--fs-sm);
 }
 
-@media screen and (max-width:992px) {
-    .menu-service-list a {
-        background-color: var(--white);
-        padding: 16px;
-        border-radius: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        letter-spacing: 0;
-        line-height: 1em;
-    }
-    
-}
-
 @media screen and (max-width: 992px) {
-    .nav-link-case,.nav-link-news,.nav-link,.nav-link-about {
-        padding-bottom: 32px;
+    .menu-service-list{
+        row-gap: 16px;
+        column-gap: 8px;
+    }
+
+    .menu-service-list a {
+        background-color: #fff;
+        border-radius: 32px;
+        padding: 16px;
+        letter-spacing: 0;
+    }
+
+    .list1 {
+        width: 172px;
     }
 }
 
 .nav-link-news {
-    padding-bottom: 40px;
+    padding-bottom: 32px;
     padding-top: 11x;
 }
 
+
 .menu-header-cta {
     border-bottom: 1px solid #fff;
-    font-size: 20px;
     font-weight: 700;
     padding-bottom: 9px;
+    line-height: 1.35em;
 }
 
-@media screen and (max-width: 992px) {
-    .menu-header-cta p{
-        font-size: var(--fs-base);
-        line-height: 1.35em;
-        padding-bottom: 8px;
-    }
+.menu-header-cta p {
+    line-height: 1.35em;
+    font-weight: 700;
 }
-
 
 .mobile-menu.active .mobile-nav-links a {
     opacity: 1;
@@ -465,78 +457,42 @@ main{
 
 .cta-container {
     display: flex;
-    flex-direction: column;
     gap: 16px;
 }
 
-@media screen and (max-width:992px) {
-    .cta-container {
-        flex-direction: row;
-        gap: 12px;
-    }   
-}
 
 .mobile-menu-cta {
     background-color: var(--burnt-orange);
     border-radius: 8px;
     color: white;
-    padding: 21px 28px;
-    max-height: 149px;
+    padding: 16px 13px;
+    width: 177px;
 }
 
-@media screen and (max-width: 992px) {
-    .mobile-menu-cta {
-        padding: 16px 13px;
-    }
+.cta-content  {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cta-content a {
-    font-size: 42px;
+    font-size: 22px;
     color: #fff;
     margin: 0;
     line-height: 1em;
     letter-spacing: 0;
-    transform: none;
 }
 
-.cta-content  {
-    margin-top: 20px;
+
+.cta-content2 {
     display: flex;
-    justify-content: space-between;
+    margin-top: 18px;
+    flex-direction: column;
 }
 
-@media screen and (max-width :992px) {
-    .cta-content {
-        margin-top: 0px;
-    }
-
-    .cta-tel {
-        font-size: 22px !important;
-    }
-
-    .cta-content img {
-        width: 34px;
-        height: 34px;
-    }
-
-    .cta-content small {
-        font-size: 10px;
-    }
-}
-
-.request-information {
-    font-size: 26px;
-}
-
-@media screen and (max-width:992px) {
-    .cta-content2 {
-        padding-top: 18px;
-    }
-
-    .cta-content2 p {
-        line-height: 1.35em;
-        font-size: var(--fs-base);
-    }
+.request-information p{
+    letter-spacing: 0;
 }
 
 .main-title-jap {
@@ -563,11 +519,11 @@ main{
 }
 
 .service-title-eng {
-  font-size: var(--fs-base);
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  line-height: 110%;
-  padding-top: 4px;
+    font-size: var(--fs-base);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 110%;
+    padding-top: 4px;
 }
 
 .txt-color-orange{
