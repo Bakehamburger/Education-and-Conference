@@ -12,22 +12,8 @@
 }
 
 .header-content {
-  padding-left: 92px;
-  padding-top: 210px; /* Offset for the fixed navbar */
-  
-}
-
-.main-title {
-    font-size: 40px;
-    font-weight: 800;
-    margin: 0;
-    color: white ;
-}
-
-.sub-title {
-    font-size: var(--fs-base);
-    margin-top: 5px;
-    color: white;
+     padding-top: 177px; /* Offset for the fixed navbar */
+     padding-left: 92px;
 }
 
 /* Curve & Breadcrumb Positioning */
@@ -83,72 +69,99 @@
 }
 
 main {
-  background-color: white;
+  background-color: var(--white);
 }
 
 /* intro */
 /* Typography and Colors */
-:root {
-  --primary-orange: #f38133;
-  --bg-light-gray: #f5f5f5;
-  --text-dark: #333333;
+.support-intro {
+    padding-top: 100px;
 }
 
-/* Main Top Title */
-.intro .main-title {
-  font-weight: 700;
-  font-size: 1.75rem;
-  line-height: 1.5;
-  color: #333;
+.support-row {
+    padding-bottom: 36px;
 }
+
+.support-intro .main-title-jap {
+ font-weight: 600;
+  line-height: 135%;
+  letter-spacing: 0.08em;
+  color: var(--dark-charcoal);
+}
+
 
 .title-divider {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--green-divider);
   opacity: 1;
+  margin-top: 50px;
+  margin-bottom: 34px;
 }
 
+
 /* Section Subtitle with Orange Underline */
-.intro .section-subtitle {
-  font-size: 1.25rem;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  display: inline-block;
+.support-intro .section-subtitle {
+    font-size: var(--fs-xl);
+  font-weight: 500;
+  display: inline;
 
   background-image: linear-gradient(to right, #B6EDAC 0%, #32922D 100%);
   background-repeat: no-repeat;
   
-  /* Position and Size: 100% width, 17px height, at the very bottom */
-  background-size: 100% 17px;
-  background-position: bottom;
-  padding-bottom: 4px;
+ background-size: 100% 18px; 
+    
+    /* 3. Position it to sit behind the bottom half of the text */
+    background-position: 0 100%; 
+
+    /* 4. This ensures the background wraps correctly across line breaks */
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    
+    /* Adjust line-height to ensure there is space between the two highlighted lines */
+    line-height: 1.8; 
+    padding: 30px 0 8px 0;
 }
 
 /* Solution Cards */
 .solution-card {
-  background-color: var(--bg-light-gray);
-  border-radius: 20px; /* Large rounded corners */
-  padding: 40px 20px;
+  background-color: var(--white-smoke);
+  border-radius: 20px;
+  padding: 48px 5%; /* Use % for horizontal padding so it shrinks with the card */
+  width: 100%;
+  max-width: 411px;
+  margin: 0 auto;
+  min-height: 248px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
+  /* This prevents the text from ever wrapping to a new line */
+  white-space: nowrap;
 }
 
-.solution-card:hover {
-  transform: translateY(-5px); /* Subtle lift on hover */
+/* Fix for 992px to 1200px range */
+@media (max-width: 1200px) {
+  .solution-card {
+    padding: 40px 15px; /* Significant reduction to keep text on one line */
+  }
+  
+  .card-text {
+    /* Scale the font down slightly so it fits the smaller card */
+    font-size: var(--fs-sm); 
+  }
 }
+
 
 .point-number {
   color: var(--emerald-green);
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: var(--fs-lg);
   margin-bottom: 15px;
 }
 
 .card-text {
+  font-size: var(--fs-lg);
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 200%;
   margin-bottom: 0;
 }
 
@@ -158,22 +171,10 @@ main {
 .feature-section {
     background-color: var(--green); /* Matches the warm cream tone */
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    margin-top: 97px;
+    padding-bottom: 146px;
 }
 
-/* The Inverted Triangle at the top */
-.triangle-top {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-top: 30px solid var(--white); /* Cutting into the section */
-}
 
 /* Typography */
 /* Layout Adjustments */
@@ -185,17 +186,16 @@ main {
 .section-divider {
     border-top: 3px solid var(--emerald-green);
     opacity: 10%;
-    margin-top: 2rem;
+    margin-top: 22px;
 }
 
 
-.feature-item {
-  padding-top: 144px;
-}
 
 .feature-text-wrapper {
   display: flex;
   align-items: flex-start;
+  padding-right: 20px; /* Gives some breathing room before the box */
+
 }
 
 .feature-list {
@@ -205,31 +205,36 @@ main {
 }
 
 .feature-list li {
+   width: 100%; /* Changed from 90% to ensure text uses the column width */
     position: relative;
     padding-left: 25px;
     margin-bottom: 1.5rem;
-    line-height: 1.6;
+    line-height: 200%; /* Slightly reduced for better readability */
+    font-weight: 500;
+    font-size: var(--fs-sm);
 }
 
 /* The orange dots in your image */
 .feature-list li::before {
-    content: "●";
-    background: linear-gradient(58deg, #B6EDAC 0%, #32922D 100%);
-    color: transparent;
-    border-radius: 50%;
+   content: "";
     position: absolute;
     left: 0;
-    width: 12px;
-    height: 12px;
-    top: 2px;
+    top: 0.5em; /* Centers it relative to line-height */
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #FE9F5D, #EA6300);
 }
 
 .gray-placeholder-box {
-    background-color: #d1d1d1;
-    width: 450px; /* Adjust based on preference */
-    height: 300px;
-    border-radius: 15px;
+    background-color: var(--service-box);
+    width: 100%; /* Make it responsive to the col-lg-5 container */
+    max-width: 516px; /* You can keep a max-width if you don't want it too big */
+    height: 344px;
+    border-radius: 16px;
+    margin-left: auto; /* Pushes the box to the right edge of its column */
 }
+
 
 
 /* case */

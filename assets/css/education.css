@@ -88,21 +88,23 @@ main {
 
 /* case */
 .service-case {
-    padding-top: 50px;
+    padding-top: 156px;
 }
 
 .case-main-title {
-    padding-bottom: 20px;
+    padding-bottom: 51px;
 }
 
 .case-grid-grow {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;      
+    row-gap: 12px;   
 }
 
 .case-card-item .case-image-wrapper img{
     border-radius: 16px;
+    width: 100%;
+    max-width: 411px;
 }
 
 .mobile-filter-container {
@@ -112,6 +114,11 @@ main {
 
 .all-btn-wrapper {
     flex-shrink: 0; /* Prevents the "All" button from getting squeezed */
+}
+
+.case-btn {
+    padding-top: 20px;
+    padding-bottom: 191px;
 }
 
 @media screen and (max-width: 992px){  

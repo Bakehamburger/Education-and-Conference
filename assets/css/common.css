@@ -130,6 +130,7 @@ main{
     --mint-white: #ECF8EE;
     --emerald-green: #419755;
     --green: #ECF8EE;
+    --green-divider: #E5E5E5;
     --white-smoke: #F5F5F5;
     --dark-charcoal: #333333;
     --service-bg: #FEF7F2;
@@ -626,22 +627,26 @@ main{
 /* local */
 /* intro */
 /* Main Top Title */
-.intro .main-title-jap {
-  line-height: 135%;
-  letter-spacing: 0.08em;
+.intro {
+    padding-top: 108px;
+    padding-bottom: 62px;
 }
 
-.title-divider {
-  border-top: 1px solid #eee;
-  opacity: 1;
+.intro .main-title-jap {
+font-weight: 600;
+  line-height: 135%;
+  letter-spacing: 0.08em;
+  color: var(--dark-charcoal);
 }
+
 
 /* Section Subtitle with Orange Underline */
 .intro .service-title-jap {
     font-weight: 500;
-    display: inline-block; /* Crucial: ensures underline only spans the text width */
+    /* 1. Change to inline so the highlight wraps with the text */
+    display: inline; 
     
-    /* Apply the orange gradient as a background instead of a border */
+    /* Keep your specific gradient */
     background-image: linear-gradient(
         to right, 
         #FE9F5D 20%, 
@@ -652,43 +657,72 @@ main{
     
     background-repeat: no-repeat;
     
-    /* Set the height of the underline to 17px */
-    background-size: 100% 17px;
+    /* 2. Set height of the marker (17px is good, or try 50% for a true 'half-high' look) */
+    background-size: 100% 18px; 
     
-    /* Stick it to the bottom */
-    background-position: bottom;
+    /* 3. Position it to sit behind the bottom half of the text */
+    background-position: 0 100%; 
+
+    /* 4. This ensures the background wraps correctly across line breaks */
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
     
-    /* Control the gap between the text and the line */
-    padding-bottom: 8px; 
-    
+    /* Adjust line-height to ensure there is space between the two highlighted lines */
+    line-height: 1.8; 
+    padding: 38px 0 10px 0;
 }
+
+@media screen and (min-width: 1200px) {
+    .intro .service-title-jap br {
+        display: none;
+    }
+}
+
+.pointers {
+    padding-top: 27px;
+}
+
 /* Solution Cards */
 .solution-card {
-  background-color: var(--white-smoke);
-  border-radius: 20px; /* Large rounded corners */
-  padding: 48px 70px;
+ background-color: var(--white-smoke);
+  border-radius: 20px;
+  padding: 48px 5%; /* Use % for horizontal padding so it shrinks with the card */
+  width: 100%;
+  max-width: 411px;
+  margin: 0 auto;
+  min-height: 248px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
+  /* This prevents the text from ever wrapping to a new line */
+  white-space: nowrap;
 }
 
-.solution-card:hover {
-  transform: translateY(-5px); /* Subtle lift on hover */
+/* Fix for 992px to 1200px range */
+@media (max-width: 1200px) {
+  .solution-card {
+    padding: 40px 15px; /* Significant reduction to keep text on one line */
+  }
+  
+  .card-text {
+    /* Scale the font down slightly so it fits the smaller card */
+    font-size: var(--fs-sm); 
+  }
 }
+
 
 .point-number {
   color: var(--burnt-orange);
-  font-weight: bold;
+  font-weight: 600;
   font-size: var(--fs-lg);
   margin-bottom: 15px;
 }
 
 .card-text {
-     font-size: var(--fs-lg);
+font-size: var(--fs-lg);
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 200%;
   margin-bottom: 0;
 }
 
@@ -698,8 +732,7 @@ main{
 .feature-section {
     background-color: var(--service-bg); /* Matches the warm cream tone */
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 584px;
 }
 
 /* The Inverted Triangle at the top */
@@ -710,21 +743,56 @@ main{
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-top: 30px solid var(--white); /* Cutting into the section */
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 60px solid var(--white); /* Cutting into the section */
 }
 
 /* Typography */
 .section-divider {
     border-top: 3px solid var(--burnt-orange);
     opacity: 10%;
-    margin-top: 2rem;
+    margin: 17px 0 31px 0;
+}
+
+
+.first-feature {
+    padding-top: 173px;
+}
+
+.first-feature-sp {
+    padding-top: 160px;
+}
+
+.sub {
+    padding-top: 42px;
+}
+
+.sub-sp {
+    padding-top: 39px;
+}
+
+.last-sub {
+    padding-top: 35px;
 }
 
 
 .feature-item {
   padding-top: 144px;
+}
+
+/* Target the .feature-item that is inside the very last .row of the container */
+.last-item {
+   padding-top: 134px;
+}
+
+.last-ed-item {
+    padding-top: 185px;
+}
+
+
+.last-sec-div {
+  margin-top: 22px;
 }
 
 .feature-text-wrapper {
