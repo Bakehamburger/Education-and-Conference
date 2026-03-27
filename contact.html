@@ -188,26 +188,26 @@
 
             <div class="mb-3 mt-4 pb-3">
                 <label class="form-label" for="company_name">会社名 <span class="ms-2 badge-custom badge-required">必須</span></label>
-                <input type="text" id="company_name" name="company_name" class="form-control custom-input">
+                <input type="text" id="company_name" name="company_name" class="form-control custom-input" required>
             </div>
 
             <div class="mb-3 pb-3">
-                <label class="form-label" for="user_name">お名前 <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <label class="form-label" for="user_name">お名前 <span class="ms-2 badge-custom badge-required" required>必須</span></label>
                 <input type="text" id="user_name" name="user_name" class="form-control custom-input">
             </div>
 
             <div class="mb-3 pb-3">
-                <label class="form-label" for="user_kana">お名前（フリガナ） <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <label class="form-label" for="user_kana">お名前（フリガナ） <span class="ms-2 badge-custom badge-required" required>必須</span></label>
                 <input type="text" id="user_kana" name="user_kana" class="form-control custom-input">
             </div>
 
             <div class="mb-3 pb-3">
-                <label class="form-label" for="email">メールアドレス <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <label class="form-label" for="email">メールアドレス <span class="ms-2 badge-custom badge-required" required>必須</span></label>
                 <input type="email" id="email" name="email" class="form-control custom-input">
             </div>
 
             <div class="mb-3 pb-4">
-                <label class="form-label" for="tel">電話番号 <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <label class="form-label" for="tel">電話番号 <span class="ms-2 badge-custom badge-required" required>必須</span></label>
                 <input type="tel" id="tel" name="tel" class="form-control custom-input">
             </div>
 
@@ -260,12 +260,11 @@
                         となく第三者に提供、開示しません。
                     </p>
                 </div>
-            </div>         
-        </form>
-        <div class="btn-submit-container d-flex align-items-center">
-            <button type="submit" class="btn btn-submit mx-auto">送信する</button>
-        </div>
-        
+            </div>  
+            <div class="btn-submit-container d-flex align-items-center">
+                <button type="submit" class="btn btn-submit mx-auto">送信する</button>
+            </div>       
+        </form>      
     </div>
 </main>
 
