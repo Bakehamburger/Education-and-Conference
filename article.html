@@ -15,8 +15,8 @@
 </head>
 <body class="bg-gray-base">
 
-    <header class="header-gray-top">
-         <nav class="navbar-horizontal">
+    <header class="news-header">
+    <nav class="navbar-horizontal">
                 <div class="navbar-container">
                     <!-- Logo -->
                     <a href="index.html" class="navbar-brand"><img src="assets/images/icons/company-logo.svg" alt="company logo"></a>
@@ -108,26 +108,26 @@
                     </div>
                 </div>
             </div>
-        <div class="pt-5 mt-5">
-            <div class="d-flex justify-content-between align-items-center ps-5">
-                <div>
-                    <h1 class="main-title text-orange">記事</h1>
-                    <p class="sub-title text-muted">News</p>
-                </div>
-            </div>
-            <div class="position-relative">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb d-flex justify-content-end mb-0">
-                        <li class="breadcrumb-items"><a href="index.html">トップ</a></li>
-                        <li class="breadcrumb-item"><a href="news.html">お知らせ</a></li>
-                        <li class="breadcrumb-item active">記事</li>
-                    </ol>
-                </nav>
-            <svg width="620" height="93" viewBox="0 0 620 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M621 93H0C25.4154 93 46.0186 72.3426 46.0186 46.8605V46.1395C46.0186 20.6574 66.6219 3.94797e-07 92.0373 0H621V93Z" fill="white"/>
-            </svg>
+
+
+    <div class="header-content">
+        <h1 class="main-title-jap txt-color-orange">記事</h1>
+        <p class="main-title-eng txt-color-orange-rgba">News</p>
+    </div>
+
+    <div class="curve-container">
+        <svg width="620" height="93" viewBox="0 0 620 93" fill="none" xmlns="http://www.w3.org/2000/svg" class="s-curve-svg">
+            <path d="M621 93H0C25.4154 93 46.0186 72.3426 46.0186 46.8605V46.1395C46.0186 20.6574 66.6219 0 92.0373 0H621V93Z" fill="white"/>
+        </svg>
+        
+        <div class="breadcrumb-overlay">
+            <a href="index.html"><span class="breadcrumb-item">トップ</span></a>
+            <span class="breadcrumb-black-arrow">▶</span>
+            <a href="news.html"><span class="breadcrumb-item">お知らせ</span></a>
+            <span class="breadcrumb-arrow">▶</span>
+            <span class="breadcrumb-current">お知らせ</span>
         </div>
-        </div>
+    </div>
     </header>
 
     <main class="content-white-bottom mx-0 my-0">
@@ -136,12 +136,12 @@
                 <div class="col-lg-10">
                     
                     <article class="news-content">
-                        <h2 class="fw-bold mb-3">ホームページをリニューアルしました。</h2>
-                        <p class="text-orange fw-bold mb-4">2025.10.10</p>
-                        <hr class="mb-5">
+                        <h2 class="fw-bold mb-31">ホームページをリニューアルしました。</h2>
+                        <p class="text-orange fw-bold mb-3">2025.10.10</p>
+                        <hr class="horizontal-line">
 
                         <div class="content-body">
-                            <p>この度、弊社のホームページをリニューアルいたしました。<br>
+                            <p class="article-title-content">この度、弊社のホームページをリニューアルいたしました。<br>
                             開発事例やサービス内容を、より分かりやすくお伝えできるようにデザインと構成を見直しています。<br>
                             これからも、お客様の課題解決につながる情報を発信してまいりますので、引き続きどうぞよろしくお願いいたします。</p>
                             

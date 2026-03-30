@@ -1,5 +1,117 @@
 @charset "UTF-8";
 
+:root {
+--burnt-orange: #E66B27;
+--bg-grey: #F5F5F5;
+--border-pill: #D0D0D0;
+--brand-orange: #e66b00;
+--light-bg: #f9f9f9;
+}
+
+
+
+
+
+main {
+    background-color: white;
+}
+
+.news-header {
+    position: relative;
+    background-color: var(--bg-grey);
+    min-height: 400px; /* Adjust based on your preference */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.header-content {
+    padding:  0 clamp(12px, 7.6vw - 17.7px, 92px);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 122px;
+}
+
+.main-title {
+    color: var(--burnt-orange);
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+    
+}
+
+.sub-title {
+    color: var(--burnt-orange);
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-family: sans-serif;
+}
+
+/* Curve & Breadcrumb Positioning */
+.curve-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 620px; /* Matches SVG width */
+    height: 93px; /* Matches SVG height */
+}
+
+.breadcrumb-overlay {
+    position: absolute;
+    bottom: 30px; /* Adjust to center vertically in the white area */
+    left: 100px;   /* Adjust to match horizontal padding in image */
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.breadcrumb-arrow {
+    color: var(--burnt-orange);
+    font-size: 0.7rem;
+}
+
+.breadcrumb-current {
+    color: var(--burnt-orange);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px){  
+.curve-container  {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 341px !important; /* Matches SVG width */
+    height: 51px !important; /* Matches SVG height */
+}
+
+.breadcrumb-overlay {
+    position: absolute;
+    bottom: 20px !important; /* Adjust to center vertically in the white area */
+    left: 45px !important;   /* Adjust to match horizontal padding in image */
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+}
+
+
+/* Hide curve on small mobile screens if it breaks layout */
+@media (max-width: 620px) {
+.curve-container {
+    width: 100%;
+    height: auto;
+}
+.breadcrumb-overlay {
+        right: 20px;
+        font-size: 0.8rem;
+}
+}
+
 .navbar-no-background {
     padding: 1rem 0;
     position: fixed;
@@ -19,7 +131,8 @@
 .content-white-bottom {
     background-color: #ffffff;
     position: relative;
-    min-height: 80vh;             /* Ensures white background covers the screen */
+    min-height: 80vh;    
+    margin-top: 16px;
 }
 
 .card-logo {
@@ -43,6 +156,25 @@
     font-size: 14px;
 }
 
+.news-content {
+    padding-top: 124px;
+}
+
+.horizontal-line {
+    margin-bottom: 64px;
+}
+
+.article-title-content {
+    font-weight: 500;
+    line-height: 200%;
+    letter-spacing: 0;
+
+}
+
+.mb-31 {
+    margin-bottom: 31px !important;
+}
+
 @media screen and (max-width: 576px) {
 .breadcrumb {
     position: absolute;
@@ -56,10 +188,6 @@
     padding-top: 210px;
     padding-left: 92px;
 }
-
-/* .title-wrapper {
-    margin-bottom: 57px;
-} */
 
 .breadcrumb-item + .breadcrumb-item::before {
     content: "▶";
@@ -84,12 +212,12 @@
 
 /* Pagination Styling (Matching your orange theme) */
 .t-group-pagination .page-item {
-    margin: 0 5px; /* Spacing between the numbers */
+    margin: 0 5px; 
 }
 
 .t-group-pagination .page-link {
     border: none;
-    color: #666666; /* Default text color */
+    color: #EA6300; /* Default text color */
     background: transparent;
     font-weight: bold;
     font-size: 1.1rem;
@@ -98,33 +226,40 @@
     transition: all 0.2s ease;
 }
 
-/* Styling for the numeric pages */
-.t-group-pagination .t-number {
-    border-radius: 10px; /* Specific pill/square for number items */
-}
-
 /* Setting 'number 2' active state */
 .t-group-pagination .page-item.active .page-link {
-    background-color: var(--burnt-orange); /* Orange background */
     color: white !important;
-    box-shadow: 0 4px 6px rgba(230, 107, 39, 0.2);
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    align-items: center;
+    background: conic-gradient(from 122.98deg at 46.95% 52.86%, #EA6300 0deg, #FE9F5D 73.17deg, #FE864F 157.5deg, #FD6C41 242.31deg, #EA6300 360deg);
 }
 
 /* Styling for the Arrow boxes */
 .t-group-pagination .t-arrow .page-link {
-    background-color: #f1f1f1; /* Gray background for arrows */
-    color: #999999;
+    background-color: #e66b00; /* Gray background for arrows */
+    color: #ffffff;
     border-radius: 5px;
     width: 45px;
     height: 45px;
     display: flex;
     align-items: center;
-    justify-content: center;
+justify-content: center;
 }
 
-.t-group-pagination .t-arrow .page-link:hover {
-    background-color: var(--burnt-orange);
-    color: white;
+.news-date {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+.jap-news-title {
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0;
 }
 
 /* Base Background for the whole page */
@@ -140,7 +275,7 @@
     position: relative;
     margin-left: 0;
     z-index: 1;
-}
+    }
 .header-gray-top svg {
     display: flex;
     justify-self: end;
@@ -150,12 +285,13 @@
 .card-list {
     display: flex;
     justify-self: center;
-    width: 80%;
+    width: 64.353%;
+    row-gap: 32px;
 }
 }
 
 @media screen and (max-width: 576px) {
-.card-list-mobile {
+    .card-list-mobile {
     display: flex;
     justify-self: center;
     width: 100%;
@@ -163,7 +299,7 @@
 }
 
 .card-list-mobile {
-    padding-top: 96px;
+    padding-top: 82px;
 }
 
 /* Ensure the breadcrumb and titles stay clean */
@@ -176,7 +312,7 @@
 /* Smooth card hover */
 .news-card-list {
     border: none;
-    background: rgba(234, 99, 0, 0.1);
+    background: rgba(234, 99, 0, 0.06);
     padding: 40px;
     border-radius: 16px;
 }
@@ -212,19 +348,6 @@
     transform: translateX(5px);
 }
 
-    
-
-:root {
-    --brand-orange: #e66b00;
-    --light-bg: #f9f9f9;
-}
-
-body {
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    color: #333;
-    background-color: #fff;
-}
-
 .text-orange {
     color: var(--brand-orange);
 }
@@ -240,29 +363,25 @@ body {
     color: var(--brand-orange);
 }
 
-.breadcrumb-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: #fff;
-    padding: 10px 40px;
-    border-radius: 30px 0 0 0; /* Creates the curve effect */
+.breadcrumb-black-arrow {
+    font-size: 12px;
+    color: #333;
 }
 
-.breadcrumb-item a {
+.breadcrumb-item {
     text-decoration: none;
     color: #333;
-    font-size: 0.8rem;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
-.breadcrumb-item.active {
-    color: var(--brand-orange);
-}
 
 /* Article Styles */
 .image-box {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 10 / 6;
     border: 1px solid #eee;
 }
 
@@ -286,14 +405,14 @@ body {
 }
 
 .btn-icon {
-   display: flex;          /* 1. Enable flexbox */
+    display: flex;          /* 1. Enable flexbox */
     align-items: center;    /* 2. Center vertically */
     justify-content: center; /* 3. Center horizontally */
-    
+
     padding: 25px 22px 23px 14px;          /* Keep your padding or set a fixed width */
     border-left: 1px solid rgba(255, 255, 255, 0.4);
     height: 100%;
-}
+    }
 
 .btn-icon .bi {
     font-size: 10px;
@@ -316,6 +435,11 @@ body {
     gap: 10px;
 }
 
+.page-item-wrapper {
+    padding-bottom: 236px;
+    padding-top: 110px;
+}
+
 
 .btn-orange-main {
     background-color: var(--brand-orange);
@@ -334,3 +458,5 @@ body {
 .footer-section {
     background-color: #ffffff;
 }
+
+
