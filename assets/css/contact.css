@@ -180,8 +180,8 @@ textarea.custom-input { min-height: 166px; }
 }
 .privacy-link {
     color: var(--dark-charcoal);
-    text-decoration: underline !important; /* Forces the underline back */
-    text-underline-offset: 3px; /* Adjusts the gap between text and line */
+    text-decoration: underline !important; 
+    text-underline-offset: 3px; 
 }
 
 /* Button Styling (Bonus) */
@@ -210,25 +210,21 @@ textarea.custom-input { min-height: 166px; }
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 341px !important; /* Matches SVG width */
-        height: 51px !important; /* Matches SVG height */
+        width: 341px !important; 
+        height: 51px !important; 
     }
   
     .breadcrumb-overlay {
         position: absolute;
-        bottom: 20px !important; /* Adjust to center vertically in the white area */
-        left: 45px !important;   /* Adjust to match horizontal padding in image */
+        bottom: 20px !important; 
+        left: 45px !important;   
         font-size: 0.9rem;
         color: #333;
         display: flex;
         align-items: center;
         gap: 10px;
     }
-}
 
-
-/* Hide curve on small mobile screens if it breaks layout */
-@media (max-width: 620px) {
     .curve-container {
         width: 100%;
         height: auto;
@@ -237,4 +233,6 @@ textarea.custom-input { min-height: 166px; }
         right: 20px;
         font-size: 0.8rem;
     }
+
+    
 }

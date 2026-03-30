@@ -81,6 +81,15 @@ main {
         align-items: center;
         gap: 10px;
     }
+
+    .curve-container {
+        width: 100%;
+        height: auto;
+    }
+    .breadcrumb-overlay {
+        right: 20px;
+        font-size: 0.8rem;
+    }
 }
 
 
@@ -94,17 +103,6 @@ main {
     font-weight: 600;
 }
 
-/* Hide curve on small mobile screens if it breaks layout */
-@media (max-width: 620px) {
-    .curve-container {
-        width: 100%;
-        height: auto;
-    }
-    .breadcrumb-overlay {
-        right: 20px;
-        font-size: 0.8rem;
-    }
-}
 
 .custom-fs{
     font-size: 18px;
