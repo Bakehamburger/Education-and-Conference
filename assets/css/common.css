@@ -934,6 +934,7 @@ font-weight: 600;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    justify-content: end;
     min-width: 225px;
     font-weight: bold;
     border-radius: 12px; /* Adjusted for the rounded look in your image */
