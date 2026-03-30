@@ -330,6 +330,18 @@ body.menu-open {
     
     .service-section .description {
         font-size: var(--fs-base);
+        max-width: 82%;
+    }
+    .service-section .main-service-grid {
+    padding-top: 15px;
+}
+    
+    .service-section .g-custom {
+    --bs-gutter-y: 18px;
+}
+    
+    .service-section .card-content {
+        padding: 24px 18px;
     }
 }
 
