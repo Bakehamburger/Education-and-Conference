@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+main {
+    background-color: white;
+
+}
+
+.content-404 {
+    padding: 96px 201px 160px 198px;
+}
+
+.header-404 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.description-404 {
+    width: 1041px;
+    padding-top: 48px;
+    padding-bottom: 80px;
+    color: var(--dark-charcoal);
+    line-height: 2em;
+    font-weight: 500;
+}
+
+.footer-section-404 {
+    margin-top: 0;
+}
+
+.btn-orange-lg-404{
+    min-width: 200px;
+}
