@@ -427,34 +427,32 @@ body.menu-open {
 
 /* Pin coordinate: Top-Right quad */
 .north-label {
-    top: 6%; 
-    left: 56%;
+    top: 10%; 
+    left: 53%;
     transform: translate(-50%, -50%); 
 }
 
 /* Pin coordinate: Middle-Left quad */
 .central-label {
-    top: 42%; 
-    left: 30%;
+    top: 45%; 
+    left: 28%;
     transform: translate(-50%, -50%);
 }
 
 /* Pin coordinate: Middle-Right quad */
 .east-label {
     top: 70%; 
-    left: 75%;
+    left: 67%;
     transform: translate(-50%, -50%);
 }
 
 /* Pin coordinate: Bottom-Left quad */
 .south-label {
-    top: 74%; 
+    top: 76%; 
     left: 19%;
     transform: translate(-80%, -98%);
 }
 
-
-/* Image Wrapper & Label */
 .case-image-wrapper {
     position: relative;
     overflow: hidden;
@@ -469,6 +467,10 @@ body.menu-open {
     letter-spacing: 0;
     line-height: 100%;
     white-space: nowrap;
+}
+
+.case-btn{
+    padding-top: 18px;
 }
 
 
@@ -533,6 +535,7 @@ body.menu-open {
 }
 
 .solution-section-desc{
+    font-size: 20px;
     letter-spacing: 0.08em;
 }
 

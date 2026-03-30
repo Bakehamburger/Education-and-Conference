@@ -3,6 +3,113 @@
 * {
     font-family: "Zen Kaku Gothic New", sans-serif;
 }
+.cookie-policy-header {
+    position: relative;
+    background-color: var(--white-smoke);
+    min-height: 400px; /* Adjust based on your preference */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.header-content {
+    padding:  0 clamp(12px, 7.6vw - 17.7px, 92px);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 122px;
+}
+
+.main-title {
+    color: var(--burnt-orange);
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+     
+}
+
+.sub-title {
+    color: var(--burnt-orange);
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-family: sans-serif;
+}
+
+/* Curve & Breadcrumb Positioning */
+.curve-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 620px; /* Matches SVG width */
+    height: 93px; /* Matches SVG height */
+}
+
+.breadcrumb-overlay {
+    position: absolute;
+    bottom: 30px; /* Adjust to center vertically in the white area */
+    left: 100px;   /* Adjust to match horizontal padding in image */
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.breadcrumb-arrow {
+    color: var(--burnt-orange);
+    font-size: 0.7rem;
+}
+
+.breadcrumb-current {
+    color: var(--burnt-orange);
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .policy-h2 {
+        font-size: 1.25rem;
+    }
+    .cookie-table th {
+        width: 40% !important;
+    }
+}
+
+
+@media screen and (max-width: 768px){  
+    .curve-container  {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 341px !important; /* Matches SVG width */
+        height: 51px !important; /* Matches SVG height */
+    }
+  
+    .breadcrumb-overlay {
+        position: absolute;
+        bottom: 20px !important; /* Adjust to center vertically in the white area */
+        left: 45px !important;   /* Adjust to match horizontal padding in image */
+        font-size: 0.9rem;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+/* Hide curve on small mobile screens if it breaks layout */
+@media (max-width: 620px) {
+    .curve-container {
+        width: 100%;
+        height: auto;
+    }
+    .breadcrumb-overlay {
+        right: 20px;
+        font-size: 0.8rem;
+    }
+}
+
 
 .content-white-bottom {
     background-color: #ffffff;
@@ -15,6 +122,7 @@
     padding-bottom: 80px;
     line-height: 1.35em;
     font-size: 40px;
+    color: var(--burnt-orange);
 }
 
 .company-philosophy-content {

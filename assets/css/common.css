@@ -134,7 +134,12 @@ main{
     --white-smoke: #F5F5F5;
     --dark-charcoal: #333333;
     --service-bg: #FEF7F2;
-    --service-box: #D9D9D9
+    --service-box: #D9D9D9;
+    --border-pill: #D0D0D0;
+    --badge-color-opt: #B4B4B4;
+    --badge-color-req: #F25858;
+    --form-check-border: #C3C3C3;
+    --form-check-border-privacy: #8E8E8E;
 }
 
 .en {
@@ -209,15 +214,18 @@ main{
 }
 
 .nav-link {
+    display: flex;
+    align-items: center;
     color: black !important;
     font-weight: 500;
     font-size: 1.1rem;
-    padding: 0.75rem 1.5rem !important;
     text-decoration: none;
     border-radius: 25px;
     transition: all 0.3s ease;
     white-space: nowrap;
+    padding-left: 93px;
 }
+
 
 @media screen and (max-width: 992px){
     .navbar-brand img{
@@ -420,19 +428,19 @@ main{
 @media screen and (max-width:992px) {
 
     .menu-service-list {
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 32px;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 32px;
     }
 
     .menu-service-list a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin: 0;
-    font-size: var(--fs-sm);
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin: 0;
+        font-size: var(--fs-sm);
+    }
 }
 
 
