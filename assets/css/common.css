@@ -688,7 +688,6 @@ main{
 /* intro */
 /* Main Top Title */
 .intro {
-    padding-top: 108px;
     padding-bottom: 62px;
 }
 
@@ -816,8 +815,13 @@ font-weight: 600;
 }
 
 
+
 .first-feature {
     padding-top: 173px;
+}
+
+.first-feature-ed {
+    padding-top: 158px;
 }
 
 .first-feature-sp {
