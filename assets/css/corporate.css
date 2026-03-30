@@ -30,6 +30,7 @@
     color: white;
 }
 
+
 /* Curve & Breadcrumb Positioning */
 .curve-container {
     position: absolute;
@@ -86,23 +87,50 @@ main {
   background-color: white;
 }
 
+
+.intro {
+    padding-top: 107px;
+    padding-bottom: 96px;
+}
+
+
+.pointers {
+    padding-top: 29px;
+}
+
+
+.title-divider {
+  border-top: 1px solid #eee;
+  opacity: 1;
+  margin-top: 46px;
+  margin-bottom: 17px;
+}
+
+.feature-section {
+    background-color: var(--service-bg); /* Matches the warm cream tone */
+    position: relative;
+    padding-bottom: 601px;
+}
+
 /* case */
 .service-case {
-    padding-top: 50px;
+    padding-top: 141px;
 }
 
 .case-main-title {
-    padding-bottom: 20px;
+    padding-bottom: 54px;
 }
 
 .case-grid-grow {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;      
+    row-gap: 12px;   
 }
 
 .case-card-item .case-image-wrapper img{
     border-radius: 16px;
+    width: 100%;
+    max-width: 411px;
 }
 
 .mobile-filter-container {
@@ -112,6 +140,11 @@ main {
 
 .all-btn-wrapper {
     flex-shrink: 0; /* Prevents the "All" button from getting squeezed */
+}
+
+.case-btn {
+    padding-top: 20px;
+    padding-bottom: 191px;
 }
 
 @media screen and (max-width: 992px){  
