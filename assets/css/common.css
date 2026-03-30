@@ -926,15 +926,14 @@ font-weight: 600;
     display: inline-flex;
     align-items: center;
     min-width: 225px;
-    font-weight: bold;
-    border-radius: 12px; /* Adjusted for the rounded look in your image */
+    border-radius: 8px; /* Adjusted for the rounded look in your image */
     overflow: hidden;    /* Keeps the inner corners clipped to the radius */
     padding: 0;          /* Remove padding from parent */
 }
 
 .btn-text {
     text-align: center;
-    padding: 15px 46px 15px 36px;
+    padding: 14px 46px 14px 36px;
     white-space: nowrap;
     font-size: var(--fs-sm);
     font-weight: 400;
