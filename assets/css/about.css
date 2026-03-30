@@ -125,6 +125,15 @@
     color: var(--burnt-orange);
 }
 
+@media screen and (max-width: 992px) {
+    .about-top {
+        padding-top: 141px;
+    }
+    .about-top h1 {
+        font-size: 24px;
+    }
+}
+
 .company-philosophy-content {
     line-height: 2em;
     font-weight: 500;
