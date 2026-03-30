@@ -184,7 +184,7 @@ main{
 }
 
 .navbar-container {
-    max-width: 1400px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 12px;
     display: flex;
@@ -213,9 +213,19 @@ main{
     list-style: none;
 }
 
-.nav-link {
+.desktop-nav-container{
     display: flex;
     align-items: center;
+    /* RESPONSIVE GAP: 
+       Min: 20px, 
+       Preferred: 5vw (scales with screen), 
+       Max: 93px 
+    */
+    gap: clamp(20px, 5vw, 93px);
+    margin-right: 33px;
+}
+
+.nav-link {
     color: black !important;
     font-weight: 500;
     font-size: 1.1rem;
@@ -223,7 +233,6 @@ main{
     border-radius: 25px;
     transition: all 0.3s ease;
     white-space: nowrap;
-    padding-left: 93px;
 }
 
 
@@ -256,7 +265,7 @@ main{
     transition: all 0.3s ease;
     text-decoration: none;
     white-space: nowrap;
-    margin-left: 1rem;
+    margin-right: 33px;
     display: flex;
     max-height: 55px;
 }
