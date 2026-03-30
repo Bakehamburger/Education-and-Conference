@@ -186,7 +186,7 @@ main{
 .navbar-container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 12px;
+    padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -198,9 +198,12 @@ main{
     display: flex;
 }
 @media screen and (max-width:992px) {
+    .navbar-container{
+        padding: 0 12px;
+    }
     .navbar-brand img{
-    height: 39px;
-}
+        height: 39px;
+    }
 
 }
 
@@ -1019,7 +1022,7 @@ font-weight: 600;
     }
 
     .case-container .container-inner{
-        padding: 220px 32px 0px;
+        padding: 106px 32px 0px;
     }
 
      .case-card-container {

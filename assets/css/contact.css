@@ -66,6 +66,40 @@ main {
     font-weight: 600;
 }
 
+@media screen and (max-width: 768px){  
+    .curve-container  {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 341px !important; /* Matches SVG width */
+        height: 51px !important; /* Matches SVG height */
+    }
+  
+    .breadcrumb-overlay {
+        position: absolute;
+        bottom: 20px !important; /* Adjust to center vertically in the white area */
+        left: 45px !important;   /* Adjust to match horizontal padding in image */
+        font-size: 0.9rem;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+/* Hide curve on small mobile screens if it breaks layout */
+@media (max-width: 620px) {
+    .curve-container {
+        width: 100%;
+        height: auto;
+    }
+    .breadcrumb-overlay {
+        right: 20px;
+        font-size: 0.8rem;
+    }
+}
+
 
 /* for main */
 .contact-container{
@@ -176,7 +210,7 @@ textarea.custom-input { min-height: 166px; }
 
 /* Button Styling (Bonus) */
 .btn-submit-container{
-    padding: 75px 0px 150px;
+    padding: 75px 0px 50px;
 }
 .btn-submit {
     background-color: var(--burnt-orange);
@@ -195,36 +229,4 @@ textarea.custom-input { min-height: 166px; }
 }
 
 
-@media screen and (max-width: 768px){  
-    .curve-container  {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 341px !important; /* Matches SVG width */
-        height: 51px !important; /* Matches SVG height */
-    }
-  
-    .breadcrumb-overlay {
-        position: absolute;
-        bottom: 20px !important; /* Adjust to center vertically in the white area */
-        left: 45px !important;   /* Adjust to match horizontal padding in image */
-        font-size: 0.9rem;
-        color: #333;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-}
 
-
-/* Hide curve on small mobile screens if it breaks layout */
-@media (max-width: 620px) {
-    .curve-container {
-        width: 100%;
-        height: auto;
-    }
-    .breadcrumb-overlay {
-        right: 20px;
-        font-size: 0.8rem;
-    }
-}
