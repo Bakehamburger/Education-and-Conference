@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+:root {
+    --burnt-orange: #E66B27;
+    --bg-grey: #F5F5F5;
+}
+
+main {
+  background-color: white;
+}
+
+.privacy-policy-header {
+    position: relative;
+    background-color: var(--bg-grey);
+    min-height: 400px; /* Adjust based on your preference */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.header-content {
+    padding:  0 clamp(12px, 7.6vw - 17.7px, 92px);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 122px;
+}
+
+.main-title {
+    color: var(--burnt-orange);
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+     
+}
+
+.sub-title {
+    color: var(--burnt-orange);
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-family: sans-serif;
+}
+
+/* Curve & Breadcrumb Positioning */
+.curve-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 620px; /* Matches SVG width */
+    height: 93px; /* Matches SVG height */
+}
+
+.breadcrumb-overlay {
+    position: absolute;
+    bottom: 30px; /* Adjust to center vertically in the white area */
+    left: 100px;   /* Adjust to match horizontal padding in image */
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.breadcrumb-arrow {
+    color: var(--burnt-orange);
+    font-size: 0.7rem;
+}
+
+.breadcrumb-current {
+    color: var(--burnt-orange);
+    font-weight: 600;
+}
+
+
+/* for main */
+.privacy-policy-container{
+    padding-top: 55px;
+    font-size: var(--fs-base);
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 200%;
+    color: var(--dark-charcoal);
+    max-width: 1056px;
+    margin: 0 auto;
+    padding-bottom: 150px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 32px 0 60px 0;
+    opacity: 1;
+}
+
+.pp-sub-header{
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.03em;
+    line-height: 100%;
+}
+
+.pb-16{
+    padding-bottom: 16px;
+}
+
+
+
+@media screen and (max-width: 768px){  
+    .curve-container  {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 341px !important; /* Matches SVG width */
+        height: 51px !important; /* Matches SVG height */
+    }
+  
+    .breadcrumb-overlay {
+        position: absolute;
+        bottom: 20px !important; /* Adjust to center vertically in the white area */
+        left: 45px !important;   /* Adjust to match horizontal padding in image */
+        font-size: 0.9rem;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+     .curve-container {
+        width: 100%;
+        height: auto;
+    }
+    .breadcrumb-overlay {
+        right: 20px;
+        font-size: 0.8rem;
+    }
+}
+

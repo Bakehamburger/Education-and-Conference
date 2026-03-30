@@ -532,7 +532,7 @@ body.menu-open {
         #FD6C41 67%, 
         #EA6300 100%);
     background-blend-mode: overlay;     
-    opacity: 0.8; 
+    opacity: 0.9; 
     z-index: -1;
     border-radius: clamp(32px, 10vw, 128px);
 }
@@ -690,8 +690,6 @@ body.menu-open {
         z-index: 999;
     }
 
-    /* Hide arrow on the last step (Step 5) */
-    /* 3. THE CRITICAL FIX: Hide arrow on the last card (Step 5) */
     .solution-steps-wrapper > div:last-child {
         margin-bottom: 0;
     }
