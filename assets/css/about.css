@@ -21,7 +21,7 @@
 .header-content {
     padding:  0 clamp(12px, 7.6vw - 17.7px, 92px);
     position: absolute;
-    bottom: 36px;
+    bottom: 31px;
     margin-bottom: 122px;
 }
 
