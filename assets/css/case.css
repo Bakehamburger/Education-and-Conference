@@ -62,7 +62,7 @@ main {
     gap: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){  
     .curve-container  {
         position: absolute;
         bottom: 0;
@@ -81,7 +81,11 @@ main {
         align-items: center;
         gap: 10px;
     }
+}
 
+
+/* Hide curve on small mobile screens if it breaks layout */
+@media (max-width: 620px) {
     .curve-container {
         width: 100%;
         height: auto;

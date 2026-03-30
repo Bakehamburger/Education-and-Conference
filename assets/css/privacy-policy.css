@@ -1,17 +1,12 @@
 @charset "UTF-8";
 
-:root {
-    --burnt-orange: #E66B27;
-    --bg-grey: #F5F5F5;
-}
-
 main {
   background-color: white;
 }
 
 .privacy-policy-header {
     position: relative;
-    background-color: var(--bg-grey);
+    background-color: var(--white-smoke);
     min-height: 400px; /* Adjust based on your preference */
     display: flex;
     flex-direction: column;
@@ -104,7 +99,6 @@ hr {
 }
 
 
-
 @media screen and (max-width: 768px){  
     .curve-container  {
         position: absolute;
@@ -124,8 +118,12 @@ hr {
         align-items: center;
         gap: 10px;
     }
+}
 
-     .curve-container {
+
+/* Hide curve on small mobile screens if it breaks layout */
+@media (max-width: 620px) {
+    .curve-container {
         width: 100%;
         height: auto;
     }
