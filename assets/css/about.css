@@ -3,6 +3,11 @@
 * {
     font-family: "Zen Kaku Gothic New", sans-serif;
 }
+
+.navbar-horizontal {
+    margin-top: 50px;
+}
+
 .cookie-policy-header {
     position: relative;
     background-color: var(--white-smoke);
@@ -16,7 +21,7 @@
 .header-content {
     padding:  0 clamp(12px, 7.6vw - 17.7px, 92px);
     position: absolute;
-    bottom: 0;
+    bottom: 36px;
     margin-bottom: 122px;
 }
 
@@ -25,8 +30,17 @@
     font-size: 3.5rem;
     font-weight: 800;
     margin: 0;
-     
 }
+@media screen and (max-width: 992px) {
+    .about-main-title-jap {
+        font-size: 32px;
+        padding-bottom: 24px;
+    }
+}
+.main-title-jap {
+    font-size: 32px;
+}
+
 
 .sub-title {
     color: var(--burnt-orange);
