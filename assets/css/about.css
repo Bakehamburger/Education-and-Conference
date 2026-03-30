@@ -4,25 +4,29 @@
     font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
-.navbar-horizontal {
-    margin-top: 50px;
-}
 
 .cookie-policy-header {
     position: relative;
     background-color: var(--white-smoke);
-    min-height: 400px; /* Adjust based on your preference */
+    min-height: 340px; /* Adjust based on your preference */
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
 }
 
-.header-content {
+.about-header-content {
     padding:  0 clamp(12px, 7.6vw - 17.7px, 92px);
     position: absolute;
     bottom: 31px;
     margin-bottom: 122px;
+}
+
+@media screen and (max-width: 992px) {
+    .about-header-content {
+        bottom: 81px;
+        margin-bottom: 41px;
+    }
 }
 
 .main-title {
