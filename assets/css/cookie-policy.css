@@ -1,17 +1,13 @@
 @charset "UTF-8";
 
-:root {
-    --burnt-orange: #E66B27;
-    --bg-grey: #F5F5F5;
-}
 
 main {
-  background-color: white;
+  background-color: var(--white);
 }
 
 .cookie-policy-header {
     position: relative;
-    background-color: var(--bg-grey);
+    background-color: var(--white-smoke);
     min-height: 400px; /* Adjust based on your preference */
     display: flex;
     flex-direction: column;
@@ -75,6 +71,7 @@ main {
 /* for main */
 .cookie-policy-container{
     padding-top: 55px;
+    padding-bottom: 83px;
     font-size: var(--fs-base);
     font-weight: 500;
     letter-spacing: 0;
@@ -82,66 +79,65 @@ main {
     color: var(--dark-charcoal);
     max-width: 1056px;
     margin: 0 auto;
-    padding-bottom: 150px;
 }
 
 hr {
     border: none;
-    border-top: 1px solid #eee;
-    margin: 32px 0 60px 0;
+    border-top: 1px solid var(--green-divider);
+    margin: 40px 0 64px 0;
     opacity: 1;
 }
 
+.policy-content-body {
+    padding-bottom: 96px;
+}
+
 .policy-h2 {
-    color: #F38135; /* Your orange theme color */
-    font-size: 1.5rem;
+    color: var(--burnt-orange); /* Your orange theme color */
+    font-size: var(--fs-lg);
     font-weight: 700;
-    padding-top: 48px;
-   padding-bottom: 24px;
+    letter-spacing: 0.03em;
+    line-height: 100%;
+    padding-bottom: 24px;
 }
 
 .policy-text {
-    font-size: 1rem;
+    font-size: var(--fs-base);
     margin-bottom: 1rem;
     text-align: justify;
 }
 
 /* Table Styling */
 .cookie-table {
-    border: 1px solid #dee2e6;
+    border: 1px solid black;
+    margin-top: 24px;
+
 }
 
 .cookie-table th {
     width: 30%;
+    font-weight: 500;
 }
 
 .cookie-table th, 
 .cookie-table td {
-    padding: 1.25rem;
-    font-size: 0.95rem;
+    padding: 18px;
+    font-size: var(--fs-base);
+    color: var(--dark-charcoal);
+    line-height: 160%;
 }
 
 
-/* Light orange background for headers in the table */
-.bg-light-orange {
-    background-color: #FFF5EE !important; /* Very light orange/shell color */
-    color: #333;
-    font-weight: 500;
-}
 
-.cookie-table a {
-    color: #333;
-    transition: color 0.3s;
-}
-
-.cookie-table a:hover {
-    color: #F38135;
-}
 
 /* List styling inside table */
 .cookie-table ul li {
     position: relative;
-    padding-left: 0.5rem;
+    padding-left: 24px;
+}
+
+.last-text {
+    color: var(--dark-charcoal);
 }
 
 /* Responsive adjustments */

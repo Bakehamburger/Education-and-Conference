@@ -306,6 +306,24 @@ body.menu-open {
 
 /* SERVICE */
 
+.service-section {
+    padding-top: 154px;
+}
+
+.service-section .headline-text {
+    padding-top: 55px;
+}
+
+.main-service-grid {
+    padding-top: 18px;
+}
+
+.g-custom {
+    --bs-gutter-x: 12px;
+    --bs-gutter-y: 12px;
+}
+
+
 
 /* Service Card Styles */
 .service-card {
