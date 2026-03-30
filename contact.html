@@ -126,13 +126,13 @@
         </div>
     </div>
 </header>
-<main class="contact-container pb-0">
+<main class="contact-container">
     <div class="container col-lg-10 col-sm-12 my-5">
         <p class="mb-4 form-header-text">ご質問やご相談がございましたら、以下のフォームに必要事項を入力しお気軽にお問い合わせください。</p>
         <hr>
 
         <form class="form-section">
-            <div class="mb-4 pb-2">
+            <div class="mb-4 pb-2 custom-pd-form">
                 <label class="form-label">お問い合わせ種類 <span class="ms-4 badge-custom badge-optional">任意</span></label>
                 <div class="row row-cols-2" style="max-width: 500px;">
                     <div class="col">
@@ -163,7 +163,7 @@
                 </div>
             </div>
 
-            <div class="mb-5 pt-3">
+            <div class="mb-5 pt-3 form-choices">
                 <label class="form-label">資料請求したいサービス <span class="ms-3 badge-custom badge-optional">任意</span></label>
                 <div class="row">
                     <div class="col-12">
@@ -184,7 +184,7 @@
                 </div>
             </div>
 
-            <div class="mb-3 mt-4 pb-3">
+            <div class="mb-3 mt-4 pb-3 d-none d-md-block">
                 <label class="form-label" for="company_name">会社名 <span class="ms-2 badge-custom badge-required">必須</span></label>
                 <input type="text" id="company_name" name="company_name" class="form-control custom-input" required>
             </div>
@@ -237,7 +237,7 @@
                 <input type="text" id="address_detail" name="address_detail" class="form-control custom-input">
             </div>
 
-            <div class="mb-2">
+            <div class="d-none d-md-flex flex-column mb-2">
                 <label class="form-label" for="message">お問合せ内容 <span class="ms-2 badge-custom badge-required">必須</span></label>
                 <textarea id="message" name="message" class="form-control custom-input" placeholder="ご希望やご質問などご自由にお書きください。"></textarea>
             </div>

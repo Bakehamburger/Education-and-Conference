@@ -508,7 +508,49 @@ body.menu-open {
     }
 }
 
-@media screen and (max-width: 576px ){
+@media screen and (max-width: 768px ){
+    .case-section{
+        margin-top: 104px;
+    }
+
+    .case-section-inner{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .case-headline-section{
+        padding-top: 16px;
+    }
+
+    .case-headline-section .headline-text{
+        font-size: 32px;
+    }
+
+    .case-headline-section .description-text{
+        padding-top: 12px;
+    }
+
+    .case-card-container{
+        padding-top: 29px !important;
+    }
+
+    .case-image-wrapper{
+        border-radius: 16px;
+    }
+
+    .case-content-area{
+        padding-bottom: 0px;
+    }
+
+    .case-card-container{
+        gap: 11px;
+    }
+
+    .case-btn{
+        padding-top: 38px;
+    }
+
+
     .north-label {
         top: 10%; 
         left: 62%;
@@ -720,15 +762,15 @@ body.menu-open {
     .solution-step-card::after {
         content: "";
         position: absolute;
-        bottom: -15px; 
+        bottom: -23px; 
         left: 50%;
         transform: translateX(-50%);
         right: auto !important;
         top: auto !important;
         
-        border-left: 12px solid transparent;
-        border-right: 12px solid transparent;
-        border-top: 15px solid var(--burnt-orange); 
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 23px solid var(--burnt-orange); 
         border-bottom: 0;
         
         display: block !important;
@@ -742,6 +784,42 @@ body.menu-open {
     .solution-steps-wrapper > div:last-child .solution-step-card::after {
         display: none !important;
         content: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .solution-section::before{
+        background: 
+        url('https://grainy-gradients.vercel.app/noise.svg'),
+        linear-gradient(
+        to right,
+        #FE9F5D 20%, 
+        #FD854F 44%, 
+        #FD6C41 67%, 
+        #EA6300 100%);
+        background-blend-mode: overlay;     
+        opacity: 0.8; 
+    }
+    .solution-section-inner{
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
+    .solution-section-desc{
+        padding-top: 34px;
+        font-size: 16px;
+    }
+
+    .solution-title{
+        margin-bottom: 22px !important;
+    }
+
+    .solution-step-card{
+        height: 109px !important;
+    }
+
+    .solution-steps-wrapper{
+        gap: 11px !important;
     }
 }
 
@@ -782,6 +860,16 @@ body.menu-open {
     }
     100% {
         transform: translateX(-25%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .phrase-marquee-section{
+        padding-top: 10px !important;
+    }
+    .marquee-track span{
+        font-size: 100px;
+        color: rgba(234,99,0,0.1); 
     }
 }
 
