@@ -66,39 +66,6 @@ main {
     font-weight: 600;
 }
 
-
-/* for main */
-.privacy-policy-container{
-    padding-top: 55px;
-    font-size: var(--fs-base);
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 200%;
-    color: var(--dark-charcoal);
-    max-width: 1056px;
-    margin: 0 auto;
-    padding-bottom: 150px;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #eee;
-    margin: 32px 0 60px 0;
-    opacity: 1;
-}
-
-.pp-sub-header{
-    font-weight: 600;
-    font-size: 24px;
-    letter-spacing: 0.03em;
-    line-height: 100%;
-}
-
-.pb-16{
-    padding-bottom: 16px;
-}
-
-
 @media screen and (max-width: 768px){  
     .curve-container  {
         position: absolute;
@@ -132,4 +99,39 @@ hr {
         font-size: 0.8rem;
     }
 }
+
+
+/* for main */
+.privacy-policy-container{
+    padding-top: 55px;
+    font-size: var(--fs-base);
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 200%;
+    color: var(--dark-charcoal);
+    max-width: 1056px;
+    margin: 0 auto;
+    padding-bottom: 150px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 32px 0 60px 0;
+    opacity: 1;
+}
+
+.pp-sub-header{
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.03em;
+    line-height: 100%;
+}
+
+.pb-16{
+    padding-bottom: 16px;
+}
+
+
+
 
