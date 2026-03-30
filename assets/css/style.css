@@ -310,6 +310,29 @@ body.menu-open {
     padding-top: 154px;
 }
 
+@media screen and (max-width: 768px) {
+    .service-section {
+        padding-top: 94px;
+    } 
+    
+    .service-section-header .headline-text {
+        font-size: var(--fs-xl);
+        padding-top: 49px !important;
+    }
+    
+     .service-section-header .description-text {
+        padding-top: 5px !important;
+    }
+    
+    .service-section .btn-orange-lg {
+        margin-top: 31px;
+    }
+    
+    .service-section .description {
+        font-size: var(--fs-base);
+    }
+}
+
 .service-section .headline-text {
     padding-top: 55px;
 }
@@ -335,7 +358,6 @@ body.menu-open {
     background-position: center;
     background-size: cover;
     text-decoration: none;
-    transition: transform 0.3s ease;
 }
 
 .card-content {
@@ -376,6 +398,8 @@ body.menu-open {
     align-items: center;
     justify-content: center;
 }
+
+
 
 
 /* case section */
