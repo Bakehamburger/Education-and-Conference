@@ -129,6 +129,7 @@ main {
 .form-check-label,
 .form-header-text{
     font-weight: 500;
+    line-height: 200%;
 }
 
 hr {
@@ -226,6 +227,42 @@ textarea.custom-input { min-height: 166px; }
     opacity: 0.6 !important;
     background-color: var(--burnt-orange) !important;
     color: var(--white) !important;
+}
+
+@media screen and (max-width: 768px){
+    .contact-header {
+        min-height: 270px; /* Adjust based on your preference */
+    }
+
+    .header-content {
+        margin-bottom: 85px;
+    }
+    .main-title-jap {
+        font-size: 32px !important;
+    }  
+
+    .form-section{
+        padding-top: 29px;
+    }
+
+    .form-choices{
+        padding-top: 0 !important;
+        margin-bottom: 43px !important;
+    }
+
+    .custom-pd-form{
+        padding: 0 !important;
+        margin-bottom: 8px;
+    }
+
+    .btn-submit-container,
+    .contact-container{
+        padding-bottom: 0;
+    }
+
+    .contact-footer-section{
+        margin-top: 97px;
+    }
 }
 
 
