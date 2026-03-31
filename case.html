@@ -38,69 +38,73 @@
     </nav>
 
     <!-- Fullscreen Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu container-fluid px-0    " id="mobileMenu">
         <button class="mobile-menu-header" id="closeMenu">&times;</button>
         <div class="row mobile-nav-links">
-            <div class="col">
-                <div>
-                <a href="#home">
+            <div class="col-12 col-md-7 col-lg-5 mobile-nav-links-wrapper">
+                <div class="top-navlink">
+                <a href="index.html">
                     <p>トップ</p> 
                     <small> Top </small> 
                 </a>
                 </div>
-                <div>
-                    <a href="#service">
+                <div class="nav-link-service">
+                    <a href="service-list.html">
                         <p>事業紹介</p> 
-                        <p class="text-orange">Service</p>
+                        <small class="text-orange">Service</small>
                     </a>
                 </div>
-                <ul class="menu-service-list">
-                    <li><a href="#service"><img src="assets/images/icons/navbar-line.svg" alt="">自治体ソリューション</a></li>
-                    <li><a href="#service"><img src="assets/images/icons/navbar-line.svg" alt="">自治体ソリューション</a></li>
-                    <li><a href="#service"><img src="assets/images/icons/navbar-line.svg" alt="">自治体ソリューション</a></li>
+                <ul class="row menu-service-list">
+                    <li class="col-7 col-lg-12 list list1"><a class="list1" href="#service"><img src="assets/images/icons/navbar-line.svg" class="d-none d-lg-block" alt="">自治体ソリューション</a></li>
+                    <li class="col-6 col-lg-12 list col-lg-4"><a href="service-list.html"><img src="assets/images/icons/navbar-line.svg" class="d-none d-lg-block" alt="">教育ソリューション</a></li>
+                    <li class="col-8 col-lg-12 list col-lg-4"><a href="service-list.html"><img src="assets/images/icons/navbar-line.svg" class="d-none d-lg-block" alt="">企業・ビジネスソリューション</a></li>
+                    <li class="col-6 col-lg-12 list col-lg-4"><a href="service-list.html"><img src="assets/images/icons/navbar-line.svg" class="d-none d-lg-block" alt="">サポートサービス</a></li>
                 </ul>
-                <div>
-                    <a href="#case">
+                <div class="nav-link-case">
+                    <a href="case.html">
                         <p>導入事例</p> 
-                        <p class="text-orange">Case</p>
+                        <small class="text-orange">Case</small>
                     </a>
                 </div>
             </div>
-            <div class="col">
-                <div class="">
-                    <a href="#news">
+            <div class="col-12 col-md-2 col-lg-2 mobile-nav-links-wrapper mobile-nav-links-wrapper2">
+                <div class="nav-link-news">
+                    <a href="news.html">
                         <p>お知らせ</p> 
-                        <p class="text-orange">News</p>
+                        <small class="text-orange">News</small>
                     </a>
                 </div>
-                <div>
-                    <a href="#about">お知らせ <span class="text-orange">About</span></a>
+                <div class="nav-link-about">
+                    <a href="about.html">
+                        <p>お知らせ</p> 
+                        <small class="text-orange">About</small>
+                    </a>
                 </div>
             </div>
-            <div class="col">
-                <div class="mobile-menu-cta mb-3">
+            <div class="col-12  col-lg-4 d-flex flex-lg-column cta-container">
+                <div class="mobile-menu-cta">
                     <div class="menu-header-cta">
-                        <p>電話で問い合わせる</p>
+                        <p class="ms-2">電話で <br class="d-block d-lg-none"> 問い合わせる</p>
                     </div>
-                    <div class="row cta-content ">
-                        <div class="col-10 text-center">
-                        <small>トゥワロー</small>
-                        <a href="0120108624" class="en">0120-108624</a> 
-                        </div>
-                        <div class="col-2 d-flex justify-content-center align-items-end">
+                    <div class="cta-content d-flex justify-content-between">
+                            <div class="d-flex justify-content-center align-items-end justify-content-lg-center align-items-lg-center flex-column">
+                                <small>トゥワロー</small>
+                                <a href="0120108624" class="en cta-tel">0120-108624</a> 
+                            </div>
+                        <div class="d-flex justify-content-end align-items-lg-end justify-content-lg-center">
                             <img src="assets/images/icons/menu-play-btn-white.svg" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="mobile-menu-cta">
+                <div class="mobile-menu-cta mobile-menu-cta2">
                     <div class="menu-header-cta">
-                        <p class="fw-bold">電話で問い合わせる</p>
+                        <p class="fw-bold">電話で <br class="d-block d-lg-none"> 問い合わせる</p>
                     </div>
-                    <div class="row cta-content cta-content2">
-                        <div class="col-10 request-information">
-                        <p class="fw-bold">お問い合わせ・資料請求</p>
+                    <div class="cta-content cta-content2 d-flex justify-content-between">
+                        <div class="request-information d-flex justify-content-lg-center align-items-center">
+                        <p class="fw-bold">お問い合わせ・ <br class="d-block d-md-none"> 資料請求</p>
                         </div>
-                        <div class="col-2">
+                        <div class="d-flex justify-content-end align-items-end">
                             <img src="assets/images/icons/menu-play-btn-white.svg" alt="">
                         </div>
                     </div>
@@ -726,7 +730,7 @@
             </div>
             <div class="col-12 col-lg-3 footer-left-nav-links order-2 order-lg-3">
                 <div class="footer-links footer-service-link">
-                    <a href="#service">
+                    <a href="service-list.html">
                         <p>事業紹介</p> 
                         <small>service</small>
                     </a>
@@ -739,7 +743,7 @@
                 </ul>
                 </ul>
                 <div class="footer-links">
-                <a href="#case">
+                <a href="case.html">
                     <p>導入事例</p> 
                     <small>case</small>
                 </a>
@@ -748,13 +752,13 @@
             
             <div class="col-12 col-lg-3  footer-right-nav-links order-4 order-lg-4">
                 <div class="footer-links">
-                    <a href="#news">
+                    <a href="news.html">
                         <p>お知らせ</p> 
                         <small>news</small>
                     </a>
                 </div>
                 <div class="footer-links">
-                    <a href="#about">
+                    <a href="about.html">
                         <p>お知らせ</p> 
                         <small>about</small>
                     </a>

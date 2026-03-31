@@ -899,7 +899,6 @@ font-weight: 600;
 .gray-placeholder-box {
     background-color: var(--service-box);
     width: 100%; 
-    max-width: 516px; 
     height: 344px;
     border-radius: 16px;
 }
