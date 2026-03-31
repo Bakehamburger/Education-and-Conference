@@ -212,6 +212,7 @@
     }
 }
 
+
 .message-title {
     padding-bottom: 57px;
 }
@@ -261,45 +262,70 @@
     }
 }
 
+.about-company-section {
+    padding-bottom: 96px;
+}
 
 .company-container {
     background: #fff;
 }
-.header-title {
+.section-header-title {
     color: var(--burnt-orange);
     margin-bottom: 40px;
 }
-.header-title h1 {
+
+@media screen and (max-width: 992px) {
+    .section-header-title{
+        margin-bottom: 45px;
+    }
+
+    .about-company-section .section-header-title p {
+        padding-top: 7px;
+    }
+}
+.section-header-title h1 {
     font-weight: bold;
     font-size: 42px;
     margin-bottom: 5px;
 }
-.header-title p {
-    font-size: 0.9rem;
+.section-header-title p {
     letter-spacing: 1px;
     opacity: 0.6;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 992px) {
+    .header-title p {
+        padding-top: 6px;
+    }
 }
 
 .row-border {
-    display: flex;
-    gap: 29px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #EFEFEF;
+    margin-bottom: 40px;
 }
 
 .label-col {
-    color: #ff6600;
-    font-weight: bold;
-    flex-shrink: 0;
-    font-size: 0.9rem;
+    color: var(--burnt-orange);
+    font-weight: 500;
+    line-height: 1.6em;
 }
 .content-col {
-    flex-grow: 1;
-    font-size: 0.95rem;
-    line-height: 1.8;
+    line-height: 1.6em;
+    font-weight: 500;
 }
 /* Mobile adjustment */
 @media (max-width: 992px) {
     .company-container {
-        padding-top: 96px;
+        padding-top: 89px;
+    }
+
+    .label-col-main-suppliers {
+        padding-top: 90px;
+    }
+    .label-col-business-partners {
+        padding-top: 40px;
     }
 }
 
@@ -315,6 +341,16 @@
     width: 1360px;
 }
 
+@media screen and (max-width: 992px) {
+    .history-card {
+        padding-top:80px;
+        padding-left: 15px;
+        padding-bottom: 0;
+        padding-right: 43px;
+        width: inherit;
+    }
+}
+
 .history-title {
     color: #f37021;
     font-weight: bold;
@@ -326,6 +362,11 @@
 }
 
 /* Timeline Logic */
+
+.timeline-container {
+    padding-top: 17px;
+}
+
 .timeline {
     position: relative;
     padding-left: 40px;
@@ -378,18 +419,18 @@
 
 
 .year {
-    color: #f37021;
+    color: var(--burnt-orange);
     font-size: var(--fs-xl);
     font-weight: 800;
-    line-height: 1;
-    margin-bottom: 5px;
-    font-family: "Manrop", sans-serif;
+    line-height: 1em;
+    margin-bottom: 16px;
+    font-family: "Manrope", sans-serif;
 }
 
 .description {
-    font-size: 0.95rem;
     color: #333;
     font-weight: 500;
+    line-height: 1em;
 }
 
 
