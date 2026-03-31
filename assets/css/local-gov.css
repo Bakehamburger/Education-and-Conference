@@ -156,15 +156,6 @@ main {
 }
 
 
-@media (max-width: 1200px) {
-  .solution-card {
-    padding: 40px 15px; 
-  }
-  
-  .card-text {
-    font-size: var(--fs-sm); 
-  }
-}
 
 
 .point-number {
@@ -272,11 +263,8 @@ font-size: var(--fs-lg);
 
 .gray-placeholder-box {
     background-color: var(--service-box);
-    width: 100%; 
-    max-width: 516px; 
-    height: 344px;
+    width: 100%;  
     border-radius: 16px;
-    margin-left: auto; 
 }
 
 
@@ -323,6 +311,14 @@ font-size: var(--fs-lg);
     .intro .service-title-jap br {
         display: none;
     }
+    
+     .solution-card {
+    padding: 40px 15px; 
+  }
+  
+  .card-text {
+    font-size: var(--fs-sm); 
+  }
 }
 
 /* 992px */
@@ -459,7 +455,6 @@ font-size: var(--fs-lg);
 
 .gray-placeholder-box {
         width: 100%; 
-        max-width: 366px; 
         height: 243px;
     }
     
