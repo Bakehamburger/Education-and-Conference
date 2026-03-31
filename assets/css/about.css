@@ -4,16 +4,17 @@
     font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
-
+/* HEADER */
 .about-header {
     position: relative;
     background-color: var(--white-smoke);
-    min-height: 340px; /* Adjust based on your preference */
+    min-height: 400px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
 }
+
 
 @media screen and (max-width:992px) {
     .about-header {
@@ -25,7 +26,7 @@
     padding:  0 clamp(12px, 7.6vw - 17.7px, 92px);
     position: absolute;
     bottom: 31px;
-    margin-bottom: 122px;
+    margin-bottom: 94px;
 }
 
 @media screen and (max-width: 992px) {
@@ -35,20 +36,23 @@
     }
 }
 
-.main-title {
-    color: var(--burnt-orange);
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin: 0;
-}
 @media screen and (max-width: 992px) {
     .about-main-title-jap {
         font-size: 32px;
         padding-bottom: 24px;
     }
 }
-.main-title-jap {
-    font-size: 32px;
+.about-main-title-jap {
+    font-size: 42px;
+    color: var(--burnt-orange);
+    font-weight: 800;
+    margin: 0;
+}
+
+@media screen and (max-width: 922px) {
+    .about-main-title-jap {
+        font-size: 32px;
+    }
 }
 
 
@@ -59,19 +63,19 @@
     font-family: sans-serif;
 }
 
-/* Curve & Breadcrumb Positioning */
+
 .curve-container {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 620px; /* Matches SVG width */
-    height: 93px; /* Matches SVG height */
+    width: 620px; 
+    height: 93px; 
 }
 
 .breadcrumb-overlay {
     position: absolute;
-    bottom: 30px; /* Adjust to center vertically in the white area */
-    left: 100px;   /* Adjust to match horizontal padding in image */
+    bottom: 30px; 
+    left: 100px;   
     font-size: 0.9rem;
     color: #333;
     display: flex;
@@ -89,7 +93,7 @@
     font-weight: 600;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .policy-h2 {
         font-size: 1.25rem;
@@ -105,14 +109,14 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 341px !important; /* Matches SVG width */
-        height: 51px !important; /* Matches SVG height */
+        width: 341px !important; 
+        height: 51px !important; 
     }
-  
+
     .breadcrumb-overlay {
         position: absolute;
-        bottom: 20px !important; /* Adjust to center vertically in the white area */
-        left: 45px !important;   /* Adjust to match horizontal padding in image */
+        bottom: 20px !important;  
+        left: 45px !important;   
         font-size: 0.9rem;
         color: #333;
         display: flex;
@@ -122,7 +126,6 @@
 }
 
 
-/* Hide curve on small mobile screens if it breaks layout */
 @media (max-width: 620px) {
     .curve-container {
         width: 100%;
@@ -138,11 +141,15 @@
 .content-white-bottom {
     background-color: #ffffff;
     position: relative;
-    min-height: 80vh;             /* Ensures white background covers the screen */
+    min-height: 80vh;            
 }
 
+
+/* TOP */
+
 .about-top {
-    padding-top: 80px;
+    padding-top: 97px;
+    padding-bottom: 80px;
 }
 
 .about-top h1{
@@ -154,7 +161,7 @@
 
 @media screen and (max-width: 992px) {
     .about-top {
-        padding-top: 103px;
+        padding-top: 106px;
         padding-bottom: 30px;
     }
     .about-top h1 {
@@ -212,6 +219,7 @@
     }
 }
 
+/* MESSAGE SECTION */
 
 .message-title {
     padding-bottom: 57px;
@@ -239,6 +247,10 @@
     width: 410px;
 }
 
+.about-company-president {
+    padding-top: 31px;
+}
+
 @media screen and (max-width: 992px) {
     .message-content p {
         width: inherit;
@@ -262,12 +274,21 @@
     }
 }
 
+/* ABOUT COMPANY SECTION */
+
 .about-company-section {
-    padding-bottom: 96px;
+    padding-bottom: 122px;
+}
+
+@media screen and (max-width: 992px) {
+    .about-company-section {
+        padding-bottom: 100px;
+    }
 }
 
 .company-container {
     background: #fff;
+    padding: 136px 303px 0 303px;
 }
 .section-header-title {
     color: var(--burnt-orange);
@@ -300,6 +321,18 @@
     }
 }
 
+/* COMPANY OVERVIEW */
+
+.company-overview-content-wrapper {
+    padding-top: 5px;
+}
+
+@media screen and (max-width) {
+    .company-overview-content-wrapper {
+        padding-top: 0;
+    }
+}
+
 .row-border {
     padding-bottom: 40px;
     border-bottom: 1px solid #EFEFEF;
@@ -318,7 +351,8 @@
 /* Mobile adjustment */
 @media (max-width: 992px) {
     .company-container {
-        padding-top: 89px;
+        padding-top: 89px !important;
+        padding: 0;
     }
 
     .label-col-main-suppliers {
@@ -329,10 +363,10 @@
     }
 }
 
+/* HISTORY SECTION */
 
-/* Card Container */
 .history-card {
-    background: #f5f5f5;
+    background-color: var(--white-smoke);
     border-radius: 60px;
     padding: 95px 426px 96px 158px;
     margin: auto;
@@ -342,11 +376,12 @@
 
 @media screen and (max-width: 992px) {
     .history-card {
-        padding-top:80px;
+        padding-top:75px;
         padding-left: 15px;
         padding-bottom: 0;
         padding-right: 0;
         width: inherit;
+        height: 1164px;
     }
 
     .history-section .section-header-title {
@@ -366,7 +401,7 @@
     letter-spacing: 0.1em;
 }
 
-/* Timeline Logic */
+
 
 .timeline-container {
     padding-top: 17px;
@@ -377,19 +412,18 @@
     padding-left: 40px;
 }
 
-/* The Vertical Line */
+
 .timeline::before {
     content: '';
     position: absolute;
     left: 7px;
     top: 20px;
-    bottom: 35px; /* Ends at the last dot */
+    bottom: 35px; 
     width: 1px;
     background-color: #f37021;
     opacity: 0.5;
 }
 
-/* The Dotted Extension at the bottom */
 .timeline::after {
     content: '';
     position: absolute;
@@ -407,6 +441,7 @@
 }
 
 @media screen and (max-width: 992px) {
+
     .timeline-item6 {
         margin-bottom: 74px;
     }
@@ -424,11 +459,6 @@
     z-index: 2;
 }
 
-
-
-
-
-
 .year {
     color: var(--burnt-orange);
     font-size: var(--fs-xl);
@@ -444,57 +474,79 @@
     line-height: 1em;
 }
 
+/* ACCESS SECTION */
 
-
-.access-container {
-    max-width: 960px;
-}
-
-/* ヘッダーレイアウト */
-.access-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 25px;
-    gap: 20px;
-    padding-top: 96px;
-}
-
-/* オレンジのテキスト */
-.main-title {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 0;
-    line-height: 1.2;
+.access-section {
+    padding-top: 40px;
 }
 
 @media screen and (max-width: 992px) {
-    .main-title {
-        line-height: 1em;
-        padding-bottom: 8px;
+    .access-section {
+        padding-top: 0;
     }
 }
 
-.sub-title {
-    font-size: 0.9rem;
-    font-weight: 700;
-    margin-top: -2px;
+
+.access-section .section-header-title {
+    margin-bottom: 50px;
+    padding-right: 262px;
 }
+
+.access-container {
+    max-width: 1044px;
+}
+
+@media screen and (max-width: 992px) {
+    .access-container {
+        max-width: 960px;
+    }
+}
+
+.access-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding-top: 96px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .access-header {
+        padding-top: 91px;
+        margin-bottom: 50px;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+.access-section .section-header-title {
+    padding-right:0;
+    }
+
+}
+
 
 .address-info {
-    font-size: 0.95rem;
-    line-height: 1.7;
     color: #333;
-    flex-grow: 1;
     padding-top: 5px;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    padding-right: 96px;
 }
 
-/* GoogleMapボタン */
+@media screen and (max-width: 992px) {
+    .address-info {
+        padding-right: 0;
+    }
+}
+
 .btn-google {
     background-color: #f26600;
     color: #fff;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -503,44 +555,53 @@
     flex-shrink: 0;
 }
 
+@media screen and (max-width: 992px) {
+    .btn-google {
+        margin-top: 18px;
+    }
+}
+
 .btn-google:hover {
     background-color: #d65a00;
     color: #fff;
 }
 
 .btn-label {
-    padding: 10px 25px;
+    padding: 16px 35px;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 14px;
+    height: 55px;
 }
 
 .btn-arrow {
-    background-color: #d65a00;
-    padding: 10px 12px;
+    background-color: var(--burnt-orange);
+    padding: 25px 22px;
     display: flex;
     align-items: center;
+    height: 55px;
 }
 
-/* 地図コンテナ */
 .map-wrapper {
     width: 100%;
-    height: 450px;
+    height: 528px;
     border: 1px solid #ddd;
     border-radius: 4px;
     overflow: hidden;
 }
 
-/* モバイル対応 */
-@media (max-width: 768px) {
-    .access-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .btn-google {
-        width: auto;
-    }
-
+@media screen and (max-width: 992px) {
     .map-wrapper {
-        height: 184px;
+        height: 450px;
     }
 }
+
+.about-footer-section {
+    margin-top: 134px;
+}
+
+@media screen and (max-width: 992px) {
+    .about-footer-section {
+    margin-top: 94px;
+    }
+}
+
