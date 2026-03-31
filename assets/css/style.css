@@ -1088,6 +1088,7 @@ body.menu-open {
     padding-top: 140px;
     z-index: 100;
     display: flex;
+    pointer-events: none;
 
 }
 
@@ -1135,6 +1136,7 @@ body.menu-open {
     position: absolute;
     bottom: 12px;
     right: 12px;
+    cursor: pointer;
 }
 
 /* Responsive Rules */
