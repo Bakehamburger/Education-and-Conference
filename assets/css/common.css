@@ -1067,7 +1067,12 @@ font-weight: 600;
     display: flex;
     flex-direction: column;
     padding-top: 145px;
-    background-color: var(--white-smoke);
+}
+
+@media screen and (max-width: 992px) {
+    .footer-section {
+        padding-top: 32px;
+    }
 }
 
 .contact-container {
@@ -1081,6 +1086,17 @@ font-weight: 600;
     font-weight: 700;
     line-height: 1.8;
     font-size: 1.5rem;
+}
+
+@media screen and (max-width: 992px) {
+    .left-text {
+        line-height: 200%;
+        letter-spacing: 0;
+        font-size: 18px;
+    }
+    .mb-mobile-custom {
+        margin-bottom: 17px !important;
+    }
 }
 
 .orange-card {
@@ -1341,7 +1357,7 @@ background:
     }
 
     .orange-card {
-        padding: 12px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1411,6 +1427,7 @@ background:
 
     .footer-body {
         border-radius: 0;
+        padding-bottom: 48px;
     }
 
     .footer-content {
