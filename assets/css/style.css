@@ -1007,7 +1007,7 @@ body.menu-open {
 
 .news-card-description {
     font-size: var(--fs-sm);
-    font-weight: 500;
+    font-weight: 700;
     line-height: 135%;
     letter-spacing: 0.08em;
     color: #333;
@@ -1162,12 +1162,13 @@ body.menu-open {
 
     .map-news {
         max-width: 462px;
-        transform: translateX(-22%);
+        transform: translateX(-2%);
+        width: 104%;
     }
 
     .card-logo {
     width: 105%;
-    row-gap: 12px;
+    row-gap: 17px;
 
     }   
 
@@ -1176,7 +1177,14 @@ body.menu-open {
     }
 
     .gallery-section {
-        margin-top: 5px !important; 
+        margin-top: -43px !important; 
+    }
+
+    .placeholder-text {
+        line-height: 135%;
+        letter-spacing: 0.08em;
+        font-weight: 700;
+        color: #333333;
     }
 
     .pt-144 {
