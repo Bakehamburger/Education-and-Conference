@@ -1057,7 +1057,8 @@ font-weight: 600;
 .footer-section {
     display: flex;
     flex-direction: column;
-    margin-top: 145px;
+    padding-top: 145px;
+    background-color: var(--white-smoke);
 }
 
 .contact-container {

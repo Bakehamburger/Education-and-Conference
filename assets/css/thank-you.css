@@ -6,7 +6,7 @@ main {
 }
 
 
-.header-404 {
+.header-thank-you {
     position: relative;
     background-color: var(--white-smoke);
     min-height: 400px; /* Adjust based on your preference */
@@ -68,24 +68,23 @@ main {
     font-weight: 600;
 }
 
-
-.header-content-404 {
+.header-content-thank-you {
     padding-left: 92px;
 }
 
-.content-404 {
+
+.content-thank-you {
     padding: 96px 201px 160px 198px;
 }
 
 
-
-.title-404{
+.title-thank-you{
     font-size: 40px;
     font-weight: bold;
     line-height: 1em;
 }
 
-.description-404 {
+.description-thank-you {
     width: 1041px;
     padding-top: 48px;
     padding-bottom: 80px;
@@ -94,7 +93,7 @@ main {
     font-weight: 500;
 }
 
-.footer-section-404 {
+.footer-section-thank-you {
     margin-top: 0;
 }
 
