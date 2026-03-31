@@ -5,69 +5,39 @@
 .landing-page {
     position: relative;
     background: url('/assets/images/service/cbs-lp.png');
-    background-size: cover; /* Ensures the image fills the space */
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 400px; /* This makes it take up 100% of the screen height */
+    min-height: 400px; 
 }
 
 .header-content {
   padding-left: 92px;
-  padding-top: 210px; /* Offset for the fixed navbar */
+  padding-top: 210px; 
   
 }
 
-.main-title {
-    font-size: 40px;
-    font-weight: 800;
-    margin: 0;
-    color: white ;
-}
-
-.sub-title {
-    font-size: var(--fs-base);
-    margin-top: 5px;
-    color: white;
-}
 
 
-/* Curve & Breadcrumb Positioning */
+
+
 .curve-container {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 620px; /* Matches SVG width */
-    height: 93px; /* Matches SVG height */
+    width: 620px; 
+    height: 93px; 
 }
 
-@media screen and (max-width: 768px) {
-  .curve-container  {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 341px; /* Matches SVG width */
-    height: 51px; /* Matches SVG height */
-  }
-  
-  .breadcrumb-overlay {
-    position: absolute;
-    bottom: 10px !important; /* Adjust to center vertically in the white area */
-    left: 45px !important;   /* Adjust to match horizontal padding in image */
-    font-size: 0.9rem;
-    color: #333;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-}
+
 
 
 .breadcrumb-overlay {
     position: absolute;
-    bottom: 30px; /* Adjust to center vertically in the white area */
-    left: 130px;   /* Adjust to match horizontal padding in image */
-    font-size: 0.9rem;
-    color: #333;
+    bottom: 30px; 
+    left: 130px;  
+    font-size: var(--fs-sm);
+    color: var(--dark-charcoal);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -84,41 +54,41 @@
 }
 
 main {
-  background-color: white;
+  background-color: var(--white);
 }
 
-
+/* Main Top Title */
 .intro {
-    padding-top: 107px;
-    padding-bottom: 96px;
-}
-
-
-.pointers {
-    padding-top: 29px;
+    padding-top: 108px;
+    padding-bottom: 101px;
 }
 
 
 .title-divider {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--green-divider);
   opacity: 1;
-  margin-top: 46px;
+  margin-top: 44px;
   margin-bottom: 17px;
 }
 
 .feature-section {
     background-color: var(--service-bg); /* Matches the warm cream tone */
     position: relative;
-    padding-bottom: 601px;
+    padding-bottom: 598px;
 }
+
+
+
+
 
 /* case */
 .service-case {
     padding-top: 141px;
 }
 
+
 .case-main-title {
-    padding-bottom: 54px;
+    padding-bottom: 48px;
 }
 
 .case-grid-grow {
@@ -135,11 +105,11 @@ main {
 
 .mobile-filter-container {
     display: flex;
-    align-items: flex-start; /* Keeps the "All" button at the top */
+    align-items: flex-start; 
 }
 
 .all-btn-wrapper {
-    flex-shrink: 0; /* Prevents the "All" button from getting squeezed */
+    flex-shrink: 0; 
 }
 
 .case-btn {
@@ -159,3 +129,176 @@ main {
         padding: 10px 16px !important;
     }
 }
+
+
+/* 1200px */
+@media screen and (min-width: 1200px) {
+    .intro .service-title-jap br {
+        display: none;
+    }
+}
+
+
+
+/* 768px */
+@media screen and (max-width: 768px) {
+  .curve-container  {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 341px; 
+    height: 51px; 
+  }
+  
+  .breadcrumb-overlay {
+    position: absolute;
+    bottom: 10px !important; 
+    left: 45px !important;   
+    font-size: var(--fs-sm);
+    color: var(--dark-charcoal);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+}
+
+/* 576 */
+@media screen and (max-width: 576px) {
+        .landing-page {
+            min-height: 230px;
+        }
+        
+        .header-content {
+            margin-top: 41px;
+            padding: 72px 0 0 12px;
+        }
+        
+        .header-content .main-title-jap {
+            font-size: var(--fs-xl);
+            font-weight: 600;
+            padding-bottom: 14px;
+        }
+        
+        .header-content .main-title-eng {
+            font-weight: 400;
+            letter-spacing: 0.12em;
+        }
+        
+         .intro {
+        padding-top: 72px;
+        padding-bottom: 85px;
+     }
+    
+    .intro .main-title-jap {
+        font-size: var(--fs-lg);
+        font-weight: 500;
+        line-height: 165%;
+        letter-spacing: 0.08em;
+    }
+    
+     .intro  .title-divider {
+    border-top: 1px solid var(--green-divider);
+    opacity: 1;
+    margin: 13px 0 14px 0;
+}
+        
+          .intro .service-title-jap {
+    font-size: var(--fs-lg);
+    margin: 0;
+}
+
+    
+    .pointers {
+        padding-top: 7px !important;
+    } 
+        
+        .feature-section {
+        padding-bottom: 1114px;
+    }  
+    
+     .feature-item,
+    .container .row:last-child .feature-item {
+  padding-top: 64px !important;
+}
+        
+         .feature-list li {
+        margin-bottom: 24px;
+        font-weight: 500;
+        font-size: var(--fs-base);
+        line-height: 200%;
+        letter-spacing: 0.04em;
+    }
+    
+     .first-feature-ed {
+    padding-top: 120px;
+    }
+    
+    .feature-section .service-title-jap {
+        font-size: var(--fs-lg);
+        font-weight: 600;
+        line-height: 165%;
+    }
+    
+    .feature-section .section-subtitle {
+        font-size: 18px;
+        
+    }
+    
+    .container > .row:not(:nth-child(3)) .sub {
+    padding-top: 34px;
+}
+    
+.feature-section .row:first-of-type .section-divider {
+    border-top: 3px solid var(--burnt-orange);
+    opacity: 10%;
+    margin: 48px 0 32px 0;
+}
+
+
+.feature-section .row:nth-of-type(2) .section-divider,
+.feature-section .row:nth-of-type(3) .section-divider {
+     border-top: 3px solid var(--burnt-orange);
+    opacity: 10%;
+    margin: 24px 0;
+}
+
+.feature-section .row:nth-of-type(4) .section-divider,
+.feature-section .row:nth-of-type(5) .section-divider{
+    border-top: 3px solid var(--burnt-orange);
+    opacity: 10%;
+    margin: 24px 0 32px 0;
+}
+        
+        
+        .service-case {
+    padding-top: 96px;
+}
+
+.case-content-area {
+    padding-bottom: 15px;
+}
+
+.case-btn {
+    padding-top: 25px !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+} 
+        
+    footer {
+        margin-top: 0 !important;
+        padding-top: 95px !important;
+    }      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }

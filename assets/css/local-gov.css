@@ -1,52 +1,27 @@
 @charset "UTF-8";
 
 
-/* Content spacing */
 .landing-page {
     position: relative;
     background: url('/assets/images/service/lgs-lp.png');
-    background-size: cover; /* Ensures the image fills the space */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 400px; /* This makes it take up 100% of the screen height */
+    min-height: 400px; 
 }
 
 .header-content {
   padding-left: 92px;
-  padding-top: 210px; /* Offset for the fixed navbar */
+  padding-top: 210px; 
   
 }
 
-@media screen and (max-width: 576px) {
-        .landing-page {
-            min-height: 230px;
-        }
-        
-        .header-content {
-            margin-top: 41px;
-            padding: 85px 0 0 12px;
-        }
-        
-        .header-content .main-title-jap {
-            font-size: var(--fs-xl);
-            font-weight: 600;
-            padding-bottom: 14px;
-        }
-        
-        .header-content .main-title-eng {
-            font-weight: 400;
-            letter-spacing: 0.12em;
-        }
-    }
-
-
-/* Curve & Breadcrumb Positioning */
 .curve-container {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 620px; /* Matches SVG width */
-    height: 93px; /* Matches SVG height */
+    width: 620px; 
+    height: 93px; 
 }
 
 @media screen and (max-width: 768px) {
@@ -54,16 +29,16 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 341px; /* Matches SVG width */
-    height: 51px; /* Matches SVG height */
+    width: 341px; 
+    height: 51px; 
   }
   
   .breadcrumb-overlay {
     position: absolute;
-    bottom: 10px !important; /* Adjust to center vertically in the white area */
-    left: 45px !important;   /* Adjust to match horizontal padding in image */
-    font-size: 0.9rem;
-    color: #333;
+    bottom: 10px !important; 
+    left: 45px !important;   
+    font-size: var(--fs-sm);
+    color:var(--dark-charcoal);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -72,10 +47,10 @@
 
 .breadcrumb-overlay {
     position: absolute;
-    bottom: 30px; /* Adjust to center vertically in the white area */
-    left: 130px;   /* Adjust to match horizontal padding in image */
-    font-size: 0.9rem;
-    color: #333;
+    bottom: 30px; 
+    left: 130px;   
+    font-size: var(--fs-sm);
+    color:var(--dark-charcoal);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -96,8 +71,6 @@ main {
 }
 
 
-/* local */
-/* intro */
 /* Main Top Title */
 .intro {
     padding-top: 108px;
@@ -113,39 +86,15 @@ main {
   color: var(--dark-charcoal);
 }
 
-@media screen and (max-width: 576px) {
-     .intro {
-        padding-top: 72px;
-        padding-bottom: 85px;
-     }
-    
-    .intro .main-title-jap {
-        font-size: var(--fs-lg);
-        font-weight: 500;
-        line-height: 165%;
-        letter-spacing: 0.08em;
-    }
-    
-     .intro  .title-divider {
-    border-top: 1px solid var(--green-divider);
-    opacity: 1;
-    margin: 13px 0 14px 0;
-}
-}
-
 .title-divider {
   border-top: 1px solid var(--green-divider);
   opacity: 1;
   margin: 46px 0 36px 0;
 }
 
-/* Section Subtitle with Orange Underline */
 .intro .service-title-jap {
     font-weight: 500;
-    /* 1. Change to inline so the highlight wraps with the text */
     display: inline; 
-    
-    /* Keep your specific gradient */
     background-image: linear-gradient(
         to right, 
         rgba(254, 159, 93, 0.8) 20%, 
@@ -153,40 +102,18 @@ main {
         rgba(253, 108, 65, 0.8) 67%, 
         rgba(234, 99, 0, 0.8) 100%
     );
-    
     background-repeat: no-repeat;
-    
-    /* 2. Set height of the marker (17px is good, or try 50% for a true 'half-high' look) */
     background-size: 100% 18px; 
-    
-    /* 3. Position it to sit behind the bottom half of the text */
     background-position: 0 100%; 
-
-    /* 4. This ensures the background wraps correctly across line breaks */
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
-    
-    /* Adjust line-height to ensure there is space between the two highlighted lines */
     line-height: 165%; 
     padding: 38px 4px 10px 4px;
 }
 
-@media screen and (min-width: 1200px) {
-    .intro .service-title-jap br {
-        display: none;
-    }
-}
 
-@media screen and (max-width: 576px) {
-    .intro .service-title-jap {
-        font-size: var(--fs-lg);
-        background-size: 100% 24px; 
-    }
-    
-    .pointers {
-        padding-top: 14px !important;
-    }
-}
+
+
 
 .pointers {
     padding-top: 27px;
@@ -196,7 +123,7 @@ main {
 .solution-card {
  background-color: var(--white-smoke);
   border-radius: 20px;
-  padding: 48px 5%; /* Use % for horizontal padding so it shrinks with the card */
+  padding: 48px 5%; 
   width: 100%;
   max-width: 411px;
   margin: 0 auto;
@@ -205,18 +132,16 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* This prevents the text from ever wrapping to a new line */
   white-space: nowrap;
 }
 
-/* Fix for 992px to 1200px range */
+
 @media (max-width: 1200px) {
   .solution-card {
-    padding: 40px 15px; /* Significant reduction to keep text on one line */
+    padding: 40px 15px; 
   }
   
   .card-text {
-    /* Scale the font down slightly so it fits the smaller card */
     font-size: var(--fs-sm); 
   }
 }
@@ -237,21 +162,15 @@ font-size: var(--fs-lg);
 }
 
 
-/* feature */
-/* Section Background */
+/* FEATURE SECTION */
 .feature-section {
-    background-color: var(--service-bg); /* Matches the warm cream tone */
+    background-color: var(--service-bg); 
     position: relative;
     padding-bottom: 584px;
 }
 
-@media screen and (max-width: 576px) {
-    .feature-section {
-        padding-bottom: 963px;
-    }
-}
 
-/* The Inverted Triangle at the top */
+
 .triangle-top {
     position: absolute;
     top: 0;
@@ -261,7 +180,7 @@ font-size: var(--fs-lg);
     height: 0;
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
-    border-top: 60px solid var(--white); /* Cutting into the section */
+    border-top: 60px solid var(--white); 
 }
 
 /* Typography */
@@ -276,8 +195,210 @@ font-size: var(--fs-lg);
     padding-top: 173px;
 }
 
+
+.sub {
+    padding-top: 42px;
+}
+
+.feature-item {
+  padding-top: 144px;
+}
+
+
+.container .row:last-child .feature-item {
+   padding-top: 134px;
+}
+.container > .row:last-child .sub {
+    padding-top: 35px;
+}
+
+.container > .row:last-child .section-divider{
+  margin-top: 22px;
+}
+
+.feature-text-wrapper {
+  display: flex;
+  align-items: flex-start;
+  padding-right: 20px; 
+
+}
+
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+   
+}
+
+.feature-list li {
+   width: 100%; 
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 24px;
+    line-height: 200%; 
+    font-weight: 500;
+    font-size: var(--fs-sm);
+}
+
+.feature-list li::before {
+   content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em; 
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #FE9F5D, #EA6300);
+}
+
+.gray-placeholder-box {
+    background-color: var(--service-box);
+    width: 100%; 
+    max-width: 516px; 
+    height: 344px;
+    border-radius: 16px;
+    margin-left: auto; 
+}
+
+
+
+
+/* case */
+.service-case {
+    padding-top: 156px;
+}
+
+.case-main-title {
+    padding-bottom: 51px;
+}
+
+.case-grid-grow {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 12px;   
+}
+
+.case-card-item .case-image-wrapper img{
+    border-radius: 16px;
+    width: 100%;
+    max-width: 411px;
+}
+
+.mobile-filter-container {
+    display: flex;
+    align-items: flex-start; 
+}
+
+.all-btn-wrapper {
+    flex-shrink: 0;
+}
+
+.case-btn {
+    padding-top: 20px;
+    padding-bottom: 191px;
+}
+
+
+/* 1200px */
+@media screen and (min-width: 1200px) {
+    .intro .service-title-jap br {
+        display: none;
+    }
+}
+
+/* 992px */
+@media screen and (max-width: 992px){  
+    .mobile-filter-container{
+        flex-direction: column;
+    }
+    .choices-btn-wrapper{
+        margin-top: 24px;
+    }
+
+    .custom-pad{
+        padding: 10px 16px !important;
+    }
+}
+
+
+/* 768px */
+@media screen and (max-width: 768px) {
+  .curve-container  {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 341px; 
+    height: 51px; 
+  }
+  
+  .breadcrumb-overlay {
+    position: absolute;
+    bottom: 10px !important; 
+    left: 45px !important;   
+    font-size: var(--fs-sm);
+    color:var(--dark-charcoal);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+}
+
+
+/* 576px */
 @media screen and (max-width: 576px) {
-    .first-feature {
+      .landing-page {
+            min-height: 230px;
+        }
+        
+        .header-content {
+            margin-top: 41px;
+            padding: 85px 0 0 12px;
+        }
+        
+        .header-content .main-title-jap {
+            font-size: var(--fs-xl);
+            font-weight: 600;
+            padding-bottom: 14px;
+        }
+        
+        .header-content .main-title-eng {
+            font-weight: 400;
+            letter-spacing: 0.12em;
+        }
+        
+    .intro {
+        padding-top: 72px;
+        padding-bottom: 85px;
+     }
+    
+    .intro .main-title-jap {
+        font-size: var(--fs-lg);
+        font-weight: 500;
+        line-height: 165%;
+        letter-spacing: 0.08em;
+    }
+    
+     .intro  .title-divider {
+    border-top: 1px solid var(--green-divider);
+    opacity: 1;
+    margin: 13px 0 14px 0;
+}
+    
+    
+    .intro .service-title-jap {
+        font-size: var(--fs-lg);
+        background-size: 100% 24px; 
+    }
+    
+    .pointers {
+        padding-top: 14px !important;
+    }
+    
+    .feature-section {
+        padding-bottom: 963px;
+    }
+    
+    
+     .first-feature {
     padding-top: 120px;
     }
     
@@ -301,110 +422,28 @@ font-size: var(--fs-lg);
     opacity: 10%;
     margin: 19px 0 28px 0;
 }
-
-}
-
-.sub {
-    padding-top: 42px;
-}
-
-.feature-item {
-  padding-top: 144px;
-}
-
-@media screen and (max-width: 576px) {
     .feature-item,
     .container .row:last-child .feature-item {
   padding-top: 64px !important;
 }
 
 
-/* Targets the .sub element inside the 3rd .row of the .container */
 .container > .row:nth-child(3) .sub {
     padding-top: 40px;
 }
-}
 
-/* Target the .feature-item that is inside the very last .row of the container */
-.container .row:last-child .feature-item {
-   padding-top: 134px;
-}
-.container > .row:last-child .sub {
-    padding-top: 35px;
-}
-
-.container > .row:last-child .section-divider{
-  margin-top: 22px;
-}
-
-.feature-text-wrapper {
-  display: flex;
-  align-items: flex-start;
-  padding-right: 20px; /* Gives some breathing room before the box */
-
-}
-
-.feature-list {
-    list-style: none;
-    padding-left: 0;
-   
-}
-
-.feature-list li {
-   width: 100%; /* Changed from 90% to ensure text uses the column width */
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 24px;
-    line-height: 200%; /* Slightly reduced for better readability */
-    font-weight: 500;
-    font-size: var(--fs-sm);
-}
-
-@media screen and (max-width: 576px) {
-    .feature-list li {
+ .feature-list li {
         margin-bottom: 37px;
         font-weight: 600;
     }
-}
-
-/* The orange dots in your image */
-.feature-list li::before {
-   content: "";
-    position: absolute;
-    left: 0;
-    top: 0.5em; /* Centers it relative to line-height */
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: linear-gradient(to right, #FE9F5D, #EA6300);
-}
 
 .gray-placeholder-box {
-    background-color: var(--service-box);
-    width: 100%; /* Make it responsive to the col-lg-5 container */
-    max-width: 516px; /* You can keep a max-width if you don't want it too big */
-    height: 344px;
-    border-radius: 16px;
-    margin-left: auto; /* Pushes the box to the right edge of its column */
-}
-
-@media screen and (max-width: 576px) {
-    .gray-placeholder-box {
-        width: 100%; /* Make it responsive to the col-lg-5 container */
-        max-width: 366px; /* You can keep a max-width if you don't want it too big */
+        width: 100%; 
+        max-width: 366px; 
         height: 243px;
     }
-}
-
-
-
-/* case */
-.service-case {
-    padding-top: 156px;
-}
-
-@media  screen and (max-width: 576px) { 
-    .service-case {
+    
+     .service-case {
     padding-top: 96px;
 }
 
@@ -417,55 +456,11 @@ font-size: var(--fs-lg);
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
 }
-    
-}
 
-.case-main-title {
-    padding-bottom: 51px;
-}
-
-.case-grid-grow {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 12px;   
-}
-
-.case-card-item .case-image-wrapper img{
-    border-radius: 16px;
-    width: 100%;
-    max-width: 411px;
-}
-
-.mobile-filter-container {
-    display: flex;
-    align-items: flex-start; /* Keeps the "All" button at the top */
-}
-
-.all-btn-wrapper {
-    flex-shrink: 0; /* Prevents the "All" button from getting squeezed */
-}
-
-.case-btn {
-    padding-top: 20px;
-    padding-bottom: 191px;
-}
-
-@media screen and (max-width: 992px){  
-    .mobile-filter-container{
-        flex-direction: column;
-    }
-    .choices-btn-wrapper{
-        margin-top: 24px;
-    }
-
-    .custom-pad{
-        padding: 10px 16px !important;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    footer {
+ footer {
         margin-top: 0 !important;
         padding-top: 95px !important;
     }
+    
+    
 }

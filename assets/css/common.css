@@ -686,7 +686,7 @@ main{
     color: var(--dark-charcoal);
 }
 
-/* service */
+/* SERVICE SECTION */
 .service-title-fw {
     font-weight: 800;
     line-height: 100%;
@@ -703,10 +703,6 @@ main{
     line-height: 200%;
 }
 
-
-/* local */
-/* intro */
-/* Main Top Title */
 .intro {
     padding-bottom: 62px;
 }
@@ -719,34 +715,20 @@ font-weight: 600;
 }
 
 
-/* Section Subtitle with Orange Underline */
 .intro .service-title-jap {
     font-weight: 500;
-    /* 1. Change to inline so the highlight wraps with the text */
     display: inline; 
-    
-    /* Keep your specific gradient */
-    background-image: linear-gradient(
-        to right, 
-        #FE9F5D 20%, 
-        #FD854F 44%, 
-        #FD6C41 67%, 
-        #EA6300 100%
+    background-image: linear-gradient(to right,
+        rgba(254, 159, 93, 0.8) 20%, 
+        rgba(253, 133, 79, 0.8) 44%, 
+        rgba(253, 108, 65, 0.8) 67%, 
+        rgba(234, 99, 0, 0.8) 100%
     );
-    
     background-repeat: no-repeat;
-    
-    /* 2. Set height of the marker (17px is good, or try 50% for a true 'half-high' look) */
     background-size: 100% 18px; 
-    
-    /* 3. Position it to sit behind the bottom half of the text */
     background-position: 0 100%; 
-
-    /* 4. This ensures the background wraps correctly across line breaks */
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
-    
-    /* Adjust line-height to ensure there is space between the two highlighted lines */
     line-height: 1.8; 
     padding: 38px 0 10px 0;
 }
@@ -765,7 +747,7 @@ font-weight: 600;
 .solution-card {
     background-color: var(--white-smoke);
     border-radius: 20px;
-    padding: 48px 5%; /* Use % for horizontal padding so it shrinks with the card */
+    padding: 48px 5%;
     width: 100%;
     max-width: 411px;
     margin: 0 auto;
@@ -774,18 +756,15 @@ font-weight: 600;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* This prevents the text from ever wrapping to a new line */
     white-space: nowrap;
 }
 
-/* Fix for 992px to 1200px range */
 @media (max-width: 1200px) {
     .solution-card {
-        padding: 40px 15px; /* Significant reduction to keep text on one line */
+        padding: 40px 15px; 
     }
     
     .card-text {
-        /* Scale the font down slightly so it fits the smaller card */
         font-size: var(--fs-sm); 
     }
     }
@@ -806,15 +785,14 @@ font-weight: 600;
 }
 
 
-/* feature */
-/* Section Background */
+/* FEATURE SECTION */
 .feature-section {
-    background-color: var(--service-bg); /* Matches the warm cream tone */
+    background-color: var(--service-bg); 
     position: relative;
     padding-bottom: 584px;
 }
 
-/* The Inverted Triangle at the top */
+
 .triangle-top {
     position: absolute;
     top: 0;
@@ -824,17 +802,14 @@ font-weight: 600;
     height: 0;
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
-    border-top: 60px solid var(--white); /* Cutting into the section */
+    border-top: 60px solid var(--white); 
 }
 
-/* Typography */
 .section-divider {
     border-top: 3px solid var(--burnt-orange);
     opacity: 10%;
     margin: 17px 0 31px 0;
 }
-
-
 
 .first-feature {
     padding-top: 173px;
@@ -865,7 +840,6 @@ font-weight: 600;
   padding-top: 144px;
 }
 
-/* Target the .feature-item that is inside the very last .row of the container */
 .last-item {
    padding-top: 134px;
 }
@@ -882,7 +856,7 @@ font-weight: 600;
 .feature-text-wrapper {
   display: flex;
   align-items: flex-start;
-  padding-right: 20px; /* Gives some breathing room before the box */
+  padding-right: 20px; 
 
 }
 
@@ -893,45 +867,48 @@ font-weight: 600;
 }
 
 .feature-list li {
-   width: 100%; /* Changed from 90% to ensure text uses the column width */
+   width: 100%;
     position: relative;
     padding-left: 25px;
-    margin-bottom: 1.5rem;
-    line-height: 200%; /* Slightly reduced for better readability */
+    margin-bottom: 24px;
+    line-height: 200%; 
     font-weight: 500;
     font-size: var(--fs-sm);
 }
 
-/* The orange dots in your image */
 .feature-list li::before {
    content: "";
     position: absolute;
     left: 0;
-    top: 0.5em; /* Centers it relative to line-height */
-    width: 8px;
-    height: 8px;
+    top: 0.5em;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background: linear-gradient(to right, #FE9F5D, #EA6300);
 }
 
 .gray-placeholder-box {
     background-color: var(--service-box);
-    width: 100%; /* Make it responsive to the col-lg-5 container */
-    max-width: 516px; /* You can keep a max-width if you don't want it too big */
+    width: 100%; 
+    max-width: 516px; 
     height: 344px;
     border-radius: 16px;
-    margin-left: auto; /* Pushes the box to the right edge of its column */
+    margin-left: auto; 
 }
 
-/* Hide desktop nav on mobile */
+@media screen and (max-width: 576px) {
+    .gray-placeholder-box {
+        width: 100%;
+        max-width: 366px; 
+        height: 243px;
+    }
+}
+
 @media (max-width: 991px) {
     .desktop-nav-container {
         display: none !important;
     }
 }
-
-
-/* Main Button */
 .btn-orange-lg {
     background-color: var(--burnt-orange); /* Replace with your var(--burnt-orange) */
     color: white;
@@ -954,9 +931,9 @@ font-weight: 600;
 }
 
 .btn-icon {
-    display: flex;          /* 1. Enable flexbox */
-    align-items: center;    /* 2. Center vertically */
-    justify-content: center; /* 3. Center horizontally */
+    display: flex;          
+    align-items: center;    
+    justify-content: center;
     
     padding: 25px 22px 23px 14px;          /* Keep your padding or set a fixed width */
     border-left: 1px solid rgba(255, 255, 255, 0.4);
@@ -1075,7 +1052,7 @@ font-weight: 600;
 
 .orange-card {
     background-color: var(--burnt-orange); /* Matching the orange shade */
-    color: white;
+    color: var(--white);
     border-radius: 12px;
     padding: 2rem;
     position: relative;

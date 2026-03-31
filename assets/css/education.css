@@ -18,28 +18,6 @@
 }
 
 
-@media screen and (max-width: 576px) {
-        .landing-page {
-            min-height: 230px;
-        }
-        
-        .header-content {
-            margin-top: 41px;
-            padding: 85px 0 0 12px;
-        }
-        
-        .header-content .main-title-jap {
-            font-size: var(--fs-xl);
-            font-weight: 600;
-            padding-bottom: 14px;
-        }
-        
-        .header-content .main-title-eng {
-            font-weight: 400;
-            letter-spacing: 0.12em;
-        }
-    }
-
 
 /* Curve & Breadcrumb Positioning */
 .curve-container {
@@ -49,28 +27,6 @@
     width: 620px; /* Matches SVG width */
     height: 93px; /* Matches SVG height */
 }
-
-@media screen and (max-width: 768px) {
-  .curve-container  {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 341px; /* Matches SVG width */
-    height: 51px; /* Matches SVG height */
-  }
-  
-  .breadcrumb-overlay {
-    position: absolute;
-    bottom: 10px !important; /* Adjust to center vertically in the white area */
-    left: 45px !important;   /* Adjust to match horizontal padding in image */
-    font-size: 0.9rem;
-    color: #333;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-}
-
 
 .breadcrumb-overlay {
     position: absolute;
@@ -94,7 +50,7 @@
 }
 
 main {
-  background-color: white;
+  background-color: var(--white);
 }
 
 /* Main Top Title */
@@ -104,64 +60,44 @@ main {
 }
 
 
-@media screen and (max-width: 576px) {
-     .intro {
-        padding-top: 72px;
-        padding-bottom: 85px;
-     }
-    
-    .intro .main-title-jap {
-        font-size: var(--fs-lg);
-        font-weight: 500;
-        line-height: 165%;
-        letter-spacing: 0.08em;
-    }
-    
-     .intro  .title-divider {
-    border-top: 1px solid var(--green-divider);
-    opacity: 1;
-    margin: 13px 0 14px 0;
-}
-}
-
-@media screen and (min-width: 1200px) {
-    .intro .service-title-jap br {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .intro .service-title-jap {
-        font-size: var(--fs-lg);
-        background-size: 100% 24px; 
-    }
-    
-    .pointers {
-        padding-top: 14px !important;
-    }
-}
-
 
 
 .title-divider {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--green-divider);
   opacity: 1;
   margin-top: 44px;
   margin-bottom: 17px;
 }
 
 
-
-
 .feature-section {
-    background-color: var(--service-bg); /* Matches the warm cream tone */
+    background-color: var(--service-bg); 
     position: relative;
     padding-bottom: 598px;
 }
 
+
+
 /* case */
 .service-case {
     padding-top: 141px;
+}
+
+@media  screen and (max-width: 576px) { 
+    .service-case {
+    padding-top: 96px;
+}
+
+.case-content-area {
+    padding-bottom: 15px;
+}
+
+.case-btn {
+    padding-top: 25px !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+    
 }
 
 .case-main-title {
@@ -182,11 +118,11 @@ main {
 
 .mobile-filter-container {
     display: flex;
-    align-items: flex-start; /* Keeps the "All" button at the top */
+    align-items: flex-start; 
 }
 
 .all-btn-wrapper {
-    flex-shrink: 0; /* Prevents the "All" button from getting squeezed */
+    flex-shrink: 0; 
 }
 
 .case-btn {
@@ -194,6 +130,16 @@ main {
     padding-bottom: 191px;
 }
 
+
+
+/* 1200px */
+@media screen and (min-width: 1200px) {
+    .intro .service-title-jap br {
+        display: none;
+    }
+}
+
+/* 992px */
 @media screen and (max-width: 992px){  
     .mobile-filter-container{
         flex-direction: column;
@@ -206,3 +152,140 @@ main {
         padding: 10px 16px !important;
     }
 }
+
+
+/* 768px */
+@media screen and (max-width: 768px) {
+  .curve-container  {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 341px; 
+    height: 51px; 
+  }
+  
+  .breadcrumb-overlay {
+    position: absolute;
+    bottom: 10px !important; 
+    left: 45px !important;  
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+}
+
+/* 576px */
+@media screen and (max-width: 576px) {
+        .landing-page {
+            min-height: 230px;
+        }
+        
+        .header-content {
+            margin-top: 41px;
+            padding: 85px 0 0 12px;
+        }
+        
+        .header-content .main-title-jap {
+            font-size: var(--fs-xl);
+            font-weight: 600;
+            padding-bottom: 14px;
+        }
+        
+        .header-content .main-title-eng {
+            font-weight: 400;
+            letter-spacing: 0.12em;
+        }
+        
+         .intro {
+        padding-top: 72px;
+        padding-bottom: 85px;
+     }
+    
+    .intro .main-title-jap {
+        font-size: var(--fs-lg);
+        font-weight: 500;
+        line-height: 165%;
+        letter-spacing: 0.08em;
+    }
+    
+     .intro  .title-divider {
+    border-top: 1px solid var(--green-divider);
+    opacity: 1;
+    margin: 13px 0 14px 0;
+}
+        
+         .intro .service-title-jap {
+    font-size: var(--fs-lg);
+    margin: 0;
+}
+
+    
+    .pointers {
+        padding-top: 14px !important;
+    }
+        
+        .feature-section {
+        padding-bottom: 843px;
+    }
+        
+         .first-feature-ed {
+    padding-top: 120px;
+    }
+    
+    .feature-section .service-title-jap {
+        font-size: var(--fs-lg);
+        font-weight: 600;
+        line-height: 165%;
+    }
+    
+    .feature-section .section-subtitle {
+        font-size: 18px;
+        
+    }
+    
+    .container > .row:not(:nth-child(3)) .sub {
+    padding-top: 34px;
+}
+    
+    .section-divider {
+    border-top: 3px solid var(--burnt-orange);
+    opacity: 10%;
+    margin: 19px 0 28px 0;
+}
+         .feature-item,
+    .container .row:last-child .feature-item {
+  padding-top: 64px !important;
+}
+        
+        
+        .feature-list li {
+        margin-bottom: 24px;
+        font-weight: 500;
+        font-size: var(--fs-base);
+    }
+        
+       footer {
+        margin-top: 0 !important;
+        padding-top: 95px !important;
+    } 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+
