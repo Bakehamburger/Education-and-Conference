@@ -1,7 +1,7 @@
     @charset "UTF-8";
 
-    main {
-    background-color: var(white);
+    .service-list-main {
+    background-color: var(--white);
     }
 
     /* SERVICE */
@@ -24,16 +24,7 @@
         overflow: hidden;
     }
     
-    @media screen and (max-width: 768px) {
-        .service-header {
-            min-height: 271px;
-        }
-        
-        .header-content {
-            margin-top: 41px;
-            padding-left: 12px;
-        }
-    }
+   
 
     .curve-container {
         position: absolute;
@@ -54,27 +45,6 @@
         gap: 10px;
     }
 
-    @media screen and (max-width: 768px) {
-    .curve-container  {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 341px !important; 
-        height: 51px !important; 
-    }
-    
-    .breadcrumb-overlay {
-        position: absolute;
-        bottom: 20px !important; 
-        left: 45px !important;   
-        font-size: 0.9rem;
-        color: #333;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    }
-
 
     .breadcrumb-arrow {
         color: var(--burnt-orange);
@@ -86,17 +56,7 @@
         font-weight: 600;
     }
 
-    @media (max-width: 620px) {
-        .curve-container {
-            width: 100%;
-            height: auto;
-        }
-        .breadcrumb-overlay {
-            right: 20px;
-            font-size: 0.8rem;
-        }
-    }
-
+   
     /* service grid */
     .service-landing-page {
         padding-top: 104px;
@@ -104,49 +64,6 @@
         row-gap: 11px;
     }
     
-
-    @media screen and (min-width: 992px) {
-        .service-grid {
-            padding: 0 32px;
-        }
-    }
-    
-     @media screen and (max-width: 768px) {
-        .service-landing-page {
-        padding-top: 85px;
-    }
-    
-    .service-landing-page .headline-text {
-        font-size: var(--fs-xl);
-        padding-left: 12px !important;
-    }
-    
-    .service-landing-page .description-text {
-        margin-top: 43px !important;
-        padding-left: 12px !important;
-    }
-    
-     .service-landing-page .top-space {
-        padding-top: 66px;
-    }
-    
-      .service-landing-page .service-card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      
-    
-    
-}
-
-    @media screen and (max-width: 767px) {
-        .service-landing-page .site-container {
-        max-width: 768px;
-    }
-
-
     .service-landing-page .service-card {
         min-height: 122px; 
         height: 100%;
@@ -170,7 +87,6 @@
     .service-card p {
         display: none;
         }
-    }
     
     .top-space {
         padding-top: 37px;
@@ -231,18 +147,6 @@
     line-height: 135%;
     }
     
-    /* Media Query Adjustment for 768px and below */
-@media screen and (max-width: 768px) {
-    
-    .time-badge {
-        font-size: var(--fs-xl);
-        margin-top: auto; /* Scale text down so it doesn't break */
-    }
-
-    .top-left-content {
-        top: 20px;
-    }
-}
 
     
     /* solution */
@@ -255,15 +159,7 @@
         z-index: 1;
         border-radius: clamp(32px, 10vw, 128px);  
     }
-    
-    @media screen and (max-width: 768px) {
-        .solutions-section {
-            margin-top: 94px;
-            margin-bottom: 96px;
-            padding-top: 78px;
-            padding-bottom: 91px;
-        }
-    }
+
 
     .solutions-section::before {
         content: "";
@@ -280,36 +176,18 @@
         z-index: -1; 
     }
     
-    @media screen and (max-width: 768px) {
-        .solutions-section .service-title-jap {
-            font-size: var(--fs-lg);
-        }
-        
-        .solutions-section .description-text {
-            padding-top: 20px;
-        }
-    }
     
 
     .site-container {
     padding: 0 32px;
     }
 
-    @media screen and (max-width: 992px) {
-        .site-container {
-            padding: 0 12px;
-        }
-    }
-    
+  
     .solution-steps-wrapper {
         padding-top: 32px;
     }
     
-    @media screen and (max-width: 992px) {
-       .solution-steps-wrapper {
-        padding-top: 52px;
-    }
-    }
+   
     
 
 
@@ -358,9 +236,205 @@
         object-fit: contain;
     }
 
+    .strength-feature-title {
+        padding-top: 125px;
+    }
+    
 
-    @media screen and  (min-width: 992px) {
-        .solution-steps-wrapper {
+    .feature-item-list {
+        padding-top: 79px;
+        padding-left: 58px;
+    }
+
+    
+
+
+    .feature-num {
+    font-size: 120px; 
+    font-weight: 400;
+    letter-spacing: -0.1em;
+    opacity: 0.3;
+    line-height: 100%;
+    display: block;
+    padding-bottom: 20px;
+    
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+
+    }
+
+   
+
+
+
+    .feature-title {
+    font-weight:500;
+    line-height: 100%;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+    }
+    
+     
+     
+    .feature-desc {
+    font-size:var(--fs-base);
+    line-height: 200%;
+    width: 68%;
+    }
+    
+
+
+   /* service solution list */
+#services-list-solutions {
+    background-color: var(--white);
+    padding: 60px 0; 
+}
+
+
+.services-list-solutions-card {
+    background-color: var(--white-smoke); 
+    border-radius: 24px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border: none;
+}
+
+.services-list-solutions-image {
+    padding: 30px 30px 30px 57px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-list-solutions-image img {
+    width: 100%; 
+    height:auto;
+    object-fit: cover;
+    border-radius: 15px; 
+    display: block;
+}
+
+.services-list-solutions-content {
+    padding: 40px 40px 40px 0; 
+    min-height: 100%; 
+}
+
+.services-list-solutions-content .service-title-jap {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.services-list-solutions-content .service-title-eng {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.services-list-solutions-desc {
+    width: 85%;
+    font-weight: 500;
+    line-height: 1.8;
+    color: #333;
+}
+
+.services-list-solutions-btn {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.services-list-solutions-btn:hover {
+    transform: scale(1.1); 
+}
+
+
+
+    /* FLOW */
+  #flow-section {
+    background-color: var(--white);
+    margin: 177px 0 190px;
+}
+    
+    
+    
+.timeline-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--flow-circle-size);
+    padding: 0; /* Remove padding so the line is perfectly centered */
+}
+
+.flow-number {
+   width: 62px;
+    height: 62px;
+    background: linear-gradient(57deg,
+        rgba(254, 159, 93, 0.8) 20%,
+        rgba(253, 133, 79, 0.8) 44%,
+        rgba(253, 108, 65, 0.8) 67%,
+        rgba(234, 99, 0, 0.8) 100%
+    );
+    background-repeat: no-repeat;
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    z-index: 2;
+    margin-left: 12px;
+}
+
+.vertical-line {
+    flex-grow: 1;
+    width: 1px;
+    background-color: rgba(254, 159, 93, 0.8);
+    margin: -1px 0;
+}
+
+.step-header {
+    color: var(--burnt-orange);
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: var(--fs-lg);
+    padding-bottom: 4px;
+}
+
+.step-description {
+    line-height: 200%;
+    font-weight: 500;
+}
+    .pb-gap {
+        padding-bottom: 79px;
+    }
+    
+    .pb-gap-lg {
+        padding-bottom: 83px;
+    }
+
+	
+	
+	/* 992px */
+	@media screen and (min-width: 992px) {
+        .service-grid {
+            padding: 0 32px;
+        }
+		
+		.site-container {
+            padding: 0 12px;
+        }
+		
+		.solution-steps-wrapper {
+        padding-top: 52px;
+    }
+	
+	.solution-steps-wrapper {
             display: flex;
             justify-content: center; 
             gap: 26px; 
@@ -392,10 +466,52 @@
         .solution-steps-wrapper > div:last-child .solution-step-card::after {
             display: none;   
         }
-
+	
+	  .feature-item-list {
+            padding-top: 43px;
+            padding-left: 0;
+        }
+        
+        .row > div:nth-child(n+2) .feature-item-list {
+            padding-top: 58px;
+        }
+		
+	
+		.feature-num {
+			font-size: 80px;
+			padding-bottom: 2px;
+        }
+	
+		
+		.feature-title {
+        	font-size: var(--fs-xl);
+            padding-bottom: 0;
+        }
+		
+		
+		 .feature-desc{
+        font-size: 18px;
+        }
+		
+		 .services-list-solutions-content {
+        padding: 0 40px 40px 40px; 
+        text-align: left;
+    }
+    
+    .services-list-solutions-image {
+        padding: 30px 30px 10px 30px; 
     }
 
-    @media screen and  (max-width: 991px){
+    .services-list-solutions-desc {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+	
+}
+    
+	
+	/* 991px*/
+	 @media screen and  (max-width: 991px){
         .solutions-section .headline-text {
             font-size: var(--fs-lg);
         }
@@ -470,12 +586,86 @@
         }
     }
     
-    .strength-feature-title {
-        padding-top: 125px;
+	
+	/* 768px */
+	@media screen and (max-width: 768px) {
+        .service-header {
+            min-height: 271px;
+        }
+        
+        .header-content {
+            margin-top: 41px;
+            padding-left: 12px;
+        }
+		
+		.curve-container  {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 341px !important; 
+        height: 51px !important; 
     }
     
-  @media screen and (max-width: 768px) {
-         .strength-feature-title {
+    .breadcrumb-overlay {
+        position: absolute;
+        bottom: 20px !important; 
+        left: 45px !important;   
+        font-size: 0.9rem;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+	
+	  .service-landing-page {
+        padding-top: 85px;
+    }
+    
+    .service-landing-page .headline-text {
+        font-size: var(--fs-xl);
+        padding-left: 12px !important;
+    }
+    
+    .service-landing-page .description-text {
+        margin-top: 43px !important;
+        padding-left: 12px !important;
+    }
+    
+     .service-landing-page .top-space {
+        padding-top: 66px;
+    }
+    
+      .service-landing-page .service-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+	  
+	  .time-badge {
+			font-size: var(--fs-xl);
+			margin-top: auto; 
+		}
+
+		.top-left-content {
+			top: 20px;
+		}
+	
+	 	.solutions-section {
+            margin-top: 94px;
+            margin-bottom: 96px;
+            padding-top: 78px;
+            padding-bottom: 91px;
+        }
+	
+	.solutions-section .service-title-jap {
+            font-size: var(--fs-lg);
+        }
+        
+        .solutions-section .description-text {
+            padding-top: 20px;
+        }
+	
+		.strength-feature-title {
         padding-top: 77px;
     }
     
@@ -483,169 +673,42 @@
         font-size: var(--fs-xl);
         font-weight: 700;
     }
-    }
-
-    .feature-item-list {
-        padding-top: 79px;
-        padding-left: 58px;
-    }
-
-    @media screen and (max-width: 992px) {
-        .feature-item-list {
-            padding-top: 43px;
-            padding-left: 0;
-        }
-        
-        /* n+2 means "start at 2 and keep going" */
-        .row > div:nth-child(n+2) .feature-item-list {
-            padding-top: 58px;
-        }
-    }
-
-
-    .feature-num {
-    font-size: 120px; 
-    font-weight: 400;
-    letter-spacing: -0.1em;
-    opacity: 0.3;
-    line-height: 100%;
-    display: block;
-    padding-bottom: 20px;
-    
-    font-family: "Abel", sans-serif;
-    font-weight: 400;
-
-    }
-
-   
-      @media screen and (max-width: 992px) {
-       .feature-num {
-           font-size: 80px;
-           padding-bottom: 2px;
-        }
-    }
-
-
-
-    .feature-title {
-    font-weight:500;
-    line-height: 100%;
-    margin-bottom: 15px;
-    padding-bottom: 20px;
-    display: inline-block;
-    width: 100%;
-    }
-    
-     
-      @media screen and (max-width: 992px) {
-       .feature-title {
-        font-size: var(--fs-xl);
-           padding-bottom: 0;
-        }
-    }
-
-    .feature-desc {
-    font-size:var(--fs-base);
-    line-height: 200%;
-    width: 68%;
-    }
-    
-      @media screen and (max-width: 992px) {
-       .feature-desc{
-        font-size: 18px;
-        }
-    }
-
-   /* service solution list */
-#services-list-solutions {
-    background-color: var(--white);
-    padding: 60px 0; /* Added vertical breathing room for the section */
-}
-
- @media screen and (max-width: 768px) {
-      #services-list-solutions {
+	
+	  #services-list-solutions {
         padding-top: 0;
       }
+	
+	  #flow-section {
+        margin-top: 0;
+        padding-top: 30px;
+        padding-left: 12px;
+        padding-right: 12px;
+        }
+
+    }
+	
+	/* 767px */
+	@media screen and (max-width: 767px) {
+        .service-landing-page .site-container {
+        max-width: 768px;
+    	}
+	}
+	
+	/* 620px */
+	 @media (max-width: 620px) {
+        .curve-container {
+            width: 100%;
+            height: auto;
+        }
+        .breadcrumb-overlay {
+            right: 20px;
+            font-size: 0.8rem;
+        }
     }
 
-.services-list-solutions-card {
-    background-color: var(--white-smoke); 
-    border-radius: 24px;
-    margin-bottom: 30px;
-    overflow: hidden;
-    border: none;
-    /* Removed display: flex and align-items: center because the Bootstrap 'row' handles this */
-}
-
-.services-list-solutions-image {
-    padding: 30px 30px 30px 57px; /* Simplified padding to match the image mockup */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.services-list-solutions-image img {
-    width: 100%; 
-    /* REMOVED min-width: 516px - this was breaking your layout on smaller screens */
-    height: auto;
-    object-fit: cover;
-    border-radius: 15px; 
-    display: block;
-}
-
-.services-list-solutions-content {
-    padding: 40px 40px 40px 0; /* Padding-right and vertical padding */
-    min-height: 100%; /* Ensures it fills the height of the row */
-}
-
-.services-list-solutions-content .service-title-jap {
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 1.3;
-}
-
-.services-list-solutions-content .service-title-eng {
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.services-list-solutions-desc {
-    width: 85%;
-    font-weight: 500;
-    line-height: 1.8;
-    color: #333;
-}
-
-.services-list-solutions-btn {
-    flex-shrink: 0;
-    transition: transform 0.2s ease;
-    display: inline-block;
-}
-
-.services-list-solutions-btn:hover {
-    transform: scale(1.1); /* Subtle interaction effect */
-}
-
-/* Responsive - Tablet (Stacked starts here based on your col-lg use) */
-@media (max-width: 992px) {
-    .services-list-solutions-content {
-        padding: 0 40px 40px 40px; /* Add left padding back when stacked */
-        text-align: left;
-    }
-    
-    .services-list-solutions-image {
-        padding: 30px 30px 10px 30px; /* Reduce bottom padding when image is on top */
-    }
-
-    .services-list-solutions-desc {
-        width: 100%; /* Use full width when stacked */
-        margin-bottom: 15px;
-    }
-}
-
-/* Responsive - Mobile */
-@media (max-width: 576px) {
+	
+	/* 576px */
+	@media (max-width: 576px) {
     .services-list-solutions-card {
         border-radius: 16px;
         margin-bottom: 20px;
@@ -668,16 +731,15 @@
         padding-bottom: 16px;
     }
     
-    /* This ensures the button and description sit nicely together on small phones */
     .services-list-solutions-content .services-list-solutions-desc {
-    width: 95%; /* Removed !important here if possible */
+    width: 95%; 
     align-items: flex-end;
     padding-bottom: 54px;
     font-size: var(--fs-sm);
 }
 
 .services-list-solutions-card:nth-child(4) .services-list-solutions-desc {
-      width: 95%; /* Removed !important here if possible */
+      width: 95%; 
     align-items: flex-end;
     padding-bottom: 35px;
     font-size: var(--fs-sm);
@@ -690,39 +752,19 @@
         width: 45px;
         height: 45px;
     }
-
-}
-
-    /* FLOW */
-  #flow-section {
-    background-color: var(--white);
-    margin: 177px 0 190px;
-}
-    
-    @media (max-width: 768px) {
-        #flow-section {
-        margin-top: 0;
-        padding-top: 30px;
-        padding-left: 12px;
-        padding-right: 12px;
-        }
-    }
-    
-    
-    /* --- The Mobile Fix (576px and down) --- */
-@media (max-width: 576px) {
-    #flow-section {
+	
+	
+	 #flow-section {
         margin: 0;
-        padding: 30px 12px; /* Fixed 12px side padding */
+        padding: 30px 12px; 
     }
 
-    /* Remove Bootstrap's negative margins so the 12px padding is respected */
+    
     #flow-section .row {
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
 
-    /* Remove container padding to avoid "double padding" */
     #flow-section .container {
         padding: 0 !important;
     }
@@ -744,65 +786,5 @@
     footer {
         margin-top: 74px !important;
     }
-}
-    
-   /* --- Timeline Elements --- */
-.timeline-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: var(--flow-circle-size);
-    padding: 0; /* Remove padding so the line is perfectly centered */
-}
 
-.flow-number {
-   width: 62px;
-    height: 62px;
-    background: linear-gradient(57deg,
-        rgba(254, 159, 93, 0.8) 20%,
-        rgba(253, 133, 79, 0.8) 44%,
-        rgba(253, 108, 65, 0.8) 67%,
-        rgba(234, 99, 0, 0.8) 100%
-    );
-    background-repeat: no-repeat;
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Abel", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 160%;
-    z-index: 2;
-    margin-left: 12px;
 }
-
-.vertical-line {
-    flex-grow: 1;
-    width: 1px;
-    background-color: rgba(254, 159, 93, 0.8);
-    margin: -1px 0;
-}
-
-.step-header {
-    color: var(--burnt-orange);
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-size: var(--fs-lg);
-    padding-bottom: 4px;
-}
-
-.step-description {
-    line-height: 200%;
-    font-weight: 500;
-}
-    .pb-gap {
-        padding-bottom: 79px;
-    }
-    
-    .pb-gap-lg {
-        padding-bottom: 83px;
-    }
-
-
