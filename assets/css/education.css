@@ -17,18 +17,29 @@
   
 }
 
-.main-title {
-    font-size: 40px;
-    font-weight: 800;
-    margin: 0;
-    color: white ;
-}
 
-.sub-title {
-    font-size: var(--fs-base);
-    margin-top: 5px;
-    color: white;
-}
+@media screen and (max-width: 576px) {
+        .landing-page {
+            min-height: 230px;
+        }
+        
+        .header-content {
+            margin-top: 41px;
+            padding: 85px 0 0 12px;
+        }
+        
+        .header-content .main-title-jap {
+            font-size: var(--fs-xl);
+            font-weight: 600;
+            padding-bottom: 14px;
+        }
+        
+        .header-content .main-title-eng {
+            font-weight: 400;
+            letter-spacing: 0.12em;
+        }
+    }
+
 
 /* Curve & Breadcrumb Positioning */
 .curve-container {
@@ -93,6 +104,44 @@ main {
 }
 
 
+@media screen and (max-width: 576px) {
+     .intro {
+        padding-top: 72px;
+        padding-bottom: 85px;
+     }
+    
+    .intro .main-title-jap {
+        font-size: var(--fs-lg);
+        font-weight: 500;
+        line-height: 165%;
+        letter-spacing: 0.08em;
+    }
+    
+     .intro  .title-divider {
+    border-top: 1px solid var(--green-divider);
+    opacity: 1;
+    margin: 13px 0 14px 0;
+}
+}
+
+@media screen and (min-width: 1200px) {
+    .intro .service-title-jap br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .intro .service-title-jap {
+        font-size: var(--fs-lg);
+        background-size: 100% 24px; 
+    }
+    
+    .pointers {
+        padding-top: 14px !important;
+    }
+}
+
+
 
 .title-divider {
   border-top: 1px solid #eee;
@@ -100,6 +149,9 @@ main {
   margin-top: 44px;
   margin-bottom: 17px;
 }
+
+
+
 
 .feature-section {
     background-color: var(--service-bg); /* Matches the warm cream tone */

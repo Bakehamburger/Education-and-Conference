@@ -1,7 +1,7 @@
     @charset "UTF-8";
 
     main {
-    background-color: white;
+    background-color: var(white);
     }
 
     /* SERVICE */
@@ -694,64 +694,109 @@
 }
 
     /* FLOW */
-    #flow-section {
+  #flow-section {
     background-color: var(--white);
-    margin-top: 177px;
-    margin-bottom: 190px;
+    margin: 177px 0 190px;
+}
+    
+    @media (max-width: 768px) {
+        #flow-section {
+        margin-top: 0;
+        padding-top: 30px;
+        padding-left: 12px;
+        padding-right: 12px;
+        }
     }
     
     
+    /* --- The Mobile Fix (576px and down) --- */
+@media (max-width: 576px) {
+    #flow-section {
+        margin: 0;
+        padding: 30px 12px; /* Fixed 12px side padding */
+    }
 
+    /* Remove Bootstrap's negative margins so the 12px padding is respected */
+    #flow-section .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Remove container padding to avoid "double padding" */
+    #flow-section .container {
+        padding: 0 !important;
+    }
+    
+
+    
     .timeline-col {
+        width: 50px !important;
+    }
+    
+    .pb-gap {
+        padding-bottom: 47px !important;
+    }
+    
+    .pb-gap-lg {
+        padding-bottom: 58px !important;
+    }
+    
+    footer {
+        margin-top: 74px !important;
+    }
+}
+    
+   /* --- Timeline Elements --- */
+.timeline-col {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70px; 
-    }
+    width: var(--flow-circle-size);
+    padding: 0; /* Remove padding so the line is perfectly centered */
+}
 
-    .flow-number {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(57deg, 
-        rgba(254, 159, 93, 0.8) 20%, 
-        rgba(253, 133, 79, 0.8) 44%, 
-        rgba(253, 108, 65, 0.8) 67%, 
+.flow-number {
+   width: 62px;
+    height: 62px;
+    background: linear-gradient(57deg,
+        rgba(254, 159, 93, 0.8) 20%,
+        rgba(253, 133, 79, 0.8) 44%,
+        rgba(253, 108, 65, 0.8) 67%,
         rgba(234, 99, 0, 0.8) 100%
     );
     background-repeat: no-repeat;
-    color: white;
+    color: var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
     z-index: 2;
-    }
+    margin-left: 12px;
+}
 
-    .vertical-line {
+.vertical-line {
     flex-grow: 1;
     width: 1px;
     background-color: rgba(254, 159, 93, 0.8);
-    margin-top: -5px;
-    margin-bottom: -5px;
-    }
+    margin: -1px 0;
+}
 
-    .step-header {
+.step-header {
     color: var(--burnt-orange);
     font-weight: 600;
-    font-size: var(--fs-xl);
-    margin-top: 5px;
-    margin-bottom: 20px;
-    }
+    margin-bottom: 15px;
+    font-size: var(--fs-lg);
+    padding-bottom: 4px;
+}
 
-    .step-description {
-    line-height: 180%;
-    font-size: var(--fs-base);
+.step-description {
+    line-height: 200%;
     font-weight: 500;
-    padding-top: 30px;
-    }
-    
+}
     .pb-gap {
         padding-bottom: 79px;
     }
@@ -761,8 +806,3 @@
     }
 
 
-    @media (max-width: 576px) {
-    .step-header { font-size: 1.3rem; }
-    .timeline-col { width: 50px; }
-    .flow-number { width: 40px; height: 40px; font-size: 0.9rem; }
-    }
