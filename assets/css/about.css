@@ -338,7 +338,6 @@
     margin: auto;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     height: 1137px;
-    width: 1360px;
 }
 
 @media screen and (max-width: 992px) {
@@ -346,9 +345,15 @@
         padding-top:80px;
         padding-left: 15px;
         padding-bottom: 0;
-        padding-right: 43px;
+        padding-right: 0;
         width: inherit;
     }
+
+    .history-section .section-header-title {
+        margin-bottom: 29px !important;
+    }
+
+
 }
 
 .history-title {
@@ -389,7 +394,7 @@
     content: '';
     position: absolute;
     left: 7px;
-    bottom: -80px;
+    bottom: -40px;
     height: 120px;
     width: 1px;
     border-left: 1px dashed #f37021;
@@ -399,6 +404,12 @@
 .timeline-item {
     position: relative;
     margin-bottom: 64px;
+}
+
+@media screen and (max-width: 992px) {
+    .timeline-item6 {
+        margin-bottom: 74px;
+    }
 }
 
 /* The Orange Dots */
@@ -437,8 +448,6 @@
 
 .access-container {
     max-width: 960px;
-    margin: 0 auto;
-    padding-bottom: 240px;
 }
 
 /* ヘッダーレイアウト */
@@ -448,6 +457,7 @@
     align-items: flex-start;
     margin-bottom: 25px;
     gap: 20px;
+    padding-top: 96px;
 }
 
 /* オレンジのテキスト */
@@ -528,5 +538,9 @@
     }
     .btn-google {
         width: auto;
+    }
+
+    .map-wrapper {
+        height: 184px;
     }
 }
