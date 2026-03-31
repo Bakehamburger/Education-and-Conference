@@ -161,7 +161,7 @@ main {
 }
 
 .horizontal-line {
-    margin-bottom: 64px;
+    margin-bottom: 58px;
 }
 
 .article-title-content {
@@ -381,6 +381,7 @@ justify-content: center;
 /* Article Styles */
 .image-box {
     width: 100%;
+    max-height: 641px;
     aspect-ratio: 10 / 6;
     border: 1px solid #eee;
 }
@@ -402,6 +403,14 @@ justify-content: center;
 .btn-text {
     text-align: center;
     padding: 15px 60px 15px 20px;
+}
+
+.pt-69 {
+    padding-top: 69px;
+}
+
+.pt-62 {
+    padding-top: 62px;
 }
 
 .btn-icon {
@@ -457,6 +466,8 @@ justify-content: center;
 
 .footer-section {
     background-color: #ffffff;
+    padding-top: 236px;
+    margin: 0;
 }
 
 
