@@ -764,7 +764,7 @@ font-weight: 600;
 /* Solution Cards */
 .solution-card {
     background-color: var(--white-smoke);
-    border-radius: 20px;
+    border-radius: 32px;
     padding: 48px 5%; /* Use % for horizontal padding so it shrinks with the card */
     width: 100%;
     max-width: 411px;
@@ -920,7 +920,6 @@ font-weight: 600;
     max-width: 516px; /* You can keep a max-width if you don't want it too big */
     height: 344px;
     border-radius: 16px;
-    margin-left: auto; /* Pushes the box to the right edge of its column */
 }
 
 /* Hide desktop nav on mobile */

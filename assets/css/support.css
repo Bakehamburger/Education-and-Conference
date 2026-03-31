@@ -16,6 +16,28 @@
      padding-left: 92px;
 }
 
+@media screen and (max-width: 576px) {
+    .landing-page {
+        min-height: 230px;
+    }
+    
+    .header-content {
+        margin-top: 41px;
+        padding: 85px 0 0 12px;
+    }
+    
+    .header-content .main-title-jap {
+        font-size: var(--fs-xl);
+        font-weight: 600;
+        padding-bottom: 14px;
+    }
+    
+    .header-content .main-title-eng {
+        font-weight: 400;
+        letter-spacing: 0.12em;
+    }
+}
+
 /* Curve & Breadcrumb Positioning */
 .curve-container {
     position: absolute;
@@ -24,28 +46,6 @@
     width: 620px; /* Matches SVG width */
     height: 93px; /* Matches SVG height */
 }
-
-@media screen and (max-width: 768px) {
-  .curve-container  {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 341px; /* Matches SVG width */
-    height: 51px; /* Matches SVG height */
-  }
-  
-  .breadcrumb-overlay {
-    position: absolute;
-    bottom: 10px !important; /* Adjust to center vertically in the white area */
-    left: 45px !important;   /* Adjust to match horizontal padding in image */
-    font-size: 0.9rem;
-    color: #333;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-}
-
 
 .breadcrumb-overlay {
     position: absolute;
@@ -66,6 +66,27 @@
 .breadcrumb-current {
     color: var(--burnt-orange);
     font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .curve-container  {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 341px; /* Matches SVG width */
+        height: 51px; /* Matches SVG height */
+    }
+  
+    .breadcrumb-overlay {
+        position: absolute;
+        bottom: 10px !important; /* Adjust to center vertically in the white area */
+        left: 45px !important;   /* Adjust to match horizontal padding in image */
+        font-size: 0.9rem;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 }
 
 main {
@@ -97,17 +118,16 @@ main {
   margin-bottom: 34px;
 }
 
-
 /* Section Subtitle with Orange Underline */
 .support-intro .section-subtitle {
     font-size: var(--fs-xl);
-  font-weight: 500;
-  display: inline;
+    font-weight: 500;
+    display: inline;
 
-  background-image: linear-gradient(to right, #B6EDAC 0%, #32922D 100%);
-  background-repeat: no-repeat;
-  
- background-size: 100% 18px; 
+    background-image: linear-gradient(to right, #B6EDAC 0%, #32922D 100%);
+    background-repeat: no-repeat;
+    
+    background-size: 100% 18px; 
     
     /* 3. Position it to sit behind the bottom half of the text */
     background-position: 0 100%; 
@@ -121,10 +141,10 @@ main {
     padding: 30px 0 8px 0;
 }
 
+
 /* Solution Cards */
 .solution-card {
   background-color: var(--white-smoke);
-  border-radius: 20px;
   padding: 48px 5%; /* Use % for horizontal padding so it shrinks with the card */
   width: 100%;
   max-width: 411px;
@@ -220,10 +240,10 @@ main {
     position: absolute;
     left: 0;
     top: 0.5em; /* Centers it relative to line-height */
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: linear-gradient(to right, #FE9F5D, #EA6300);
+    background: linear-gradient(to right, #B6EDAC, #32922D);
 }
 
 .gray-placeholder-box {
@@ -232,9 +252,7 @@ main {
     max-width: 516px; /* You can keep a max-width if you don't want it too big */
     height: 344px;
     border-radius: 16px;
-    margin-left: auto; /* Pushes the box to the right edge of its column */
 }
-
 
 
 /* case */
@@ -283,4 +301,106 @@ main {
     .custom-pad{
         padding: 10px 16px !important;
     }
+}
+
+@media screen and (max-width: 576px) {
+    .support-intro {
+        padding-top: 72px;
+    }
+        
+    .support-intro .main-title-jap {
+        font-size: var(--fs-lg);
+        font-weight: 500;
+        line-height: 165%;
+        letter-spacing: 0.08em;
+    }
+    
+    .support-intro  .title-divider {
+        border-top: 1px solid var(--green-divider);
+        opacity: 1;
+        margin: 13px 0 14px 0;
+    }
+
+    .support-intro .section-subtitle{
+        font-size: var(--fs-lg);
+        width: 241px;
+    }
+
+    .mb-40{
+        margin-bottom: 40px !important;
+    }
+
+    .pt-8{
+        padding-top: 8px;
+    }
+
+    .pd-5{
+        padding-top: 5px;
+    }
+
+    .section-title{
+        line-height: 165%;
+    }
+
+    .pt-34{
+        padding-top: 34px;
+    }
+
+    .feature-section{
+        margin-top: 87px;
+        padding-bottom: 73px;
+    }
+
+    .first-feature-sp{
+        padding-top: 124px;
+    }
+
+    .sub-sp{
+        padding-top: 30px;
+    }
+
+    .section-divider{
+        margin-top: 45px;
+    }
+
+    .feature-list{
+        margin-bottom: 8px;
+    }
+
+    .feature-list li{
+        font-size: var(--fs-base);
+    }
+
+
+    .gray-placeholder-box {
+        width: 100%; /* Make it responsive to the col-lg-5 container */
+        height: 245px;
+    }
+
+    .last-item{
+        padding-top: 62px;
+    }
+
+    .mt-14{
+        margin-top: 14px;
+    }
+
+    .service-case {
+        padding-top: 93px;
+    }
+
+    .case-content-area{
+        padding-bottom: 0px;
+    }
+
+    .case-btn{
+        padding-top: 45px;
+        padding-bottom: 0;
+        margin-bottom: 0 !important;
+    }
+
+    .support-footer-section{
+        margin-top: 96px;
+    }
+
 }
