@@ -429,7 +429,7 @@ body.menu-open {
 
 .map-region path {
     fill: var(--burnt-orange);
-    stroke: #ffffff;
+    stroke: var(--white);
     stroke-width: 1;
     transition: opacity 0.5s ease;
     cursor: pointer;
@@ -442,47 +442,36 @@ body.menu-open {
 .region-label {
     position: absolute;
     display: inline-block;
-    
-    /* Box Styling */
     background-color: var(--white); 
     border: 2px solid var(--burnt-orange); 
     border-radius: 50px; 
-    
-    /* Text Styling */
     color: var(--dark-charcoal);
     font-size: 16px; 
     font-weight: bold;
     text-align: center;
     line-height: 200%;
-    
-    /* Spacing & Sizing (the design has a narrow pill shape) */
     min-width: 122px;
     letter-spacing: 0;
 }
 
-
-/* Pin coordinate: Top-Right quad */
 .north-label {
     top: 10%; 
     left: 53%;
     transform: translate(-50%, -50%); 
 }
 
-/* Pin coordinate: Middle-Left quad */
 .central-label {
     top: 45%; 
     left: 28%;
     transform: translate(-50%, -50%);
 }
 
-/* Pin coordinate: Middle-Right quad */
 .east-label {
     top: 70%; 
     left: 67%;
     transform: translate(-50%, -50%);
 }
 
-/* Pin coordinate: Bottom-Left quad */
 .south-label {
     top: 76%; 
     left: 19%;
@@ -569,21 +558,18 @@ body.menu-open {
         transform: translate(-50%, -50%); 
     }
 
-    /* Pin coordinate: Middle-Left quad */
     .central-label {
         top: 52%; 
         left: 18%;
         transform: translate(-50%, -50%);
     }
 
-    /* Pin coordinate: Middle-Right quad */
     .east-label {
         top: 65%; 
         left: 82%;
         transform: translate(-50%, -50%);
     }
 
-    /* Pin coordinate: Bottom-Left quad */
     .south-label {
         top: 80%; 
         left: 15%;
@@ -598,7 +584,6 @@ body.menu-open {
 
 
 /* SOLUTION SECTION*/
-/* Background with 80% Opacity */
 .solution-section {
     position: relative;
     overflow: hidden;
@@ -770,7 +755,6 @@ body.menu-open {
         margin-left: auto;
     }
 
-    /* Create the downward pointing arrow between cards */
     .solution-step-card::after {
         content: "";
         position: absolute;
@@ -851,7 +835,6 @@ body.menu-open {
 .marquee-track {
     display: flex;
     padding-left: 0;
-    /* Adjust '30s' to change speed (Higher = Slower) */
     animation: marquee-move 30s linear infinite;
 }
 

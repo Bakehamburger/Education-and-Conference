@@ -17,10 +17,6 @@
   
 }
 
-
-
-
-
 .curve-container {
     position: absolute;
     bottom: 0;
@@ -164,9 +160,12 @@ main {
 
 /* 576 */
 @media screen and (max-width: 576px) {
-        .landing-page {
+         .landing-page {
             min-height: 230px;
+           background-position: 1% center;
+            background-size: cover;
         }
+        
         
         .header-content {
             margin-top: 41px;

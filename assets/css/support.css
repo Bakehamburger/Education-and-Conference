@@ -17,9 +17,12 @@
 }
 
 @media screen and (max-width: 576px) {
-    .landing-page {
-        min-height: 230px;
-    }
+     .landing-page {
+            min-height: 230px;
+             background-position: center bottom 20%;
+             background-size: cover;
+        }
+        
     
     .header-content {
         margin-top: 41px;
@@ -43,14 +46,14 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 620px; /* Matches SVG width */
-    height: 93px; /* Matches SVG height */
+    width: 620px; 
+    height: 93px; 
 }
 
 .breadcrumb-overlay {
     position: absolute;
-    bottom: 30px; /* Adjust to center vertically in the white area */
-    left: 130px;   /* Adjust to match horizontal padding in image */
+    bottom: 30px; 
+    left: 130px;   
     font-size: 0.9rem;
     color: #333;
     display: flex;
@@ -73,14 +76,14 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 341px; /* Matches SVG width */
-        height: 51px; /* Matches SVG height */
+        width: 341px; 
+        height: 51px; 
     }
   
     .breadcrumb-overlay {
         position: absolute;
-        bottom: 10px !important; /* Adjust to center vertically in the white area */
-        left: 45px !important;   /* Adjust to match horizontal padding in image */
+        bottom: 10px !important; 
+        left: 45px !important;   
         font-size: 0.9rem;
         color: #333;
         display: flex;
@@ -123,21 +126,13 @@ main {
     font-size: var(--fs-xl);
     font-weight: 500;
     display: inline;
-
     background-image: linear-gradient(to right, #B6EDAC 0%, #32922D 100%);
     background-repeat: no-repeat;
-    
     background-size: 100% 18px; 
-    
-    /* 3. Position it to sit behind the bottom half of the text */
     background-position: 0 100%; 
-
-    /* 4. This ensures the background wraps correctly across line breaks */
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
-    
-    /* Adjust line-height to ensure there is space between the two highlighted lines */
-    line-height: 1.8; 
+    line-height: 100%; 
     padding: 30px 0 8px 0;
 }
 
@@ -145,7 +140,7 @@ main {
 /* Solution Cards */
 .solution-card {
   background-color: var(--white-smoke);
-  padding: 48px 5%; /* Use % for horizontal padding so it shrinks with the card */
+  padding: 48px 5%; 
   width: 100%;
   max-width: 411px;
   margin: 0 auto;
@@ -154,18 +149,16 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* This prevents the text from ever wrapping to a new line */
   white-space: nowrap;
 }
 
 /* Fix for 992px to 1200px range */
 @media (max-width: 1200px) {
   .solution-card {
-    padding: 40px 15px; /* Significant reduction to keep text on one line */
+    padding: 40px 15px; 
   }
   
   .card-text {
-    /* Scale the font down slightly so it fits the smaller card */
     font-size: var(--fs-sm); 
   }
 }
@@ -186,20 +179,17 @@ main {
 }
 
 
-/* feature */
-/* Section Background */
+/* FEATURE SECTION */
 .feature-section {
-    background-color: var(--green); /* Matches the warm cream tone */
+    background-color: var(--green); 
     position: relative;
     margin-top: 97px;
     padding-bottom: 146px;
 }
 
 
-/* Typography */
-/* Layout Adjustments */
 .section-title {
-    color: var(--emerald-green); /* Matches the orange in your image */
+    color: var(--emerald-green); 
     font-weight: 700;
 }
 
@@ -214,7 +204,7 @@ main {
 .feature-text-wrapper {
   display: flex;
   align-items: flex-start;
-  padding-right: 20px; /* Gives some breathing room before the box */
+  padding-right: 20px;
 
 }
 
@@ -225,11 +215,11 @@ main {
 }
 
 .feature-list li {
-   width: 100%; /* Changed from 90% to ensure text uses the column width */
+   width: 100%; 
     position: relative;
     padding-left: 25px;
     margin-bottom: 1.5rem;
-    line-height: 200%; /* Slightly reduced for better readability */
+    line-height: 200%; 
     font-weight: 500;
     font-size: var(--fs-sm);
 }
@@ -239,7 +229,7 @@ main {
    content: "";
     position: absolute;
     left: 0;
-    top: 0.5em; /* Centers it relative to line-height */
+    top: 0.5em; 
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -248,7 +238,7 @@ main {
 
 .gray-placeholder-box {
     background-color: var(--service-box);
-    width: 100%; /* Make it responsive to the col-lg-5 container */
+    width: 100%;
     height: 344px;
     border-radius: 16px;
 }
@@ -277,11 +267,11 @@ main {
 
 .mobile-filter-container {
     display: flex;
-    align-items: flex-start; /* Keeps the "All" button at the top */
+    align-items: flex-start; 
 }
 
 .all-btn-wrapper {
-    flex-shrink: 0; /* Prevents the "All" button from getting squeezed */
+    flex-shrink: 0; 
 }
 
 .case-btn {
@@ -372,7 +362,7 @@ main {
 
 
     .gray-placeholder-box {
-        width: 100%; /* Make it responsive to the col-lg-5 container */
+        width: 100%; 
         height: 245px;
     }
 
