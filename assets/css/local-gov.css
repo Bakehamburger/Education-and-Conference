@@ -17,6 +17,28 @@
   
 }
 
+@media screen and (max-width: 576px) {
+        .landing-page {
+            min-height: 230px;
+        }
+        
+        .header-content {
+            margin-top: 41px;
+            padding: 85px 0 0 12px;
+        }
+        
+        .header-content .main-title-jap {
+            font-size: var(--fs-xl);
+            font-weight: 600;
+            padding-bottom: 14px;
+        }
+        
+        .header-content .main-title-eng {
+            font-weight: 400;
+            letter-spacing: 0.12em;
+        }
+    }
+
 
 /* Curve & Breadcrumb Positioning */
 .curve-container {
@@ -66,11 +88,11 @@
 
 .breadcrumb-current {
     color: var(--burnt-orange);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 main {
-  background-color: white;
+  background-color: var(--white);
 }
 
 
@@ -91,11 +113,30 @@ main {
   color: var(--dark-charcoal);
 }
 
+@media screen and (max-width: 576px) {
+     .intro {
+        padding-top: 72px;
+        padding-bottom: 85px;
+     }
+    
+    .intro .main-title-jap {
+        font-size: var(--fs-lg);
+        font-weight: 500;
+        line-height: 165%;
+        letter-spacing: 0.08em;
+    }
+    
+     .intro  .title-divider {
+    border-top: 1px solid var(--green-divider);
+    opacity: 1;
+    margin: 13px 0 14px 0;
+}
+}
+
 .title-divider {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--green-divider);
   opacity: 1;
-  margin-top: 46px;
-  margin-bottom: 36px;
+  margin: 46px 0 36px 0;
 }
 
 /* Section Subtitle with Orange Underline */
@@ -107,10 +148,10 @@ main {
     /* Keep your specific gradient */
     background-image: linear-gradient(
         to right, 
-        #FE9F5D 20%, 
-        #FD854F 44%, 
-        #FD6C41 67%, 
-        #EA6300 100%
+        rgba(254, 159, 93, 0.8) 20%, 
+        rgba(253, 133, 79, 0.8) 44%, 
+        rgba(253, 108, 65, 0.8) 67%, 
+        rgba(234, 99, 0, 0.8) 100%
     );
     
     background-repeat: no-repeat;
@@ -126,13 +167,24 @@ main {
     -webkit-box-decoration-break: clone;
     
     /* Adjust line-height to ensure there is space between the two highlighted lines */
-    line-height: 1.8; 
-    padding: 38px 0 10px 0;
+    line-height: 165%; 
+    padding: 38px 4px 10px 4px;
 }
 
 @media screen and (min-width: 1200px) {
     .intro .service-title-jap br {
         display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .intro .service-title-jap {
+        font-size: var(--fs-lg);
+        background-size: 100% 24px; 
+    }
+    
+    .pointers {
+        padding-top: 14px !important;
     }
 }
 
@@ -193,6 +245,12 @@ font-size: var(--fs-lg);
     padding-bottom: 584px;
 }
 
+@media screen and (max-width: 576px) {
+    .feature-section {
+        padding-bottom: 963px;
+    }
+}
+
 /* The Inverted Triangle at the top */
 .triangle-top {
     position: absolute;
@@ -218,12 +276,53 @@ font-size: var(--fs-lg);
     padding-top: 173px;
 }
 
+@media screen and (max-width: 576px) {
+    .first-feature {
+    padding-top: 120px;
+    }
+    
+    .feature-section .service-title-jap {
+        font-size: var(--fs-lg);
+        font-weight: 600;
+        line-height: 165%;
+    }
+    
+    .feature-section .section-subtitle {
+        font-size: 18px;
+        
+    }
+    
+    .container > .row:not(:nth-child(3)) .sub {
+    padding-top: 34px;
+}
+    
+    .section-divider {
+    border-top: 3px solid var(--burnt-orange);
+    opacity: 10%;
+    margin: 19px 0 28px 0;
+}
+
+}
+
 .sub {
     padding-top: 42px;
 }
 
 .feature-item {
   padding-top: 144px;
+}
+
+@media screen and (max-width: 576px) {
+    .feature-item,
+    .container .row:last-child .feature-item {
+  padding-top: 64px !important;
+}
+
+
+/* Targets the .sub element inside the 3rd .row of the .container */
+.container > .row:nth-child(3) .sub {
+    padding-top: 40px;
+}
 }
 
 /* Target the .feature-item that is inside the very last .row of the container */
@@ -255,10 +354,17 @@ font-size: var(--fs-lg);
    width: 100%; /* Changed from 90% to ensure text uses the column width */
     position: relative;
     padding-left: 25px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
     line-height: 200%; /* Slightly reduced for better readability */
     font-weight: 500;
     font-size: var(--fs-sm);
+}
+
+@media screen and (max-width: 576px) {
+    .feature-list li {
+        margin-bottom: 37px;
+        font-weight: 600;
+    }
 }
 
 /* The orange dots in your image */
@@ -282,13 +388,36 @@ font-size: var(--fs-lg);
     margin-left: auto; /* Pushes the box to the right edge of its column */
 }
 
-
+@media screen and (max-width: 576px) {
+    .gray-placeholder-box {
+        width: 100%; /* Make it responsive to the col-lg-5 container */
+        max-width: 366px; /* You can keep a max-width if you don't want it too big */
+        height: 243px;
+    }
+}
 
 
 
 /* case */
 .service-case {
     padding-top: 156px;
+}
+
+@media  screen and (max-width: 576px) { 
+    .service-case {
+    padding-top: 96px;
+}
+
+.case-content-area {
+    padding-bottom: 15px;
+}
+
+.case-btn {
+    padding-top: 25px !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+    
 }
 
 .case-main-title {
@@ -331,5 +460,12 @@ font-size: var(--fs-lg);
 
     .custom-pad{
         padding: 10px 16px !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    footer {
+        margin-top: 0 !important;
+        padding-top: 95px !important;
     }
 }
