@@ -5,7 +5,7 @@
 }
 
 
-.cookie-policy-header {
+.about-header {
     position: relative;
     background-color: var(--white-smoke);
     min-height: 340px; /* Adjust based on your preference */
@@ -13,6 +13,12 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+}
+
+@media screen and (max-width:992px) {
+    .about-header {
+        min-height: 271px;
+    }
 }
 
 .about-header-content {
@@ -24,7 +30,7 @@
 
 @media screen and (max-width: 992px) {
     .about-header-content {
-        bottom: 81px;
+        bottom: 28px;
         margin-bottom: 41px;
     }
 }
@@ -135,9 +141,12 @@
     min-height: 80vh;             /* Ensures white background covers the screen */
 }
 
+.about-top {
+    padding-top: 80px;
+}
+
 .about-top h1{
     font-weight: bold;
-    padding-bottom: 80px;
     line-height: 1.35em;
     font-size: 40px;
     color: var(--burnt-orange);
@@ -145,7 +154,8 @@
 
 @media screen and (max-width: 992px) {
     .about-top {
-        padding-top: 141px;
+        padding-top: 103px;
+        padding-bottom: 30px;
     }
     .about-top h1 {
         font-size: 24px;
@@ -158,6 +168,16 @@
     padding-bottom: 72px;
 }
 
+@media screen and (max-width: 992px) {
+    .company-philosophy-content {
+        padding-bottom: 66px;
+    }
+}
+
+.about_management-philosophy-container {
+    padding-bottom: 73px;
+}
+
 .management-philosophy-title {
     color: var(--burnt-orange);
     font-size: 18px;
@@ -165,6 +185,12 @@
     line-height: 1em;
     font-weight: bolder;
     padding-bottom: 40px;
+}
+
+@media screen and (max-width: 992px) {
+    .management-philosophy-title {
+        padding-bottom: 30px;
+    }
 }
 
 .about_management-philosophy p{
@@ -176,8 +202,34 @@
     letter-spacing: 0.15em;
 }
 
+@media screen and (max-width: 992px) {
+    .about_management-philosophy p {
+        font-size: var(--fs-lg);
+        font-weight: bold;
+        line-height: 1.65em;
+        padding-bottom: 20px;
+        letter-spacing: 0.15em;
+    }
+}
+
+.message-title {
+    padding-bottom: 57px;
+}
+
 .company-president-image img{
     width: 516px;
+}
+
+@media screen and (max-width: 992px) {
+    .company-president-image {
+        padding-bottom: 48px;
+        
+    }
+
+    .company-president-image img{
+        height: 419px;
+        
+    }   
 }
 
 .message-content p{
@@ -186,37 +238,56 @@
     width: 410px;
 }
 
+@media screen and (max-width: 992px) {
+    .message-content p {
+        width: inherit;
+        letter-spacing: 0;
+        line-height: 2em;
+    }
+
+    .about-company-president {
+        padding-top: 25px;
+    }
+
+    .about-company-president p {
+        line-height: 1em;
+        font-weight: 500;
+        padding-bottom: 10px;
+    }
+
+    .about-company-president span {
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
 
 .company-container {
-    max-width: 900px;
-    margin: 50px auto;
     background: #fff;
-    padding: 60px;
 }
 .header-title {
-    color: #ff6600; /* Matching the orange color */
-    text-align: center;
+    color: var(--burnt-orange);
     margin-bottom: 40px;
 }
 .header-title h1 {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 42px;
     margin-bottom: 5px;
 }
 .header-title p {
     font-size: 0.9rem;
     letter-spacing: 1px;
+    opacity: 0.6;
 }
+
 .row-border {
-    border-bottom: 1px solid #eeeeee;
-    padding: 20px 0;
     display: flex;
-    align-items: flex-start;
+    gap: 29px;
 }
+
 .label-col {
     color: #ff6600;
     font-weight: bold;
-    width: 200px;
     flex-shrink: 0;
     font-size: 0.9rem;
 }
@@ -226,17 +297,9 @@
     line-height: 1.8;
 }
 /* Mobile adjustment */
-@media (max-width: 768px) {
-    .row-border {
-        flex-direction: column;
-    }
-    .label-col {
-        width: 100%;
-        margin-bottom: 5px;
-    }
+@media (max-width: 992px) {
     .company-container {
-        padding: 20px;
-        margin: 10px;
+        padding-top: 96px;
     }
 }
 
@@ -331,91 +394,98 @@
 
 
 
-        .access-container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding-bottom: 240px;
-        }
+.access-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-bottom: 240px;
+}
 
-        /* ヘッダーレイアウト */
-        .access-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 25px;
-            gap: 20px;
-        }
+/* ヘッダーレイアウト */
+.access-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    gap: 20px;
+}
 
-        /* オレンジのテキスト */
-        .main-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 0;
-            line-height: 1.2;
-        }
+/* オレンジのテキスト */
+.main-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
 
-        .sub-title {
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin-top: -2px;
-        }
+@media screen and (max-width: 992px) {
+    .main-title {
+        line-height: 1em;
+        padding-bottom: 8px;
+    }
+}
 
-        .address-info {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: #333;
-            flex-grow: 1;
-            padding-top: 5px;
-        }
+.sub-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-top: -2px;
+}
 
-        /* GoogleMapボタン */
-        .btn-google {
-            background-color: #f26600;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            transition: background-color 0.2s;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
+.address-info {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #333;
+    flex-grow: 1;
+    padding-top: 5px;
+}
 
-        .btn-google:hover {
-            background-color: #d65a00;
-            color: #fff;
-        }
+/* GoogleMapボタン */
+.btn-google {
+    background-color: #f26600;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    overflow: hidden;
+    flex-shrink: 0;
+}
 
-        .btn-label {
-            padding: 10px 25px;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
+.btn-google:hover {
+    background-color: #d65a00;
+    color: #fff;
+}
 
-        .btn-arrow {
-            background-color: #d65a00;
-            padding: 10px 12px;
-            display: flex;
-            align-items: center;
-        }
+.btn-label {
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
 
-        /* 地図コンテナ */
-        .map-wrapper {
-            width: 100%;
-            height: 450px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            overflow: hidden;
-        }
+.btn-arrow {
+    background-color: #d65a00;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+}
 
-        /* モバイル対応 */
-        @media (max-width: 768px) {
-            .access-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .btn-google {
-                width: auto;
-            }
-        }
+/* 地図コンテナ */
+.map-wrapper {
+    width: 100%;
+    height: 450px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .access-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .btn-google {
+        width: auto;
+    }
+}

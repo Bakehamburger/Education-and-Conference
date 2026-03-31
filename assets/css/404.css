@@ -9,6 +9,10 @@ main {
     padding: 96px 201px 160px 198px;
 }
 
+.header-content-404 {
+    padding-left: 92px;
+}
+
 .header-404 {
     font-size: 40px;
     font-weight: bold;
@@ -31,3 +35,4 @@ main {
 .btn-orange-lg-404{
     min-width: 200px;
 }
+
