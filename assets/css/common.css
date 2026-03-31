@@ -756,7 +756,7 @@ font-weight: 600;
 .solution-card {
     background-color: var(--white-smoke);
     border-radius: 32px;
-    padding: 48px 5%; /* Use % for horizontal padding so it shrinks with the card */
+    padding: 48px 5%;
     width: 100%;
     max-width: 411px;
     margin: 0 auto;
@@ -801,6 +801,11 @@ font-weight: 600;
     padding-bottom: 584px;
 }
 
+@media  screen and (max-width: 768px) {
+    .feature-section  .service-title-jap {
+        line-height: 165%;
+    }
+}
 
 .triangle-top {
     position: absolute;
