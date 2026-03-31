@@ -24,26 +24,6 @@
     height: 93px; 
 }
 
-@media screen and (max-width: 768px) {
-    .curve-container  {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 341px; /* Matches SVG width */
-        height: 51px; /* Matches SVG height */
-    }
-  
-    .breadcrumb-overlay {
-        position: absolute;
-        bottom: 10px !important; /* Adjust to center vertically in the white area */
-        left: 45px !important;   /* Adjust to match horizontal padding in image */
-        font-size: 0.9rem;
-        color: #333;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-}
 
 .breadcrumb-overlay {
     position: absolute;
@@ -338,6 +318,27 @@ font-size: var(--fs-lg);
 
 /* 768px */
 @media screen and (max-width: 768px) {
+     .curve-container  {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 341px; /* Matches SVG width */
+        height: 51px; /* Matches SVG height */
+    }
+  
+    .breadcrumb-overlay {
+        position: absolute;
+        bottom: 10px !important; /* Adjust to center vertically in the white area */
+        left: 45px !important;   /* Adjust to match horizontal padding in image */
+        font-size: 0.9rem;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    
+    
   .curve-container  {
     position: absolute;
     bottom: 0;
@@ -363,6 +364,8 @@ font-size: var(--fs-lg);
 @media screen and (max-width: 576px) {
       .landing-page {
             min-height: 230px;
+             background-position: 20% left;
+             background-size: cover;
         }
         
         .header-content {

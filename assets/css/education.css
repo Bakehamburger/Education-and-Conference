@@ -158,9 +158,12 @@ main {
 
 /* 576px */
 @media screen and (max-width: 576px) {
-        .landing-page {
+       .landing-page {
             min-height: 230px;
+            background-position: center bottom 20%;
+            background-size: cover;
         }
+        
         
         .header-content {
             margin-top: 41px;
