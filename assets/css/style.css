@@ -857,9 +857,10 @@ body.menu-open {
 
 .marquee-track span {
     display: inline-block;
+    font-family: "Manrope", sans-serif;
     font-size: 188px;
     font-weight: 800;
-    color: rgba(234,99,0,0.05); 
+    color: rgba(234, 99, 0, 0.05) ;
     padding-right: 20px;
     line-height: 1; 
     margin: 0;
@@ -881,7 +882,7 @@ body.menu-open {
     }
     .marquee-track span{
         font-size: 100px;
-        color: rgba(234,99,0,0.1); 
+        color: rgba(234, 99, 0, 0.1); 
     }
 }
 
