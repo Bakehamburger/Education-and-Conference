@@ -1,15 +1,13 @@
 @charset "UTF-8";
 
 main {
-    background-color: white;
-
+    background-color: var(--white);
 }
-
 
 .header-404 {
     position: relative;
     background-color: var(--white-smoke);
-    min-height: 400px; /* Adjust based on your preference */
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,39 +18,26 @@ main {
     padding:  0 clamp(12px, 7.6vw - 17.7px, 92px);
     position: absolute;
     bottom: 0;
-    margin-bottom: 122px;
+    margin-bottom: 123px;
 }
 
-.main-title {
-    color: var(--burnt-orange);
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin: 0;
-     
-}
 
-.sub-title {
-    color: var(--burnt-orange);
-    font-size: 1.2rem;
-    margin-top: 5px;
-    font-family: sans-serif;
-}
-
-/* Curve & Breadcrumb Positioning */
 .curve-container {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 620px; /* Matches SVG width */
-    height: 93px; /* Matches SVG height */
+    width: 620px; 
+    height: 93px; 
 }
 
 .breadcrumb-overlay {
     position: absolute;
-    bottom: 30px; /* Adjust to center vertically in the white area */
-    left: 100px;   /* Adjust to match horizontal padding in image */
-    font-size: 0.9rem;
-    color: #333;
+    bottom: 30px;  
+    left: 100px;   
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--dark-charcoal);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -60,7 +45,7 @@ main {
 
 .breadcrumb-arrow {
     color: var(--burnt-orange);
-    font-size: 0.7rem;
+    font-size: 11.52px;
 }
 
 .breadcrumb-current {
@@ -68,16 +53,47 @@ main {
     font-weight: 600;
 }
 
+@media screen and (max-width: 768px){  
+    .header-404{
+        min-height: 270px;
+    }
 
-.header-content-404 {
-    padding-left: 92px;
+    .header-content{
+        margin-bottom: 75px;
+    }
+
+    .curve-container  {
+        width: 341px !important; 
+        height: 51px !important; 
+    }
+  
+    .breadcrumb-overlay {
+        bottom: 10px !important; 
+        left: 45px !important;   
+    }
 }
 
-.content-404 {
-    padding: 96px 201px 160px 198px;
+
+@media (max-width: 620px) {
+    .curve-container {
+        width: 100%;
+        height: auto;
+    }
+    .breadcrumb-overlay {
+        right: 20px;
+    }
 }
 
-
+.container-404{
+    padding-top: 55px;
+    font-size: var(--fs-base);
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 200%;
+    color: var(--dark-charcoal);
+    max-width: 1056px;
+    margin: 0 auto;
+}
 
 .title-404{
     font-size: 40px;
@@ -86,7 +102,6 @@ main {
 }
 
 .description-404 {
-    width: 1041px;
     padding-top: 48px;
     padding-bottom: 80px;
     color: var(--dark-charcoal);
