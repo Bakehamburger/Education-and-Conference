@@ -9,6 +9,7 @@ main {
     position: relative;
     background-color: var(--white-smoke);
     min-height: 400px; 
+    min-height: 400px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,9 +146,6 @@ hr {
 }
 
 
-
-
-/* List styling inside table */
 .cookie-table ul li {
     position: relative;
     padding-left: 24px;
@@ -157,10 +155,9 @@ hr {
     color: var(--dark-charcoal);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .policy-h2 {
-        font-size: 1.25rem;
+        font-size: 20px;
     }
     .cookie-table th {
         width: 40% !important;

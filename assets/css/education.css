@@ -4,7 +4,7 @@
 /* Content spacing */
 .landing-page {
     position: relative;
-    background: url('/assets/images/service/es-lp.png');
+    background: url('../images/service/es-lp.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@
 
 .breadcrumb-arrow {
     color: var(--burnt-orange);
-    font-size: 0.7rem;
+    font-size:var(--fs-xs);
 }
 
 .breadcrumb-current {
@@ -148,8 +148,8 @@ main {
     position: absolute;
     bottom: 10px !important; 
     left: 45px !important;  
-    font-size: 0.9rem;
-    color: #333;
+    font-size: var(--fs-sm);
+    color: var(--dark-charcoal);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -159,6 +159,7 @@ main {
 /* 576px */
 @media screen and (max-width: 576px) {
        .landing-page {
+            background-image: url('../images/service/es-mb.png');
             min-height: 230px;
             background-position: center bottom 20%;
             background-size: cover;

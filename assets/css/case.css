@@ -8,6 +8,7 @@ main {
     position: relative;
     background-color: var(--white-smoke);
     min-height: 400px; 
+    min-height: 400px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
