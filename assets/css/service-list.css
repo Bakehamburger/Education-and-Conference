@@ -143,7 +143,7 @@
 }
 
 
-/* solution */
+/* SOLUTIONS SECTION */
 .solutions-section {
     position: relative; 
     padding: 95px 0 74px 0;
@@ -291,8 +291,11 @@
     display: block;
 }
 
-
-
+  #services-list-solutions .services-list-solutions-content {
+        padding: 40px 40px 40px 0; 
+        min-height: 100%; 
+    }
+    
 .services-list-solutions-content .service-title-jap {
     font-size: var(--fs-xl);
     font-weight: 600;
@@ -386,90 +389,6 @@
     padding-bottom: 83px;
 }
 
-
-
-/* 992px */
-@media screen and (min-width: 992px) {
-    .service-grid {
-        padding: 0 32px;
-    }
-    
-    
-    .solution-steps-wrapper {
-        padding-top: 52px;
-    }
-
-    .solution-steps-wrapper {
-        display: flex;
-        justify-content: center; 
-        gap: 26px; 
-        align-items: stretch;
-    }
-
-    .solution-step-card {
-        position: relative;        
-        width: 100%;   
-    }
-    
-    .solution-steps-wrapper > div:last-child {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .solution-step-card::after {
-        content: "";
-        position: absolute;
-        right: -15px; 
-        top: 50%;
-        transform: translateY(-50%);
-        border-top: 12px solid transparent;
-        border-bottom: 12px solid transparent;
-        border-left: 15px solid var(--burnt-orange);
-        z-index: 2;
-    }
-
-    .solution-steps-wrapper > div:last-child .solution-step-card::after {
-        display: none;   
-    }
-
-    .feature-item-list {
-        padding-top: 43px;
-        padding-left: 0;
-    }
-    
-    .row > div:nth-child(n+2) .feature-item-list {
-        padding-top: 58px;
-    }
-    
-    .feature-num {
-        font-size: 80px;
-        padding-bottom: 2px;
-    }
-    
-    .feature-title {
-        font-size: var(--fs-xl);
-        padding-bottom: 0;
-    }
-     
-    .feature-desc{
-        font-size: 18px;
-    }
-    
-    .services-list-solutions-content {
-        padding: 0 40px 40px 40px; 
-        text-align: left;
-    }
-        
-    #services-list-solutions .services-list-solutions-content {
-        padding: 40px 40px 40px 0; 
-        min-height: 100%; 
-    }
-
-    .services-list-solutions-desc {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-}
 
 
 /* 991px*/
@@ -566,69 +485,7 @@
 
 
 /* 768px */
-@media screen and (min-width: 768px) {
-
-    .service-landing-page {
-        padding-top: 85px;
-    }
-    
-    .service-landing-page .headline-text {
-        font-size: var(--fs-xl);
-        padding-left: 12px !important;
-    }
-    
-    .service-landing-page .description-text {
-        margin-top: 43px !important;
-        padding-left: 12px !important;
-    }
-    
-    .service-landing-page .top-space {
-        padding-top: 66px;
-    }
-    
-    .top-left-content {
-        top: 20px;
-    }
-
-    .solutions-section {
-        margin-top: 94px;
-        margin-bottom: 96px;
-        padding-top: 78px;
-        padding-bottom: 91px;
-    }
-
-    .solutions-section .service-title-jap {
-        font-size: var(--fs-lg);
-    }
-    
-    .solutions-section .description-text {
-        padding-top: 20px;
-    }
-    
-    .strength-feature-title {
-        padding-top: 77px;
-    }
-
-    .strength-feature-title .main-title-jap  {
-        font-size: var(--fs-xl);
-        font-weight: 700;
-    }
-
-    #services-list-solutions {
-        padding-top: 0;
-    }
-
-    #flow-section {
-        margin-top: 0;
-        padding-top: 30px;
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-}
-
-/* 767px */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .service-section-header .headline-text, 
     .service-section-header .description-text {
         padding: 0 12px;
@@ -697,6 +554,10 @@
 
 /* 576px */
 @media (max-width: 576px) {
+    
+    .solutions-section .service-title-jap {
+        font-size: var(--fs-lg);
+    }
     
     .service-section-header .headline-text, 
     .service-section-header .description-text {
