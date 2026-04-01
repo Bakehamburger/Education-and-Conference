@@ -24,8 +24,7 @@
         overflow: hidden;
     }
     
-   
-
+    
     .curve-container {
         position: absolute;
         bottom: 0;
@@ -56,7 +55,6 @@
         font-weight: 600;
     }
 
-   
     /* service grid */
     .service-landing-page {
         padding-top: 104px;
@@ -174,8 +172,8 @@
         justify-content: center;
         
         font-family: "Manrope", sans-serif;
-        font-size: 16px;
-        font-weight: 5;
+        font-size: var(--fs-base);
+        font-weight: 500;
         letter-spacing: 0.03em;
         line-height: 100%;
         margin-bottom: 22px;
@@ -203,13 +201,11 @@
 
     .feature-num {
     font-size: 120px; 
-    font-weight: 400;
-    letter-spacing: -0.1em;
+    letter-spacing: -0.04em;
     opacity: 0.3;
     line-height: 100%;
     display: block;
     padding-bottom: 20px;
-    
     font-family: "Abel", sans-serif;
     font-weight: 400;
 
@@ -366,6 +362,7 @@
 	
 	/* 992px */
 	@media screen and (min-width: 992px) {
+        
         .service-grid {
             padding: 0 32px;
         }
@@ -413,16 +410,6 @@
             padding-left: 0;
         }
         
-        .row > div:nth-child(n+2) .feature-item-list {
-            padding-top: 58px;
-        }
-		
-        
-        
-		.feature-num {
-			font-size: 80px;
-			padding-bottom: 2px;
-        }
 	
 		
 		.feature-title {
@@ -553,7 +540,7 @@
         
         .header-content {
             margin-top: 41px;
-            padding-left: 12px;
+            padding-left: 92px;
         }
 		
 		.curve-container  {
@@ -582,6 +569,7 @@
         .service-landing-page .headline-text {
             font-size: var(--fs-xl);
             padding-left: 12px !important;
+            font-weight: 500;
         }
         
         .service-landing-page .description-text {
@@ -607,7 +595,7 @@
         
 	
 	    .solutions-section .service-title-jap {
-            font-size: var(--fs-lg);
+            font-size: var(--fs-xl);
         }
         
         .solutions-section .description-text {
