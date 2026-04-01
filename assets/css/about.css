@@ -261,8 +261,8 @@
         padding-top: 7px;
     }
 }
-.section-header-title h1 {
-    font-weight: bold;
+.section-header-title h2 {
+    font-weight: bold !important;
     font-size: 42px;
     margin-bottom: 5px;
 }
