@@ -326,7 +326,6 @@ main {
     .landing-page {
         background-image: url('../images/service/lgs-mb.png');
         min-height: 230px;
-        background-position: 20% left;
         background-size: cover;
     }
     
