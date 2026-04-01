@@ -870,11 +870,6 @@ body.menu-open {
 }
 
 
-
-
-
-
-
 /*--------------*/
 /*-----NEWS-----*/
 /*--------------*/
@@ -925,8 +920,6 @@ body.menu-open {
         font-weight: 700;
     }
 }
-
-
 
 
 .news-content-wrapper {
@@ -1056,7 +1049,7 @@ body.menu-open {
 .placeholder-text {
     font-weight: bold;
     font-size: 0.9rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
 }
 
 /* Map Positioning */
