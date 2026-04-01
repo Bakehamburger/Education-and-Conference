@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -194,23 +193,23 @@
             </div>
 
             <div class="mb-3 pb-3 pt-2 pd-0">
-                <label class="form-label" for="user_name">お名前 <span class="ms-2 badge-custom badge-required" required>必須</span></label>
-                <input type="text" id="user_name" name="user_name" class="form-control custom-input">
+                <label class="form-label" for="user_name">お名前 <span class="ms-2 badge-custom badge-required" >必須</span></label>
+                <input type="text" id="user_name" name="user_name" class="form-control custom-input" required>
             </div>
 
             <div class="mb-3 pb-3 pt-2">
-                <label class="form-label" for="user_kana">お名前（フリガナ） <span class="ms-2 badge-custom badge-required" required>必須</span></label>
-                <input type="text" id="user_kana" name="user_kana" class="form-control custom-input">
+                <label class="form-label" for="user_kana">お名前（フリガナ） <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <input type="text" id="user_kana" name="user_kana" class="form-control custom-input" required>
             </div>
 
             <div class="mb-3 pb-3 pt-1">
-                <label class="form-label" for="email">メールアドレス <span class="ms-2 badge-custom badge-required" required>必須</span></label>
-                <input type="email" id="email" name="email" class="form-control custom-input">
+                <label class="form-label" for="email">メールアドレス <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <input type="email" id="email" name="email" class="form-control custom-input" required>
             </div>
 
             <div class="mb-3 pb-4 pt-2">
-                <label class="form-label" for="tel">電話番号 <span class="ms-2 badge-custom badge-required" required>必須</span></label>
-                <input type="tel" id="tel" name="tel" class="form-control custom-input">
+                <label class="form-label" for="tel">電話番号 <span class="ms-2 badge-custom badge-required">必須</span></label>
+                <input type="tel" id="tel" name="tel" class="form-control custom-input" required>
             </div>
 
             <div class="mb-3 pb-3">
@@ -224,7 +223,7 @@
                 <label class="form-label" for="prefecture">都道府県 <span class="ms-2 badge-custom badge-optional">任意</span></label>
                 <div class="custom-width">
                     <select id="prefecture" name="prefecture" class="form-select custom-input">
-                        <option selected disabled value=""></option>
+                        <option selected disabled value="">選択してください</option>
                         <option value="13">東京都</option>
                         <option value="27">大阪府</option>
                     </select>
@@ -313,12 +312,11 @@
                     <li><a href="#service"><img src="assets/images/icons/line-white.svg" alt="">自治体ソリューション</a></li>
                     <li><a href="#service"><img src="assets/images/icons/line-white.svg" alt="">自治体ソリューション</a></li>
                 </ul>
-                </ul>
                 <div class="footer-links">
-                <a href="case.html">
-                    <p>導入事例</p> 
-                    <small>case</small>
-                </a>
+                    <a href="case.html">
+                        <p>導入事例</p> 
+                        <small>case</small>
+                    </a>
                 </div>
             </div>
             
@@ -378,12 +376,10 @@
     </div>
 </footer>
 
+   
+<script src="assets/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-
-    
-    <script src="assets/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 </body>
 </html>
