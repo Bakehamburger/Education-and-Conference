@@ -60,20 +60,18 @@ main {
 }
 
 .support-intro .main-title-jap {
- font-weight: 600;
-  line-height: 135%;
-  letter-spacing: 0.08em;
-  color: var(--dark-charcoal);
+    font-weight: 600;
+    line-height: 135%;
+    letter-spacing: 0.08em;
+    color: var(--dark-charcoal);
 }
-
 
 .title-divider {
-  border-top: 1px solid var(--green-divider);
-  opacity: 1;
-  margin-top: 50px;
-  margin-bottom: 34px;
+    border-top: 1px solid var(--green-divider);
+    opacity: 1;
+    margin-top: 50px;
+    margin-bottom: 34px;
 }
-
 
 .support-intro .section-subtitle {
     font-size: var(--fs-xl);
@@ -106,21 +104,18 @@ main {
 }
 
 
-
-
-
 .point-number {
-  color: var(--emerald-green);
-  font-weight: 600;
-  font-size: var(--fs-lg);
-  margin-bottom: 15px;
+    color: var(--emerald-green);
+    font-weight: 600;
+    font-size: var(--fs-lg);
+    margin-bottom: 15px;
 }
 
 .card-text {
-  font-size: var(--fs-lg);
-  font-weight: 500;
-  line-height: 200%;
-  margin-bottom: 0;
+    font-size: var(--fs-lg);
+    font-weight: 500;
+    line-height: 200%;
+    margin-bottom: 0;
 }
 
 
@@ -147,9 +142,9 @@ main {
 
 
 .feature-text-wrapper {
-  display: flex;
-  align-items: flex-start;
-  padding-right: 20px;
+    display: flex;
+    align-items: flex-start;
+    padding-right: 20px;
 
 }
 
@@ -160,7 +155,7 @@ main {
 }
 
 .feature-list li {
-   width: 100%; 
+    width: 100%; 
     position: relative;
     padding-left: 25px;
     margin-bottom: 24px;
@@ -171,7 +166,7 @@ main {
 
 
 .feature-list li::before {
-   content: "";
+    content: "";
     position: absolute;
     left: 0;
     top: 0.5em; 
@@ -228,13 +223,13 @@ main {
 
 /* 1200px */
 @media (max-width: 1200px) {
-  .solution-card {
-    padding: 40px 15px; 
-  }
-  
-  .card-text {
-    font-size: var(--fs-sm); 
-  }
+    .solution-card {
+        padding: 40px 15px; 
+    }
+    
+    .card-text {
+        font-size: var(--fs-sm); 
+    }
 }
 
 /* 992px */
@@ -275,12 +270,12 @@ main {
 
 /* 576px */
 @media screen and (max-width: 576px) {
-     .landing-page {
-            background-image: url('../images/service/ss-mb.png');
-            min-height: 230px;
-            background-position: center bottom 20%;
-            background-size: cover;
-        }
+    .landing-page {
+        background-image: url('../images/service/ss-mb.png');
+        min-height: 230px;
+        background-position: center bottom 20%;
+        background-size: cover;
+    }
         
     
     .header-content {
