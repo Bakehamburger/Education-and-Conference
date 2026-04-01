@@ -410,8 +410,8 @@ main{
     }
 
     .mobile-nav-links-wrapper2 {
-    padding-bottom: 25px; 
-    padding-right: 0;
+        padding-bottom: 25px; 
+        padding-right: 0;
     }
     .mobile-nav-links-wrapper p {
         font-size: 20px;
@@ -629,6 +629,13 @@ main{
     letter-spacing: 0;
     line-height: 100%;
     padding-bottom: 12px;
+}
+
+@media screen and (max-width: 992px) {
+    .main-title-jap {
+        font-size: 32px;
+        padding-bottom: 16px;
+    }
 }
 
 .service-title-jap {

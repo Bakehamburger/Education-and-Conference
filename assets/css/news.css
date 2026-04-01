@@ -1,25 +1,14 @@
 @charset "UTF-8";
 
-:root {
---burnt-orange: #E66B27;
---bg-grey: #F5F5F5;
---border-pill: #D0D0D0;
---brand-orange: #e66b00;
---light-bg: #f9f9f9;
-}
-
-
-
-
 
 main {
-    background-color: white;
+  background-color: var(--white);
 }
 
 .news-header {
     position: relative;
     background-color: var(--bg-grey);
-    min-height: 400px; /* Adjust based on your preference */
+    min-height: 400px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,36 +22,22 @@ main {
     margin-bottom: 122px;
 }
 
-.main-title {
-    color: var(--burnt-orange);
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin: 0;
-    
-}
-
-.sub-title {
-    color: var(--burnt-orange);
-    font-size: 1.2rem;
-    margin-top: 5px;
-    font-family: sans-serif;
-}
-
-/* Curve & Breadcrumb Positioning */
 .curve-container {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 620px; /* Matches SVG width */
-    height: 93px; /* Matches SVG height */
+    width: 620px; 
+    height: 93px; 
 }
 
 .breadcrumb-overlay {
     position: absolute;
-    bottom: 30px; /* Adjust to center vertically in the white area */
-    left: 100px;   /* Adjust to match horizontal padding in image */
-    font-size: 0.9rem;
-    color: #333;
+    bottom: 30px;  
+    left: 100px;   
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--dark-charcoal);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -70,7 +45,7 @@ main {
 
 .breadcrumb-arrow {
     color: var(--burnt-orange);
-    font-size: 0.7rem;
+    font-size: 11.52px;
 }
 
 .breadcrumb-current {
@@ -79,45 +54,33 @@ main {
 }
 
 @media screen and (max-width: 768px){  
-.news-header {
-    min-height: 270px;
+    .news-header {
+        min-height: 270px;
+    }
+
+    .header-content {
+        margin-bottom: 75px;
+    }
+        
+ .curve-container  {
+        width: 341px !important; 
+        height: 51px !important; 
+    }
+  
+    .breadcrumb-overlay {
+        bottom: 10px !important; 
+        left: 45px !important;   
+    }
 }
 
-.header-content {
-    margin-bottom: 85px;
-}
-    
-.curve-container  {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 341px !important; /* Matches SVG width */
-    height: 51px !important; /* Matches SVG height */
-}
-
-.breadcrumb-overlay {
-    position: absolute;
-    bottom: 20px !important; /* Adjust to center vertically in the white area */
-    left: 45px !important;   /* Adjust to match horizontal padding in image */
-    font-size: 0.9rem;
-    color: #333;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-}
-
-
-/* Hide curve on small mobile screens if it breaks layout */
 @media (max-width: 620px) {
-.curve-container {
-    width: 100%;
-    height: auto;
-}
-.breadcrumb-overlay {
+    .curve-container {
+        width: 100%;
+        height: auto;
+    }
+    .breadcrumb-overlay {
         right: 20px;
-        font-size: 0.8rem;
-}
+    }
 }
 
 .navbar-no-background {
@@ -191,25 +154,22 @@ main {
 }
 
 @media screen and (max-width: 576px) {
-.breadcrumb {
-    position: absolute;
-    right: 150px;
-    padding-top: 20px;
-    font-size: 14px;
-}
-.news-content {
-    padding-top: 98px;
-}
-.article-jap-title {
-    margin-bottom: 15px !important;
-}
-.horizontal-line {
-    margin-bottom: 63px;
-}
 
-.mb-sm-16 {
-    margin-bottom: 16px !important;
-}
+    .news-content {
+        padding-top: 98px;
+    }
+
+    .article-jap-title {
+        margin-bottom: 15px !important;
+    }
+
+    .horizontal-line {
+        margin-bottom: 63px;
+    }
+
+    .mb-sm-16 {
+        margin-bottom: 16px !important;
+    }
 }
 
 .title-news-container {
@@ -217,25 +177,6 @@ main {
     padding-left: 92px;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
-    content: "▶";
-    color: var(--brand-orange);
-    font-size: 0.8rem;
-    padding-top: 2px;
-}
-.breadcrumb-item a {
-    color: #333333;
-    text-decoration: none;
-}
-.breadcrumb-item.active {
-    color: var(--brand-orange); 
-}
-
-.breadcrumb-items::after {
-    content: "▶";
-    padding: 0 8px 0 8px;
-    font-size: 0.8rem;
-}
 
 
 /* Pagination Styling (Matching your orange theme) */
