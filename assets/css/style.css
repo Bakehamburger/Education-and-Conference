@@ -365,7 +365,7 @@ body.menu-open {
     display: block;
     position: relative;
     height: 300px;
-    border-radius: 15px;
+    border-radius: 16px;
     overflow: hidden;
     background-position: center;
     background-size: cover;
