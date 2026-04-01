@@ -1018,6 +1018,7 @@ main{
     display: flex;
     flex-direction: column;
     padding-top: 145px;
+    background-color: var(--white-smoke);
 }
 
 @media screen and (max-width: 992px) {
