@@ -11,7 +11,7 @@ body.menu-open {
 /* Content spacing */
 .landing-page {
     position: relative;
-    background: url('/assets/images/landing-page/first-view.png');
+    background: url('../images/landing-page/first-view.png');
     background-size: cover; /* Ensures the image fills the space */
     background-position: center;
     height: 870px;

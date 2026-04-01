@@ -4,7 +4,7 @@
 /* Content spacing */
 .landing-page {
     position: relative;
-    background: url('/assets/images/service/cbs-lp.png');
+    background: url('../images/service/cbs-lp.png');
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
@@ -41,7 +41,7 @@
 
 .breadcrumb-arrow {
     color: var(--burnt-orange);
-    font-size: 0.7rem;
+    font-size: var(--fs-xs);
 }
 
 .breadcrumb-current {
@@ -68,12 +68,10 @@ main {
 }
 
 .feature-section {
-    background-color: var(--service-bg); /* Matches the warm cream tone */
+    background-color: var(--service-bg); 
     position: relative;
     padding-bottom: 598px;
 }
-
-
 
 
 
@@ -161,6 +159,7 @@ main {
 /* 576 */
 @media screen and (max-width: 576px) {
          .landing-page {
+            background-image: url('../images/service/cbs-mb.png');
             min-height: 230px;
            background-position: 1% center;
             background-size: cover;

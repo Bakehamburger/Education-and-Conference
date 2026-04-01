@@ -30,7 +30,7 @@ table {
 
 html {
     height: 100%;
-    overflow: hidden; /* Prevent double scrollbars */
+    overflow: hidden; 
 }
 
 body {
@@ -106,15 +106,14 @@ main{
 }
 
 :root {
-    /* fonts */
     /* Font Size Scale */
-    --fs-xs: 12px;    /* 12px */
-    --fs-sm: 14px;   /* 14px */
-    --fs-base: 16px;     /* 16px */
-    --fs-md: 20px;    /* 20px */
-    --fs-lg: 24px;     /* 24px */
-    --fs-xl: 32px;       /* 32px */
-    --fs-xxl: 48px;      /* 48px */
+    --fs-xs: 12px;   
+    --fs-sm: 14px;  
+    --fs-base: 16px;     
+    --fs-md: 20px;   
+    --fs-lg: 24px;    
+    --fs-xl: 32px;       
+    --fs-xxl: 48px;     
     
     
     --sunset-gradient: linear-gradient(
@@ -219,11 +218,6 @@ main{
 .desktop-nav-container{
     display: flex;
     align-items: center;
-    /* RESPONSIVE GAP: 
-       Min: 20px, 
-       Preferred: 5vw (scales with screen), 
-       Max: 93px 
-    */
     gap: clamp(20px, 5vw, 93px);
     margin-right: 33px;
 }
@@ -252,7 +246,7 @@ main{
 }
 
 .nav-link:hover {
-    color: #fff !important;
+    color: var(--white) !important;
     background: rgba(255,255,255,0.15);
     transform: translateY(-2px);
 }
@@ -260,7 +254,7 @@ main{
 .cta-btn {
     background: var(--burnt-orange);
     border: none ;
-    color: white;
+    color: var(--white);
     font-weight: 700 ;
     padding: 18px 20px 17px 11px;
     border-radius: 8px ;
@@ -283,7 +277,6 @@ main{
     height: 18px;
 }
 
-/* Burger Button - Always Visible */
 .burger-btn {
     background: var(--sunset-gradient);
     backdrop-filter: blur(20px);
@@ -538,7 +531,7 @@ main{
     height: 149px;
     border-radius: 8px;
     background-color: var(--burnt-orange);
-    color: white;
+    color: var(--white);
 }
 
 @media screen and (max-width: 992px) {
@@ -717,7 +710,7 @@ main{
 }
 
 .intro .main-title-jap {
-font-weight: 600;
+    font-weight: 600;
     line-height: 135%;
     letter-spacing: 0.08em;
     color: var(--dark-charcoal);
@@ -914,16 +907,16 @@ font-weight: 600;
     }
 }
 .btn-orange-lg {
-    background-color: var(--burnt-orange); /* Replace with your var(--burnt-orange) */
+    background-color: var(--burnt-orange);
     color: white;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: end;
     min-width: 225px;
-    border-radius: 8px; /* Adjusted for the rounded look in your image */
-    overflow: hidden;    /* Keeps the inner corners clipped to the radius */
-    padding: 0;          /* Remove padding from parent */
+    border-radius: 8px; 
+    overflow: hidden;   
+    padding: 0;        
 }
 
 .btn-text {
@@ -938,8 +931,7 @@ font-weight: 600;
     display: flex;          
     align-items: center;    
     justify-content: center;
-    
-    padding: 25px 22px 23px 14px;          /* Keep your padding or set a fixed width */
+    padding: 25px 22px 23px 14px;         
     border-left: 1px solid rgba(255, 255, 255, 0.4);
     height: 100%;
 }
@@ -1072,7 +1064,7 @@ font-weight: 600;
 }
 
 .orange-card {
-    background-color: var(--burnt-orange); /* Matching the orange shade */
+    background-color: var(--burnt-orange); 
     color: var(--white);
     border-radius: 12px;
     padding: 2rem;

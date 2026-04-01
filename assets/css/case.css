@@ -7,7 +7,7 @@ main {
 .case-header {
     position: relative;
     background-color: var(--white-smoke);
-    min-height: 400px; /* Adjust based on your preference */
+    min-height: 400px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,16 +41,16 @@ main {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 620px; /* Matches SVG width */
-    height: 93px; /* Matches SVG height */
+    width: 620px; 
+    height: 93px; 
 }
 
 .breadcrumb-overlay {
     position: absolute;
-    bottom: 30px; /* Adjust to center vertically in the white area */
-    left: 100px;   /* Adjust to match horizontal padding in image */
-    font-size: 0.9rem;
-    color: #333;
+    bottom: 30px; 
+    left: 100px;  
+    font-size: var(--fs-sm);
+    color: var(--dark-charcoal);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -61,16 +61,16 @@ main {
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 341px !important; /* Matches SVG width */
-        height: 51px !important; /* Matches SVG height */
+        width: 341px !important; 
+        height: 51px !important; 
     }
   
     .breadcrumb-overlay {
         position: absolute;
-        bottom: 20px !important; /* Adjust to center vertically in the white area */
-        left: 45px !important;   /* Adjust to match horizontal padding in image */
-        font-size: 0.9rem;
-        color: #333;
+        bottom: 20px !important; 
+        left: 45px !important;   
+        font-size: var(--fs-sm);
+        color: var(--dark-charcoal);
         display: flex;
         align-items: center;
         gap: 10px;
@@ -78,7 +78,6 @@ main {
 }
 
 
-/* Hide curve on small mobile screens if it breaks layout */
 @media (max-width: 620px) {
     .curve-container {
         width: 100%;

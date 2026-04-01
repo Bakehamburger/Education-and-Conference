@@ -1,47 +1,20 @@
 @charset "UTF-8";
 
-
-/* Content spacing */
 .landing-page {
     position: relative;
-    background: url('/assets/images/service/ss-lp.png');
-    background-size: cover; /* Ensures the image fills the space */
+    background: url('../images/service/ss-lp.png');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 400px; /* This makes it take up 100% of the screen height */
+    min-height: 400px; 
 }
 
 .header-content {
-     padding-top: 177px; /* Offset for the fixed navbar */
+     padding-top: 177px; 
      padding-left: 92px;
 }
 
-@media screen and (max-width: 576px) {
-     .landing-page {
-            min-height: 230px;
-             background-position: center bottom 20%;
-             background-size: cover;
-        }
-        
-    
-    .header-content {
-        margin-top: 41px;
-        padding: 85px 0 0 12px;
-    }
-    
-    .header-content .main-title-jap {
-        font-size: var(--fs-xl);
-        font-weight: 600;
-        padding-bottom: 14px;
-    }
-    
-    .header-content .main-title-eng {
-        font-weight: 400;
-        letter-spacing: 0.12em;
-    }
-}
 
-/* Curve & Breadcrumb Positioning */
 .curve-container {
     position: absolute;
     bottom: 0;
@@ -54,8 +27,8 @@
     position: absolute;
     bottom: 30px; 
     left: 130px;   
-    font-size: 0.9rem;
-    color: #333;
+    font-size: var(--fs-sm);
+    color: var(--dark-charcoal);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -63,7 +36,7 @@
 
 .breadcrumb-arrow {
     color: var(--burnt-orange);
-    font-size: 0.7rem;
+    font-size: var(--fs-xs);
 }
 
 .breadcrumb-current {
@@ -71,33 +44,13 @@
     font-weight: 600;
 }
 
-@media screen and (max-width: 768px) {
-    .curve-container  {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 341px; 
-        height: 51px; 
-    }
-  
-    .breadcrumb-overlay {
-        position: absolute;
-        bottom: 10px !important; 
-        left: 45px !important;   
-        font-size: 0.9rem;
-        color: #333;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-}
+
 
 main {
   background-color: var(--white);
 }
 
 /* intro */
-/* Typography and Colors */
 .support-intro {
     padding-top: 100px;
 }
@@ -121,7 +74,7 @@ main {
   margin-bottom: 34px;
 }
 
-/* Section Subtitle with Orange Underline */
+
 .support-intro .section-subtitle {
     font-size: var(--fs-xl);
     font-weight: 500;
@@ -152,16 +105,8 @@ main {
   white-space: nowrap;
 }
 
-/* Fix for 992px to 1200px range */
-@media (max-width: 1200px) {
-  .solution-card {
-    padding: 40px 15px; 
-  }
-  
-  .card-text {
-    font-size: var(--fs-sm); 
-  }
-}
+
+
 
 
 .point-number {
@@ -218,13 +163,13 @@ main {
    width: 100%; 
     position: relative;
     padding-left: 25px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
     line-height: 200%; 
     font-weight: 500;
     font-size: var(--fs-sm);
 }
 
-/* The orange dots in your image */
+
 .feature-list li::before {
    content: "";
     position: absolute;
@@ -279,6 +224,20 @@ main {
     padding-bottom: 191px;
 }
 
+
+
+/* 1200px */
+@media (max-width: 1200px) {
+  .solution-card {
+    padding: 40px 15px; 
+  }
+  
+  .card-text {
+    font-size: var(--fs-sm); 
+  }
+}
+
+/* 992px */
 @media screen and (max-width: 992px){  
     .mobile-filter-container{
         flex-direction: column;
@@ -292,8 +251,55 @@ main {
     }
 }
 
+/* 768px */
+@media screen and (max-width: 768px) {
+    .curve-container  {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 341px; 
+        height: 51px; 
+    }
+  
+    .breadcrumb-overlay {
+        position: absolute;
+        bottom: 10px !important; 
+        left: 45px !important;   
+        font-size: var(--fs-sm);
+        color: var(--dark-charcoal);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+/* 576px */
 @media screen and (max-width: 576px) {
-    .support-intro {
+     .landing-page {
+            background-image: url('../images/service/ss-mb.png');
+            min-height: 230px;
+            background-position: center bottom 20%;
+            background-size: cover;
+        }
+        
+    
+    .header-content {
+        margin-top: 41px;
+        padding: 85px 0 0 12px;
+    }
+    
+    .header-content .main-title-jap {
+        font-size: var(--fs-xl);
+        font-weight: 600;
+        padding-bottom: 14px;
+    }
+    
+    .header-content .main-title-eng {
+        font-weight: 400;
+        letter-spacing: 0.12em;
+    }
+    
+     .support-intro {
         padding-top: 72px;
     }
         
