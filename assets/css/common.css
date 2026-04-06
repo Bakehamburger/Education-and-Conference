@@ -360,6 +360,10 @@ main{
     flex-direction: column;
 }
 
+.mobile-nav-links-wrapper a:hover {
+    opacity: 0.6;
+}
+
 .mobile-nav-links p {
     line-height: 1em;
 }
@@ -455,6 +459,7 @@ main{
         flex-direction: row;
         margin: 0;
         font-size: var(--fs-sm);
+        padding-bottom: 0;
     }
 
      .menu-service-list{
@@ -1078,6 +1083,7 @@ main{
     letter-spacing: 0.2rem;
     display: block;
     margin-bottom: -5px;
+    padding-left: 60px;
 }
 
 .badge-circle {
@@ -1218,10 +1224,19 @@ background:
     font-weight: 500;
 }
 
+.footer-links a:hover {
+    opacity: 0.6;
+}
+
+.menu-service-list-footer a:hover {
+    opacity: 0.6;
+}
+
 .footer-links small {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.1em;
+    font-family: "Manrope", sans-serif;
 }
 
 .custom-fw{
@@ -1307,7 +1322,11 @@ background:
 }
 
 .brand-name {
-    padding-left: 60px;
+    padding-left: 120px;
+}
+
+.custom-pd-copyright {
+    font-family: "Manrope", sans-serif;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1337,7 +1356,7 @@ background:
     }
 
     .brand-name {
-        padding-left: 160px;
+        padding-left: 120px;
     }
 
     .footer-banner-content {

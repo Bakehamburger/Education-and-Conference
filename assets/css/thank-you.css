@@ -104,6 +104,12 @@ main {
     line-height: 1em;
 }
 
+@media screen and (max-width: 992px) {
+    .title-thank-you {
+        font-size: 32px;
+    }
+}
+
 .description-thank-you {
     padding-top: 48px;
     padding-bottom: 80px;

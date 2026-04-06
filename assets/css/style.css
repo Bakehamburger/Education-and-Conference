@@ -77,6 +77,11 @@ body.menu-open {
     bottom: 20%;
 }
 
+
+.news-content-hover:hover {
+    opacity: 0.6;
+}
+
 @media screen and (max-width: 992px) {
     .news-content-container-mobile {
         left: 10%;
@@ -149,9 +154,6 @@ body.menu-open {
     margin-bottom: 2px;
 }
 
-.news-container-hover:hover {
-    opacity: 0.6;
-}
 
 @media screen and (max-width:992px) {
     .news-button-container {

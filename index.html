@@ -36,7 +36,7 @@
         </nav>
 
         <!-- Fullscreen Mobile Menu -->
-        <div class="mobile-menu container-fluid px-0" id="mobileMenu">
+<div class="mobile-menu container-fluid px-0" id="mobileMenu">
             <button class="mobile-menu-header" id="closeMenu">&times;</button>
             <div class="row mobile-nav-links">
                 <div class="col-12 col-md-7 col-lg-5 mobile-nav-links-wrapper">
@@ -53,10 +53,10 @@
                         </a>
                     </div>
                     <ul class="row menu-service-list">
-                        <li class="col-7 col-lg-12 list list1"><a class="list1" href="service-list.html"><img src="assets/images/icons/navbar-line.svg" class="d-none d-lg-block" alt="">自治体ソリューション</a></li>
-                        <li class="col-6 col-lg-12 list col-lg-4"><a href="service-list.html"><img src="assets/images/icons/navbar-line.svg" class="d-none d-lg-block" alt="">教育ソリューション</a></li>
-                        <li class="col-8 col-lg-12 list col-lg-4"><a href="service-list.html"><img src="assets/images/icons/navbar-line.svg" class="d-none d-lg-block" alt="">企業・ビジネスソリューション</a></li>
-                        <li class="col-6 col-lg-12 list col-lg-4"><a href="service-list.html"><img src="assets/images/icons/navbar-line.svg" class="d-none d-lg-block" alt="">サポートサービス</a></li>
+                        <li class="col-7 col-lg-12 list list1"><a class="list1" href="local-gov.html"><img src="assets/images/icons/navbar-line.svg" class="d-none d-lg-block" alt="line">自治体ソリューション</a></li>
+                        <li class="col-6 col-lg-12 list col-lg-4"><a href="education.html"><img src="assets/images/icons/navbar-line.svg" class="d-none d-lg-block" alt="line">教育ソリューション</a></li>
+                        <li class="col-8 col-lg-12 list col-lg-4"><a href="corporate.html"><img src="assets/images/icons/navbar-line.svg" class="d-none d-lg-block" alt="line">企業・ビジネスソリューション</a></li>
+                        <li class="col-6 col-lg-12 list col-lg-4"><a href="support.html"><img src="assets/images/icons/navbar-line.svg" class="d-none d-lg-block" alt="line">サポートサービス</a></li>
                     </ul>
                     <div class="nav-link-case">
                         <a href="case.html">
@@ -94,6 +94,7 @@
                             </div>
                         </div>
                     </div>
+                    <a href="contact.html">
                     <div class="mobile-menu-cta mobile-menu-cta2">
                         <div class="menu-header-cta">
                             <p class="fw-bold">電話で <br class="d-block d-lg-none"> 問い合わせる</p>
@@ -107,6 +108,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -118,30 +120,35 @@
                     ともに未来をつくる
                 </h1>
             </div>
+            
             <div class="news-container d-none d-lg-block">
+                
                 <svg width="595" height="154" viewBox="0 0 595 154" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M595 154H0C35.3462 154 64 125.346 64 90V64C64 28.6538 92.6538 0 128 0H595V154Z" fill="#F5F5F5"/>
                 </svg>
-                
-                <div class="news-content-container d-none d-lg-flex">
-                    <div class="news-img-wrapper">
-                        <img src="assets/images/landing-page/news-icon.png" alt="News">
-                    </div>
+                <a href="news.html" class="news-content-hover">
+                    <div class="news-content-container d-none d-lg-flex">
+                        
+                        <div class="news-img-wrapper">
+                            <img src="assets/images/landing-page/news-icon.png" alt="News">
+                        </div>
 
-                    <div class="news-content d-none d-lg-block d-flex">
-                        <span class="news-pill">お知らせ</span> 
-                        <p class="news-date mb-0" style="color: #f06700; font-weight: bold;">2025.01.01</p>
-                        <a href="#" class="news-link text-dark" style="text-decoration: underline;">ホームページをリ ニューアルしました。</a>
-                    </div>
+                        <div class="news-content d-none d-lg-block d-flex">
+                            <span class="news-pill">お知らせ</span> 
+                            <p class="news-date mb-0" style="color: #f06700; font-weight: bold;">2025.01.01</p>
+                            <span class="news-link text-dark" style="text-decoration: underline;">ホームページをリ ニューアルしました。</span>
+                        </div>
 
-                    <div class="news-button-container ">
-                        <div class="play-btn d-flex align-items-center justify-content-center" 
-                            style="background: #f06700; width: 40px; height: 40px; border-radius: 8px;">
-                            <span style="color: white; font-size: 10px;">▶</span>
+                        <div class="news-button-container ">
+                            <div class="play-btn d-flex align-items-center justify-content-center" 
+                                style="background: #f06700; width: 40px; height: 40px; border-radius: 8px;">
+                                <span style="color: white; font-size: 10px;">▶</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
+            
             <!-- MOBILE -->
             <div class="news-container-mobile d-block d-lg-none">
                 <svg width="378" height="131" viewBox="0 0 378 131" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -693,13 +700,11 @@
                 <div class="col-lg-6 d-flex justify-content-end align-items-end">
                     <div class="orange-card shadow-sm">
                         <div class="phone-header">
-                            <svg class="phone-icon" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17,1H7A2,2 0 0,0 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3A2,2 0 0,0 17,1M17,19H7V5H17V19Z" />
-                            </svg>
+                            <img src="assets/images/icons/phone.svg" class="phone-icon" alt="phone-icon">
                             電話で問い合わせる
                         </div>
                         
-                        <div class="d-flex align-items-center justify-content-center align-items-lg-end justify-content-lg-between flex-wrap">
+                        <div class="d-flex align-items-center justify-content-center  align-items-lg-end flex-wrap">
                             <div>
                                 <span class="brand-name">トゥワロー</span>
                                 <div class="phone-number">
@@ -724,7 +729,7 @@
                 </div>
             </div>
         </div>
-    <div class="row footer-banner mx-auto">
+    <a href="contact.html" class="row footer-banner mx-auto">
         <div class="footer-banner-content">
             <div class="col-12 col-lg-4 footer-banner-title">
                 <h2>
@@ -740,7 +745,7 @@
                 <img src="assets/images/icons/sm-play-btn.svg" alt="">
             </div>
         </div>
-    </div>
+    </a>
     <div class="footer-body">
         <div class="row footer-content mx-auto">
             <div class="col-12 col-lg-6 footer-header">
@@ -760,10 +765,10 @@
                     </a>
                 </div>
                 <ul class="menu-service-list-footer">
-                    <li><a href="service-list.html"><img src="assets/images/icons/line-white.svg" alt="">自治体ソリューション</a></li>
-                    <li><a href="service-list.html"><img src="assets/images/icons/line-white.svg" alt="">自治体ソリューション</a></li>
-                    <li><a href="service-list.html"><img src="assets/images/icons/line-white.svg" alt="">自治体ソリューション</a></li>
-                    <li><a href="service-list.html"><img src="assets/images/icons/line-white.svg" alt="">自治体ソリューション</a></li>
+                    <li><a href="local-gov.html"><img src="assets/images/icons/line-white.svg" alt="line">自治体ソリューション</a></li>
+                    <li><a href="education.html"><img src="assets/images/icons/line-white.svg" alt="line">教育ソリューション</a></li>
+                    <li><a href="corporate.html"><img src="assets/images/icons/line-white.svg" alt="line">企業・ビジネスソリューション</a></li>
+                    <li><a href="support.html"><img src="assets/images/icons/line-white.svg" alt="line">サポートサービス</a></li>
                 </ul>
                 <div class="footer-links">
                 <a href="case.html">
