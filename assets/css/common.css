@@ -244,9 +244,7 @@ main{
 }
 
 .nav-link:hover {
-    color: var(--white);
     opacity: 0.6;
-    transform: translateY(-2px);
 }
 
 
@@ -267,8 +265,7 @@ main{
 }
 
 .cta-btn:hover {
-    transform: translateY(-3px);
-    color: #000 !important;
+    opacity: 0.6;
 }
 
 .cta-btn img {
@@ -404,6 +401,7 @@ main{
     align-items: center;
     letter-spacing: 0;
     font-size: 14px;
+    padding-bottom: 16px;
 }
 
 .nav-link-news {
@@ -1120,6 +1118,11 @@ main{
     z-index: 1;
 }
 
+.footer-banner:hover {
+    opacity: 0.6;
+    transition:ease-in-out 0.3s;
+}
+
 .footer-banner-content {
     display: flex;
     justify-content: space-between;
@@ -1297,6 +1300,16 @@ background:
     line-height: 1em;
 }
 
+.phone-number a{
+        font-size: 42px;
+        font-weight: bold;
+        line-height: 1em;
+}
+
+.brand-name {
+    padding-left: 60px;
+}
+
 @media screen and (max-width: 1200px) {
     .footer-left-nav-links {
         padding-left: 0;
@@ -1323,14 +1336,8 @@ background:
         align-items: center;
     }
 
-     .brand-name {
+    .brand-name {
         padding-left: 160px;
-    }
-
-    .phone-number a{
-        font-size: 42px;
-        font-weight: bold;
-        line-height: 1em;
     }
 
     .footer-banner-content {
