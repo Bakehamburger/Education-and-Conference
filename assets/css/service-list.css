@@ -190,7 +190,7 @@
 .solution-step-card {
     background: var(--white);
     border-radius: 24px;
-    padding: 35px 0;
+    padding: 35px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,8 +203,8 @@
 .step-number {
     background-color: var(--burnt-orange);
     color: var(--white);
-    width: 30px;
-    height: 30px;
+    width: 39px;
+    height: 39px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -225,7 +225,7 @@
     letter-spacing: 0.03em;
     line-height: 100%;
     margin-bottom: 25px !important;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 .step-icon img {
@@ -437,6 +437,7 @@
         z-index: 2;
         pointer-events: none;
     }
+    
 }
 
 
@@ -531,87 +532,10 @@
     .feature-item-list {
         padding-bottom: 50px;
     }
-}
-
-
-/* 768px */
-@media screen and (max-width: 768px) {
-    .service-section-header .headline-text, 
-    .service-section-header .description-text {
-        padding: 0 12px;
-    }
     
-    .service-landing-page .site-container {
-    max-width: 768px;
-    }
     
-    .service-landing-page .service-card {
-        min-height: 122px; 
-        height: 100%;
-        column-gap: 11px;
-        row-gap: 11px;
-        border-radius: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        white-space: nowrap;
-    }
-
-    main.service-list-main .service-landing-page .service-title-jap {
-        font-size: var(--fs-sm);
-    }
     
-    .service-card p {
-        display: none;
-    }
-        
-    #services-list-solutions .services-list-solutions-content {
-        padding: 0 12px 24px 12px; 
-        min-height: 100%; 
-    }
-
-    .service-landing-page .wide-card .md-text {
-        font-size: var(--fs-md) !important;
-    }
-    
-    .service-card .card-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start; 
-        height: 100%;
-        padding-top: 20px; 
-    }
-
-
-    .service-card.wide-card {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end; 
-        margin-top: auto;
-        position: relative;
-    }
-
-    .top-left-content {
-        position: absolute; 
-        top: 15px;        
-        left: 20px;
-    }
-    
-    .feature-row {
-        padding: 0;
-    }
-    
-    .feature-desc {
-        width: 80%;
-    }
-}
-
-
-
-
-/* 576px */
-@media (max-width: 576px) {
+    /* try */
     .service-landing-page {
         padding-top: 79px;
     }
