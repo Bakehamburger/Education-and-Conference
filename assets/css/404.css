@@ -85,7 +85,7 @@ main {
 }
 
 .container-404{
-    padding-top: 55px;
+    padding-top: 90px;
     font-size: var(--fs-base);
     font-weight: 500;
     letter-spacing: 0;
@@ -102,8 +102,31 @@ main {
 }
 
 @media screen and (max-width: 992px) {
+    .container-404 {
+        padding-top: 102px;
+    }
+
+
     .title-404 {
         font-size: 32px;
+        line-height: 1.65em;
+    }
+
+    .description-404 {
+        padding-top: 37px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .footer-section-404 {
+        padding-top: 94px;
+    }
+
+    .footer-banner-cta-404 {
+        padding-top: 18px;
+    }
+
+    .footer-banner-title-404 {
+        padding-bottom: 56px;
     }
 }
 
@@ -117,9 +140,13 @@ main {
 
 .footer-section-404 {
     margin-top: 0;
+    padding-top: 155px;
 }
 
 .btn-orange-lg-404{
     min-width: 200px;
+    height: 55px;
 }
+
+
 
