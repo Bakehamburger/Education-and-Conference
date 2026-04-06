@@ -177,6 +177,11 @@ main {
 
 .t-group-pagination .page-item {
     margin: 0 5px; 
+    transition: ease-in-out 0.3s;
+}
+
+.page-item:hover {
+    opacity: 0.6;
 }
 
 .t-group-pagination .page-link {
@@ -289,6 +294,12 @@ main {
     background: rgba(234, 99, 0, 0.06);
     padding: 40px;
     border-radius: 16px;
+    transition: ease-in-out 0.3s;
+}
+
+.news-card-list:hover {
+    opacity: 0.6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .page-item-wrapper {
@@ -299,7 +310,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    max-width: 211px;
 }
 
 @media screen and (max-width: 992px) {
@@ -324,6 +334,10 @@ main {
         width: 90%;
     }
 
+    .article-content {
+        max-width: 220px;
+    }
+
 }
 
 .news-card {
@@ -343,8 +357,8 @@ main {
     color: var(--white);
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s ease;
     border-bottom: 1px solid var(--white);
+    transition: ease-in-out 0.3s;
 }
 
 .arrow-box:hover {
