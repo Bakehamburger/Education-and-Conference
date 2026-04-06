@@ -88,7 +88,7 @@ main {
 
 /* for main */
 .thank-you-container{
-    padding-top: 55px;
+    padding-top: 90px;
     font-size: var(--fs-base);
     font-weight: 500;
     letter-spacing: 0;
@@ -105,8 +105,22 @@ main {
 }
 
 @media screen and (max-width: 992px) {
+
+    .thank-you-container {
+        padding-top: 103px;
+    }
     .title-thank-you {
         font-size: 32px;
+        line-height: 1.65em;
+    }
+    
+    .description-thank-you  {
+        padding-top: 37px !important;
+        padding-bottom: 43px !important;
+    }
+
+    .thank-you-footer-section {
+        padding-top: 96px !important;
     }
 }
 
@@ -118,11 +132,13 @@ main {
     font-weight: 500;
 }
 
-.footer-section-thank-you {
+.thank-you-footer-section {
     margin-top: 0;
+    padding-top: 161px;
 }
 
 .btn-orange-lg-404{
     min-width: 200px;
+    height: 55px;
 }
 
