@@ -180,7 +180,7 @@ main {
     transition: ease-in-out 0.3s;
 }
 
-.page-item:hover {
+.t-arrow:hover {
     opacity: 0.6;
 }
 
