@@ -184,8 +184,6 @@ main {
     opacity: 0.6;
 }
 
-.t-number {}
-
 .t-group-pagination .page-link {
     border: none;
     color: var(--burnt-orange);
