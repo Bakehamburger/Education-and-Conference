@@ -148,7 +148,7 @@
     position: relative; 
     padding: 95px 0 74px 0;
     border-radius: 128px;
-    margin: 144px 0;
+    margin: 142px 0 84px 0;
     overflow: hidden; 
     z-index: 1;
     border-radius: clamp(32px, 10vw, 128px);  
@@ -164,7 +164,12 @@
     bottom: 0;
     background: 
         url('https://grainy-gradients.vercel.app/noise.svg'),
-        var(--sunset-gradient);
+        linear-gradient(to right,
+        rgba(254, 159, 93, 1) 20%,
+        rgba(253, 133, 79, 1) 44%,
+        rgba(253, 108, 65, 1) 67%,
+        rgba(234, 99, 0, 1) 100%
+        );
     background-blend-mode: overlay;
     opacity: 0.8; 
     z-index: -1; 
@@ -176,13 +181,16 @@
 }
 
 .solution-steps-wrapper {
-    padding-top: 32px;
+    padding-top: 82px;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .solution-step-card {
     background: var(--white);
     border-radius: 24px;
-    padding: 24px 29px 29px 22px;
+    padding: 35px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,6 +198,7 @@
     min-height: 241px; 
     box-shadow: 0 4px 40px 0 rgba(139, 73, 25, 0.5);
 }
+
 
 .step-number {
     background-color: var(--burnt-orange);
@@ -202,8 +211,8 @@
     justify-content: center;
     
     font-family: "Manrope", sans-serif;
-    font-size: 16px;
-    font-weight: 5;
+    font-size: var(--fs-base);
+    font-weight: 600;
     letter-spacing: 0.03em;
     line-height: 100%;
     margin-bottom: 22px;
@@ -211,11 +220,12 @@
 
 .step-title {
     color: var(--burnt-orange);
-    font-size: 20px;
+    font-size: var(--fs-md);
     font-weight: 500;
     letter-spacing: 0.03em;
     line-height: 100%;
     margin-bottom: 25px !important;
+    white-space: nowrap;
 }
 
 .step-icon img {
@@ -228,17 +238,20 @@
     padding-top: 125px;
 }
 
+.feature-row {
+    padding-top: 65px;
+    padding-left: 53px;
+}
+
 
 .feature-num {
+    font-family: "Manrope", sans-serif;
     font-size: 120px; 
     letter-spacing: -0.04em;
     opacity: 0.3;
     line-height: 100%;
     display: block;
-    padding-bottom: 20px;
-
-    font-family: "Abel", sans-serif;
-    font-weight: 400;
+    padding-bottom: 16px;
 
 }
 
@@ -247,14 +260,14 @@
     font-weight:500;
     line-height: 100%;
     margin-bottom: 15px;
-    padding-bottom: 20px;
+    padding-bottom: 16px;
     display: inline-block;
     width: 100%;
 }
 
 
 .feature-desc {
-    font-size:var(--fs-base);
+    font-size:var(--fs-md);
     line-height: 200%;
     width: 68%;
 }
@@ -271,10 +284,12 @@
 .services-list-solutions-card {
     background-color: var(--white-smoke); 
     border-radius: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     overflow: hidden;
     border: none;
 }
+
+
 
 .services-list-solutions-image {
     padding: 30px 30px 30px 57px; 
@@ -284,7 +299,8 @@
 }
 
 .services-list-solutions-image img {
-    width: 100%; 
+    width: auto; 
+    max-width: 95%;
     height:auto;
     object-fit: cover;
     border-radius: 15px; 
@@ -327,7 +343,7 @@
 /* FLOW */
 #flow-section {
     background-color: var(--white);
-    margin: 177px 0 190px;
+    margin: 132px 0 93px;
 } 
     
 .timeline-col {
@@ -336,6 +352,10 @@
     align-items: center;
     width: var(--flow-circle-size);
     padding: 0;
+}
+
+.flow-item:first-of-type {
+    padding-top: 50px;
 }
 
 .flow-number {
@@ -353,9 +373,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Abel", sans-serif;
+    font-family: "Manrope", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: var(--fs-md);
     line-height: 160%;
     z-index: 2;
     margin-left: 12px;
@@ -379,6 +399,7 @@
 .step-description {
     line-height: 200%;
     font-weight: 500;
+    padding-top: 30px;
 }
 
 .pb-gap {
@@ -389,6 +410,27 @@
     padding-bottom: 83px;
 }
 
+/* cards arrow */
+@media screen and (min-width: 992px) {
+    .solution-steps-wrapper > .col:not(:last-child) {
+        position: relative;
+    }
+
+    .solution-steps-wrapper > .col:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 6px; 
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 16px solid transparent;
+        border-bottom: 16px solid transparent;
+        border-left: 18px solid var(--burnt-orange);
+        z-index: 2;
+        pointer-events: none;
+    }
+}
 
 
 /* 991px*/
