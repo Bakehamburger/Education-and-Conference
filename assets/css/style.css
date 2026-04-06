@@ -392,12 +392,14 @@ body.menu-open {
 
 
 
+.service-card h3,
 .service-card h3 span {
-    font-size: 1.8rem;
+    font-size: var(--fs-xl);
+    font-weight: 500;
 }
 
 .english-label {
-    font-size: 0.9rem;
+    font-size: var(--fs-base);
     margin-bottom: auto; 
 }
 
