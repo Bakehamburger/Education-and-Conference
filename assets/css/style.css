@@ -715,9 +715,7 @@ body.menu-open {
         display: none;   
     }
 
-    .solution-title {
-        padding: 0px 92px;
-    }
+    
     .solution-section-inner {
         padding: 128px 32px; 
     }
