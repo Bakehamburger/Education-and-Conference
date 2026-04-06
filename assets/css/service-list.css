@@ -287,7 +287,14 @@
     margin-bottom: 24px;
     overflow: hidden;
     border: none;
+    transition: all ease-in-out 0.3s;
 }
+
+.services-list-solutions-card:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
 
 
 
@@ -452,7 +459,6 @@
     }
 
     .solution-steps-wrapper > div {
-        margin-bottom: 16px; 
         position: relative;
     }
 
@@ -519,9 +525,11 @@
         min-height: 100%; 
     }
 
+    .feature-row {
+        margin-top: 33px;
+    }
     .feature-item-list {
-        padding-top: 55px;
-        padding-left: 0;
+        padding-bottom: 50px;
     }
 }
 
@@ -542,7 +550,7 @@
         height: 100%;
         column-gap: 11px;
         row-gap: 11px;
-        border-radius: 4px;
+        border-radius: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -559,7 +567,7 @@
     }
         
     #services-list-solutions .services-list-solutions-content {
-        padding: 16px 12px 24px 12px; 
+        padding: 0 12px 24px 12px; 
         min-height: 100%; 
     }
 
@@ -589,6 +597,14 @@
         top: 15px;        
         left: 20px;
     }
+    
+    .feature-row {
+        padding: 0;
+    }
+    
+    .feature-desc {
+        width: 80%;
+    }
 }
 
 
@@ -596,19 +612,52 @@
 
 /* 576px */
 @media (max-width: 576px) {
+    .service-landing-page {
+        padding-top: 79px;
+    }
+    
+      .solutions-section {
+        margin-top: 96px;
+        padding: 76px 0 29px 0;
+    }
     
     .solutions-section .service-title-jap {
         font-size: var(--fs-lg);
     }
     
-    .service-section-header .headline-text, 
-    .service-section-header .description-text {
-        padding: 0 12px;
+    .solutions-section .description-text {
+        margin-top: 20px;
     }
+    
+    .solution-steps-wrapper {
+        padding-top: 100px;
+    }
+    
+    .custom-card {
+        margin-bottom: 40px;
+    }
+    
+    .strength-feature-title {
+    padding-top: 79px;
+}
+    
+     .service-section-header .headline-text {
+        font-size: var(--fs-xl);
+     }
+
+    
+     .service-section-header .description-text {
+        margin-top: 57px !important;
+     }
+     
+     
+     #services-list-solutions {
+    padding: 12px 0 0 0;
+}
         
     .services-list-solutions-card {
         border-radius: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
     }
 
     .services-list-solutions-image {
@@ -618,6 +667,15 @@
     .services-list-solutions-content {
         padding: 0 12px 24px 12px;
     }
+    
+     .services-list-solutions-image img {
+    width: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+    
+  
 
     .services-list-solutions-content .service-title-jap {
         font-size: var(--fs-lg);
@@ -631,15 +689,19 @@
     .services-list-solutions-content .services-list-solutions-desc {
         width: 95%; 
         align-items: flex-end;
-        padding-bottom: 54px;
+        padding-bottom: 64px;
         font-size: var(--fs-sm);
     }
 
     .services-list-solutions-card:nth-child(4) .services-list-solutions-desc {
         width: 95%; 
         align-items: flex-end;
-        padding-bottom: 35px;
+        padding-bottom: 54px;
         font-size: var(--fs-sm);
+    }
+    
+    .mb-gap {
+        padding-top: 59px;
     }
 
     .g-custom-24 {
@@ -653,6 +715,7 @@
     .time-badge {
         margin-top: auto;
     }
+    
 
     .feature-num {
         font-size: 80px;
@@ -666,21 +729,36 @@
     
     .feature-desc{
         font-size: 18px;
+        padding-top: 10px;
     }
 
     #flow-section {
         margin: 0;
-        padding: 30px 12px; 
+        padding: 75px 12px 0 0 !important; 
+    }
+    
+    #flow-section .container {
+        padding: 0 !important;
     }
     
     #flow-section .row {
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
+  
+    
+    .flow-item:first-of-type {
+    padding-top: 47px;
+}
 
-    #flow-section .container {
-        padding: 0 !important;
-    }
+.step-description {
+    padding-top: 4px;
+}
+
+ #flow-section .flow-number {
+    font-size: var(--fs-md) !important;
+    font-weight: 300 !important;
+}
     
     .timeline-col {
         width: 50px !important;
@@ -691,11 +769,11 @@
     }
     
     .pb-gap-lg {
-        padding-bottom: 58px !important;
+        padding-bottom: 54px !important;
     }
     
     footer {
-        margin-top: 74px !important;
+        margin-top: 66px !important;
     }
 
 }
