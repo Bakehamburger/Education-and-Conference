@@ -497,11 +497,6 @@ main{
     opacity: 1;
 }
 
-.mobile-nav-links a:hover {
-    text-shadow: 0 0 30px rgba(255,255,255,0.8);
-
-}
-
 .cta-container {
     display: flex;
     gap: 16px;
@@ -514,6 +509,12 @@ main{
     border-radius: 8px;
     background-color: var(--burnt-orange);
     color: var(--white);
+    transition: ease-in-out 0.3s;
+}
+
+.mobile-menu-cta:hover{
+    opacity: 0.6;
+    cursor: pointer;
 }
 
 
