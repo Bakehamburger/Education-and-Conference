@@ -1396,7 +1396,7 @@ background:
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding-top: 24px;
+        padding-top: 16px;
     }
 
     .footer-banner-cta img {
