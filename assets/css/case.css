@@ -147,13 +147,13 @@ main {
     box-shadow: none !important; 
 }
 
-.filter-group .btn:hover, 
-.filter-group .btn:focus {
-    background-color: var(--white) !important;
+.filter-group .btn:hover {
+    /* background-color: var(--white) !important;
     color: var(--dark-charcoal) !important;
     border-color: var(--borderpill) !important;
     outline: none !important;
-    box-shadow: none !important;
+    box-shadow: none !important; */
+    opacity: 0.3;
 }
 
 
@@ -165,12 +165,14 @@ main {
     font-weight: 500;
     letter-spacing: 0.02em;
     line-height: 100%;
+    opacity: none;
 }
 
 .filter-group .btn.active-orange:hover,
 .filter-group .btn.active-orange:focus {
     background-color: var(--burnt-orange) !important;
     color: var(--white) !important;
+    opacity: none;
 }
 
 .pagination-arrow, .page-num {
