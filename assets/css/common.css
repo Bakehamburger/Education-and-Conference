@@ -895,7 +895,7 @@ main{
 }
 .btn-orange-lg {
     background-color: var(--burnt-orange);
-    color: white;
+    color: var(--white);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -903,7 +903,8 @@ main{
     min-width: 225px;
     border-radius: 8px; 
     overflow: hidden;   
-    padding: 0;        
+    padding: 0;      
+    transition: ease-in-out 0.3s;  
 }
 
 .btn-text {
@@ -930,8 +931,7 @@ main{
 
 /* Hover effect */
 .btn-orange-lg:hover {
-    filter: brightness(1.1);
-    color: white;
+   opacity: 0.6;
 }
 
 /* Case Cards */
@@ -1018,7 +1018,7 @@ main{
     display: flex;
     flex-direction: column;
     padding-top: 145px;
-    background-color: var(--white-smoke);
+    background-color: var(--white);
 }
 
 @media screen and (max-width: 992px) {
