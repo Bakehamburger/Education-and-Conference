@@ -181,6 +181,7 @@
 }
 
 .solution-steps-wrapper {
+    margin-top: 2px;
     padding-top: 82px;
     position: relative;
     display: flex;
@@ -397,7 +398,7 @@
 
 .step-header {
     color: var(--burnt-orange);
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 15px;
     font-size: var(--fs-lg);
     padding-bottom: 4px;
@@ -443,20 +444,106 @@
 
 /* 991px*/
 @media screen and  (max-width: 991px){
+    /* service-lp */
+    
+    .service-landing-page {
+        padding-top: 79px;
+    }
+     .service-landing-page .site-container {
+    max-width: 768px;
+    }
     
     .site-container {
         padding: 0 12px;
     }
+
+    .service-section-header .headline-text {
+        font-size: var(--fs-xl);
+        padding-left: 12px;
+     }
     
+     .service-section-header .description-text {
+        margin-top: 57px !important;
+        padding-left: 12px;
+     }
+     
+      .mb-gap {
+        padding-top: 59px;
+    }
+
+   
+      .time-badge {
+        margin-top: auto;
+    }
     
-    .solutions-section .headline-text {
+    .service-landing-page .service-card {
+        min-height: 122px; 
+        height: 100%;
+        column-gap: 11px;
+        row-gap: 11px;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    main.service-list-main .service-landing-page .service-title-jap {
+        font-size: var(--fs-sm);
+    }
+    
+    .service-card p {
+        display: none;
+    }
+        
+  
+
+    .service-landing-page .wide-card .md-text {
+        font-size: var(--fs-md) !important;
+    }
+    
+    .service-card .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        height: 100%;
+        padding-top: 20px; 
+    }
+
+    .service-card.wide-card {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; 
+        margin-top: auto;
+        position: relative;
+    }
+
+    .top-left-content {
+        position: absolute; 
+        top: 15px;        
+        left: 20px;
+    }
+    
+    /* solutions */
+
+    .solutions-section {
+        margin-top: 96px;
+        padding: 76px 0 29px 0;
+    }
+    
+    .solutions-section .service-title-jap {
         font-size: var(--fs-lg);
     }
     
-    
+    .solutions-section .description-text {
+        margin-top: 20px;
+    }
+  
     .solution-steps-wrapper {
         flex-direction: column !important;
         gap: 0 !important;
+        padding-top: 49px;
     }
 
     .solution-steps-wrapper > div {
@@ -521,43 +608,7 @@
         content: none;
     }
     
-    #services-list-solutions .services-list-solutions-content {
-        padding: 40px; 
-        min-height: 100%; 
-    }
-
-    .feature-row {
-        margin-top: 33px;
-    }
-    .feature-item-list {
-        padding-bottom: 50px;
-    }
-    
-    
-    
-    /* try */
-    .service-landing-page {
-        padding-top: 79px;
-    }
-    
-      .solutions-section {
-        margin-top: 96px;
-        padding: 76px 0 29px 0;
-    }
-    
-    .solutions-section .service-title-jap {
-        font-size: var(--fs-lg);
-    }
-    
-    .solutions-section .description-text {
-        margin-top: 20px;
-    }
-    
-    .solution-steps-wrapper {
-        padding-top: 100px;
-    }
-    
-    .custom-card {
+      .custom-card {
         margin-bottom: 40px;
     }
     
@@ -565,32 +616,38 @@
     padding-top: 79px;
 }
     
-     .service-section-header .headline-text {
-        font-size: var(--fs-xl);
-     }
-
+    .feature-row {
+        margin-top: 33px;
+     padding: 0;
+    }
+    .feature-item-list {
+        padding-bottom: 50px;
+    }
     
-     .service-section-header .description-text {
-        margin-top: 57px !important;
-     }
-     
-     
-     #services-list-solutions {
+    .feature-num {
+        font-size: 80px;
+        padding-bottom: 2px;
+    }
+    
+    .feature-title {
+        font-size: var(--fs-xl);
+        padding-bottom: 0;
+    }  
+    .feature-desc{
+        font-size: 18px;
+        padding-top: 10px;
+        width: 80%;
+    }
+
+    /* service-list-solutions */
+    #services-list-solutions {
     padding: 12px 0 0 0;
 }
-        
-    .services-list-solutions-card {
-        border-radius: 16px;
-        margin-bottom: 24px;
-    }
 
     .services-list-solutions-image {
-        padding: 12px 12px 24px 12px;
+        padding: 24px 12px 12px 12px !important;
     }
 
-    .services-list-solutions-content {
-        padding: 0 12px 24px 12px;
-    }
     
      .services-list-solutions-image img {
     width: auto;
@@ -598,8 +655,11 @@
     border-radius: 10px;
     display: block;
 }
-    
-  
+
+  #services-list-solutions .services-list-solutions-content {
+        padding: 0 12px 24px 12px;
+        min-height: 100%; 
+    }
 
     .services-list-solutions-content .service-title-jap {
         font-size: var(--fs-lg);
@@ -616,7 +676,11 @@
         padding-bottom: 64px;
         font-size: var(--fs-sm);
     }
-
+    
+      
+    
+  
+    
     .services-list-solutions-card:nth-child(4) .services-list-solutions-desc {
         width: 95%; 
         align-items: flex-end;
@@ -624,37 +688,13 @@
         font-size: var(--fs-sm);
     }
     
-    .mb-gap {
-        padding-top: 59px;
-    }
-
-    .g-custom-24 {
-        --bs-gutter-y: 24px;
-    }
+   
     .services-list-solutions-content .services-list-solutions-btn img {
         width: 45px;
         height: 45px;
     }
 
-    .time-badge {
-        margin-top: auto;
-    }
-    
-
-    .feature-num {
-        font-size: 80px;
-        padding-bottom: 2px;
-    }
-    
-    .feature-title {
-        font-size: var(--fs-xl);
-        padding-bottom: 0;
-    }  
-    
-    .feature-desc{
-        font-size: 18px;
-        padding-top: 10px;
-    }
+  /* flow */
 
     #flow-section {
         margin: 0;
@@ -682,10 +722,11 @@
  #flow-section .flow-number {
     font-size: var(--fs-md) !important;
     font-weight: 300 !important;
+    
 }
     
     .timeline-col {
-        width: 50px !important;
+        width: 62px !important;
     }
     
     .pb-gap {
