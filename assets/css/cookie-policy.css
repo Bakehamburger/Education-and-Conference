@@ -32,7 +32,7 @@ main {
 }
 
 .breadcrumb-overlay {
-   position: absolute;
+    position: absolute;
     bottom: 30px;  
     left: 100px;   
     font-size: var(--fs-sm);

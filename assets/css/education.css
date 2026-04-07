@@ -17,20 +17,21 @@
   
 }
 
-
 .curve-container {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 620px;
+    width: 620px; 
     height: 93px; 
 }
 
 .breadcrumb-overlay {
     position: absolute;
-    bottom: 30px;
-    left: 130px;  
+    bottom: 30px;  
+    left: 100px;   
     font-size: var(--fs-sm);
+    font-weight: 600;
+    letter-spacing: 0.02em;
     color: var(--dark-charcoal);
     display: flex;
     align-items: center;
@@ -39,14 +40,13 @@
 
 .breadcrumb-arrow {
     color: var(--burnt-orange);
-    font-size:var(--fs-xs);
+    font-size: 11.52px;
 }
 
 .breadcrumb-current {
     color: var(--burnt-orange);
     font-weight: 600;
 }
-
 main {
   background-color: var(--white);
 }
@@ -197,7 +197,7 @@ main {
     .intro  .title-divider {
         border-top: 1px solid var(--green-divider);
         opacity: 1;
-        margin: 13px 0 14px 0;
+        margin: 9px 0 14px 0;
     }
         
     .intro .service-title-jap {

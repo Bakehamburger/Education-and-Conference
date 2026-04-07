@@ -24,13 +24,14 @@
     height: 93px; 
 }
 
-
 .breadcrumb-overlay {
     position: absolute;
-    bottom: 30px; 
-    left: 130px;   
+    bottom: 30px;  
+    left: 100px;   
     font-size: var(--fs-sm);
-    color:var(--dark-charcoal);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--dark-charcoal);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -38,12 +39,12 @@
 
 .breadcrumb-arrow {
     color: var(--burnt-orange);
-    font-size: var(--fs-xs);
+    font-size: 11.52px;
 }
 
 .breadcrumb-current {
     color: var(--burnt-orange);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 main {
@@ -57,12 +58,6 @@ main {
     padding-bottom: 62px;
 }
 
-.intro .main-title-jap {
- font-weight: 600;
-  line-height: 135%;
-  letter-spacing: 0.08em;
-  color: var(--dark-charcoal);
-}
 
 .title-divider {
   border-top: 1px solid var(--green-divider);
@@ -70,146 +65,21 @@ main {
   margin: 46px 0 36px 0;
 }
 
-.intro .service-title-jap {
-    font-weight: 500;
-    display: inline; 
-    background-image: linear-gradient(
-        to right, 
-        rgba(254, 159, 93, 0.8) 20%, 
-        rgba(253, 133, 79, 0.8) 44%, 
-        rgba(253, 108, 65, 0.8) 67%, 
-        rgba(234, 99, 0, 0.8) 100%
-    );
-    background-repeat: no-repeat;
-    background-size: 100% 18px; 
-    background-position: 0 100%; 
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-    line-height: 165%; 
-    padding: 38px 4px 10px 4px;
-}
-
-.pointers {
-    padding-top: 27px;
-}
-
-/* Solution Cards */
-.solution-card {
-    background-color: var(--white-smoke);
-    border-radius: 20px;
-    padding: 48px 5%; 
-    width: 100%;
-    max-width: 411px;
-    margin: 0 auto;
-    min-height: 248px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-}
-
-.point-number {
-    color: var(--burnt-orange);
-    font-weight: bold;
-    font-size: var(--fs-lg);
-    margin-bottom: 15px;
-}
-
-.card-text {
-    font-size: var(--fs-lg);
-    font-weight: 500;
-    line-height: 200%;
-    margin-bottom: 0;
-}
-
 
 /* FEATURE SECTION */
 .feature-section {
     background-color: var(--service-bg); 
     position: relative;
-    padding-bottom: 584px;
-}
-
-.triangle-top {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 35px solid transparent;
-    border-right: 35px solid transparent;
-    border-top: 60px solid var(--white); 
+    padding-bottom: 582px;
 }
 
 /* Typography */
 .section-divider {
     border-top: 3px solid var(--burnt-orange);
     opacity: 10%;
-    margin: 17px 0 31px 0;
+    margin: 17px 0 29px 0;
 }
 
-.first-feature {
-    padding-top: 173px;
-}
-
-.sub {
-    padding-top: 42px;
-}
-
-.feature-item {
-    padding-top: 144px;
-}
-
-.container .row:last-child .feature-item {
-    padding-top: 134px;
-}
-.container > .row:last-child .sub {
-    padding-top: 35px;
-}
-
-.container > .row:last-child .section-divider{
-    margin-top: 22px;
-}
-
-.feature-text-wrapper {
-    display: flex;
-    align-items: flex-start;
-    padding-right: 20px; 
-}
-
-.feature-list {
-    list-style: none;
-    padding-left: 0; 
-}
-
-.feature-list li {
-    width: 100%; 
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 24px;
-    line-height: 200%; 
-    font-weight: 500;
-    font-size: var(--fs-sm);
-}
-
-.feature-list li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.5em; 
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: linear-gradient(to right, #FE9F5D, #EA6300);
-}
-
-.gray-placeholder-box {
-    background-color: var(--service-box);
-    width: 100%;  
-    border-radius: 16px;
-}
 
 
 /* case */
@@ -243,8 +113,12 @@ main {
 }
 
 .case-btn {
-    padding-top: 20px;
+    padding-top: 14px;
     padding-bottom: 191px;
+}
+
+.footer-section {
+    padding-top: 0;
 }
 
 
@@ -259,7 +133,7 @@ main {
     }
   
     .card-text {
-        font-size: var(--fs-sm); 
+        font-size: var(--fs-lg); 
     }
 }
 
@@ -365,7 +239,8 @@ main {
     
     .intro .service-title-jap {
         font-size: var(--fs-lg);
-        background-size: 100% 24px; 
+        background-size: 100% 17px; 
+        line-height: 165%;
     }
     
     .pointers {

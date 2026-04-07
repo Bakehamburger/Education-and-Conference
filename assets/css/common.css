@@ -712,10 +712,10 @@ main{
     font-weight: 500;
     display: inline; 
     background-image: linear-gradient(to right,
-        rgba(254, 159, 93, 0.8) 20%, 
-        rgba(253, 133, 79, 0.8) 44%, 
-        rgba(253, 108, 65, 0.8) 67%, 
-        rgba(234, 99, 0, 0.8) 100%
+        rgba(254, 159, 93, 0.9) 20%, 
+        rgba(253, 133, 79, 0.9) 44%, 
+        rgba(253, 108, 65, 0.9) 67%, 
+        rgba(234, 99, 0, 0.9) 100%
     );
     background-repeat: no-repeat;
     background-size: 100% 18px; 
@@ -764,6 +764,7 @@ main{
 
 
 .point-number {
+    font-family: "Manrope", sans-serif;
     color: var(--burnt-orange);
     font-weight: 600;
     font-size: var(--fs-lg);
