@@ -1124,6 +1124,7 @@ main{
     overflow: hidden; 
     margin-bottom: -120px;
     z-index: 1;
+    cursor: pointer;
 }
 
 .footer-banner:hover {
