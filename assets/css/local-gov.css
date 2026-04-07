@@ -91,6 +91,10 @@ main {
     padding-bottom: 51px;
 }
 
+.case-main-title .main-title-jap {
+    font-size: 40px;
+}
+
 .case-grid-grow {
     display: flex;
     flex-wrap: wrap;

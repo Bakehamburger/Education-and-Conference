@@ -705,6 +705,7 @@ main{
     line-height: 135%;
     letter-spacing: 0.08em;
     color: var(--dark-charcoal);
+    padding-bottom: 9px;
 }
 
 
@@ -718,12 +719,12 @@ main{
         rgba(234, 99, 0, 0.9) 100%
     );
     background-repeat: no-repeat;
-    background-size: 100% 18px; 
+    background-size: 100% 19px; 
     background-position: 0 100%; 
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     line-height: 1.8; 
-    padding: 38px 0 10px 0;
+    padding: 43px 0 5px 0;
 }
 
 @media screen and (min-width: 1200px) {
