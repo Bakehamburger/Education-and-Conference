@@ -188,7 +188,7 @@ body.menu-open {
 
 /* TOP */
 .top-section {
-    padding: 159px 12px 80px 12px;
+    padding: 159px 34px 80px 44px;
 }
 
 @media screen and (max-width :992px) {
@@ -226,16 +226,21 @@ body.menu-open {
 
 /* EVENT INFORMATION CARD */
 .event-information-card-section {
-    padding: 0 12px;
+    padding: 0 44px;
+
 }
 
 .event-information-card {
     background-color: #fff;
     border-radius: 32px;
     padding: 128px 106px ;
+    max-width: 1256px;
 }
 
 @media screen and (max-width:992px) {
+    .event-information-card-section {
+        padding: 0 12px;
+    }
     .event-information-card {
         padding: 72px 12px 79px 12px;
     }
