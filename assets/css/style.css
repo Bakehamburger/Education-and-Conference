@@ -523,7 +523,7 @@ body.menu-open {
         padding: 0px 104px;
     }
     .case-section-inner{
-        padding: 128px 32px; 
+        padding: 128px 32px 136px 32px; 
     }
 }
 
@@ -712,8 +712,8 @@ body.menu-open {
         right: -20px; 
         top: 50%;
         transform: translateY(-50%);
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
         border-left: 20px solid #F35F20;
         z-index: 2;
     }
@@ -722,7 +722,6 @@ body.menu-open {
         display: none;   
     }
 
-    
     .solution-section-inner {
         padding: 128px 32px; 
     }

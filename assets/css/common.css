@@ -983,10 +983,6 @@ main{
 
 
 @media screen and (min-width: 992px){
-    .case-title-section,
-    .case-headline-section{
-        padding: 0px 92px;
-    }
 
     .case-container .container-inner{
         padding: 106px 32px 0px;
